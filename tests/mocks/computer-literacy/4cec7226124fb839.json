@@ -1,0 +1,1103 @@
+{
+  "created_at": "2026-03-26T17:50:30.165038+00:00",
+  "elapsed": 0.20218,
+  "encoding": "utf-8",
+  "headers": {
+    "Access-Control-Allow-Credentials": "true",
+    "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+    "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Max-Age": "1728000",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=utf-8",
+    "Date": "Thu, 26 Mar 2026 17:50:29 GMT",
+    "ETag": "\"YWY5NzgwMDAwMDAwMDAwMFNvbHI=\"",
+    "Last-Modified": "Thu, 26 Mar 2026 17:36:37 GMT",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "Transfer-Encoding": "chunked",
+    "X-NewRelic-App-Data": "PxQPUVJRAAATUFRQBwIDXlwEFB9AMQYAZBBZDEtZV0ZaClc9HidaDhBTRT1JMFdfQjYEE0JURBIiWFpHBxRBTgBMCE4IFgUGB1YAUwZQH09VGhUABAAAVQJRUgEBCFRRXQlQEU4AAg5DB2U="
+  },
+  "reason": "OK",
+  "request": {
+    "body": "",
+    "method": "GET",
+    "url": "https://api.plos.org/search?q=Student+Computer+Literacy&rows=50&start=100"
+  },
+  "status_code": 200,
+  "url": "https://api.plos.org/search?q=Student+Computer+Literacy&rows=50&start=100",
+  "_decoded_content": {
+    "response": {
+      "numFound": 2823,
+      "start": 100,
+      "maxScore": 12.409701,
+      "docs": [
+        {
+          "id": "10.1371/journal.pone.0288292",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-07-20T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Joanne Veatch Coggins"
+          ],
+          "abstract": [
+            "Objectives: This study measured whether and to what degree Readable English effectively improves reading fluency and comprehension skills of adolescent learners. Methods: This experimental study (N = 855) measured the efficacy of two different multiple component reading programs for students in grades three, four, and five. Students were pre-and post-tested using EasyCBM Grade Level Reading Benchmarks. Students scoring at/below the 30th percentile on either benchmark were also assessed with the WRMT-3 Passage Reading Comprehension and Oral Reading Fluency measures. Students received 45\u201360 instructional hours in either Readable English or Amplify CKLA during their regular ELA class. Results: Students who received Readable English instruction significantly outperformed students in the typical practice condition on all measures of reading fluency and comprehension. The intervention condition\u2019s EasyCBM benchmark reading rate (m = 29.6 WCPM), reading accuracy (m = 3.1%), and comprehension (m = 1.9) surpassed the control group\u2019s reading rate (m = 17.4 WCPM), accuracy (m = 0.7%), and comprehension (m = 0.7) WRMT-3 ORF showed students in the Readable English intervention condition (m = 13.4 growth scale values [GSV] and m = 1.0 grade equivalency) outscored students in the control condition (m = 7.8 GSV and m = 0.5 grade equivalency). WRMT-3 Passage Comprehension showed Readable English students (m = 11.0 GSV and m = 0.9 grade equivalency) outgrew control condition students (m = 4.4 GSV and m = 0.3 grade equivalency). Conclusions: In a school year fraught with pandemic instructional interruptions and learning loss, students in grades 3\u20135 who received Readable English instruction closed reading gaps. The meaningful gains in reading rate and accuracy experienced by students in the intervention group will give exponential word reading volume dividends to students able to read text faster and more accurately going forward, helping them become more skilled readers. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Using Readable English leads to reading gains for rural elementary students: An experimental study",
+          "score": 11.412402
+        },
+        {
+          "id": "10.1371/journal.pone.0161485",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2016-08-24T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Lena V. Nordheim",
+            "Malene W. Gundersen",
+            "Birgitte Espehaug",
+            "\u00d8ystein Guttersrud",
+            "Signe Flottorp"
+          ],
+          "abstract": [
+            "Background and Objective: Adolescents are frequent media users who access health claims from various sources. The plethora of conflicting, pseudo-scientific, and often misleading health claims in popular media makes critical appraisal of health claims an essential ability. Schools play an important role in educating youth to critically appraise health claims. The objective of this systematic review was to evaluate the effects of school-based educational interventions for enhancing adolescents\u2019 abilities in critically appraising health claims. Methods: We searched MEDLINE, Embase, PsycINFO, AMED, Cinahl, Teachers Reference Centre, LISTA, ERIC, Sociological Abstracts, Social Services Abstracts, The Cochrane Library, Science Citation Index Expanded, Social Sciences Citation Index, and sources of grey literature. Studies that evaluated school-based educational interventions to improve adolescents\u2019 critical appraisal ability for health claims through advancing the students\u2019 knowledge about science were included. Eligible study designs were randomised and non-randomised controlled trials, and interrupted time series. Two authors independently selected studies, extracted data, and assessed risk of bias in included studies. Due to heterogeneity in interventions and inadequate reporting of results, we performed a descriptive synthesis of studies. We used GRADE (Grading of Recommendations, Assessment, Development, and Evaluation) to assess the certainty of the evidence. Results: Eight studies were included: two compared different teaching modalities, while the others compared educational interventions to instruction as usual. Studies mostly reported positive short-term effects on critical appraisal-related knowledge and skills in favour of the educational interventions. However, the certainty of the evidence for all comparisons and outcomes was very low. Conclusion: Educational interventions in schools may have beneficial short-term effects on knowledge and skills relevant to the critical appraisal of health claims. The small number of studies, their heterogeneity, and the predominantly high risk of bias inhibit any firm conclusions about their effects. None of the studies evaluated any long-term effects of interventions. Future intervention studies should adhere to high methodological standards, target a wider variety of school-based settings, and include a process evaluation. Systematic Review Registration: PROSPERO no. CRD42015017936. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Effects of School-Based Educational Interventions for Enhancing Adolescents Abilities in Critical Appraisal of Health Claims: A Systematic Review",
+          "score": 11.408907
+        },
+        {
+          "id": "10.1371/journal.pone.0315407",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-12-19T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Muhammad Tayyab Zamir",
+            "Fida Ullah",
+            "Rasikh Tariq",
+            "Waqas Haider Bangyal",
+            "Muhammad Arif",
+            "Alexander Gelbukh"
+          ],
+          "abstract": [
+            "\nInformal education via social media plays a crucial role in modern learning, offering self-directed and community-driven opportunities to gain knowledge, skills, and attitudes beyond traditional educational settings. These platforms provide access to a broad range of learning materials, such as tutorials, blogs, forums, and interactive content, making education more accessible and tailored to individual interests and needs. However, challenges like information overload and the spread of misinformation highlight the importance of digital literacy in ensuring users can critically evaluate the credibility of information. Consequently, the significance of sentiment analysis has grown in contemporary times due to the widespread utilization of social media platforms as a means for individuals to articulate their viewpoints. Twitter (now X) is well recognized as a prominent social media platform that is predominantly utilized for microblogging. Individuals commonly engage in expressing their viewpoints regarding contemporary events, hence presenting a significant difficulty for scholars to categorize the sentiment associated with such expressions effectively. This research study introduces a highly effective technique for detecting misinformation related to the COVID-19 pandemic. The spread of fake news during the COVID-19 pandemic has created significant challenges for public health and safety because misinformation about the virus, its transmission, and treatments has led to confusion and distrust among the public. This research study introduce highly effective techniques for detecting misinformation related to the COVID-19 pandemic. The methodology of this work includes gathering a dataset comprising fabricated news articles sourced from a corpus and subjected to the natural language processing (NLP) cycle. After applying some filters, a total of five machine learning classifiers and three deep learning classifiers were employed to forecast the sentiment of news articles, distinguishing between those that are authentic and those that are fabricated. This research employs machine learning classifiers, namely Support Vector Machine, Logistic Regression, K-Nearest Neighbors, Decision Trees, and Random Forest, to analyze and compare the obtained results. This research employs Convolutional Neural Networks, Long Short-Term Memory (LSTM), and Gated Recurrent Unit (GRU) as deep learning classifiers, and afterwards compares the obtained results. The results indicate that the BiGRU deep learning classifier demonstrates high accuracy and efficiency, with the following indicators: accuracy of 0.91, precision of 0.90, recall of 0.93, and F1-score of 0.92. For the same algorithm, the true negatives, and true positives came out to be 555 and 580, respectively, whereas, the false negatives and false positives came out to be 81, and 68, respectively. In conclusion, this research highlights the effectiveness of the BiGRU deep learning classifier in detecting misinformation related to COVID-19, emphasizing its significance for fostering media literacy and resilience against fake news in contemporary society. The implications of this research are significant for higher education and lifelong learners as it highlights the potential for using advanced machine learning to help educators and institutions in the process of combating the spread of misinformation and promoting critical thinking skills among students. By applying these methods to analyze and classify news articles, educators can develop more effective tools and curricula for teaching media literacy and information validation, equipping students with the skills needed to discern between authentic and fabricated information in the context of the COVID-19 pandemic and beyond. The implications of this research extrapolate to the creation of a society that is resistant to the spread of fake news through social media platforms.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Machine and deep learning algorithms for sentiment analysis during COVID-19: A vision to create fake news resistant society",
+          "score": 11.406099
+        },
+        {
+          "id": "10.1371/journal.pone.0290885",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-11-16T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Fernando A. Pe\u00f1a-Ram\u00edrez",
+            "Renata R. Guerra",
+            "Charles Peixoto Mafalda"
+          ],
+          "abstract": [
+            "\nWe propose a new family of distributions, so-called the unit ratio-extended Weibull family (U R E W). It is derived from ratio transformation in an extended Weibull random variable. The use of this transformation is a novelty of the work since it has been less explored than the exponential and has not yet been studied within the extended Weibull class. Moreover, we offer a valuable alternative to model double-bounded variables on the unit interval. Five U R E W special models are studied in detail, namely the: i) unit ratio-Gompertz; ii) unit ratio-Burr XII; iii) unit ratio-Lomax; v) unit ratio-Rayleigh, and vi) unit ratio-Weibull distributions. We propose a quantile-parameterization for the new family. The maximum likelihood estimators (MLEs) are presented. A Monte Carlo study is performed to evaluate the behavior of the MLEs of unit ratio-Gompertz and unit ratio-Rayleigh distributions. This last model has closed-form and approximately unbiased MLE for small sample sizes. Further, the U R E W submodels are adjusted to the dropout rate in Brazilian undergraduate courses. We focus on the areas of civil engineering, economics, computer sciences, and control engineering. The applications show that the new family is suitable for modeling educational data and may provide effective alternatives compared to other usual unit models, such as the Beta, Kumaraswamy, and unit gamma distributions. They can also outperform some recent contributions in the unit distribution literature. Thus, the U R E W family can provide competitive alternatives when those models are unsuitable.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "The unit ratio-extended Weibull family and the dropout rate in Brazilian undergraduate courses",
+          "score": 11.405459
+        },
+        {
+          "id": "10.1371/journal.pone.0240901",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2020-10-16T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Hyun Min Kim",
+            "Brigid McNeill",
+            "John Everatt",
+            "Leali\u2019ie\u2019e T. Taleni",
+            "El-Shadan Tautolo",
+            "Gail Gillon",
+            "Philip J. Schluter"
+          ],
+          "abstract": [
+            "Purpose: In New Zealand, Pacific immigrants are among the fastest growing ethnic minorities but, as a group, they are also at most risk of not realising their literacy and educational aspirations critical for achieving their human potential and wellbeing. This may be due, in part, to a misalignment in the shared understanding of academic success between students, parents and their teachers within largely non-Pacific school environments. This study aims to report levels of agreement in child-mother, child-teacher, and mother-teacher perceptions of Pacific children\u2019s academic performance at age 6 years. Method: A cohort of Pacific infants born during 2000 in Auckland, New Zealand, was followed as part of the Pacific Islands Families study. Maternal home interviews were conducted at 6-weeks and 6-years postpartum, together with separate child and teacher elicitations at 6-years. Pairwise agreement of academic performance responses was assessed using Cohen\u2019s weighted \u03ba statistic, along with symmetry and marginal homogeneity tests. Results: At 6-years, information was available for 1,001 children and their mothers, and teachers\u2019 evaluations for 549 children. Negligible to slight agreements and significant asymmetry were found between the child-mother (\u03ba = 0.03, 95% CI: -0.03, 0.09), child-teacher (\u03ba = 0.04, 95% CI: 0.01, 0.08), and mother-teacher (\u03ba = 0.07, 95% CI: 0.03, 0.11) pairwise assessments\u2013with children and mothers more likely to rate Pacific children\u2019s academic performance higher than their teachers. Significantly higher concordances with teacher assessments were found among mothers with post-secondary education, proficiency in English, and stronger alignment with New Zealand culture and for children who performed strongly on a standardised measure of performance relative to their peers. Conclusion: Strategies are needed to align Pacific students\u2019 and parental perceptions with documented educational achievement outcomes and to facilitate more effective and timely feedback on achievement results and home-school communication. The importance of removing language, cultural and socio-economic barriers to achieving shared understanding of academic performance between teachers and families is highlighted. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Perceptions of Pacific children\u2019s academic performance at age 6 years: A multi-informant agreement study",
+          "score": 11.402982
+        },
+        {
+          "id": "10.1371/journal.pone.0311793",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-10-28T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Weisong Chen",
+            "Bowei Zhou",
+            "Xuan Wang",
+            "Lin Li"
+          ],
+          "abstract": [
+            "\nIn recent decades, the concept of \"Physical Literacy\" has emerged as a significant breakthrough in enhancing the physical health of children and adolescents. This concept has become the guiding principle and future direction for physical education reform in Western countries. As China\u2019s economic and social development enters a new phase, the negative impact of insufficient physical activity on adolescent health remains a significant challenge to the strategies of \"Healthy China\" and \"A Leading Sports Nation.\" The unique value of physical literacy, which emphasizes the importance of regular physical activity, aligns perfectly with the developmental needs of the nation, the era, and individuals. Given the crucial role of interpersonal support in the development of adolescents\u2019 physical literacy, this study employs questionnaire surveys and statistical analysis to investigate the current state of physical literacy among Chinese adolescents. It explores the predictive relationship between parental support, teacher support, and peer support on physical literacy, aiming to provide guidance for the future development of adolescents\u2019 physical literacy. The research findings indicate significant differences in the five dimensions of physical literacy (attitude, sports knowledge, emotion, athletic ability, and physical fitness) among adolescents of different grades and residence type. Additionally, there are notable gender differences in the dimensions of sports knowledge, emotion, and athletic ability. The interaction effect of gender and grade is particularly evident in the emotional and physical fitness dimensions. There is a significant correlation between interpersonal support and all dimensions of physical literacy. After controlling for variables such as gender, grade, and family background, interpersonal support for adolescent physical exercise was found to have a significant impact on all dimensions of physical literacy. Among the forms of support, peer support was identified as a more powerful predictor of physical literacy compared to parental and teacher support.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Research on the relationship between physical literacy and demographic variables and interpersonal support for physical exercise among adolescents in China",
+          "score": 11.402386
+        },
+        {
+          "id": "10.1371/journal.pone.0276546",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-10-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Haomin Zhang",
+            "Jiexin Lin",
+            "Xi Cheng",
+            "Jiefang Li"
+          ],
+          "abstract": [
+            "\nRecent research has included multiple measures of morphological awareness to address the dimensionality of morphological construct in the context of modeling skilled reading. However, a majority of studies have an Anglocentric focus. The current study aims to extend the previous studies to logographic learners by evaluating the dimensionality of morphological awareness in higher-order reading comprehension among Chinese adolescent readers. A total of 686 early adolescent students (339 fifth-grade students and 347 sixth-grade students) participated in the study. They completed a series of morphological awareness measurements (morpheme recognition, morpheme discrimination, and compound structure awareness), vocabulary knowledge, lexical inference and reading comprehension. By testing three alternative path models, the study showed that morphological awareness and vocabulary knowledge were best represented as parallel covariates in predicting Chinese reading comprehension. More important, the study highlighted the mediator of lexical inference in associating morphological awareness, vocabulary knowledge and reading comprehension among Chinese readers. Empirical findings suggest that morphological awareness and vocabulary knowledge seem to be under a unitary construct in logographic reading acquisition and that word-meaning inference ability connects the path between morphological awareness and reading comprehension. These findings contribute to the complexity in the conceptualization of Chinese morphological awareness and reading instruction by examining the ways in which the morphological construct supports higher-order reading development.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "The dimensionality of morphological awareness in reading comprehension among Chinese early adolescent readers",
+          "score": 11.396248
+        },
+        {
+          "id": "10.1371/journal.pone.0317232",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2025-01-29T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Vimala Balakrishnan",
+            "Umayma Ahhmed",
+            "Faris Basheer"
+          ],
+          "abstract": [
+            "Background: Online malicious attempts such as scamming continue to proliferate across the globe, aided by the ubiquitous nature of technology that makes it increasingly easy to dupe individuals. This study aimed to identify the predictors for online fraud victimization focusing on Personal, Environment and Behavior (PEB). Methods: Social Cognitive Theory (SCT) was used as a guide in developing the PEB framework. Specifically, three factors were identified\u2014Self-awareness (Personal), Attitude (Personal and Environment) and Safe Practice (Behavior) as the potential predictors for online fraud victimization. A self-reporting questionnaire was developed based on the PEB framework and used to collect data targeting Malaysian adults. The study reports result from two separate datasets collected across two separate timelines. Study I involved data collection in January 2023 (n = 820) whereas Study II was conducted with a modified questionnaire from November 2023 \u2013January 2024 (n = 629). Study I identified the online fraud victimization predictors through an Exploratory Factor Analysis (EFA) and a hierarchical binary logistic regression. The dataset from Study II was used to validate the online fraud victimization model derived from Study I by executing another round of hierarchical binary logistic regression. Results: Results from both the samples show that most of the respondents are aware of digital privacy. EFA from Study I yielded a five-factor solution with a total variance of 60.6%, namely, Self-awareness, Safe Practice, Bank Trust, Overconfidence and Social Influence. Hierarchical binary logistic regression results from both the studies were found to be consistent. Specifically, Overconfidence (\u03b2 = 0.374; OR = 1.453; 95% CI [1.119, 1.887]; p = 0.005) and Social Influence (\u03b2 = 0.332; OR = 1.225; 95% CI [1.077, 1.512]; p = 0.006) were found to significantly predict online fraud victimization as well as gender (\u03b2 = 0.364; OR = 1.440; 95% CI [1.008, 2.016]; p = 0.045) with females exhibiting higher risks to victimization. Implications: The emergence of Overconfidence and Social Influence as significant predictors can guide the development of targeted online fraud awareness campaigns and/or tools emphasizing critical thinking and skepticism. Policymakers can leverage this knowledge to implement regulations that reduce deceptive practices online, promote digital literacy programs, and mandate clearer consumer protections to mitigate the impact of social manipulation and overconfidence on fraud victimization. Conclusion: This study identifies online fraud victimization predictors, hence improving our understanding of the factors behind this phenomenon\u2014allowing for the development of effective preventive measures and policies to safeguard individuals and improve digital security. For instance, gender- specific educational campaigns can be developed to enhance awareness and equip women with strategies to detect and avoid scams. Additionally, addressing systemic factors like social norms and digital literacy gaps is crucial for creating equitable and effective solutions to reduce online fraud victimization. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Personal, environmental and behavioral predictors associated with online fraud victimization among adults",
+          "score": 11.393377
+        },
+        {
+          "id": "10.1371/journal.pone.0229591",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2020-02-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Thomas E. Allen",
+            "Donna A. Morere"
+          ],
+          "abstract": [
+            "\nPrevious research has established a correlation between literacy skills and sign language skills among deaf children raised in signing families, but little research has examined the impact of early signing skills on the rate of growth of emergent literacy in early childhood. A subset of data was extracted from a larger dataset containing national longitudinal data from a three-year investigation of early literacy development of deaf children who were between the ages of three and six at the outset of the study. Selection criteria for inclusion in this limited sample included: 1) being rated as having little or no access to spoken language and 2) being raised in homes in which signs were regularly used as a means of communication (N = 56). Our purpose was twofold: 1) to examine and describe the trajectories of growth in letter and word identification skill for this sample in relation to the participants\u2019 initial ages; and 2) to assess the degree to which the presence or deaf parents in the home (DoD) and the receptive American Sign Language (ASL) skills of the participants impacted both the level of emerging print literacy and its rate of growth over the three year period. We hypothesized that both the presence of a deaf parent in the home and the acquisition of ASL skills, a strong native language, would contribute to both the overall letter and word identification skills and to the rates of growth of this skill over time. Results indicated that having a deaf parent did, indeed, impact emergent literacy attainment, but its effect was rendered nonsignificant when ASL skill was taken into consideration. Possession of stronger ASL skills, whether or not the children had deaf parents, contributed significantly to both the levels and rate of growth. The findings contribute to the body of work that emphasizes the importance early language skills (spoken or signed) to later academic success and dispels the myth that deaf children with deaf parents have exclusive access to the acquisition of these skills.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Early visual language skills affect the trajectory of literacy gains over a three-year period of time for preschool aged deaf children who experience signing in the home",
+          "score": 11.3922825
+        },
+        {
+          "id": "10.1371/journal.pone.0307505",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-07-18T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Hang Yin",
+            "Roxana Dev Omar Dev",
+            "Kim Geok Soh",
+            "Fangyi Li",
+            "Menglong Lian"
+          ],
+          "abstract": [
+            "\nIn recent years, physical literacy (PL) has gained a great deal of attention in global academia. Children\u2019s physical activity (PA) participation is severely underrepresented today, and students\u2019 participation in PA and PL level development is strongly dependent on the PL levels of PE teachers. This study aims to offer information for PE teachers to improve their PL levels and for the future development of tools to assess the PL of PE teachers through a systematic review of studies assessing PL of PE teachers. The Preferred Reporting Items for Systematic Reviews and Meta-Analysis (PRISMA) was used to conduct a comprehensive and systematic search in six databases\u2014Web of Science, Scopus, ScienceDirect, PubMed, ProQuest; and SportDiscus, and a total of 671 papers were retrieved, but after removing duplicates, article identification, and screening only eight papers met the inclusion criteria. This study\u2019s results indicate a paucity of research related to PL among PE teachers, focusing on children, students, older adults, and children with disabilities. PE teachers performed poorly in the physical competence domain and better in the cognitive and affective domains, with a moderate level of overall PL. Only one instrument is currently available to assess PE teachers\u2019 (perceived) PL, and other studies have used instrument components. Therefore, it was concluded that the current PE teachers\u2019 PL level is not high. Also, because the concept of PL among PE teachers has not been standardized, no tool has been developed to evaluate the PL of PE teachers comprehensively and systematically. The CPD (continuing professional development) is considered an effective means of enhancing PL among PE teachers, and research should prioritize the development of CPD programs and tools that are specifically tailored to assess PL among PE teachers in the future.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Assessment and development of physical education teachers\u2019 physical literacy: A systematic review",
+          "score": 11.390244
+        },
+        {
+          "id": "10.1371/journal.pone.0294593",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-12-15T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Lianghua Gong"
+          ],
+          "abstract": [
+            "\nThe innovative teaching behaviors of college teacher are of positive significance for promoting the construction of educational informatization in China and realizing the high-quality development of higher education. Based on the theory of social cognition and theory of behavioral change, the paper explores the influential mechanism and its boundary conditions of college teachers\u2019 information literacy on their innovative teaching behaviors during the new era of educational informatization. Through the investigation of 280 college teachers, it is found that: (1) information literacy and its dimensions of information knowledge and information capability have a significant positive effect on innovative teaching behavior; (2) Creative self-efficacy plays a mediating role between information literacy (information knowledge and information capability) and innovative teaching behavior; (3) College innovation climate significantly moderates the positive relationship between information literacy (information awareness and information knowledge) and creative self-efficacy; (4) College innovation climate significantly moderates the mediating effect of creative self-efficacy between information literacy (information awareness and information knowledge) and innovative teaching behavior. Therefore, colleges and universities should focus on enhancing teachers\u2019 information literacy level and their creative self-efficacy, creating an excellent atmosphere for innovation, and encouraging college teachers to actively carry out their innovative teaching practice in the new stage of educational informatization.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "How can college teachers\u2019 information literacy empower their innovative teaching behaviors under the background of informatization?",
+          "score": 11.385452
+        },
+        {
+          "id": "10.1371/journal.pone.0175372",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2017-04-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Sarah S. Richtering",
+            "Rebecca Morris",
+            "Sze-Ee Soh",
+            "Anna Barker",
+            "Fiona Bampi",
+            "Lis Neubeck",
+            "Genevieve Coorey",
+            "John Mulley",
+            "John Chalmers",
+            "Tim Usherwood",
+            "David Peiris",
+            "Clara K. Chow",
+            "Julie Redfern"
+          ],
+          "abstract": [
+            "Introduction: Electronic health (eHealth) strategies are evolving making it important to have valid scales to assess eHealth and health literacy. Item response theory methods, such as the Rasch measurement model, are increasingly used for the psychometric evaluation of scales. This paper aims to examine the internal construct validity of an eHealth and health literacy scale using Rasch analysis in a population with moderate to high cardiovascular disease risk. Methods: The first 397 participants of the CONNECT study completed the electronic health Literacy Scale (eHEALS) and the Health Literacy Questionnaire (HLQ). Overall Rasch model fit as well as five key psychometric properties were analysed: unidimensionality, response thresholds, targeting, differential item functioning and internal consistency. Results: The eHEALS had good overall model fit (\u03c72 = 54.8, p = 0.06), ordered response thresholds, reasonable targeting and good internal consistency (person separation index (PSI) 0.90). It did, however, appear to measure two constructs of eHealth literacy. The HLQ subscales (except subscale 5) did not fit the Rasch model (\u03c72: 18.18\u201360.60, p: 0.00\u20130.58) and had suboptimal targeting for most subscales. Subscales 6 to 9 displayed disordered thresholds indicating participants had difficulty distinguishing between response options. All subscales did, nonetheless, demonstrate moderate to good internal consistency (PSI: 0.62\u20130.82). Conclusion: Rasch analyses demonstrated that the eHEALS has good measures of internal construct validity although it appears to capture different aspects of eHealth literacy (e.g. using eHealth and understanding eHealth). Whilst further studies are required to confirm this finding, it may be necessary for these constructs of the eHEALS to be scored separately. The nine HLQ subscales were shown to measure a single construct of health literacy. However, participants\u2019 scores may not represent their actual level of ability, as distinction between response categories was unclear for the last four subscales. Reducing the response categories of these subscales may improve the ability of the HLQ to distinguish between different levels of health literacy. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Examination of an eHealth literacy scale and a health literacy scale in a population with moderate to high cardiovascular risk: Rasch analyses",
+          "score": 11.3755
+        },
+        {
+          "id": "10.1371/journal.pone.0341565",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2026-02-03T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Priscilla Boafowaa Oppong",
+            "Daniel Ofori",
+            "Phanuel Wunu",
+            "Edmond Yeboah Nyamah",
+            "Evelyn Yeboah Nyamah",
+            "Justice K. G. A. Boateng",
+            "Gloria K.Q. Agyapong"
+          ],
+          "abstract": [
+            "\nProcurement remains one of the central functions in public- and private sector governance, yet relatively little attention has been given to how procurement capabilities develop during undergraduate education. This study addresses this gap by developing and validating an instrument to measure Procurement literacy of undergraduate students in Ghana. Drawing on CIPS Global Professional Standards and other policy frameworks, this study initially conceptualised six domains of procurement literacy. The initial instruments were refined through expert review before being administered to a sample of 554 students from selected public universities. The structure and psychometric properties of the administered instruments were examined using exploratory and confirmatory factor analyses. In total, a 30-item instrument grouped into five domains emerged: Ethical Procurement Practice, Procurement Planning and Decision-Making, Supplier and Contract Management, Digital and E-Procurement competency, and Legal and Policy Knowledge. The final 30-item scale demonstrated strong internal consistency, satisfactory convergent and discriminant validity, and measurement invariance across academic levels. Predictive validity was examined using the intention of students\u2019 behavioural intention to engage in ethical procurement practices, with all dimensions showing positive and statistically significant associations. Differences in procurement literacy were also observed at academic levels, with effect sizes ranging from small to moderate. Harman\u2019s single-factor test (48.5%) indicated that common method bias was not a threat. The findings suggest that procurement literacy can be measured reliably at the undergraduate level and that the instrument offers a practical tool for curriculum evaluation, instructional planning, and early capability assessment in procurement education.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "A multidimensional procurement literacy instrument: Development and validation among undergraduate procurement students in Ghana",
+          "score": 11.373643
+        },
+        {
+          "id": "10.1371/journal.pone.0257552",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2021-09-20T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Yasue Fukuda",
+            "Shuji Ando",
+            "Koji Fukuda"
+          ],
+          "abstract": [
+            "\nCountermeasures against the spread of COVID-19 have become an urgent issue in educational settings, where many group activities are necessary. Educators are key to preventing the spread of COVID-19 in educational settings. Infection prevention behavior requires comprehensive and complex measures such as self-restraint. disinfection care, hand washing, wearing masks and recommendation and implementation of vaccination. Improvement in the knowledge, skills, and preventive actions of educators vis-\u00e0-vis COVID-19 could allow for the continued provision of educational services while ensuring safety in educational settings. Therefore, the objective of this study was to explore the knowledge and preventive actions of educators regarding COVID-19 and vaccination awareness to provide appropriate support for educators. The study used data collected from 1,000 Japanese educators in January 2021 when the third wave of viral infections spread. Online surveys and multivariate linear regression analysis were used to determine age and whether respondents were being cared for by a doctor. We investigated the effects of factors on educators\u2019 willingness to be vaccinated and changes in their behavior. This study found that factors such as age, gender, whether a respondent was under a physician\u2019s care, and health literacy, affected the willingness of educators to receive vaccinations and engage in preventive actions. The study also suggests that the reliability of national government public relations efforts is lower than the reliability of local government public relations and that of information from family physicians, pharmacies, and mass media. It is therefore necessary to reexamine how information is disseminated by the national government and to increase the degree of trust in that information among the public. The findings of the study also revealed the importance of improving the provision of appropriate information and health literacy for the behavior of educators, not only during the initial outbreak, but also during the subsequent period of pandemic life.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Knowledge and preventive actions toward COVID-19, vaccination intent, and health literacy among educators in Japan: An online survey",
+          "score": 11.368793
+        },
+        {
+          "id": "10.1371/journal.pone.0288204",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-07-13T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Mohamad Fazli Sabri",
+            "Rozita Wahab",
+            "Nurul Shahnaz Mahdzan",
+            "Amirah Shazana Magli",
+            "Husniyah Abd Rahim",
+            "Siti Shazwani Ahmad Suhaimi",
+            "Nur Shuhamin Nazuri"
+          ],
+          "abstract": [
+            "\nYoung adults face many significant challenges to their financial well-being. The rising cost of living and unstable economies have impacted how they consume, manage, and save monthly income to maintain their standard of living. Hence, exploring the financial well-being of young adults in Malaysia is an intriguing and relevant research topic that deserves examination from multiple perspectives. This study aims to investigate how these three factors, namely financial knowledge and locus of control with financial behaviour as a mediator, are correlated with the financial well-being of low-income young adults in Malaysia. A total of 520 young adults from North, Central, South, East zones in Peninsular Malaysia and East Malaysia were randomly chosen using a multi-stage sampling technique as the sample of this study. Data in this study were obtained using a set of questionnaire-based survey through cross-sectional study and then scrutinized using IBM SPSS (Statistical Package of Social Science). This study discovered that financial knowledge, internal and external locus of control, and financial behaviour were significantly correlated with the financial well-being of low-income young adults. The findings also demonstrate that financial behaviour mediates the correlation between financial knowledge, both internal and external locus of control, and financial well-being. This study is one of the very few important studies that explore the link between financial literacy, locus of control, financial behaviour, and financial well-being among low-income young adults. This study also found an interesting and noteworthy fact regarding the impact of the minimum monthly wage policy on highly educated young adults in Malaysia, which is worth discussing and needs to be alerted to the policymakers and leaders of the country. Therefore, the findings of this study can be utilized as a starting point by policymakers, government organizations, and non-governmental organizations to create new initiatives aimed at raising financial well-being among the younger generation.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "An enigma of Malaysia\u2019s low-income young adults: Mediation of financial behaviour on financial well-being and locus of control cohesion",
+          "score": 11.363854
+        },
+        {
+          "id": "10.1371/journal.pone.0294765",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-11-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Gi Won Choi",
+            "Sun Ju Chang",
+            "Hee Jung Kim",
+            "Ha Na Jeong"
+          ],
+          "abstract": [
+            "Background: Health literacy is strongly associated with health inequality among persons with deafness, and hypertension (HTN) is the most prevalent chronic disease among persons with deafness in South Korea. Despite its importance, research regarding the health literacy levels of persons with deafness with HTN in South Korea is lacking. This study aimed to comprehensively assess the health literacy levels of persons with deafness with HTN in South Korea, including linguistic, functional, and internet health literacy. Methods: In this descriptive cross-sectional study, 95 persons with deafness with HTN were recruited through facilities associated with the deaf community. From August 2022 to February 2023, data were collected through face-to-face surveys attended by a sign language interpreter and online surveys. The data were analyzed using descriptive statistics and Spearman\u2019s correlation. Results: Approximately 62.1% of the participants exhibited a linguistic health literacy level corresponding to less than that of middle school students, and the total percentage correct of functional health literacy was 17.9%. Each domain of internet health literacy was low. Significant correlations were found between some aspects of health literacy. Conclusions: The study\u2019s findings highlight the low health literacy levels across various facets among persons with deafness with HTN in South Korea. Based on these findings, several strategies are suggested for developing HTN self-management interventions for persons with deafness. This study contributes to the foundational understanding of health literacy among persons with deafness with HTN in South Korea and provides valuable insights and guidance for developing HTN self-management interventions. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Understanding health literacy of deaf persons with hypertension in South Korea: A cross-sectional study",
+          "score": 11.347988
+        },
+        {
+          "id": "10.1371/journal.pone.0333089",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-09-23T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Mir Hasib",
+            "Md. Shariful Islam"
+          ],
+          "abstract": [
+            "\nThis study examined university students\u2019 perceptions and practices of using ChatGPT through a qualitative approach, employing semi-structured, in-depth interviews with 20 Khulna University students. Using thematic analysis, the research identified key themes, including both academic and non-academic motivations, with applications ranging from assignments and research to entertainment. Despite limitations such as false references and predetermined feedback, students found ChatGPT efficient and useful both inside and outside the classroom. However, concerns about academic integrity arose, as some students devised creative ways to bypass existing plagiarism detection systems. Ethical considerations emerged regarding responsible AI use, underscoring the need for clear guidelines and training to ensure proper referencing and the development of critical thinking skills. Future research should focus on continuous evaluation and the implementation of support services to encourage the responsible integration of ChatGPT in university settings.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "How University students in Bangladesh engage with ChatGPT: A qualitative study",
+          "score": 11.346869
+        },
+        {
+          "id": "10.1371/journal.pone.0324998",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-06-04T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Dani Tomlin",
+            "Patrick Bowers",
+            "Benjamin Zonca",
+            "Kelley Graydon",
+            "Jocelyn Phillips",
+            "Gary Rance"
+          ],
+          "abstract": [
+            "Background: The capacity to listen effectively greatly influences learning. Speech understanding in noise, a crucial element of listening, involves the ability to comprehend and interpret speech despite surrounding auditory distractions or background noise. While numerous studies have examined the effect of noise on academic success, there is a noticeable lack of research focusing on how a student\u2019s skill in understanding speech amidst noise connects to their unique educational achievements and overall learning journey. This study explores the relationship between listening ability and educational achievement. Design: 108 primary school aged children; 55 from Grade 3 (mean age of 8 years 9 months) and 53 from Grade 5 (mean age of 10 years 7 months) participated in this study. Children completed both a listening skills assessment, using the Sound Scouts platform and the National Assessment Program - Literacy and Numeracy (NAPLAN). Interactions between results were explored. Results: A significant interaction between speech-in-noise ability and reading was seen in the combined cohort. When exploring interactions between variables within year levels, significant correlations between literacy (reading, grammar/punctuation, writing and spelling) outcomes, but not numeracy, were found in the Grade 3 children. No significant interaction between listening skills and academic achievement were observed in the Grade 5 cohort. Summary: The link between speech-in noise ability and literacy development provides insight into overlapping processes in both skills and their developmental trajectories. This highlights the importance of identifying not only the role that noise itself plays in learning, but the skills that support the ability to manage classroom listening environments. This research has implications for early hearing screening programs, teaching approaches, and interventions focused on enhancing the learning environment for all students. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Speech-in-noise recognition as a predictor of academic achievement",
+          "score": 11.343341
+        },
+        {
+          "id": "10.1371/journal.pone.0270988",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-07-21T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Mina Jeon",
+            "Mi-Sun Lee",
+            "Ji-Young Yoon",
+            "Soo-Young Bhang"
+          ],
+          "abstract": [
+            "\nThe last few decades have seen an increased interest in \u2018Mental Health Literacy (MHL)\u2019 which addresses knowledge and beliefs relating to mental health problems and is likely to hinder treatment-seeking behaviors. Although MHL research to date has explored various mental disorders, far too little attention has been paid to Internet Gaming Disorder (IGD) and Problematic Smartphone use (PSU). The objective of this study is to develop an MHL questionnaire for IGD and PSU by adopting the MHL approach in the previous literature and examine MHL of IGD and PSU in Korean teenagers by focusing on their ability to recognize addictions, and perceptions and help-seeking attitudes towards a person with addictions. The current study also aimed to compare Korean teenagers\u2019 MHL depending on low- and high-risk of IGD and PSU. A total of 169 teenagers aged 10 and 16 years were recruited from schools and children\u2019s centers in Seoul and completed the newly developed MHL questionnaire and screening questionnaires for IGD and PSU. The MHL questionnaire for IGD and PSU was designed as a vignette-based questionnaire that depicted behavioral characteristics of a severe problem with Internet and smartphone usage. Korean teenagers had a poor ability to recognize IGD and PSU and were more prone to seek parental help than professional help. The current study also showed that teenagers had better recognition of IGD than PSU and perceived that a person with IGD has a more difficult life than a person with PSU. Furthermore, a low-risk or high-risk group of IGD or PSU showed minimal differences in MHL. The current study provided empirical evidence to support a need to develop educational programs to improve Korean teenagers\u2019 MHL for both IGD and PSU.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Mental health literacy of Internet gaming disorder and problematic smartphone use among Korean teenagers",
+          "score": 11.341667
+        },
+        {
+          "id": "10.1371/journal.pone.0263153",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-01-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Jagan Kumar Baskaradoss",
+            "Aishah AlSumait",
+            "Eman Behbehani",
+            "Muawia A. Qudeimat"
+          ],
+          "abstract": [
+            "Aim: Previous studies have shown that children of caregivers with low oral health literacy (OHL) had more untreated caries than children of caregivers with adequate OHL. However, there is a paucity of information on this relationship among children and youth with special health care needs (CYSHCN). Accordingly, this study aims to assess the association between the caregivers\u2019 OHL and the oral health status of CYSHCN. Methods: This cross-sectional study was conducted in four schools dedicated for CYSHCN. A 48-item questionnaire gathered information about the demographic and socioeconomic factors, the child/adolescent\u2019s medical condition, dental characteristics, caregiver self-efficacy and the child\u2019s dental attitude. The Comprehensive Measure of Oral Health Knowledge (CMOHK) questionnaire was used to assess the caregivers\u2019 OHL. The L\u00f6e & Silness gingival index (GI) and the Silness & L\u00f6e plaque index (PI) were used to assess gingival health and plaque levels, respectively. Directed acyclic graphs (DAGs) were utilized for the selection of the appropriate set of confounding variables for regression analysis. The mean score differences and 95% confidence intervals (CI) were estimated to quantify the associations of the various covariates with oral health outcome variables. Results: This study included 214 child/caregiver dyads. Most participants were physically disabled (56.1%) followed by children with hearing difficulty (9.8%) and congenital anomalies/syndromes (7.9%). The mean PI and GI of the children was 1.26\u00b10.52 and 1.30\u00b10.47, respectively. The median CMOHK score was 12 and the respondents were dichotomized based on the median value. Low caregiver oral health conceptual knowledge was significantly associated with higher PI scores (\u03b2 [95% CI] = -0.26 [-0.41, -0.13]; p<0.001. Older participants (12-21-year-olds) had significantly higher plaque scores compared with younger participants (6-12-year-olds) (\u03b2 [95% CI] = 0.33 [0.18, 0.51]; p<0.001). Participants who brushed their teeth twice or more daily had significantly lower (\u03b2 [95% CI] = -0.15 [-0.43, -0.01]; p = 0.046). Conceptual knowledge score was not significantly associated with GI. Conclusion: This study found lower caregiver OHL levels to be associated with higher plaque scores for their child. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Association between the caregivers\u2019 oral health literacy and the oral health of children and youth with special health care needs",
+          "score": 11.335384
+        },
+        {
+          "id": "10.1371/journal.pone.0089900",
+          "journal": "PLoS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2014-02-26T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Katharina Galuschka",
+            "Elena Ise",
+            "Kathrin Krick",
+            "Gerd Schulte-K\u00f6rne"
+          ],
+          "abstract": [
+            "\nChildren and adolescents with reading disabilities experience a significant impairment in the acquisition of reading and spelling skills. Given the emotional and academic consequences for children with persistent reading disorders, evidence-based interventions are critically needed. The present meta-analysis extracts the results of all available randomized controlled trials. The aims were to determine the effectiveness of different treatment approaches and the impact of various factors on the efficacy of interventions. The literature search for published randomized-controlled trials comprised an electronic search in the databases ERIC, PsycINFO, PubMed, and Cochrane, and an examination of bibliographical references. To check for unpublished trials, we searched the websites clinicaltrials.com and ProQuest, and contacted experts in the field. Twenty-two randomized controlled trials with a total of 49 comparisons of experimental and control groups could be included. The comparisons evaluated five reading fluency trainings, three phonemic awareness instructions, three reading comprehension trainings, 29 phonics instructions, three auditory trainings, two medical treatments, and four interventions with coloured overlays or lenses. One trial evaluated the effectiveness of sunflower therapy and another investigated the effectiveness of motor exercises. The results revealed that phonics instruction is not only the most frequently investigated treatment approach, but also the only approach whose efficacy on reading and spelling performance in children and adolescents with reading disabilities is statistically confirmed. The mean effect sizes of the remaining treatment approaches did not reach statistical significance. The present meta-analysis demonstrates that severe reading and spelling difficulties can be ameliorated with appropriate treatment. In order to be better able to provide evidence-based interventions to children and adolescent with reading disabilities, research should intensify the application of blinded randomized controlled trials.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Effectiveness of Treatment Approaches for Children and Adolescents with Reading Disabilities: A Meta-Analysis of Randomized Controlled Trials",
+          "score": 11.326929
+        },
+        {
+          "id": "10.1371/journal.pone.0291748",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-09-20T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Rafaela Ros\u00e1rio",
+            "Sara Barros Ara\u00fajo",
+            "Ana Silva",
+            "S\u00edlvia Barros"
+          ],
+          "abstract": [
+            "Aim: To analyze the associations between early childhood education (ECE) teachers\u00b4 digital health literacy (DHL) and well-being, and to determine whether the ECE teachers\u00b4 interaction with children and family mediated these associations. Methods: A total of 853 early childhood teachers, predominantly women (99.4%) participated in this cross-sectional study. The participants had a mean age of 39.9 years (standard deviation SD = 8.2). Data was collected through an online survey. DHL was assessed using five subscales adapted to the new coronavirus context, and the professionals\u00b4 well-being was measured using the WHO-5 well-being scale. Binary logistic regression and mediation analysis were used to analyze the data. Results: ECE teachers\u2019 DHL in dimensions of \u201cinformation searching\u201d and \u201cdetermining relevance\u201d had both direct and indirect effect on their well-being. Specifically, higher DHL in these dimensions was associated with better well-being. The dimension \u201cevaluating reliability\u201d had an indirect positive effect on well-being by promoting interaction with children. Conclusion: These findings suggest that improving ECE teachers\u00b4 DHL could have a positive effect on their well-being and their interactions with children. Therefore, it is recommended to develop health promotion practices aimed at enhancing DHL among ECE teachers. Additionally, integrating DHL contents and competencies more prominently into the qualification, further education and training of ECE teachers may help equip them with the necessary skills to access and apply health information effectively. This, in turn, can enhance interactions with children and contribute to their overall well-being. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Roles of the interaction with children and families in mediating the association between digital health literacy and well-being of early childhood teachers in Portugal: A cross-sectional study",
+          "score": 11.312745
+        },
+        {
+          "id": "10.1371/journal.pone.0218770",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2019-06-26T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Liz Dowthwaite",
+            "Elvira Perez Vallejos",
+            "Ansgar Koene",
+            "Monica Cano",
+            "Virginia Portillo"
+          ],
+          "abstract": [
+            "\nThe 5Rights Youth Juries are an educational intervention to promote digital literacy by engaging participants (i.e. jurors) in a deliberative discussion around their digital rights. The main objective of these jury-styled focus groups is to encourage children and young people to identify online concerns and solutions with a view to developing recommendations for government policy-makers and industry chiefs. The methodology included a series of dramatized scenarios that encourage jurors to deliberate about their digital rights. This paper compares two formats for these scenarios: live actors and professionally recorded and edited videos of the same actors. Results failed to show any major differences between formats indicating the cost-effectiveness of the video-recorded format and the possibility for others to run the 5Rights Youth Juries with the support of an online open educational resource.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "A comparison of presentation methods for conducting youth juries",
+          "score": 11.303446
+        },
+        {
+          "id": "10.1371/journal.pone.0125975",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2015-05-11T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Zhixia Zhang",
+            "Xingxin Zhan",
+            "Yingxue Li",
+            "Rong Hu",
+            "Weirong Yan"
+          ],
+          "abstract": [
+            "Background: Equitable access to basic public health services is a priority in China. However, primary healthcare workers\u2019 competence to deliver public health services is relatively poor because they lack professional training. Since the availability of web-based training has increased in China, the current study explored stakeholders\u2019 perceptions of a web-based training program on basic public health services to understand their thoughts, experiences, and attitudes about it. Methods: Six focus group discussions with primary healthcare workers and three with directors of township hospitals, county-level Health Bureaus, and county-level Centers for Disease Control and Prevention were conducted in Yichang City during 2013. Semi-structured topic guides were used to facilitate qualitative data collection. Audio recordings of the sessions were transcribed verbatim and theme analysis was performed. Results: Most of the study\u2019s participants, especially the village doctors, had insufficient knowledge of basic public health services. The existing training program for primary healthcare workers consisted of ineffective traditional face-to-face sessions and often posed accessibility problems for the trainees. Most of the study\u2019s participants had a positive attitude about web-based learning and expressed a strong desire to receive this novel training approach because of its flexibility and convenience. The perceived barriers to utilizing the web-based training method included poor computer literacy, lack of personal interaction, inadequate infrastructure, and lack of time and motivation. The facilitators of this approach included the training content applicability, the user-friendly and interactive learning format, and policy support. Conclusions: Web-based training on basic public health services is a promising option in rural China. The findings of the study will contribute knowledge to implementation of web-based training in similar settings. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Web-Based Training for Primary Healthcare Workers in Rural China: A Qualitative Exploration of Stakeholders\u2019 Perceptions",
+          "score": 11.291235
+        },
+        {
+          "id": "10.1371/journal.pone.0324564",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-06-04T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Wai Mar Phyo",
+            "Marianne Nikolov",
+            "\u00c1gnes H\u00f3di"
+          ],
+          "abstract": [
+            "\nThe ability to write academic texts in English requires both knowledge of academic writing conventions and expertise in academic discourse to address the needs and expectations of the target academic audience in respective disciplines (Hyland, 2018). This study investigates the relationship between non-native English-speaking doctoral students\u2019 English academic writing abilities and various factors, including their English literacy background, research knowledge, ability to read and critically evaluate academic texts, coping with emotional challenges such as stress and anxiety, as well as feedback and motivation. A total of 255 international doctoral students, speaking 49 different first languages, participated in the study. Data were collected via a survey with items presented on a 1\u20136 Likert scale following D\u00f6rnyei and Dewaele (2022). The analysis revealed the significant impact of English literacy background, initial academic writing abilities, and research knowledge on students\u2019 self-assessment of academic writing skills and research competence at the outset of their doctoral studies. While prior experience in academic writing proved beneficial, it did not always translate into significant improvements in current writing abilities or research knowledge at later stages. Feedback from advisors and doctoral research course instructors emerged as vital components in supporting academic reading and motivation throughout their doctoral journey. However, the quality of peer feedback appeared to have less impact on students\u2019 academic performance and psychological state. Overall, these findings underscore the complexity of factors influencing academic writing and research competence among NNES doctoral students, suggesting the importance of tailored support and interventions to enhance their scholarly development.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Factors underlying international doctoral students\u2019 English academic writing abilities",
+          "score": 11.283957
+        },
+        {
+          "id": "10.1371/journal.pone.0338543",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-12-16T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Qizhong Ou",
+            "Songqiao Wu",
+            "Yilu Jiang",
+            "Zhenni He",
+            "Haiqiu Luo"
+          ],
+          "abstract": [
+            "\nEnsuring teachers effectively integrate digital technologies is crucial for modernizing education, yet the success of large-scale training initiatives often varies. This study investigates the factors shaping technology adoption among 2,821 K\u201312 teachers following a national digital literacy program. Using a Structural Equation Model (SEM) based on the UTAUT framework, this research employs a multi-group analysis to examine how adoption drivers differ across key demographic segments. Results show that social influence and performance expectancy are the primary drivers of teachers\u2019 intention to use digital resources, which in turn strongly predicts actual use. Notably, the influence of these factors varies significantly depending on teachers\u2019 regional context, educational stage, and prior digital experience, highlighting the limitations of a uniform approach to professional development. The findings provide a nuanced evidence base for designing more targeted and effective teacher support strategies.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "From training to practice: A multi-group analysis of factors influencing K-12 teachers\u2019integration of Digital Educational Resources (DERs)",
+          "score": 11.266348
+        },
+        {
+          "id": "10.1371/journal.pone.0192163",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2018-02-05T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Soo-hyun Im",
+            "Joo-Yun Cho",
+            "Janet M. Dubinsky",
+            "Sashank Varma"
+          ],
+          "abstract": [
+            "\nEducators are increasingly interested in applying neuroscience findings to improve educational practice. However, their understanding of the brain often lags behind their enthusiasm for the brain. We propose that educational psychology can serve as a bridge between basic research in neuroscience and psychology on one hand and educational practice on the other. We evaluated whether taking an educational psychology course is associated with increased neuroscience literacy and reduced belief in neuromyths in a sample of South Korean pre-service teachers. The results showed that taking an educational psychology course was associated with the increased neuroscience literacy, but there was no impact on belief in neuromyths. We consider the implications of these and other findings of the study for redesigning educational psychology courses and textbooks for improving neuroscience literacy.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Taking an educational psychology course improves neuroscience literacy but does not reduce belief in neuromyths",
+          "score": 11.264954
+        },
+        {
+          "id": "10.1371/journal.pone.0334214",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-10-17T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Chuangxin Zhao",
+            "Manping Tang",
+            "Changxiang Wang"
+          ],
+          "abstract": [
+            "\nImproving the urban integration of migrant workers is a crucial requirement for advancing people-centered new urbanization. Based on the micro-data of two China Family Panel Study (CFPS) in 2016 and 2018, this paper analyzes both theoretically and empirically the impact of digital literacy on the urban integration of migrant workers. The findings indicate that digital literacy plays a significant role in enhancing the urban integration of migrant workers; This effect is the strongest in terms of economic integration and relatively weak in terms of psychological integration. The results of the quantile regression show that the positive impact of digital literacy is more pronounced for groups with lower levels of urban integration compared to those with higher levels. Mechanism analysis reveals that digital literacy effectively improves urban integration by enhancing information access and facilitating social interactions. Heterogeneity analysis suggests that digital literacy has a more significant impact on the urban integration of low education levels, the new generation, and migrant workers from the eastern region. The conclusion enriches the theoretical research on the integration of migrant workers into urban areas in the digital age, and provides policy references for the government to attach importance to optimizing digital literacy education and further promote the comprehensive realization of the integration of migrant workers into urban areas.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "The impact of digital literacy on the urban integration of migrant workers",
+          "score": 11.264937
+        },
+        {
+          "id": "10.1371/journal.pone.0260224",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2021-11-30T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Mandy Gijzen",
+            "Sanne Rasing",
+            "Rian van den Boogaart",
+            "Wendy Rongen",
+            "Twan van der Steen",
+            "Daan Creemers",
+            "Rutger Engels",
+            "Filip Smit"
+          ],
+          "abstract": [
+            "Background: Stigma and limited mental health literacy impede adolescents getting the help they need for depressive symptoms. A serious game coupled with a classroom session led by lived experience workers (LEWs) might help to overcome these barriers. The school-based Strong Teens and Resilient Minds (STORM) preventive program employed this strategy and offered a serious game, Moving Stories. The current study was carried out to assess inhibiting and promoting factors for scaling up Moving Stories once its effectiveness has been ascertained. Methods: Moving Stories was offered in three steps: (1) introductory classroom session, (2) students playing the game for five days, (3) debriefing classroom session led by lived experience worker. Data was collected on the number of participating students, costs of offering Moving Stories, and was further based on the notes of the debriefing sessions to check if mental health first aid (MHFA) strategies were addressed. Results: Moving Stories was offered in seven high-schools. Coverage was moderate with 982 participating students out of 1880 (52%). Most participating students (83%) played the Moving Stories app three out of the five days. Qualitative data showed that the MHFAs were discussed in all debriefing sessions. Students showed great interest in lived experience workers\u2019 stories and shared their own experiences with depression. Conclusions: Bringing Moving Stories to scale in the high-school setting appears feasible, but will remain logistically somewhat challenging. Future implementation and scale-up of Moving Stories could benefit from improved selection and training of LEWs that played such an important role in grabbing the full attention of students and were able to launch frank discussions about depressive disorder and stigma in classrooms. Trial registration: The study is registered in the Dutch Trial Register: Trial NL6444 (NTR6622: https://www.trialregister.nl/trial/6444). "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Feasibility of a serious game coupled with a contact-based session led by lived experience workers for depression prevention in high-school students",
+          "score": 11.26231
+        },
+        {
+          "id": "10.1371/journal.pone.0294902",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-01-19T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Jiani Liu",
+            "Kim Jungyin",
+            "Shim Jaewoo",
+            "Lee Heechul",
+            "Wasi Ul Hassan Shah"
+          ],
+          "abstract": [
+            "\nChina\u2019s higher education system is one of the largest and most complex in the world, with a vast number of higher education institutions scattered across different provinces. Evaluating the efficiency, productivity change, and technology gaps of these institutions is significant for understanding their performance and identifying areas for improvement. In this context, this study employs three different approaches, DEA super-SBM, Malmquist Productivity Index, and Meta-Frontier Analysis, to evaluate the efficiency, productivity change, and technology gaps of China\u2019s provincial higher education systems. The study results revealed that the average higher education efficiency in China is 1.0015 for the study period of 2010\u20132021. A rapid and continuous increase was witnessed in higher education efficiency in China from 2014 to 2020. Meta-frontier and Group-frontier, higher education efficiency scores of low-level literate provinces are greater than middle and high-level literate provinces. However, the TGR of higher and middle-level literate provinces is greater than low-level literate provinces, indicating a superior technological level. The average MI score is 1.0034, indicating growth in productivity change. Efficiency change is the main determinant in higher education productivity growth instead of technological growth. The Middle and Low-level literate provinces witnessed growth in higher education productivity, while high-level literate provinces observed a decline in productivity change. The Kruskal-Wallis test provides evidence that a significant statistical difference exists among the three groups of education levels for the average scores of MI, EC, TC, and TGR.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Evaluating the efficiency, productivity change, and technology gaps of China\u2019s provincial higher education systems: A comprehensive analytical framework",
+          "score": 11.258755
+        },
+        {
+          "id": "10.1371/journal.pone.0217197",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2019-05-23T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Lauren Eyler",
+            "Alan Hubbard",
+            "Catherine Juillard"
+          ],
+          "abstract": [
+            "\nHealth disparities research in low- and middle-income countries (LMICs) is hampered by the difficulty of measuring economic status in low-resource settings. We previously developed the EconomicClusters k-medoids clustering-based algorithm for defining population-specific economic models based on few Demographic and Health Surveys (DHS) assets. The algorithm previously defined a twenty-group economic model for Cameroon. The aims of this study are to optimize the functionality of our EconomicClusters algorithm and app based on collaborator feedback from early use of this twenty-group economic model, to test the validity of the model as a metric of economic status, and to assess the utility of the model in another LMIC context. We condense the twenty Cameroonian economic groups into fewer, ordinally-ranked, groups using agglomerative hierarchical clustering based on mean cluster child height-for-age Z-score (HAZ), women\u2019s literacy score, and proportion of children who are deceased. We develop an EconomicClusters model for Ghana consisting of five economic groups and rank these groups based on the same three variables. The proportion of variance in women\u2019s literacy score accounted for by the EconomicClusters model was 5\u201312% less than the proportion of variance accounted for by the DHS Wealth Index model. The proportion of the variance in child HAZ and proportion of children who are deceased accounted for by the EconomicClusters model was similar to (0.4\u20132.5% less than) the proportion of variance accounted for by the DHS Wealth Index model. The EconomicClusters model requires asking only five questions, as opposed to greater than twenty Wealth Index questions. The EconomicClusters algorithm and app could facilitate health disparities research in any country with DHS data by generating ordinally-ranked, population-specific economic models that perform nearly as well as the Wealth Index in evaluating variability in health and social outcomes based on wealth status but that are more feasible to assess in time-constrained settings.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Optimization and validation of the EconomicClusters model for facilitating global health disparities research: Examples from Cameroon and Ghana",
+          "score": 11.258617
+        },
+        {
+          "id": "10.1371/journal.pone.0284028",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-04-06T00:00:00Z",
+          "article_type": "Study Protocol",
+          "author_display": [
+            "Hind Mohamed",
+            "Jon Salsberg",
+            "Dervla Kelly"
+          ],
+          "abstract": [
+            "Background: The epidemiological transition phenomena drive the attention to focus the scope on health literacy as it has an impact on patients\u2019 health outcomes and quality of life. Aim: This paper aims to explore the implemented interventions for improving users\u2019 ability to identify trustworthy online health information. Methodology: A comprehensive search of the literature will be conducted on the following electronic bibliographic databases: Ovid Medline, Embase, Cochrane database, Academic search complete and APA psycinfo. Further, manual search of eligible studies reference lists will be carried out to identify other eligible studies. The search strategy will include a combination of three key blocks of terms, namely: (adult OR adults) Or (patient OR patients) OR (layperson OR laypersons) OR (caregiver OR caregivers), (Intervention OR Interventions) OR Educational programs OR (health literacy And curriculum) OR Community outreach OR Interactive workshops OR (Online portal OR Patient Portals), and information seeking behavior OR consumer health information OR online information OR social media OR access to information. The results of these categories will then be combined using the AND connector. Two independent reviewers will screen and assess data quality. Disagreements will be resolved by consensus. Due to the anticipated methodological pluralism of the potentially eligible studies, a narrative synthesis of the findings on interventions aimed at improving users\u2019 ability to identify trustworthy online information will be provided according to the pre-identified thematic areas. Furthermore, a narrative synthesis of the reported barriers and facilitators for applying these interventions by end users. Expected results and impact: Given that the focus of our review findings is on understanding the breadth and depth of the global research into interventions to improve users\u2019 ability to identify trustworthy online health information. The findings will be of great value to inform future innovative approaches to promote identification of trustable online sources for young people worldwide. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "An integrative review protocol on interventions to improve users\u2019 ability to identify trustworthy online health information",
+          "score": 11.252744
+        },
+        {
+          "id": "10.1371/journal.pcbi.1000035",
+          "journal": "PLoS Computational Biology",
+          "eissn": "1553-7358",
+          "publication_date": "2008-04-25T00:00:00Z",
+          "article_type": "Education",
+          "author_display": [
+            "Manuel Jo\u00e3o Costa",
+            "Eduardo Galembeck",
+            "Guilherme A. Marson",
+            "Bayardo B. Torres"
+          ],
+          "abstract": [
+            ""
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "A Quick Guide for Computer-Assisted Instruction in Computational Biology and Bioinformatics",
+          "score": 11.241617
+        },
+        {
+          "id": "10.1371/journal.pone.0282202",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-03-08T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Jana Siebert",
+            "Johannes Ulrich Siebert"
+          ],
+          "abstract": [
+            "\nThe spread and influence of misinformation have become a matter of concern in society as misinformation can negatively impact individuals\u2019 beliefs, opinions and, consequently, decisions. Research has shown that individuals persevere in their biased beliefs and opinions even after the retraction of misinformation. This phenomenon is known as the belief perseverance bias. However, research on mitigating the belief perseverance bias after the retraction of misinformation has been limited. Only a few debiasing techniques with limited practical applicability have been proposed, and research on comparing various techniques in terms of their effectiveness has been scarce. This paper contributes to research on mitigating the belief perseverance bias after the retraction of misinformation by proposing counter-speech and awareness-training techniques and comparing them in terms of effectiveness to the existing counter-explanation technique in an experiment with N = 251 participants. To determine changes in opinions, the extent of the belief perseverance bias and the effectiveness of the debiasing techniques in mitigating the belief perseverance bias, we measure participants\u2019 opinions four times in the experiment by using Likert items and phi-coefficient measures. The effectiveness of the debiasing techniques is assessed by measuring the difference between the baseline opinions before exposure to misinformation and the opinions after exposure to a debiasing technique. Further, we discuss the efforts of the providers and recipients of debiasing and the practical applicability of the debiasing techniques. The CS technique, with a very large effect size, is the most effective among the three techniques. The CE and AT techniques, with medium effect sizes, are close to being equivalent in terms of their effectiveness. The CS and AT techniques are associated with less cognitive and time effort of the recipients of debiasing than the CE technique, while the AT and CE techniques require less effort from the providers of debiasing than the CS technique.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Effective mitigation of the belief perseverance bias after the retraction of misinformation: Awareness training and counter-speech",
+          "score": 11.229216
+        },
+        {
+          "id": "10.1371/journal.pone.0281790",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-09-28T00:00:00Z",
+          "article_type": "Study Protocol",
+          "author_display": [
+            "Samantha A. Chuisano",
+            "Jane Rafferty",
+            "Alison Allen",
+            "Tammy Chang",
+            "Matthew Diemer",
+            "Kara Harris",
+            "Lisa M. Vaughn",
+            "Daphne C. Watkins",
+            "Melissa DeJonckheere"
+          ],
+          "abstract": [
+            "Background: Despite decades of calls for increased diversity in the health research workforce, disparities exist for many populations, including Black, Indigenous, and People of Color individuals, those from low-income families, and first-generation college students. To increase representation of historically marginalized populations, there is a critical need to develop programs that strengthen their path toward health research careers. High school is a critically important time to catalyze interest and rebuild engagement among youth who may have previously felt excluded from science, technology, engineering, and mathematics (STEM) and health research careers. Methods: The overall objective of the MYHealth program is to engage high school students in a community-based participatory research program focused on adolescent health. Investigators will work alongside community partners to recruit 9th through 12th graders who self-identify as a member of a group underrepresented in STEM or health research careers (e.g., based on race and ethnicity, socioeconomic status, first generation college student, disability, etc.). MYHealth students are trained to be co-researchers who work alongside academic researchers, which will help them to envision themselves as scientists capable of positively impacting their communities through research. Implemented in three phases, the MYHealth program aims to foster a continuing interest in health research careers by developing: 1) researcher identities, 2) scientific literacy, 3) scientific self-efficacy, and 4) teamwork and leadership self-efficacy. In each phase, students will build knowledge and skills in research, ethics, data collection, data analysis, and dissemination. Students will directly collaborate with and be mentored by a team that includes investigators, community advisors, scientific advisors, and youth peers. Discussion: Each year, a new cohort of up to 70 high school students will be enrolled in MYHealth. We anticipate the MYHealth program will increase interest and persistence in STEM and health research among groups that have been historically excluded in health research careers. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Increasing representation and diversity in health research: A protocol of the MYHealth research training program for high school students",
+          "score": 11.226522
+        },
+        {
+          "id": "10.1371/journal.pone.0314388",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-12-02T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Pa Sulay Jobe",
+            "Murat Yilmaz",
+            "H\u00fcseyin Emre Ilg\u0131n"
+          ],
+          "abstract": [
+            "\nThis paper explores the integration of Metaverse technologies into the digital governance framework of The Gambia, in order to identify the sectors where these innovations can be implemented most effectively. Driven by the pursuit of cutting-edge solutions to improve governance, improve public service delivery, and promote citizen engagement, the study uses qualitative analysis methodologies, including interviews with Information Technology (IT) professionals and an examination of government reports. Through the application of NVivo software for data analysis, essential themes and areas suitable for Metaverse applications were uncovered. These include the potential of the Metaverse to fundamentally transform sectors such as education, public service, infrastructure development, urban planning, and cultural heritage tourism. Despite recognizing the capacity of the Metaverse for transformative impact, this research identifies significant obstacles, including technical infrastructure readiness, ethical issues, and the need for policy reform. The findings highlight the need to address these challenges through substantial improvements in digital infrastructure, literacy, ethical guidelines, and policy frameworks. The study calls for a multistakeholder collaboration model, which incorporates government, the private sector, academia, and international bodies, to ensure the successful integration of the Metaverse into the digital governance of The Gambia. Offering comprehensive insights and strategic recommendations, this research underscores the collective effort required of all stakeholders to harness the full potential of the Metaverse, thus facilitating an inclusive and efficient digital governance ecosystem in the Gambia.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "A roadmap for a Metaverse-based digital governance: A case of the Gambia",
+          "score": 11.226453
+        },
+        {
+          "id": "10.1371/journal.pone.0332047",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-09-29T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Esra Bozkurt Altan",
+            "Tu\u011fra Karademir Co\u015fkun",
+            "Nurhan \u00d6zt\u00fcrk",
+            "Yasemin Hac\u0131o\u011flu"
+          ],
+          "abstract": [
+            "\nIn this study, the experiences of science teachers who applied the design-based learning (DBL) method in science lessons and received mentoring support towards technology integration were analyzed. Using a nested mixed design, the study included 43 science teachers who participated in a professional development program carried out with a mentoring model in a national project. In the study, face-to-face and online training were given to teachers, and mentoring was provided. Lesson plans and technology integration were evaluated with an online form. It was observed that teachers mainly tried to integrate technology into DBL activities but not as a component of the design process. The teachers integrated technology when teaching DBL STEM activities by using new teaching methods that incorporated instructional technologies. They carried out the integration, especially in the stages of solution development, prototyping/testing, and communication. Teachers who believed that technology supported their professional development recommended improving professional development programs to help overcome the challenges of technology integration.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Science teachers\u2019 mentoring support experiences when integrating technology in design-based learning STEM activities",
+          "score": 11.224932
+        },
+        {
+          "id": "10.1371/journal.pone.0172087",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2017-03-16T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Mark Levels",
+            "Jaap Dronkers",
+            "Christopher Jencks"
+          ],
+          "abstract": [
+            "\nUsing new direct measures of numeracy and literacy skills among 85,875 adults in 17 Western countries, we find that foreign-born adults have lower mean skills than native-born adults of the same age (16 to 64) in all of the examined countries. The gaps are small, and vary substantially between countries. Multilevel models reveal that immigrant populations\u2019 demographic and socioeconomic characteristics, employment, and language proficiency explain about half of the cross-national variance of numeracy and literacy skills gaps. Differences in origin countries\u2019 average education level also account for variation in the size of the immigrant-native skills gap. The more protective labor markets in immigrant-receiving countries are, the less well immigrants are skilled in numeracy and literacy compared to natives. For those who migrate before their teens (the 1.5 generation), access to an education system that accommodates migrants\u2019 special needs is crucial. The 1 and 1.5 generation have smaller numeracy and literacy skills gaps in more ethnically diverse societies.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Contextual explanations for numeracy and literacy skill disparities between native and foreign-born adults in western countries",
+          "score": 11.222973
+        },
+        {
+          "id": "10.1371/journal.pone.0310114",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-10-29T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Remziye Akarsu",
+            "Gonca Bumin",
+            "Yusuf Celik"
+          ],
+          "abstract": [
+            "\nEarly literacy skills, the foundational abilities necessary for the development of literacy, must be examined holistically in preschool children. This study aimed to investigate early literacy skills in preschool children and determine how variables related to literacy development can be clustered by using a dendrogram. The study was conducted on 166 preschool children (75 female, 91 male; mean age: 65.9\u00b14.4 months). Hierarchical cluster analysis (CA) was used to find the variable clustering trends. The 44 variables related to literacy (sociodemographic factors related to the child and family, child\u2013parent relationship, child\u2019s behavior, and social, sensory integration, motor, and auditory linguistic skills) that were closest to each other in the dendrogram were clustered, and the situation was summarized by reducing them to two main clusters and six sub-clusters. This study elaborates on the implications of reducing multivariate complexity using CA. It is recommended that the relationships among the variables in this dendrogram structure are considered when new hypotheses and studies related to early literacy are designed.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Structures of multivariables affecting literacy: Cluster analysis",
+          "score": 11.216047
+        },
+        {
+          "id": "10.1371/journal.pone.0196903",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2018-05-21T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Madelon van den Boer",
+            "Elise H. de Bree",
+            "Peter F. de Jong"
+          ],
+          "abstract": [
+            "\nAcademic accommodations associated with a diagnosis of dyslexia might be incentives for college students without reading or spelling difficulties to feign dyslexia and obtain the diagnosis unfairly. In the current study we examined malingering practices by comparing the performance of college students instructed to malinger dyslexia (n = 28) to that of students actually diagnosed with dyslexia (n = 16). We also included a control group of students without reading and spelling difficulties (n = 28). The test battery included tasks tapping literacy skills as well as underlying cognitive skills associated with literacy outcomes. These tasks are commonly used in diagnosing dyslexia. We examined patterns in the performance of malingerers across tasks and tested whether malingerers could be identified based on their performance on a limited number of tasks. Results indicated that malingerers scored significantly lower than students with dyslexia on reading and spelling skills; i.e., the core characteristics of dyslexia. Especially reading performance was extremely low and not in line with students\u2019 age and level of education. Findings for underlying cognitive skills were mixed. Overall, malingerers scored lower than students with dyslexia on tasks tapping mainly speed, whereas the two groups did not differ on tasks reflecting mainly accuracy. Based on word and pseudoword reading and letter and digit naming, the three groups could be distinguished with reasonable sensitivity and specificity. In all, results indicate that college students seem to understand on which tasks they should feign dyslexia, but tend to exaggerate difficulties on these tasks to the point where diagnosticians should mistrust performance.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Simulation of dyslexia. How literacy and cognitive skills can help distinguish college students with dyslexia from malingerers",
+          "score": 11.213791
+        },
+        {
+          "id": "10.1371/journal.pone.0268110",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-05-06T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Lauren A. Maggio",
+            "Alyssa Jeffrey",
+            "Stefanie Haustein",
+            "Anita Samuel"
+          ],
+          "abstract": [
+            "Introduction: Academia uses scholarly metrics, such as the h-index, to make hiring, promotion, and funding decisions. These high-stakes decisions require that those using scholarly metrics be able to recognize, interpret, critically assess and effectively and ethically use them. This study aimed to characterize educational videos about the h-index to understand available resources and provide recommendations for future educational initiatives. Methods: The authors analyzed videos on the h-index posted to YouTube. Videos were identified by searching YouTube and were screened by two authors. To code the videos the authors created a coding sheet, which assessed content and presentation style with a focus on the videos\u2019 educational quality based on Cognitive Load Theory. Two authors coded each video independently with discrepancies resolved by group consensus. Results: Thirty-one videos met inclusion criteria. Twenty-one videos (68%) were screencasts and seven used a \u201ctalking head\u201d approach. Twenty-six videos defined the h-index (83%) and provided examples of how to calculate and find it. The importance of the h-index in high-stakes decisions was raised in 14 (45%) videos. Sixteen videos (52%) described caveats about using the h-index, with potential disadvantages to early researchers the most prevalent (n = 7; 23%). All videos incorporated various educational approaches with potential impact on viewer cognitive load. A minority of videos (n = 10; 32%) displayed professional production quality. Discussion: The videos featured content with potential to enhance viewers\u2019 metrics literacies such that many defined the h-index and described its calculation, providing viewers with skills to recognize and interpret the metric. However, less than half described the h-index as an author quality indicator, which has been contested, and caveats about h-index use were inconsistently presented, suggesting room for improvement. While most videos integrated practices to facilitate balancing viewers\u2019 cognitive load, few (32%) were of professional production quality. Some videos missed opportunities to adopt particular practices that could benefit learning. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Becoming metrics literate: An analysis of brief videos that teach about the h-index",
+          "score": 11.212561
+        },
+        {
+          "id": "10.1371/journal.pone.0297521",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-04-24T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Raghu Raman",
+            "Hiran H. Lathabai",
+            "Santanu Mandal",
+            "Payel Das",
+            "Tavleen Kaur",
+            "Prema Nedungadi"
+          ],
+          "abstract": [
+            "\nGenerative AI tools, such as ChatGPT, are progressively transforming numerous sectors, demonstrating a capacity to impact human life dramatically. This research seeks to evaluate the UN Sustainable Development Goals (SDGs) literacy of ChatGPT, which is crucial for diverse stakeholders involved in SDG-related policies. Experimental outcomes from two widely used Sustainability Assessment tests\u2013the UN SDG Fitness Test and Sustainability Literacy Test (SULITEST) \u2010 suggest that ChatGPT exhibits high SDG literacy, yet its comprehensive SDG intelligence needs further exploration. The Fitness Test gauges eight vital competencies across introductory, intermediate, and advanced levels. Accurate mapping of these to the test questions is essential for partial evaluation of SDG intelligence. To assess SDG intelligence, the questions from both tests were mapped to 17 SDGs and eight cross-cutting SDG core competencies, but both test questionnaires were found to be insufficient. SULITEST could satisfactorily map only 5 out of 8 competencies, whereas the Fitness Test managed to map 6 out of 8. Regarding the coverage of the Fitness Test and SULITEST, their mapping to the 17 SDGs, both tests fell short. Most SDGs were underrepresented in both instruments, with certain SDGs not represented at all. Consequently, both tools proved ineffective in assessing SDG intelligence through SDG coverage. The study recommends future versions of ChatGPT to enhance competencies such as collaboration, critical thinking, systems thinking, and others to achieve the SDGs. It concludes that while AI models like ChatGPT hold considerable potential in sustainable development, their usage must be approached carefully, considering current limitations and ethical implications.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "ChatGPT: Literate or intelligent about UN sustainable development goals?",
+          "score": 11.209996
+        },
+        {
+          "id": "10.1371/journal.pone.0194337",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2018-05-16T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Julia A. Dalton",
+            "Dianne Rodger",
+            "Michael Wilmore",
+            "Sal Humphreys",
+            "Andrew Skuse",
+            "Claire T. Roberts",
+            "Vicki L. Clifton"
+          ],
+          "abstract": [
+            "Background: The use of mobile technology such as phone applications (apps) has been proposed as an efficient means of providing health and clinical information in a variety of healthcare settings. We developed the Health-e Babies app as an Android smart phone application for pregnant women attending a tertiary hospital in a low socio-economic community, with the objective of providing health information about early pregnancy that would increase maternal confidence and reduce anxiety. Based on our earlier research, this form of health communication was viewed as a preferred source of information for women of reproductive age. However, the pilot study had a poor participation rate with 76% (n = 94) not completing the study requirements. These initial findings raised some very important issues in relation to the difficulties of engaging women with a pregnancy app. This paper analyses the characteristics of the participants who did not complete the study requirements in an attempt to identify potential barriers associated with the implementation of a pregnancy app. Methods: This retrospective review of quantitative and qualitative data collected at the commencement of the Health-e Babies App trial, related to the participant\u2019s communication technology use, confidence in knowing where to seek help and mental health status, maternal-fetal attachment and parenting confidence. Engagement and use of the Health-e Babies App was measured by the completion of a questionnaire about the app and downloaded data from participant\u2019s phones. Mental health status, confidence and self-efficacy were measured by questionnaires. Results: All women were similar in terms of age, race, marital status and level of education. Of the 94 women (76%) who did not complete the trial, they were significantly more anxious as indicated by State Trait Anxiety Inventory (p = 0.001 Student T-test) and more likely to be unemployed (50% vs 31%, p = 0.012 Student T-Test). Conclusion: This study provides important information about the challenges associated with the implementation of a pregnancy app in a socially disadvantaged community. The data suggests that factors including social and mental health issues, financial constraints and technological ability can affect women\u2019s engagement with a mobile phone app. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "The Health-e Babies App for antenatal education: Feasibility for socially disadvantaged women",
+          "score": 11.2016735
+        },
+        {
+          "id": "10.1371/journal.pone.0294466",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-11-14T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Ruofan Bai"
+          ],
+          "abstract": [
+            "\nThe topic of financial wellbeing is a current concern within the realm of personal and household finance. This study aims to examine the influence of cognitive factors, specifically financial literacy, mental budgeting, and self-control, on subjective financial wellbeing. While there exist multiple determinants of financial wellbeing, this research focuses on these particular cognitive factors. The present study aims to examine the mediating role of investment decision-making behavior in the association between cognitive factors and financial well-being. The study employed Partial Least Squares Structural Equation Modeling (PLS-SEM) to analyze the data collected from a sample of 449 Chinese university students, with the aim of assessing the empirical associations. The results indicate that financial literacy, mental budgeting, and self-control exert a favorable and noteworthy influence on an individual\u2019s financial well-being. The results indicate that individuals with a greater degree of financial literacy are more prone to achieving superior financial well-being. Moreover, individuals who practice mental budgeting, a technique that entails mentally classifying and monitoring their expenditures, demonstrate elevated levels of financial well-being. Likewise, the exercise of self-regulation is identified as a pivotal element that impacts an individual\u2019s financial wellbeing. The findings indicate that there is evidence to support the mediator, investment decision-making behavior. This mediator partially mediates the association between the independent variables, namely financial literacy, mental budgeting, and self-control, and financial well-being. The results suggest that individuals with elevated levels of financial literacy, proficient mental budgeting skills, and self-regulatory abilities are inclined towards demonstrating favorable investment decision-making conduct. Consequently, this contributes to their general financial welfare. In general, the study\u2019s theoretical implications augment the current knowledge repository, while its practical implications provide feasible perspectives for policymakers, financial institutions, and individuals to foster financial wellness and enhance financial results.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Impact of financial literacy, mental budgeting and self control on financial wellbeing: Mediating impact of investment decision making",
+          "score": 11.195017
+        },
+        {
+          "id": "10.1371/journal.pone.0321791",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-04-28T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Ge Shi",
+            "Jiajia Yu",
+            "Jiaming Zhang",
+            "Jun Zhao",
+            "Zhen Peng",
+            "Li Shang"
+          ],
+          "abstract": [
+            "\nThis study aimed to explore the characteristics of online health information-seeking behavior and the influencing factors among young and middle-aged Chinese patients with stroke. The participants of this study were 230 young and middle-aged patients with stroke enrolled from a Class III Grade A hospital in Shandong Province, China, using convenience sampling from October 31, 2023, to May 15, 2024. Based on relevant theories and literature reviews, a self-administered questionnaire was used to analyze the influencing factors regarding six aspects: general demographic characteristics, disease factors, psychological factors, environmental factors, information factors, and information technology factors. Univariate, Correlation, and multivariate analyses were conducted to explore the factors affecting online health information-seeking behavior. The results showed that age, literacy level, stroke course, hospitalizations, treatment methods, number of combined chronic diseases, perceived usefulness, perceived ease of use, e-health literacy, self-efficacy, perceived benefit, health anxiety, quality of information, social influence, perceived risk, and privacy of information were all factors that influenced the online health information-seeking behavior in young and middle-aged patients with stroke. Age, perceived risk, and information privacy were negatively associated with online health information-seeking behavior, whereas the other variables were positively correlated. This study provides scientific insights into the intervention of online health information-seeking behavior in young and middle-aged patients with stroke and contributes to the enhancement of online health information literacy.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Factors affecting online health information-seeking behavior in young and middle-aged patients with stroke",
+          "score": 11.189315
+        },
+        {
+          "id": "10.1371/journal.pone.0107131",
+          "journal": "PLoS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2014-09-08T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Tru E. Kwong",
+            "Kyle J. Brachman"
+          ],
+          "abstract": [
+            "\nRelations among linguistic auditory processing, nonlinguistic auditory processing, spelling ability, and spelling strategy choice were examined. Sixty-three undergraduate students completed measures of auditory processing (one involving distinguishing similar tones, one involving distinguishing similar phonemes, and one involving selecting appropriate spellings for individual phonemes). Participants also completed a modified version of a standardized spelling test, and a secondary spelling test with retrospective strategy reports. Once testing was completed, participants were divided into phonological versus nonphonological spellers on the basis of the number of words they spelled using phonological strategies only. Results indicated a) moderate to strong positive correlations among the different auditory processing tasks in terms of reaction time, but not accuracy levels, and b) weak to moderate positive correlations between measures of linguistic auditory processing (phoneme distinction and phoneme spelling choice in the presence of foils) and spelling ability for phonological spellers, but not for nonphonological spellers. These results suggest a possible explanation for past contradictory research on auditory processing and spelling, which has been divided in terms of whether or not disabled spellers seemed to have poorer auditory processing than did typically developing spellers, and suggest implications for teaching spelling to children with good versus poor auditory processing abilities.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Strategy Choice Mediates the Link between Auditory Processing and Spelling",
+          "score": 11.173655
+        },
+        {
+          "id": "10.1371/journal.pone.0237735",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2020-08-17T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Soraya Jalali",
+            "Mahrokh Keshvari",
+            "Mohammad Reza Soleymani"
+          ],
+          "abstract": [
+            "\nObsession with the physique and appearance is a by-product of consumer societies. As such, fitness and slimming have now become major concerns of Iranian females. This study endeavors to elaborate on information-seeking behaviors among female students of Isfahan University of Medical Sciences concerning fitness. This study conducted in 2018, employs a qualitative approach using conventional content analysis. The research population includes female students of Isfahan University of Medical Sciences, 16 of whom were selected with use of purposive sampling. Data were collected through face-to-face semi-structured interviews and their trustworthiness was confirmed by the criteria of \u2018credibility\u2019, \u2018confirmability\u2019, \u2018dependability\u2019, and \u2018transferability\u2019 proposed by Guba and Lincoln. Results reveal four sub-categories and nineteen codes on information-seeking behavior. Sub-categories and codes including information-seeking motivations (achieving physical health, physical appearance, social acceptability, self-confidence, family and friends\u2019 pressure) information resources (electronic information resources, social media, printed information resources, doctors and nutritionists, family and friends, traditional & Islamic medicine, radio and TV), information validation (asking the doctors and specialists, matching the information with scientific references, consulting with friends and relatives) and obstacles to seeking information (lack of time, high costs, distrust, access limitation). by increasing the students\u2019 informational and media literacy, providing authentic and low-cost online resources of information and specialized TV programs, the damages rooted in using invalid information resources concerning fitness can be substantially diminished.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Fitness information-seeking behavior among female university students: A qualitative study",
+          "score": 11.172957
+        },
+        {
+          "id": "10.1371/journal.pone.0049779",
+          "journal": "PLoS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2012-11-14T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Viren Swami"
+          ],
+          "abstract": [
+            "Background: Poor mental health literacy and negative attitudes toward individuals with mental health disorders may impede optimal help-seeking for symptoms of mental ill-health. The present study examined the ability to recognize cases of depression as a function of respondent and target gender, as well as individual psychological differences in attitudes toward persons with depression. Methods: In a representative British general population survey, the ability to correctly recognize vignettes of depression was assessed among 1,218 adults. Respondents also rated the vignettes along a number of attitudinal dimensions and completed measures of attitudes toward seeking psychological help, psychiatric skepticism, and anti-scientific attitudes. Results: There were significant differences in the ability to correctly identify cases of depression as a function of respondent and target gender. Respondents were more likely to indicate that a male vignette did not suffer from a mental health disorder compared to a female vignette, and women were more likely than men to indicate that the male vignette suffered from a mental health disorder. Attitudes toward persons with depression were associated with attitudes toward seeking psychological help, psychiatric skepticism, and anti-scientific attitudes. Conclusion: Initiatives that consider the impact of gender stereotypes as well as individual differences may enhance mental health literacy, which in turn is associated with improved help-seeking behaviors for symptoms of mental ill-health. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Mental Health Literacy of Depression: Gender Differences and Attitudinal Antecedents in a Representative British Sample",
+          "score": 11.172825
+        },
+        {
+          "id": "10.1371/journal.pone.0130257",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2015-07-01T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Esther Prins",
+            "Shannon Monnat"
+          ],
+          "abstract": [
+            "\nThis paper uses data from the Program for the International Assessment of Adult Competencies (PIAAC) to analyze the relationship between self-reported health (SRH) and literacy and numeracy proficiency for immigrants compared to U.S.-born respondents and for Hispanic versus Asian immigrants. The research questions were: (1) Are literacy and numeracy scores associated with adults\u2019 SRH? (2) Are associations between SRH and literacy and numeracy proficiency moderated by immigrant status? (3) Among immigrants, are literacy and numeracy scores more strongly associated with SRH for Hispanics versus Asians? Immigrants had significantly lower literacy and numeracy scores, yet reported better health than U.S.-born respondents. Ordinal logistic regression analyses showed that literacy and numeracy were both positively related to SRH for immigrants and U.S.-born adults, and should therefore be viewed as part of the growing evidence that literacy is an independent and significant social determinant of health. Second, U.S.-born and immigrant adults accrued similarly positive health benefits from stronger literacy and numeracy skills. Third, although Hispanic immigrants were more disadvantaged than Asian immigrants on almost all socioeconomic characteristics and had significantly lower literacy and numeracy scores and worse SRH than Asian immigrants, both Hispanic and Asian immigrants experienced similar positive health returns from literacy and numeracy proficiency. These findings underscore the potential health benefits of providing adult basic education instruction, particularly for immigrants with the least formal schooling and fewest socioeconomic resources.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Examining Associations between Self-Rated Health and Proficiency in Literacy and Numeracy among Immigrants and U.S.-Born Adults: Evidence from the Program for the International Assessment of Adult Competencies (PIAAC)",
+          "score": 11.152231
+        },
+        {
+          "id": "10.1371/journal.pone.0280261",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-02-16T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Ryan M. Hulteen",
+            "David R. Lubans",
+            "Ryan E. Rhodes",
+            "Guy Faulkner",
+            "Yan Liu",
+            "Patti-Jean Naylor",
+            "Nicole Nathan",
+            "Katrina J. Waldhauser",
+            "Colin M. Wierts",
+            "Mark R. Beauchamp"
+          ],
+          "abstract": [
+            "Purpose: The purpose of this research was to develop, implement, and test the efficacy of a theory-driven, evidence-informed peer leadership program for elementary school students (Grade 6 and 7; age 11\u201312 years) and the Grade 3/4 students with whom they were partnered. The primary outcome was teacher ratings of their Grade 6/7 students\u2019 transformational leadership behaviors. Secondary outcomes included: Grade 6/7 students\u2019 leadership self-efficacy, as well as Grade 3/4 motivation, perceived competence, general self-concept, fundamental movement skills, school-day physical activity, and program adherence, and program evaluation. Methods: We conducted a two-arm cluster randomized controlled trial. In 2019, 6 schools comprising 7 teachers, 132 leaders, and 227 grade 3 and 4 students were randomly allocated to the intervention or waitlist control conditions. Intervention teachers took part in a half-day workshop (January 2019), delivered 7 x 40 minute lessons to Grade 6/7 peer leaders (February and March 2019), and these peer leaders subsequently ran a ten-week physical literacy development program for Grade 3/4 students (2x30 minutes sessions per week). Waitlist-control students followed their usual routines. Assessments were conducted at baseline (January 2019) and immediately post-intervention (June 2019). Results: The intervention had no significant effect on teacher ratings of their students\u2019 transformational leadership (b = 0.201, p = .272) after controlling for baseline and gender. There was no significant condition effect for Grade 6/7 student rated transformation leadership (b = 0.077, p = .569) or leadership self-efficacy (b = 3.747, p = .186) while controlling for baseline and gender. There were null findings for all outcomes related to Grade 3 and 4 students. Discussion: Adaptions to the delivery mechanism were not effective in increasing leadership skills of older students or components of physical literacy in younger Grade 3/4 students. However, teacher self-reported adherence to the intervention delivery was high. Trial registration: This trial was registered on December 19th, 2018 with Clinicaltrials.gov (NCT03783767), https://clinicaltrials.gov/ct2/show/NCT03783767. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Evaluation of the peer leadership for physical literacy intervention: A cluster randomized controlled trial",
+          "score": 11.14436
+        }
+      ]
+    }
+  }
+}

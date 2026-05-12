@@ -1,0 +1,61 @@
+ScholarFlux MCP Server
+Copyright 2026 Sammie L. Haskin
+
+This product includes software developed as part of the ScholarFlux project.
+This software uses the ScholarFlux library (Apache 2.0) for academic API orchestration.
+
+---
+
+## API Keys Required
+
+Some providers may require API keys to retrieve papers, articles, and other forms of data.
+Known providers requiring keys include:
+
+- **CORE**: For open access scientific articles
+- **Springer Nature**: For scientific content
+- **PubMed**: For biomedical literature from the PubMed database
+
+Others may require the use of a `User Agent`, including:
+
+- **Crossref**: Recommends adding a `mailto:` header for feedback and polite pool access
+- **PLOS**: Recommends a user agent identifying your application
+- **OpenAlex**: Recommends a `mailto:` parameter for polite pool access
+
+## ⚠️ Data Usage and Legal Compliance
+
+**Important**: This software is licensed under Apache 2.0, but this license **only covers the code itself**.
+
+### Your Responsibilities
+
+When using this package, you must:
+
+- ✅ Obtain your own API keys from each data provider
+- ✅ Read and comply with each provider's terms of service
+- ✅ Respect rate limits and usage restrictions
+- ✅ Ensure your use complies with copyright laws
+- ✅ Handle data according to applicable privacy regulations
+- ✅ Verify the license status of individual records before redistribution or reuse
+
+### AI-Generated Synthesis
+
+ScholarFlux MCP uses AI models to synthesize retrieved records into research summaries.
+When using the synthesis features, you must additionally:
+
+- ✅ Treat AI-generated summaries as starting points for research, not authoritative conclusions
+- ✅ Verify cited findings against the original source records before publication or clinical use
+- ✅ Disclose AI involvement in any research outputs that incorporate generated syntheses
+- ✅ Apply professional judgment — AI synthesis is a research aid, not a substitute for expert review
+
+### Disclaimer
+
+The authors and contributors assume no responsibility for:
+- Any use of the software that violates third-party terms of service
+- The accuracy, completeness, or fitness for purpose of AI-generated research syntheses
+- Decisions made on the basis of synthesized outputs without independent verification
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+**Data License**: Data accessed through APIs is subject to the respective providers' terms of service.
+**Synthesis outputs**: AI-generated content is subject to the terms of the LLM provider used.

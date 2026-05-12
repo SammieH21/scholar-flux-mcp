@@ -1,0 +1,113 @@
+[tool.poetry]
+name = "scholar-flux-mcp"
+version = "0.1.0b1"
+authors = ["Sammie L. Haskin <44345113+SammieH21@users.noreply.github.com>"]
+description = "MCP server for academic record retrieval across 7+ providers, featuring embedding-driven record relevance re-ranking and AI-powered research synthesis with citation verification built on ScholarFlux and PydanticAI."
+readme = "README.md"
+license = "Apache-2.0"
+packages = [{include = "scholar_flux_mcp", from="src"}]
+include = ["src/scholar_flux_mcp/py.typed", "README.md", "LICENSE", "NOTICE"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+mcp = ">=1.26.0"
+pydantic = "^2.10.6"
+pydantic-ai-slim = {extras = ["ollama", "anthropic", "google", "openai"], version = ">=0.1.0,<2.0.0"}
+scholar-flux = {extras = ["database", "parsing", "cryptography", "duckdb"], version = ">=0.5.2"}
+rapidfuzz = ">=3.0.0"
+sqlmodel = ">=0.0.32"
+
+[tool.poetry.group.testing.dependencies]
+pytest = "^9.0.0"
+pytest-asyncio = ">=0.23.3"
+pytest-cov = "^4.0.0"
+coverage = {extras = ["toml"], version = "*"}
+requests-mock = "*"
+fastmcp = ">=3.0.0"  # Required for fastmcp.client testing utilities
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.0"
+mypy = "^2.0.0"
+tox = ">=4.31.0,<5.0"
+pydocstyle = {extras = ["toml"], version = "*"}
+docformatter = "*"
+docstr-coverage = "*"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = ">=5.0,<8.0"
+sphinx-autobuild = ">=2024.2.4,<2025.8.25"
+sphinx-rtd-theme = ">=1.2.0,<4.0.0"
+
+[tool.poetry.scripts]
+scholar-flux-mcp = "scholar_flux_mcp.server.main:main"
+
+[tool.poetry.urls]
+Homepage = "https://github.com/SammieH21/scholar-flux-mcp"
+Documentation = "https://SammieH21.github.io/scholar-flux-mcp/"
+Repository = "https://github.com/SammieH21/scholar-flux-mcp"
+"Issue Tracker" = "https://github.com/SammieH21/scholar-flux-mcp/issues"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pydocstyle]
+convention = "google"
+add_ignore = ["D418"] # ignore overload docstrings
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+show-fixes = true
+
+[tool.ruff.lint]
+select = [
+    "E",     # pycodestyle errors
+    "W",     # pycodestyle warnings
+    "F",     # Pyflakes
+    "I",     # isort
+    "B",     # flake8-bugbear
+    "C4",    # flake8-comprehensions
+    "UP",    # pyupgrade
+    "NPY",   # numpy
+    "SIM",   # simplify
+    "TCH",   # type-checking
+]
+ignore = [
+    "E501",  # line too long (handled by formatter)
+    "B008",  # do not perform function calls in argument defaults
+    "TCH001", # type checking imports
+    "TCH002", # type checking imports
+    "UP007", # enable the use of Optional[...] without flagging
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["scholar_flux_mcp"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = [
+    "ANN",    # don't require type annotations
+    "ARG",    # Allow Unused function args
+    "S101",   # allow plain `assert` (pytest's way)
+    "SIM117", # allow nested `with` statements for readability purposes
+    "E731",   # Allow assignment of a lambda
+    "B018",   # allow useless expressions (fine in asserts)
+    "FBT",    # ignore boolean positional arguments
+    "PT004",  # fixture without value
+    "ARG001", # unused function args (pytest fixtures often look unused)
+    "UP007",  # Allows Optional[...]
+]
+
+# In case black is used locally:
+[tool.black]
+line-length = 120
+target-version = ['py313']
+include = '\.pyi?$'
+extend-exclude = ''
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

@@ -1,0 +1,1167 @@
+{
+  "created_at": "2026-03-26T17:50:24.029856+00:00",
+  "elapsed": 0.287889,
+  "encoding": "utf-8",
+  "headers": {
+    "Access-Control-Allow-Credentials": "true",
+    "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+    "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Max-Age": "1728000",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=utf-8",
+    "Date": "Thu, 26 Mar 2026 17:50:23 GMT",
+    "ETag": "\"YWY5NzgwMDAwMDAwMDAwMFNvbHI=\"",
+    "Last-Modified": "Thu, 26 Mar 2026 17:36:37 GMT",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "Transfer-Encoding": "chunked"
+  },
+  "reason": "OK",
+  "request": {
+    "body": "",
+    "method": "GET",
+    "url": "https://api.plos.org/search?q=Student+Computer+Literacy&rows=50&start=50"
+  },
+  "status_code": 200,
+  "url": "https://api.plos.org/search?q=Student+Computer+Literacy&rows=50&start=50",
+  "_decoded_content": {
+    "response": {
+      "numFound": 2823,
+      "start": 50,
+      "maxScore": 12.409701,
+      "docs": [
+        {
+          "id": "10.1371/journal.pone.0260659",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2021-12-02T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Buratin Khampirat"
+          ],
+          "abstract": [
+            "\nThe rapid development of advanced technology worldwide has promoted an increase in the need for highly skilled engineers who are adept at applying job-related technologies and have engineering competency (ENcom) to gain knowledge and introduce creative solutions. However, little is known about the underlying mechanism of the associations between ICT competencies related to work (ICT-Work) and the ENcom of engineering students. This study sought to examine the role of ICT-Work on ENcom. Based on the literature, self-esteem and self-regulated learning (SRL) were identified as factors that indicate the effect of ICT-Work on ENcom, while gender was identified as a moderator that conditioned these mediated relationships. The sample consisted of 1,313 undergraduate engineering students from eleven universities in Thailand. The results of structural equation modeling (SEM) showed positive direct and indirect effects of ICT-Work on ENcom, self-esteem, and SRL and confirmed that self-esteem and SRL mediate the impact of ICT-Work on ENcom. Moreover, multigroup SEM revealed no gender differences in the factor loadings and structural path coefficients of ICT-Work on ENcom via self-esteem and SRL. To prepare students for their professional lives in the digital world, educational institutions should emphasize the importance of developing engineering students in ICT-Work and the use of advanced ICT involved in the job.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Relationships between ICT competencies related to work, self-esteem, and self-regulated learning with engineering competencies",
+          "score": 11.706129
+        },
+        {
+          "id": "10.1371/journal.pone.0149202",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2016-02-16T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Shahla Ghanbari",
+            "Ali Ramezankhani",
+            "Ali Montazeri",
+            "Yadollah Mehrabi"
+          ],
+          "abstract": [
+            "Background: Health literacy refers to personal competencies for the access to, understanding of, appraisal of and application of health information in order to make sound decisions in everyday life. The aim of this study was to develop and evaluate the psychometric properties of an instrument for the measurement of health literacy among adolescents (the Health Literacy Measure for Adolescents-HELMA). Methods: This study was made up of two phases, qualitative and quantitative, which were carried out in 2012\u20132014 in Tehran, Iran. In the qualitative part of the study, in-depth interviews with 67 adolescents aged 15\u201318 were carried out in 4 high schools to generate the initial item pool for the survey. The content validity of the items was then assessed by an expert panel review (n = 13) and face validity was assessed by interviewing adolescents (n = 16). In the quantitative part of the study, in order to describe the psychometric properties of the scale, validity, reliability (internal consistency and test-retest) and factor analysis were assessed. Results: An item pool made up of 104 items was generated at the qualitative stage. After content validity was considered, this decreased to 47 items. In the quantitative stage, 582 adolescents aged 15\u201318 participated in the study with a mean age of 16.2 years. 51.2% of participants were females. In principal component factor analysis, 8 factors were loaded, which accounted for 53.37% of the variance observed. Reliability has been approved by \u03b1 = 0.93 and the test-retest of the scale at two-week intervals indicated an appropriate stability for the scale (ICC = 0.93). The final questionnaire was approved with 44 items split into eight sections. The sections were titled: gain access to, reading, understanding, appraise, use, communication, self-efficacy and numeracy. Conclusion: The Health Literacy Measure for Adolescents (HELMA) is a valid and reliable tool for the measurement of the health literacy of adolescents aged 15\u201318 and can be used to evaluate different levels of functional, interactive, and critical health literacy in adolescents. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Health Literacy Measure for Adolescents (HELMA): Development and Psychometric Properties",
+          "score": 11.700385
+        },
+        {
+          "id": "10.1371/journal.pone.0104406",
+          "journal": "PLoS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2014-08-08T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Xiaohua Ye",
+            "Zhenjiang Yao",
+            "Weidong Liu",
+            "Yanping Fan",
+            "Ya Xu",
+            "Sidong Chen"
+          ],
+          "abstract": [
+            "Background: Studies conducted in the past mostly rely on models of functional health literacy in adult populations. However, such models do not satisfy the need for health intervention in adolescents. The identification of key factors influencing adolescents' health literacy is essential in developing effective prevention and intervention measures. This study aimed to test a theoretical model of predictors on health skills and health behaviors in adolescents. Methods: A cross-sectional survey was conducted in Guangdong using a multi-stage stratified cluster sample design. A representative random sample of 3821 students aged 13\u201325 years was selected using multi-stage stratified cluster sampling. The path analysis was used to test a hypothesized model of health literacy. Results: The path analysis showed that knowledge of infectious disease (\u03b2\u200a=\u200a0.26), health skills (\u03b2\u200a=\u200a0.22), health concept (\u03b2\u200a=\u200a0.20), general health knowledge (\u03b2\u200a=\u200a0.15), gender (\u03b2\u200a=\u200a0.12), and school performance (\u03b2\u200a=\u200a0.06) had positive direct effect on health behaviors in adolescents. The explanatory variables accounted for 43% of the variance in explaining health behaviors. Knowledge of infectious disease (\u03b2\u200a=\u200a0.30), health concept (\u03b2\u200a=\u200a0.17), general health knowledge (\u03b2\u200a=\u200a0.13), and school performance (\u03b2\u200a=\u200a0.05) had positive indirect effect on health behaviors through the impacts on health skills. Conclusion: This study identified several direct and indirect factors influencing health skills and health behaviors in adolescents. These findings will assist health professionals designing effective health interventions that aim to improve health skills and health behaviors in adolescents. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Path Analysis to Identify Factors Influencing Health Skills and Behaviors in Adolescents: A Cross-Sectional Survey",
+          "score": 11.693993
+        },
+        {
+          "id": "10.1371/journal.pone.0152547",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2016-04-06T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Yan Zhang",
+            "Fan Zhang",
+            "Ping Hu",
+            "Wenjie Huang",
+            "Lu Lu",
+            "Ruixue Bai",
+            "Manoj Sharma",
+            "Yong Zhao"
+          ],
+          "abstract": [
+            "\nHealth literacy is important in public health and healthcare, particularly in effective communication between patients and health professionals. Although most medical students will eventually work as health professionals after graduation, research on health literacy of medical students is scarce. This study aimed to assess the health literacy level of medical students in Chongqing, China, and its influencing factors. A cross-sectional study was conducted and 1,275 participants (250 males and 1,022 females) who majored in five different disciplines were involved. The Health Literacy Questionnaire was used as the survey tool. The junior students obtained the highest scores, whereas the freshman students had the lowest scores on each scale. The average score of males was higher than that of females except in \u201cfeeling understood and supported by healthcare providers,\u201d and the average score of students who reside in urban areas was higher than that of students in rural areas. Moreover, the average score of engineering students was higher than that of medical or health sciences students. Multiple linear regression models (Radj2 = 0.435, P = 0.000) showed that the grade, socioeconomic status, and parent\u2019s highest level of education were positively correlated with health literacy. In conclusion, the health literacy levels of the medical students are insufficient and need improvement.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Exploring Health Literacy in Medical University Students of Chongqing, China: A Cross-Sectional Study",
+          "score": 11.693271
+        },
+        {
+          "id": "10.1371/journal.pone.0327242",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-06-25T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Saeed Saad Alqahtani"
+          ],
+          "abstract": [
+            "\nThis study explores the predictive validity of early and mid-year literacy assessments\u2014Letter Naming Fluency (LNF), Letter Sound Fluency (LSF), and Phoneme Segmentation Fluency (PSF)\u2014for end-of-year Word Reading Fluency (WRF) in kindergarten and grade 1 Arabic-speaking students. Using a longitudinal design, 412 students were assessed at three intervals (fall, mid-year, and year-end) to examine how these foundational literacy skills contribute to predicting WRF and identifying at-risk readers. Results from multiple regression analyses indicate that both LNF and LSF are significant predictors of end-of-year WRF across both fall and mid-year assessments, with mid-year measures demonstrating enhanced predictive accuracy. In contrast, PSF showed limited predictive value in comparison to LNF and LSF. Accuracy analyses revealed that mid-year assessments, particularly LNF and LSF, were more reliable in identifying at-risk students compared to fall assessments. Mid-year assessments correctly identified 64\u201373% of at-risk readers, emphasizing their value in early detection and intervention. These findings underline the importance of dynamic, multi-point assessments in improving educational practices and outcomes, particularly for students at risk of reading difficulties. The study highlights the critical role of foundational literacy skills in early reading development and provides actionable insights to enhance intervention strategies during key stages of literacy acquisition.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Predictive validity of early and mid-year literacy assessments for end-of-year word reading fluency",
+          "score": 11.690629
+        },
+        {
+          "id": "10.1371/journal.pdig.0001078",
+          "journal": "PLOS Digital Health",
+          "eissn": "2767-3170",
+          "publication_date": "2025-11-06T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Edlin Garcia Colato",
+            "Yang Gao",
+            "Catherine M. Sherwood-Laughlin",
+            "Hongyi Zhu",
+            "Angela Chow",
+            "Sagar Samtani",
+            "Nianjun Liu",
+            "Jonathan T. Macy"
+          ],
+          "abstract": [
+            "\nMental health literacy has largely been studied via vignettes and surveys. Capturing the reality of the mental health literacy dimensions in a natural setting is an important step for moving towards a more actionable phase for mental health literacy. This study aims to identify the frequency patterns of the four mental health literacy dimensions reflected in the mental health-related tweets specific to information technology professionals. 15,782 tweets from October 2018 to October 2022 were collected from information technology-specific accounts. Content analysis, specifically a multi-class text classification approach, was used to analyze and interpret the tweets and categorize them into themes based on the mental health literacy construct. Tweets on \u201cKnowledge and beliefs about risk factors and causes, self-treatments/interventions, and professional help available\u201d were the most common (n\u2009=\u20096,179), and tweets on \u201cability to recognize specific disorders\u201d (n\u2009=\u2009196) were the least common. The ease of sharing content on X (formerly Twitter) could be leveraged to increase mental health awareness via targeted educational material on how to recognize specific disorders, seek help, and therefore improve mental health. Integrating mental health literacy information with the content being shared by well-established organizations in the information technology sector could help to enhance mental health literacy among information technology professionals.\nAuthor summary: Mental health literacy was first coined in 1997 by Anthony Jorm. The term includes four key areas that are a holistic understanding of mental health. We know, based on survey data, that levels of understanding about mental health vary among groups. However, we do not yet have a method for assessing mental health literacy in the natural world. Here, we took an interdisciplinary approach and used content analysis to test whether we could map tweets to the four dimensions of mental health literacy. We found most tweets were about understanding mental health risk factors and causes, self-treatment, and where to seek help. However, attitudes that promote recognition and appropriate help-seeking were represented by far fewer tweets. By working with well-known, trusted organizations, we can share helpful information to improve mental health knowledge among professionals. Our study provides new insights on which areas of mental health literacy (the ability to recognize specific disorders) need more direct focus when attempting to improve mental health literacy. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Exploring mental health literacy among information technology (IT) professionals: Twitter content analysis",
+          "score": 11.675805
+        },
+        {
+          "id": "10.1371/journal.pone.0150648",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2016-03-03T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Sheryn D. Pitman",
+            "Christopher B. Daniels"
+          ],
+          "abstract": [
+            "\nKnowledge and understanding about how the Earth functions and supports life create the foundation for ecological literacy. Industrialisation, urbanisation and population growth have resulted in changed relationships between many human communities and the natural world. A potential consequence is a compromised capability to make well-informed decisions about how to live sustainably. To gain a measure of ecological literacy within the South Australian community, we collaborated with senior scientists and educators to develop and apply an instrument with the capacity to determine indicative levels of ecological knowledge and understanding. A formal, variable credit, multiple-choice assessment instrument was distributed online to groups and individuals within diverse community sectors and industries. Quantitative analyses of scores indicated that levels of ecological knowledge and understanding within a self-selected sample of over one thousand individuals ranged from very low to extremely high, with the majority of respondents achieving moderate to high scores. This instrument has a demonstrated capacity to determine indicative levels of ecological literacy within and between individuals and groups. It is able to capture mastery of ecological knowledge and understanding achieved through both formal and informal pathways. Using the results, we have been able to establish a range of standards and an aspirational target score for the South Australian community. The value of this work is in its potential to deliver insights into relationships between humans and the rest of the natural world, and into characteristics of eco-literate individuals and communities, that might not otherwise emerge.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Quantifying Ecological Literacy in an Adult Western Community: The Development and Application of a New Assessment Tool and Community Standard",
+          "score": 11.669088
+        },
+        {
+          "id": "10.1371/journal.pone.0243435",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2020-12-07T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Patrick M. Donnelly",
+            "Kevin Larson",
+            "Tanya Matskewich",
+            "Jason D. Yeatman"
+          ],
+          "abstract": [
+            "\nAn advantage of digital media is the flexibility to personalize the presentation of text to an individual\u2019s needs and embed tools that support pedagogy. The goal of this study was to develop a tablet-based reading tool, grounded in the principles of phonics-based instruction, and determine whether struggling readers could leverage this technology to decode challenging words. The tool presents a small icon below each vowel to represent its sound. Forty struggling child readers were randomly assigned to an intervention or control group to test the efficacy of the phonemic cues. We found that struggling readers could leverage the cues to improve pseudoword decoding: after two weeks of practice, the intervention group showed greater improvement than controls. This study demonstrates the potential of a text annotation, grounded in intervention research, to help children decode novel words. These results highlight the opportunity for educational technologies to support and supplement classroom instruction.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Annotating digital text with phonemic cues to support decoding in struggling readers",
+          "score": 11.669043
+        },
+        {
+          "id": "10.1371/journal.pone.0257344",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2021-09-10T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Rafael Saltos-Rivas",
+            "Pavel Novoa-Hern\u00e1ndez",
+            "Roc\u00edo Serrano Rodr\u00edguez"
+          ],
+          "abstract": [
+            "\nIn this study, we report on a Systematic Mapping Study (SMS) on how the quality of the quantitative instruments used to measure digital competencies in higher education is assured. 73 primary studies were selected from the published literature in the last 10 years in order to 1) characterize the literature, 2) evaluate the reporting practice of quality assessments, and 3) analyze which variables explain such reporting practices. The results indicate that most of the studies focused on medium to large samples of European university students, who attended social science programs. Ad hoc, self-reported questionnaires measuring various digital competence areas were the most commonly used method for data collection. The studies were mostly published in low tier journals. 36% of the studies did not report any quality assessment, while less than 50% covered both groups of reliability and validity assessments at the same time. In general, the studies had a moderate to high depth of evidence on the assessments performed. We found that studies in which several areas of digital competence were measured were more likely to report quality assessments. In addition, we estimate that the probability of finding studies with acceptable or good reporting practices increases over time.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "On the quality of quantitative instruments to measure digital competence in higher education: A systematic mapping study",
+          "score": 11.66095
+        },
+        {
+          "id": "10.1371/journal.pone.0310187",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-09-13T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Yu Xin",
+            "Yuanbin Tang",
+            "Xiangwei Mou"
+          ],
+          "abstract": [
+            "\nThe digital competence of TVET (technical and vocational education and training) teacher is the key to the digital development of TVET. Improving the digital competence of TVET teachers is of great significance to accelerate the digital transformation process of TVET. However, there are still few researches on digital competence of TVET. The aim of this study is to describe the self-cognition of digital competence of Chinese teachers for TVET. For this purpose, based on the development characteristics of China\u2019s TVET, a standard system for digital competence of TVET teachers in China was established, including digital mindset and attitude, digital knowledge and skills, digital education and teaching, digital care and support, and digital collaboration and development. Based on this, an assessment tool was developed to investigate the current situation of competence of 2,514 in-service TVET teachers in China. The results show that the competency system is an effective tool to measure the digital competence of Chinese TVET teachers, and other internal and external factors except gender have different degrees of influence on the digital competence of teachers. According to the results of this study, different suggestions are put forward to train the digital competence of TVET teachers.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "An empirical study on the evaluation and influencing factors of digital competence of Chinese teachers for TVET",
+          "score": 11.659861
+        },
+        {
+          "id": "10.1371/journal.pone.0331786",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-10-01T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Bet\u00fcl Koparan"
+          ],
+          "abstract": [
+            "\nThis study is a quasi-experimental research that aims to compare the reading comprehension levels of students who read texts in textbooks through printed, digital, and augmented reality (AR)-supported formats. The sample of the study consisted of 150 students aged 11\u201312 who were enrolled in schools in Turkey. The participating students were randomly assigned to three equal groups (print, digital, augmented reality). During the data collection process, reading comprehension was assessed in five dimensions (literal comprehension, reorganization, inferential comprehension, evaluation, and appreciation) based on Barrett\u2019s Taxonomy. In order to determine the students\u2019 reading comprehension achievement levels, a \u201creading comprehension achievement test\u201d was used. Initially, reading activities using the same printed texts were conducted with all three groups. Afterwards, a pre-test was administered. Following a five-week break, different reading activities were conducted with the three groups during the post-test phase. Intra-group comparisons of pre-test and post-test data were analyzed using the paired-samples t-test. ANCOVA analysis was used to test whether the differences in post-test reading comprehension scores between the groups were statistically significant. The results showed that the AR-supported reading activity improved students\u2019 reading comprehension performance (p\u2009<\u2009.05, \u03b72\u2009=\u2009.388). The same trend was observed in all sub-dimensions of reading comprehension (literal comprehension p\u2009<\u2009.05, \u03b72\u2009=\u2009.140; reorganization p\u2009<\u2009.05, \u03b72\u2009=\u2009.217; inferential comprehension p\u2009<\u2009.05, \u03b72\u2009=\u2009.322; evaluation p\u2009<\u2009.05, \u03b72\u2009=\u2009.225; appreciation p\u2009<\u2009.05, \u03b72\u2009=\u2009.327). Therefore, it can be concluded that augmented reality books enhance the reading comprehension performance of children aged 11\u201312. On the other hand, there was no significant difference in reading comprehension performance between traditional reading and screen-based reading (p\u2009=\u2009.542). These findings indicate that AR content is more effective in improving students\u2019 reading comprehension compared to printed and digital texts when reading storybooks. Consequently, the present research provides insights into the effects of different text formats on middle school students\u2019 reading comprehension performance.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "An investigation of the effects of different text formats on middle school students\u2019 reading comprehension performance",
+          "score": 11.654379
+        },
+        {
+          "id": "10.1371/journal.pone.0328742",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-08-14T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Gonca G\u00fcng\u00f6r G\u00f6ksu",
+            "Erdal Ero\u011flu",
+            "Cihan Y\u00fcksel",
+            "Durdane K\u00fc\u00e7\u00fckaycan"
+          ],
+          "abstract": [
+            "\nUnderstanding public finance and budget processes has become increasingly important for the younger generation in recent years. This knowledge enables Generation Z to participate more effectively in democratic life as informed citizens. However, there is limited research on Generation Z\u2019s awareness of public budgets in the existing literature. Therefore, the study addressed a significant gap in the public finance literature. We aimed to examine the determinants influencing the state budget awareness of Generation Z undergraduates by using the survey: \u201cCitizens\u2019 Budget Awareness and Effective Factors\u201d. Data was collected from 3,972 undergraduates across all disciplines enrolled in four Turkish state universities between December 2023 and April 2024. We conducted a multiple linear regression analysis to examine the data. The main results showed that being informed about allocated public revenues for which public services, the constitutional power of the purse, budgeting processes and budget-related transactions were the determinants that most influenced the budget awareness of the students. On the contrary, being informed about the connection between taxes and public services, the Public Financial Management and Control Law No. 5018, and the amounts of public revenues within the state budget were determined as the lowest determinants influencing their awareness. Based on our results, we mainly suggested that (i) comprehensive education programmes and interactive learning should be organised in universities by using digital tools, (ii) the link between public revenues and expenditures should be explained through awareness campaigns, and (iii) budget processes should be made more transparent and accessible.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Decoding budget awareness: A multivariate analysis of generation Z undergraduates",
+          "score": 11.653062
+        },
+        {
+          "id": "10.1371/journal.pone.0335126",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-11-26T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Fareeda Abo-Rass",
+            "Ora Nakash",
+            "Sarah Abu-Kaf",
+            "Bizu Gelaye",
+            "Hanan AboJabel",
+            "Anwar Khatib"
+          ],
+          "abstract": [
+            "\nMental Health Literacy (MHL) is pivotal for understanding and addressing mental disorders, often assessed using the comprehensive Mental Health Literacy Scale (MHLS) across six dimensions and 35 items. However, research on MHL within Arab populations is not just scarce, but alarmingly so, indicating a significant gap in knowledge regarding MHL in this demographic. This study aimed to fill this gap by adapting the MHLS into Arabic and evaluating its psychometric properties among three distinct Arabic-speaking groups: adolescents, students, and the general public. Data were collected using the translated MHLS, the General Health Questionnaire, and sociodemographic measures, employing a cross-sectional design. Validation procedures were conducted, including exploratory factor analysis, reliability testing, and face validity assessment. Construct validity was assessed using Pearson correlation analysis and t-tests. The validation process yielded three modified versions of the MHLS in Arabic: MHLS-Arabic-Adolescents (31 items, 5 factors), MHLS-Arabic-Students (30 items, 6 factors), and MHLS-Arabic-General Public (33 items, 5 factors). These tools demonstrated robust construct validity and high-reliability coefficients and stood as a testament to their adaptability and potential for use in diverse Arabic-speaking populations. This study suggests the nuanced nature of MHL and points to the importance of micro-context-specific validation. Providing three reliable MHLS Arabic versions could facilitate research on MHL among Arabic-speaking populations worldwide, potentially leading to tailored intervention initiatives that aim to enhance mental health outcomes and ensure equitable access to services within Arab communities globally.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Validation of the Arabic version of the Mental Health Literacy Scale (MHLS) in three Arab samples",
+          "score": 11.652753
+        },
+        {
+          "id": "10.1371/journal.pone.0335084",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-10-31T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Maria Rita Lteif",
+            "Joumana Kalot",
+            "Mahmoud El Jaouni",
+            "Samia J. Khoury"
+          ],
+          "abstract": [
+            "Background: Having high levels of e-health literacy has been shown to positively influence health-promoting behaviors by empowering patients with greater self-efficacy and improving their health management. Multiple Sclerosis (MS) in Lebanon presents a unique case for studying e-health literacy due to several socio-economic and healthcare-specific challenges faced by this population. Aim: This study aimed to evaluate the e-health literacy levels of MS patients in Lebanon and identify the barriers they face when accessing health-related information online. Methods: This study employed a mixed-methods approach, combining an online structured survey with qualitative in-depth interviews. The eHealth Literacy Scale (eHEALS) was incorporated to quantify participants\u2019 e-health literacy levels, selected for its well-established reliability and validity, as well as its availability in both English and Arabic. Additionally, the Lily Model was used to guide various phases of the study, providing a conceptual framework for understanding and interpreting e-health literacy. Results: Among participants, 45 (31.5%) had limited eHEALS scores while 98 (68.5%) had sufficient eHEALS scores, indicating an overall sufficient e-health literacy among MS patients. However, qualitative findings revealed previously unidentified challenges, including limited confidence in assessing the credibility of online content, emotional distress triggered by exaggerated MS information online, and high reliance on general search engines and social media platforms. Participants expressed lack of access to trusted disease-specific information and voiced a need for professional guidance and well-established peer support. Conclusion: These findings call for targeted health promotion interventions to enhance this population\u2019s e-health literacy levels. It is important to equip MS patients from the point of diagnosis with the necessary skills and self-efficacy to effectively utilize online health resources and enhance their disease management journey. This calls for coordinated efforts from well-established MS patient groups, healthcare providers, academic and private institutions to support and empower this population in navigating the digital health landscape. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "E-health literacy levels of multiple sclerosis patients in Lebanon",
+          "score": 11.6526165
+        },
+        {
+          "id": "10.1371/journal.pone.0177776",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2017-05-17T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Honghui Rong",
+            "Xin Cheng",
+            "Jose M. Garcia",
+            "Ling Zhang",
+            "Lu Lu",
+            "Jian Fang",
+            "Mingshan Le",
+            "Peng Hu",
+            "Xinlu Dong",
+            "Junli Yang",
+            "Ya Wang",
+            "Ting Luo",
+            "Jun Liu",
+            "Ji-an Chen"
+          ],
+          "abstract": [
+            "\nHealth literacy (HL) has become an important public health issue and is receiving growing attention. However, the HL levels of military college students in China have never been analyzed. This study aimed to investigate the HL and related associate factors in military college students in Chongqing, China. Data was obtained with the \u201cChinese Citizen Health Literacy Questionnaire (2012 edition)\u201d from 3183 military college students aged 16\u201328 years at Chongqing in December 2015. A total score of \u226580 points determined adequate HL, and HL level was defined as the proportion of students who had adequate HL out of the total number of participants. Multiple logistic regression analysis with a stepwise forward likelihood ratio (LR) method was used to determine the effects of sociodemographic characteristics, health-related behaviors, and family-related factors on HL level. The mean score of HL was 68.56, and the HL level of military college students was 21.05%; the overall knowledge rate was 71.33%. The independent factors that were associated with HL level were years in college, educational system, time playing online games, annual household income and father's education level. Senior (odds ratio [OR] = 1.229, 95% confidence interval [CI] 1.018\u223c1.484), undergraduate (OR = 1.509, 95% CI 1.151\u223c1.978), time played games more than 5 hours each week (OR = 0.638, 95% CI 0.486\u223c0.837), annual household incomes more than 50,000 yuan (OR = 1.231, 95% CI 1.027\u223c1.476) and father's education level (high school: OR = 2.327, 95% CI 1.186\u223c4.565; university: OR = 2.450, 95% CI 1.244\u223c4.825), were independently associated with higher HL level. HL levels of military college students in Chongqing need to be improved across the board. Our data suggests that special emphasis should be placed on students in junior and those in the specialist educational system. School departments may also benefit from incorporating health literacy into their curricula and helping students manage the time they spend playing online games.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Survey of health literacy level and related influencing factors in military college students in Chongqing, China: A cross-sectional analysis",
+          "score": 11.6471
+        },
+        {
+          "id": "10.1371/journal.pone.0064153",
+          "journal": "PLoS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2013-05-28T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Xinying Sun",
+            "Juan Chen",
+            "Yuhui Shi",
+            "Qingqi Zeng",
+            "Nanfang Wei",
+            "Ruiqian Xie",
+            "Chun Chang",
+            "Weijing Du"
+          ],
+          "abstract": [
+            "Background: There is no special instrument to measure skills-based health literacy where it concerns infectious respiratory diseases. This study aimed to explore and evaluate a new skills-based instrument on health literacy regarding respiratory infectious diseases. Methods: This instrument was designed to measure not only an individual\u2019s reading and numeracy ability, but also their oral communication ability and their ability to use the internet to seek information. Sixteen stimuli materials were selected to enable measurement of the skills, which were sourced from the WHO, China CDC, and Chinese Center of Health Education. The information involved the distribution of epidemics, immunization programs, early symptoms, means of disease prevention, individual\u2019s preventative behavior, use of medications and thermometers, treatment plans and the location of hospitals. Multi-stage stratified cluster sampling was employed to collect participants. Psychometric properties were used to evaluate the reliability and validity of the instrument. Results: The overall degree of difficulty and discrimination of the instrument were 0.693 and 0.482 respectively. The instrument demonstrated good internal consistency reliability with a Cronbach\u2019s alpha of 0.864. As for validity, six factors were extracted from 30 items, which together explained 47.3% of the instrument\u2019s variance. And based on confirmatory factor analysis, the items were grouped into five subscales representing prose, document, quantitative, oral and internet based information seeking skills (\u03c72\u200a=\u200a9.200, P>0.05, GFI\u200a=\u200a0.998, TLI\u200a=\u200a0.988, AGFI\u200a=\u200a0.992, RMSEA\u200a=\u200a0.028). Conclusion: The new instrument has good reliability and validity, and it could be used to assess the health literacy regarding respiratory infectious disease status of different groups. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Measuring Health Literacy Regarding Infectious Respiratory Diseases: A New Skills-Based Instrument",
+          "score": 11.630516
+        },
+        {
+          "id": "10.1371/journal.pone.0315539",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2025-02-24T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Yi Zhang",
+            "Baixiang Zhao",
+            "Min Jian",
+            "Xiaopeng Wu"
+          ],
+          "abstract": [
+            "\nAs a new generation of assessment instrument, cognitive diagnosis integrates the measurement objectives into the cognitive model to diagnose the fine-grained knowledge of students. Taking the PISA 2012 dataset in mathematics from Shanghai, Hong Kong, Macau and Taiwan as the research subject, this study constructed a cognitive model with the attributes of Mathematical Abstraction, Logical Reasoning, Mathematical Modeling, Intuitive Imagination, Mathematical Operation and Data Analysis, and made an analysis of the mastery of students\u2019 mathematical competencies of different attributes in four regions, and the learning paths of the students\u2019 mathematical competencies were constructed. The results showed that Shanghai had the obvious advantages in each attribute; the mastery mode of Hong Kong, Macau and Taiwan showed a common trend, and they all indicated a relatively low percentages of competencies in Logical Reasoning and Intuitive Imagination. In terms of the learning paths, the learning paths in the four regions reflected diversities, but obvious main learning paths existed. Majority of the knowledge states\u2019 abilities were below 0. While in Hong Kong, Taiwan, and Macau, more knowledge states\u2019 abilities were above 0. This research provided a reference for the systematic analysis of students\u2019 knowledge status and learning path.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Cognitive diagnostic analysis of mathematics key competencies based on PISA data",
+          "score": 11.626284
+        },
+        {
+          "id": "10.1371/journal.pone.0313332",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-11-07T00:00:00Z",
+          "article_type": "Study Protocol",
+          "author_display": [
+            "Mohamad Nabil Mohd Noor",
+            "Jessica Grace Cockburn",
+            "Chan Choong Foong",
+            "Chiann Ni Thiam",
+            "Yang Faridah Abdul Aziz",
+            "Wei-Han Hong",
+            "Vinod Pallath",
+            "Jamuna Vadivelu"
+          ],
+          "abstract": [
+            "\nCurrent feedback models advocate learner autonomy in seeking, processing, and responding to feedback so that medical students can become feedback-literate. Feedback literacy improves learners\u2019 motivation, engagement, and satisfaction, which in turn enhance their competencies. However, there is a lack of an objective method of measuring medical student feedback literacy in the empirical literature. Such an instrument is required to determine the level of feedback literacy amongst medical students and whether they would benefit from an intervention. Therefore, this research protocol addresses the methodology aimed at the development of a comprehensive instrument for medical student feedback literacy, which is divided into three phases, beginning with a systematic review. Available instruments in health profession education will be examined to create an interview protocol to define medical students\u2019 feedback literacy from the perspectives of medical students, educators, and patients. A thematic analysis will form the basis for item generation, which will subsequently undergo expert validation and cognitive interviews to establish content validity. Next, we will conduct a national survey to gather evidence of construct validity, internal consistency, hypothesis testing, and test-retest reliability. In the final phase, we will distribute the instrument to other countries in an international survey to assess its cross-cultural validity. This protocol will help develop an instrument that can assist educators in assessing student feedback literacy and evaluating their behavior in terms of managing feedback. Ultimately, educators can identify strengths, and improve communication with students, as well as feedback literacy and the feedback process. In conclusion, this study protocol outlined a systematic, evidence-based methodology to develop a medical student feedback literacy instrument. This study protocol will not only apply to medical and local cultural contexts, but it has the potential for application in other educational disciplines and cross-cultural studies.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Establishing the measurement and psychometrics of medical student feedback literacy (IMPROVE-FL): A research protocol",
+          "score": 11.612471
+        },
+        {
+          "id": "10.1371/journal.pone.0047943",
+          "eissn": "1932-6203",
+          "publication_date": "2012-10-17T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Alessandra Sperduti",
+            "Federica Crivellaro",
+            "Paola Francesca Rossi",
+            "Luca Bondioli"
+          ],
+          "abstract": [
+            "\n        The present study contributes to the question of school literacy about the brain, with an original survey conducted on Italian students from the 3rd to 10th grades (n\u200a=\u200a508). The main goal was to test student's knowledge, attitudes, and interests about neuroscience, to assess needs, prospects, and difficulties in teaching about the brain from elementary to high school. A written questionnaire, maintaining anonymity, asked 12 close-ended multiple choice questions on topics related to human and animal brains, plus one facultative open-ended question about interests and curiosities on brain topics. The results show that respondents have a fragmentary level of basic knowledge about the brain, with aspects related to brain functions and consciousness the most challenging. As expected, degrees of performance improve with school level; elementary school students answered correctly an average number of 5.3 questions, middle school 6.5, and high school 7.4. Overall, students show great interest in the brain, as shown by the large number of questions gathered through the open-ended question (n\u200a=\u200a384). Other topics are addressed, mostly related to brain structure/functions and the role of the brain in the everyday life. The survey indicates the need of more thorough school programs on this subject, reinforced by interdisciplinary teaching where comparative anatomy and evolutionary aspects of brain development are covered.\n      "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "\u201cDo Octopuses Have a Brain?\u201d Knowledge, Perceptions and Attitudes towards Neuroscience at School",
+          "score": 11.596868
+        },
+        {
+          "id": "10.1371/journal.pone.0325365",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-06-02T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Hui Zhang",
+            "Yuzhong Zhang",
+            "Yi Zhou",
+            "Baichao Xu"
+          ],
+          "abstract": [
+            "Objective: While research on physical exercise has predominantly focused on rational decision-making behaviors related to health benefits, comparatively less attention has been paid to achievement emotion and its role in promoting physical exercise. Building upon dual-system theory (DST), this study examines whether achievement emotion mediates between social support and physical exercise, integrating expected value and information processing theories. It also explores how this mediation effect depends on sports motivation and feedback literacy. Methods: A questionnaire survey was conducted among 534 college students (281 male, 253 female). Data were analysed using hierarchical regression procedures in terms of moderated mediation. Results: The results show that achievement emotion partially mediates the relationship between social support and physical exercise. Specifically, the interaction of social support\u2009\u00d7\u2009sports motivation indicates that the strength of the relationship between social support and achievement emotion increases linearly with higher levels of sports motivation; similarly, the interaction of social support\u2009\u00d7\u2009feedback literacy indicates that the strength of the relationship between social support and physical exercise also increases linearly through feedback literacy level. Finally, the interaction of achievement emotion\u2009\u00d7\u2009feedback literacy indicates that the strength of the relationship between achievement emotion and physical exercise increases linearly through feedback literacy level. Conclusions: These findings suggest that attention should be paid to achievement emotion, sports motivation, and feedback literacy when designing social support interventions to promote physical exercise. This research provides a theoretical reference for improving levels of physical exercise among college students. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Social support and physical exercise: The mediating role of achievement emotions, and the moderating role of exercise motivation and feedback literacy",
+          "score": 11.594606
+        },
+        {
+          "id": "10.1371/journal.pone.0262260",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-01-19T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Melvin M. R. Ng",
+            "Peter N. Bowers",
+            "Jeffrey S. Bowers"
+          ],
+          "abstract": [
+            "\nThere is growing interest in the role that morphological knowledge plays in literacy acquisition, but there is no research directly comparing the efficacy of different forms of morphological instruction. Here we compare two methods of teaching English morphology in the context of a memory experiment when words were organized by affix during study (e.g., a list of words was presented that all share an affix, such as <doing>, <going>, <talking>, <walking>, etc.) or by base during study (e.g., a list of words was presented that all share a base, such as <doing>, <done>, <redo>, <undo>). We show that memory for morphologically complex words is better in both conditions compared to a control condition that does not highlight the morphological composition of words, and most importantly, show that studying words in a base-centric format improves memory further still. We argue that the morphological matrix that organizes words around a common base may provide an important new tool for literacy instruction.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "A promising new tool for literacy instruction: The morphological matrix",
+          "score": 11.5946045
+        },
+        {
+          "id": "10.1371/journal.pone.0320725",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-04-21T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Maria Rosa Miccoli",
+            "Yury Shevchenko",
+            "Paola Iannello",
+            "Ulf-Dietrich Reips"
+          ],
+          "abstract": [
+            "\nAcademics and policymakers recognize the growing importance of\u00a0subjective financial well-being for emerging adults, yet little is known about the factors influencing the subjective financial well-being perceived by the emerging adult population. We aim to investigate the role of socio-demographic characteristics (job type, age, country of residence), individual differences in financial knowledge (financial literacy), skills (financial behavior), cognitive response styles (impulsiveness, future orientation, and maximization), and attitudinal components (trust in governmental institutions and financial professionals) in shaping subjective financial well-being among emerging adults in Italy and Germany, representing the Mediterranean and Northern models of the transitions to adulthood, respectively. A sample of 385 participants residing in Italy (n =\u2009 193) and Germany (n =\u2009 192) voluntarily participated in an online survey. Variables such as trust and maximization were incorporated into a prior financial well-being model to assess their relevance in predicting subjective financial well-being. In Model 1, variables from the prior theoretical model (socio-demographic characteristics, financial literacy, financial behavior, impulsiveness, and future orientation) were analyzed. In Model 2, trust and maximization were added as predictors of subjective financial well-being. Results revealed that the inclusion of these variables improved the model fit, and further confirmed the significant role of age, financial behavior (specifically, caring for financial matters), impulsiveness, future orientation, and trust in governmental institutions in subjective financial well-being.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Factors shaping subjective financial well-being in emerging adults: A comparative study of Italy and Germany",
+          "score": 11.592933
+        },
+        {
+          "id": "10.1371/journal.pone.0328481",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-08-14T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Nahdatul Akma Ahmad",
+            "Muhammad Asri Mohd Ali",
+            "Tengku Shahrom Tengku Shahdan"
+          ],
+          "abstract": [
+            "Introduction: As Malaysia transitions into an ageing society, older adults increasingly face challenges in acquiring digital literacy, which impacts their ability to engage with essential online services, financial transactions, healthcare applications and communication platforms. The percentage of individuals aged 65 and above in Malaysia rose from 7.2% in 2022 to 7.4% in 2023, highlighting the growing needs for digital inclusion among this demographic. While internet adoption among older individuals is increasing, many still struggle due to psychological, cognitive, and physical barriers. Factors such as low self-efficacy, fear of complexity, and age-related physical limitations hinder their effective use of digital applications. Despite government initiatives such as MyDigital and the Malaysia Digital Economy Blueprint, gaps in digital literacy persist among older adults. Research suggests that intergenerational programs (IPs), where younger individuals assist older adults in learning digital skills, can bridge this gap. These programs promote collaborative learning, reduce social isolation, and foster meaningful intergenerational relationships. However, existing instructional strategies within IPs often fail to accommodate the specific learning needs and preferences of older adults, limiting their effectiveness. Addressing these instructional gaps is essential to ensuring older adults\u2019 successful integration into the digital world. Aims: This study aims to investigate the preferences of older adult individuals in Malaysia regarding digital applications and to propose effective intergenerational instructional strategies that enhance their digital learning experiences. Methods: This qualitative study explores older adults\u2019 preferences for digital applications and their experiences with intergenerational instructional strategies in Malaysia. A total of 26 older adults and 13 young instructors participated in digital applications workshops at two Pusat Aktiviti Warga Emas (PAWE) centres on August, 2024. Older adults were paired with young instructors in small groups to guide them in using digital applications through hands-on learning. Data collection involved semi-structured interviews before and after the sessions, as well as observations. Thematic analysis is used to analyse interview data, identifying key insights into improving digital learning for older adults in Malaysia. Results: The study, conducted at two PAWE centres in Perak, Malaysia, explored intergenerational digital learning between 26 older adults (ages 59\u201382) and 13 young instructors (ages 20\u201324). Findings highlight the importance of structured instructional strategies, including interactive learning, direct instruction, and clear communication, to enhance digital literacy among older adults. Personalized learning approaches, small group discussions, and adapting content to individual needs improve engagement and comprehension. Smartphone familiarity plays a key role, with participants favouring WhatsApp and Facebook for communication. Older adults face challenges such as fear of complexity, physical limitations, and security concerns, while young instructors benefit from training to improve communication and instructional skills. The program fosters confidence, intergenerational bonding, and digital inclusion, demonstrating the value of tailored learning strategies in bridging the digital divide. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Intergenerational instructional strategies and elderly preferences for digital applications: A Malaysian case study",
+          "score": 11.591058
+        },
+        {
+          "id": "10.1371/journal.pone.0298017",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-05-31T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Mohammad Hendra Setia Lesmana",
+            "Min-Huey Chung"
+          ],
+          "abstract": [
+            "Objective: This study aimed to investigate whether perceived stigma and mental health literacy play mediating roles in the correlation between school climate and help-seeking behavior in Indonesian adolescents. Methods: We used cross-sectional study design that recruited 760 Indonesian adolescents of age 16\u201319 years. We used convenience sampling from July to September 2019. Bivariate analysis was used to investigate the association of demographic characteristics with help-seeking behavior. Mediation analysis was employed to explore the mediating roles of mental health literacy and perceived stigma on the relationship between school climate and help-seeking behavior. Results: Findings indicated that ethnicity, family income, and father\u2019s educational level were significantly associated (p < 0.05) with help-seeking behavior in Indonesian adolescents. Furthermore, perceived stigma and mental health literacy sequentially showed partial mediating roles in the relationship between school climate and help-seeking behavior (indirect effect: 0.004; 95% CI: 0.001, 0.010). Our mediating model indicated that a high level of school climate was associated with low perceived stigma (b = \u22120.11, p < 0.001) and high mental health literacy (b = 0.28, p < 0.001) and higher help-seeking behavior (b = 0.14, p < 0.001). Conclusion: Our study discovered novel insight of help-seeking behavior mechanism among adolescent by serial mediation test. Supportive school climate is necessary to achieve adequate help-seeking behavior. In addition, taking into account of student\u2019s perceived stigma and mental health literacy in promoting help-seeking behavior is also important. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Mediating roles of perceived stigma and mental health literacy in the relationship between school climate and help-seeking behavior in Indonesian adolescents",
+          "score": 11.58044
+        },
+        {
+          "id": "10.1371/journal.pone.0296000",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-12-19T00:00:00Z",
+          "article_type": "Study Protocol",
+          "author_display": [
+            "Italo Masiello",
+            "Dean L. Fixsen",
+            "Susanna Nordmark",
+            "Zeynab (Artemis) Mohseni",
+            "Kristina Holmberg",
+            "John Rack",
+            "Mattias Davidsson",
+            "Tobias Andersson-Gidlund",
+            "Hanna Augustsson"
+          ],
+          "abstract": [
+            "Background: The enhancement of\u2013or even a shift from\u2013traditional teaching and learning processes to corresponding digital practices has been rapidly occurring during the last two decades. The evidence of this ongoing change is still modest or even weak. However, the adaptation of implementation science in educational settings, a research approach which arose in the healthcare field, offers promising results for systematic and sustained improvements in schools. The aim of this study is to understand how the systematic professional development of teachers and schools principals (the intervention) to use digital learning materials and learning analytics dashboards (the innovations) could allow for innovative and lasting impacts in terms of a sustained implementation strategy, improved teaching practices and student outcomes, as well as evidence-based design of digital learning material and learning analytics dashboards. Methods: This longitudinal study uses a quasi-experimental cluster design with schools as the unit. The researchers will enroll gradually 145 experimental schools in the study. In the experimental schools the research team will form a School Team, consisting of teachers/learning-technologists, school principals, and researchers, to support teachers\u2019 use of the innovations, with student achievement as the dependent variable. For the experimental schools, the intervention is based on the four longitudinal stages comprising the Active Implementation Framework. With an anticipated student sample of about 13,000 students in grades 1\u20139, student outcomes data are going to be analyzed using hierarchical linear models. Discussion: The project seeks to address a pronounced need for favorable conditions for children\u2019s learning supported by a specific implementation framework targeting teachers, and to contribute with knowledge about the promotion of improved teaching practices and student outcomes. The project will build capacity using implementation of educational technology in Swedish educational settings. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Digital transformation in schools of two southern regions of Sweden through implementation-informed approach: A mixed-methods study protocol",
+          "score": 11.578394
+        },
+        {
+          "id": "10.1371/journal.pone.0330916",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-09-05T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Ana Lilia Ruelas-Villavicencio",
+            "Iraz\u00fa Contreras-Y\u00e1\u00f1ez",
+            "Roxana Paola G\u00f3mez-Ruiz",
+            "Mar\u00eda Clara Zagaglia Del Valle",
+            "Andrea Malag\u00f3n-Liceaga",
+            "Virginia Pascual-Ramos"
+          ],
+          "abstract": [
+            "Introduction: Digital health literacy (DHL), also known as eHealth literacy, refers to an individual\u2019s ability to locate, understand, evaluate, and apply health information from electronic sources to make informed health decisions. This skill is increasingly regarded as essential for navigating the modern healthcare landscape, promoting health equity, and improving health outcomes. The study objective was to establish an association between DHL and dermatologic outpatients\u2019 attitudes regarding ethical aspects of digital health. Additionally, we validated a questionnaire designed to assess these bioethical attitudes. Patients and methods: This cross-sectional study was performed in two phases (April 2024-December 2024). Phase-1 consisted of validating the Bioethical Attitudes toward Digital Health questionnaire (BADH). Phase-2 evaluated the association between the eHEALS (it assesses a person\u2019s ability to use digital health resources) and BADH scores. Three convenience samples of consecutive patients were used: S-1 included 46 patients who participated in a pilot testing, S-2 included 100 patients who participated in the BADH validation and S-3 included 120 patients and was used to investigate the association between DHL and bioethical attitudes. Descriptive statistics and multiple linear regression analysis were used. Results: The 8-item BADH was found to be feasible, valid, and reliable. The exploratory factor analysis revealed a two-factor structure, consisting of trust and privacy dimensions, which accounted for 59.8% of the total variance. This structure was subsequently validated through confirmatory factor analysis. The BADH reliability was confirmed with a Cronbach\u2019s alpha of 0.686 and ICC of 0.684 (95% CI: 0.581\u20130.770). A positive linear association was identified between the eHEALS and the BADH scores (\u03b2\u2009=\u20090.465, 95%CI: 0.218\u20130.450, p\u2009<\u20090.001). This relationship was evident with the trust dimension of the BADH (\u03b2\u2009=\u20090.526, 95%CI: 0.206\u20130.379, p\u2009<\u20090.001), but not with the privacy dimension. Conclusions: DHL is associated with individual moral positions regarding digital health, particularly those concerning trust. The BADH questionnaire has adequate psychometric properties. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Digital health literacy is linked to attitudes regarding the ethical aspects of digital health among patients with dermatologic comorbidities",
+          "score": 11.568679
+        },
+        {
+          "id": "10.1371/journal.pone.0077867",
+          "journal": "PLoS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2013-11-06T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "J. Antony Hughes",
+            "Gordon Phillips",
+            "Phil Reed"
+          ],
+          "abstract": [
+            "\nBasic literacy skills underlie much future adult functioning, and are targeted in children through a variety of means. Children with reading problems were exposed either to a self-paced computer programme that focused on improving phonetic ability, or underwent a classroom-based reading intervention. Exposure was limited to 3 40-min sessions a week, for six weeks. The children were assessed in terms of their reading, spelling, and mathematics abilities, as well as for their externalising and internalising behaviour problems, before the programme commenced, and immediately after the programme terminated. Relative to the control group, the computer-programme improved reading by about seven months in boys (but not in girls), but had no impact on either spelling or mathematics. Children on the programme also demonstrated fewer externalising and internalising behaviour problems than the control group. The results suggest that brief exposure to a self-paced phonetic computer-teaching programme had some benefits for the sample.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Brief Exposure to a Self-Paced Computer-Based Reading Programme and How It Impacts Reading Ability and Behaviour Problems",
+          "score": 11.5643425
+        },
+        {
+          "id": "10.1371/journal.pone.0345027",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2026-03-18T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Xiaoyu Wang",
+            "Xiang Li"
+          ],
+          "abstract": [
+            "\nChina\u2019s rapid economic growth has exacerbated environmental degradation, posing severe risks to public health and sustainable development. However, current environmental education in higher education remains predominantly teacher-centered, resulting in low engagement and inadequate development of Environmental Literacy (EL). Correspondingly, this study addresses these challenges by designing a Flipped AI-Chatbot Learning (FACL) module that is designed to support the development of students\u2019 EL through an innovative integration of generative Artificial Intelligence (AI) and Flipped Learning (FL). Using the Fuzzy Delphi Method (FDM), this research gathered the consensus of 12 experts to develop a comprehensive instructional framework grounded in educational theories. In particular, the FACL module combines pre-class AI chatbot interactions with in-class active learning strategies to promote personalized, student-centered learning. Accordingly, the results identify key instructional objectives, strategies, and evaluation mechanisms, specifying module elements intended to address traditional teaching challenges. This includes low motivation, limited interaction, and inadequate pre-class preparation. Concurrently, this study contributes to environmental science, educational technology, and information literacy by providing a scalable and interdisciplinary framework that aligns theoretical innovation with practical application. Overall, the FACL module advances environmental education while potentially cultivating critical thinking and pro-environmental behaviors, with the intention of preparing students to address complex sustainability challenges in real-world contexts.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Designing a flipped AI-chatbot learning module to support students\u2019 environmental literacy development: A Fuzzy Delphi Method",
+          "score": 11.564009
+        },
+        {
+          "id": "10.1371/journal.pone.0309806",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-09-24T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Jorge Ros\u00e1rio",
+            "Sara Sim\u00f5es Dias",
+            "S\u00f3nia Dias",
+            "Ana Rita Pedro"
+          ],
+          "abstract": [
+            "Introduction: The capacity of higher education students to comprehend and act on health information is a pivotal factor in attaining favourable health outcomes and well-being. Assessing the health literacy of these students is essential in order to develop targeted interventions and provide informed health support. The aim of this study was to identify the level of health literacy and to analyse its relationship with determinants such as socio-demographic variables, chronic disease, perceived health status, and perceived availability of money for expenses among higher education students in the Alentejo region of southern Portugal. Methodology: An observational, descriptive and cross-sectional study was conducted between 22 June and 12 September 2023. An online structured questionnaire consisting of the Portuguese version of the European Health Literacy Survey Questionnaire\u201416 items (HLS-EU-PT-Q16), including socio-demographic data, presence of chronic diseases, perceived health status, and availability of money for expenses. Data were analysed using independent samples t-test, one-way ANOVA, post-hoc Gabriel\u2019s test, and multivariate logistic regression analyses at a significance level of 0.05. Regression models were used to investigate the relationship between health literacy and various determinants. The study protocol was approved by the Ethics Committee of the University of \u00c9vora, and all participants gave written informed consent. Results: Analysis of the HLS-EU-PT-Q16 showed that 82.3% of the 1228 students sampled had limited health literacy. The mean health literacy score was 19.3 \u00b1 12.8 on a scale of 0 to 50, with subscores of 19.4 \u00b1 13.9 for health care, 19.1 \u00b1 13.1 for disease prevention, and 19.0 \u00b1 13.7 for health promotion. Significant associations were found between health literacy and several determinants. Higher health literacy was associated with the absence of chronic diseases. Regression analysis showed that lower health literacy was associated with not attending health-related courses, not living with a health professional, perceiving limited availability of money for expenses, and having an unsatisfactory health status. Conclusion: This study improves the understanding of health literacy levels among higher education students in Alentejo, Portugal, and identifies key determinants. Higher education students in this region had relatively low levels of health literacy, which may have a negative impact on their health outcomes. These findings highlight the need for interventions to improve health literacy among higher education students and to address the specific needs of high-risk subgroups in the Alentejo. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Health literacy and its determinants among higher education students in the Alentejo region of southern Portugal\u2014A cross-sectional survey",
+          "score": 11.563453
+        },
+        {
+          "id": "10.1371/journal.pone.0306802",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-10-08T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Raquel Martins",
+            "Carolina Capit\u00e3o",
+            "Rodrigo Feteira-Santos",
+            "Ana Virgolino",
+            "Osvaldo Santos"
+          ],
+          "abstract": [
+            "Background: Robust tools to assess self-reported adolescent functional health literacy are lacking. In Portugal, the only available tool is the Newest Vital Sign for Portuguese adolescents (NVS-PTeen), though presenting modest validity and reliability properties. A new instrument\u2013the Functional Literacy Questionnaire (FLiQ)\u2013was developed, inspired by the NVS-PTeen, but following the European Regulation for food labeling and targeting a balanced assessment of numeracy and verbal comprehension skills. This study aimed to evaluate several psychometric properties of the FLiQ when administered to Portuguese adolescents. Methods: We conducted a longitudinal observational study with three phases: (1) Delphi panel with health literacy experts; (2) self-administration of FLiQ and NVS-PTeen to adolescents in 7th to 9th grades; and (3) re-administration of FLiQ four weeks after baseline, to the same group of participants. Results: FLiQ\u2019s content validity was excellent, with an Average-Content Validity Index of .95. Overall, 372 adolescents (50.3% girls) aged between 12\u201317 years (median age: 13) participated in the study. Of these, 150 completed the test-retest assessment. Internal consistency was good (Kuder-Richardson Fornula-20 = .70), as well as test-retest reliability (Intraclass Coefficient Correlation = .82). FLiQ total score was weakly correlated with the school year (rho = .174), and moderately with Portuguese (rho = .348) and Mathematics grades (rho = .333). Factor analysis indicated a two-dimension structure, reflecting numeracy and verbal comprehension skills. Item response theory analysis revealed differences in difficulty and discrimination capacity among items, all with adequate fit values. Conclusion: FLiQ is a valid and reliable tool. It can be used to monitor functional health literacy levels in Portuguese adolescents. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Psychometric properties of the Functional Literacy Questionnaire among Portuguese adolescents",
+          "score": 11.551645
+        },
+        {
+          "id": "10.1371/journal.pone.0325617",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-09-02T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Dhurba Khatri",
+            "Dipendra Kumar Yadav",
+            "Shishir Paudel",
+            "Sujan Poudel",
+            "Yamuna Chhetri",
+            "Sandeepa Karki"
+          ],
+          "abstract": [
+            "Background: Suicide is a major global public health concern, with stigma and low suicide literacy posing significant barriers to prevention and intervention. Despite increasing suicide rates and concerns about suicidal ideation, limited studies have assessed suicide stigma and literacy among young adults in Nepal. Objective: This study examines suicide literacy and stigma among undergraduate students and its associated factors. Methods: A cross-sectional study was conducted among 597 randomly selected undergraduate students in Pokhara Metropolitan City, Nepal, using the Literacy of Suicide Scale (LOSS-SF) and the Stigma of Suicide Scale (SOSS-SF). Descriptive statistics, independent t-tests, and ANOVA were used to analyze socio-demographic differences. Results: The mean suicide literacy score was 4.83\u2009\u00b1\u20092.07, revealing significant knowledge gaps, particularly in suicide risk factors and misconceptions. Stigma levels were high, with \u201cpathetic\u201d (42.4%), \u201cimmoral\u201d (41.7%), and \u201cstupid\u201d (40.5%) being commonly endorsed descriptors. The average scores were 23.15 (SD\u2009\u00b1\u200913.12) for SOSS-stigma, 10.10 (SD\u2009\u00b1\u20093.89) for glorification, and 13.12 (SD\u2009\u00b1\u20094.28) for isolation/depression. Females had higher isolation (p\u2009=\u20090.001) and literacy scores (p\u2009=\u20090.023), while males exhibited greater glorification tendencies (p\u2009<\u20090.001). Adults (\u226520 years) had significantly higher stigma, isolation, and literacy scores than adolescents (p\u2009<\u20090.05). Higher isolation and literacy scores were observed among students living with family (p\u2009<\u20090.05) and third-year students (p\u2009<\u20090.01). Maternal literacy and employment were associated with higher glorification scores (p\u2009<\u20090.05). Conclusion: These findings underscore the urgent need for suicide literacy programs and stigma-reduction initiatives in Nepalese educational institutions. Addressing misconceptions and fostering help-seeking behaviors through culturally sensitive interventions could enhance suicide prevention efforts. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Suicide literacy and stigma among undergraduate students in Pokhara, Nepal: A cross-sectional study",
+          "score": 11.537861
+        },
+        {
+          "id": "10.1371/journal.pone.0218921",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2019-06-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Enrica Donolato",
+            "David Giofr\u00e8",
+            "Irene C. Mammarella"
+          ],
+          "abstract": [
+            "Introduction: Research has recently focused on the relationships between working memory, negative affect (e.g., general anxiety, depressive symptoms) and personal assets (e.g., self-concept, academic and competence dimensions, and ego-resiliency), and their influence on mathematics and reading literacy. Although these variables have been amply explored, previous research has usually considered each of these aspects in isolation. Method: In the present study, 143 schoolchildren in sixth to eighth grade were tested on general anxiety, depressive symptoms, working memory, self-concept (academic and competence scales), ego-resiliency, and mathematics and reading literacy. Results: Variance partitioning showed that all predictors, i.e., working memory, negative affect (i.e., general anxiety and depressive symptoms), and personal assets (i.e., self-concept, academic and competence dimensions, and ego-resiliency) explained a unique and shared portion of the variance in mathematics and reading literacy. Conclusions: Our findings point to the importance of investigating the relationship between these factors. Underlying implications and directions for future research are discussed. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Working memory, negative affect and personal assets: How do they relate to mathematics and reading literacy?",
+          "score": 11.533124
+        },
+        {
+          "id": "10.1371/journal.pone.0324698",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-05-23T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Weam Mohamed Meargni Ahmed",
+            "Malaz M. Abdalmotalib",
+            "Mohamed H. Elbadawi",
+            "Galia Tajelsir Fadulelmula Mohammed",
+            "Waad Mohamed Ibrahim Mohamed",
+            "Fatima Salih Babiker Mohammed",
+            "Hajar Saad Salih",
+            "Hiba Omer Yousif Mohamed"
+          ],
+          "abstract": [
+            "Background: Artificial intelligence (AI) is revolutionizing education globally, yet its adoption in medical education remains inadequately understood. ChatGPT, a generative AI tool, offers promising yet doubtful potential for enhancing academic and clinical training. Methods: This study employed an analytical cross-sectional design, involving 1,443 Sudanese medical students who participated through an online, structured questionnaire. The questionnaire was designed to assess ChatGPT awareness, usage, and associated factors. Statistical analysis was performed using SPSS software to identify key determinants influencing ChatGPT awareness and usage among the participants. Objective: This study investigates the levels of awareness, attitude, and usage of ChatGPT among Sudanese medical students, identifying key socio-demographic, economic, and institutional factors influencing its adoption. Results: Among the participants, 65.8% were aware of ChatGPT, yet only 41.9% reported using it. Gender differences were statistically significant, with males demonstrating higher usage rates (p\u2009<\u20090.001). Single and unemployed students were more likely to use ChatGPT compared to their counterparts. Students residing in private accommodations and those with higher family incomes (>300,000 SDGs) showed significantly greater usage (p\u2009<\u20090.001). Factors such as residency type, internet quality, and institutional orientation were identified as key influences on ChatGPT adoption, highlighting a substantial digital influence. Additionally, inadequate infrastructure and reliance on traditional curricula were significant barriers to wider usage. Conclusions: The findings underscore the urgent need for targeted interventions, including curriculum reform to integrate AI literacy, enhanced digital infrastructure, and gender-equity initiatives. Addressing these systemic gaps will scale up AI adoption in medical education. This study provides actionable insights for educators and policymakers, emphasizing the urgency of bridging socio-economic and institutional inequities to foster equitable access to AI tools in medical training. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Shaping the future of medical education: A cross-sectional study on ChatGPT attitude and usage among medical students in Sudan",
+          "score": 11.529268
+        },
+        {
+          "id": "10.1371/journal.pone.0265823",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-06-15T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Jannetje E. P. Driessen",
+            "Dani\u00ebl A. C. Vos",
+            "Ionica Smeets",
+            "Casper J. Albers"
+          ],
+          "abstract": [
+            "\nMisleading graphs are a source of misinformation that worry many experts. Especially people with a low graph literacy are thought to be persuaded by graphs that misrepresent the underlying data. But we know little about how people interpret misleading graphs and how these graphs influence their opinions. In this study we focus on the effect of truncating the y-axis for a line chart which exaggerates an upgoing trend. In a randomized controlled trial, we showed participants either a normal or a misleading chart, and we did so in two different contexts. After they had seen the graphs, we asked participants their opinion on the trend and to give an estimation of the increase. Finally we measured their graph literacy. Our results show that context is the only significant factor in opinion-forming; the misleading graph and graph literacy had no effect. None of these factors had a significant impact on estimations for the increase. These results show that people might be less susceptible to misleading graphs than we thought and that context has more impact than a misleading y-axis.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Misleading graphs in context: Less misleading than expected",
+          "score": 11.523859
+        },
+        {
+          "id": "10.1371/journal.pone.0322181",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-05-15T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Jorge Ros\u00e1rio",
+            "Sara Sim\u00f5es Dias",
+            "S\u00f3nia Dias",
+            "Ana Rita Pedro"
+          ],
+          "abstract": [
+            "Introduction: The navigational health literacy of higher education students is fundamental to effective health management and successful health navigation, thereby improving health outcomes and overall well-being. Assessing the general and navigational health literacy levels of these students is crucial for developing targeted interventions and facilitating informed decision-making on health-related issues. This study aimed to identify the levels of general and navigational health literacy, characterise access to and utilisation of healthcare services, and analyse the differences between the mean general and navigational health literacy indices and determinants among higher education students in the Alentejo region of southern Portugal. Methodology: A descriptive and cross-sectional study was conducted between 25 May and 12 September 2023 with 1979 higher education students. An online structured questionnaire comprising the Portuguese version of the European Health Literacy Survey Questionnaire \u2013 16 items (HLS-EU-PT-Q16) and the Navigational Health Literacy Scale (HLS19-NAV), both from the European Consortium, was used. Sociodemographic data, presence of chronic disease, perceived health status, perceived availability of money for expenses, and healthcare access and utilisation variables were included. The study data were analysed using independent samples t-test, one-way ANOVA, and post hoc Bonferroni test, followed by multiple linear regression analyses at a significance level of 0.05. Multiple linear regression analysis was performed to identify factors associated with both general and navigational health literacy. The study protocol was approved by the ethics committee of the University of \u00c9vora, and all participants provided written informed consent. Results: Most students (86.8%) exhibited limited general health literacy, while 13.2% demonstrated adequate health literacy. Inadequate navigational health literacy was observed in 73.4% of students. Students with lower mean general and navigational health literacy were more likely to have utilised health services. Students with chronic conditions, recent use of urgent or emergency services, and difficulties in accessing healthcare had lower health literacy. Conversely, those enrolled in health-related courses, those with good financial resources and those who had not used health services during their course had higher health literacy. In addition, lower navigational health literacy was found among displaced students, those with chronic conditions and those who had recently consulted a doctor. Higher navigational health literacy was associated with enrolment in health-related courses and adequate general health literacy. Conclusion: The findings highlight the significant influence of demographic and academic factors on general and navigational health literacy among higher education students. The prevalence of limited general and navigational health literacy underscores a significant challenge for students, institutions, and health policy makers. Effective health literacy interventions should take these factors into account. Future research should examine longitudinal changes in health literacy and evaluate the impact of targeted educational programmes. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Navigational health literacy and health service use among higher education students in Alentejo, Portugal - A cross-sectional study",
+          "score": 11.489816
+        },
+        {
+          "id": "10.1371/journal.pone.0259523",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2021-11-24T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Channing J. Mathews",
+            "Luke McGuire",
+            "Angelina Joy",
+            "Fidelia Law",
+            "Mark Winterbottom",
+            "Adam Rutland",
+            "Marc Drews",
+            "Adam J. Hoffman",
+            "Kelly Lynn Mulvey",
+            "Adam Hartstone-Rose"
+          ],
+          "abstract": [
+            "\nThis study explored relations between COVID-19 news source, trust in COVID-19 information source, and COVID-19 health literacy in 194 STEM-oriented adolescents and young adults from the US and the UK. Analyses suggest that adolescents use both traditional news (e.g., TV or newspapers) and social media news to acquire information about COVID-19 and have average levels of COVID-19 health literacy. Hierarchical linear regression analyses suggest that the association between traditional news media and COVID-19 health literacy depends on participants\u2019 level of trust in their government leader. For youth in both the US and the UK who used traditional media for information about COVID-19 and who have higher trust in their respective government leader (i.e., former US President Donald Trump and UK Prime Minister Boris Johnson) had lower COVID-19 health literacy. Results highlight how youth are learning about the pandemic and the importance of not only considering their information source, but also their levels of trust in their government leaders.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Assessing adolescents\u2019 critical health literacy: How is trust in government leadership associated with knowledge of COVID-19?",
+          "score": 11.488529
+        },
+        {
+          "id": "10.1371/journal.pone.0307094",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-07-18T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Anna Prokop-Dorner",
+            "Aleksandra Pi\u0142at-Kobla",
+            "Magdalena \u015alusarczyk",
+            "Maria \u015awi\u0105tkiewicz-Mo\u015bny",
+            "Natalia O\u017cegalska-\u0141ukasik",
+            "Aleksandra Potysz-Rzyman",
+            "Marianna Zarychta",
+            "Albert Juszczyk",
+            "Dominika Kondyjowska",
+            "Agnieszka Magiera",
+            "Ma\u0142gorzata Maraj",
+            "Dawid Storman",
+            "Sylwia Warzecha",
+            "Paulina W\u0119glarz",
+            "Magdalena Wojtaszek-G\u0142\u00f3wka",
+            "Wioletta \u017babicka",
+            "Ma\u0142gorzata M. Ba\u0142a"
+          ],
+          "abstract": [
+            "\nAccording to the World Health Organization, the improvement of people\u2019s health literacy is one of the fundamental public health challenges in the 21st century. The key issue in teaching health literacy is to develop critical thinking skills. As health literacy and critical thinking should be developed at school age, we reviewed teaching methods or educational interventions used in empirical studies focused on the development of critical thinking regarding health and implemented by teachers in preschools, primary schools, or secondary schools. We searched seven databases (Medline, Embase, Web of Science, ERIC, ProqQuest, PsycArticles, and CINAHL) from inception to 20 September 2023 for any type of empirical studies. Due to the heterogeneity in interventions and inadequate reporting of results, a descriptive synthesis of studies was performed in addition to quantitative analysis. Of the 15919 initial records, 115 studies were included in the review. Most of the educational interventions focused on lifestyle-related health issues such as substance use, sexual and reproductive health, and nutrition. The popularity of health issues changed over time and depended on the geographical context. Six dimensions that differentiated the teaching methods were identified: central teaching component, central educator, pupils\u2019 activity level, teaching context, educational materials, and significance of critical thinking. Many educational interventions did not address the development of critical thinking skills in a comprehensive manner, and the significance of critical thinking varied greatly. Interventions in which critical thinking had high and very high significance applied mainly problem-solving methods and involved pupils\u2019 activity. The evidence on the effectiveness of the teaching methods that develop critical thinking is limited because most articles failed to provide detailed information on the teaching methods or did not examine their effects. We recommend that a checklist is developed to facilitate a detailed description of health educational interventions and thus promoting their replicability.\nStudy registration: The protocol of the review was registered in the OSF Registries on 13 January 2022 (doi: https://doi.org/10.17605/OSF.IO/46TEZ).\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Teaching methods for critical thinking in health education of children up to high school: A scoping review",
+          "score": 11.486766
+        },
+        {
+          "id": "10.1371/journal.pone.0109110",
+          "journal": "PLoS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2014-12-05T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Braden O\u2032Neill",
+            "Daniela Gon\u00e7alves",
+            "Ignacio Ricci-Cabello",
+            "Sue Ziebland",
+            "Jose Valderas"
+          ],
+          "abstract": [
+            "\nWith the increasing recognition of health literacy as a worldwide research priority, the development and refinement of indices to measure the construct is an important area of inquiry. Furthermore, the proliferation of online resources and research means that there is a growing need for self-administered instruments. We undertook a systematic overview to identify all published self-administered health literacy assessment indices to report their content and considerations associated with their administration. A primary aim of this study was to assist those seeking to employ a self-reported health literacy index to select one that has been developed and validated for an appropriate context, as well as with desired administration characteristics. Systematic searches were carried out in four electronic databases, and studies were included if they reported the development and/or validation of a novel health literacy assessment measure. Data were systematically extracted on key characteristics of the instruments: breadth of construct (\u201cgeneric\u201d vs. \u201ccontent- or context- specific\u201d health literacy), whether it was an original instrument or a derivative, country of origin, administration characteristics, age of target population (adult vs. pediatric), and evidence for validity. 35 articles met the inclusion criteria. There were 27 original instruments (27/35; 77.1%) and 8 derivative instruments (8/35; 22.9%). 22 indices measured \u201cgeneral\u201d health literacy (22/35; 62.9%) while the remainder measured condition- or context- specific health literacy (13/35; 37.1%). Most health literacy measures were developed in the United States (22/35; 62.9%), and about half had adequate face, content, and construct validity (16/35; 45.7%). Given the number of measures available for many specific conditions and contexts, and that several have acceptable validity, our findings suggest that the research agenda should shift towards the investigation and elaboration of health literacy as a construct itself, in order for research in health literacy measurement to progress.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "An Overview of Self-Administered Health Literacy Instruments",
+          "score": 11.483074
+        },
+        {
+          "id": "10.1371/journal.pone.0315318",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-12-19T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Marco Alcocer",
+            "Leonardo Falabella",
+            "Alexandra Lange",
+            "Nicholas Smith",
+            "Maureen Feeley"
+          ],
+          "abstract": [
+            "\nDespite the importance of data literacy skills for academic and professional careers, learning these skills is a source of stress and difficulty for undergraduate students. This study first introduces an online supplemental instruction resource to support student learning in an introductory data analysis course at a large public university. To evaluate its impact, we conduct a pre-registered double-blind within-subject experiment. Each student is randomly assigned to a subset of the online supplemental instruction modules and takes an exam assessing concepts covered by the course material and supplemented by the modules. Access to the online supplemental instruction modules improves student performance on exam questions, and students who engage with the modules improve exam scores even more. We find no differential impacts based on pre-treatment GPA or underrepresented status, and a post-experiment survey suggests that the online supplemental instruction modules are also well-received by students. This study shows that asynchronous online supplemental instruction resources are a promising way to support student learning in data literacy.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Supplemental online resources improve data literacy education: Evidence from a social science methods course",
+          "score": 11.475682
+        },
+        {
+          "id": "10.1371/journal.pone.0243763",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2021-03-11T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Aki-Juhani Kyr\u00f6l\u00e4inen",
+            "Victor Kuperman"
+          ],
+          "abstract": [
+            "\nWhat makes a literate person? What leads to literacy gains and losses within and between individuals and countries? This paper provides new evidence that helps answer these questions. The present comparative analysis of literacy is based on large representative samples from the Survey of Adult Skills conducted in 33 countries, with 25\u201365 year old participants. We provide, for the first time, estimates of relative importance for a comprehensive set of experiential factors, motivations, incentives, parental influence, demands of workplace, and other predictors of influence. We sketch a configuration of factors that predicts an \u201cideal\u201d reader, i.e., the optimal literacy performance. Moreover, we discover a pivotal role of the age effect in predicting variability between countries. Countries with the highest literacy scores are the ones where literacy decreases with age the most strongly. We discuss this finding against current accounts of aging effects, cohort effects and others. Finally, we provide methodological recommendations for experimental studies of aging in cognitive tasks like reading.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Predictors of literacy in adulthood: Evidence from 33 countries",
+          "score": 11.465102
+        },
+        {
+          "id": "10.1371/journal.pone.0323510",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-08-08T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Linzhao Wang",
+            "Bo Gao",
+            "Xiangwei Chang",
+            "Li Zhang"
+          ],
+          "abstract": [
+            "\nOcean literacy plays a crucial role in promoting sustainable marine conservation behaviors, yet its underlying psychological mechanisms among university students remain underexplored, particularly within Asian contexts. This qualitative study aimed to investigate how ocean literacy influences pro-environmental behaviors among Chinese university students through environmental beliefs, values, and perceived responsibility. Semi-structured interviews with 16 university students from four coastal universities in China were conducted and analyzed using thematic analysis with NVivo software. Results indicated that ocean literacy encompasses five interconnected dimensions: scientific knowledge, environmental ethics, behavioral intentions for conservation, policy understanding, and critical thinking. Emotional connectedness and direct experiential engagement emerged as significant factors enhancing students\u2019 environmental awareness and behavioral transformation. The findings also highlighted cultural relevance, social norms, and interactive educational practices as essential elements for translating ocean literacy into tangible conservation actions. Despite participants demonstrating foundational ocean knowledge, limitations in their systemic understanding of complex marine issues were identified, suggesting the need for more comprehensive educational interventions. This study provides empirical insights for optimizing marine education strategies and policy initiatives aimed at enhancing public engagement and achieving sustainable ocean governance.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "The promotive effect of ocean literacy on marine conservation behavior: A qualitative study based on Chinese university students",
+          "score": 11.454573
+        },
+        {
+          "id": "10.1371/journal.pone.0244197",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2021-01-06T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Tan Liu",
+            "Xiao Su",
+            "Niuniu Li",
+            "Jing Sun",
+            "Guansheng Ma",
+            "Wenli Zhu"
+          ],
+          "abstract": [
+            "Background: This study aimed to develop and validate the Food and Nutrition Literacy Questionnaire for Chinese School-age Children (FNLQ-SC). Methods: A comprehensive literature review and qualitative study were initially performed to identify the dimensions and core components of food and nutrition literacy. A cross-sectional survey of 4359 school-age children was conducted, and junior middle school students were used to analyze the reliability and validity of the questionnaire (n = 2452). The reliability of the questionnaire was determined by internal consistency, the construct validity was assessed by exploratory factor analysis (EFA) and confirmatory factor analysis (CFA), and the content validity was assessed by the Pearson correlation coefficient. Results: From the literature review and qualitative methods, 19 core components of the FNLQ-SC were developed, including one dimension of food and nutrition knowledge and understanding, and four skill dimensions (ability of access, selection, preparing food and healthy eating). The overall FNLQ-SC questionnaire had acceptable internal consistency (Cronbach\u2019s \u03b1 = 0.698). The EFA of skill components extracted 5 factors that were included in the conceptual framework in a slightly different model, and the cumulative contribution of variance accounted for 50.60% of the overall variance. The CFA of skill components showed an acceptable fit in general and the root mean square error of approximation (RMSEA) was 0.070 (between 0.50 to 0.80). The communality was greater than 0.20 for all components. The Pearson correlation coefficients between each dimension and the overall questionnaire ranged from 0.370 to 0.877. The average FNLQ-SC score of all 4395 participants was 61.91 \u00b1 9.22, and the score for the knowledge and understanding dimension was higher than that for the skill dimensions. Multiple linear regression analysis indicated that not only social demographic characteristics (being a girl, being an only child, living someplace other than at school, having an urban registered permanent residence status, being from an affluent family, and being cared for by parents/grandparents with a higher education level) but also the home food environment were predictors of food and nutrition literacy in school-age children (R2 = 0.226, F = 81.401, P<0.05). Conclusion: The Food and Nutrition Literacy Questionnaire (FNLQ-SC) developed here had good reliability, and it can potentially be a useful instrument for assessing food and nutrition literacy among Chinese school-age children. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Development and validation of a food and nutrition literacy questionnaire for Chinese school-age children",
+          "score": 11.449466
+        },
+        {
+          "id": "10.1371/journal.pone.0181074",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2017-07-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Juan Zhang",
+            "Xitao Fan",
+            "Sum Kwing Cheung",
+            "Yaxuan Meng",
+            "Zhihui Cai",
+            "Bi Ying Hu"
+          ],
+          "abstract": [
+            "Background: The present study investigated the role of early language abilities in the development of math skills among Chinese K-3 students. About 2000 children in China, who were on average aged 6 years, were assessed for both informal math (e.g., basic number concepts such as counting objects) and formal math (calculations including addition and subtraction) skills, language abilities and nonverbal intelligence. Methodology: Correlation analysis showed that language abilities were more strongly associated with informal than formal math skills, and regression analyses revealed that children\u2019s language abilities could uniquely predict both informal and formal math skills with age, gender, and nonverbal intelligence controlled. Mediation analyses demonstrated that the relationship between children\u2019s language abilities and formal math skills was partially mediated by informal math skills. Results: The current findings indicate 1) Children\u2019s language abilities are of strong predictive values for both informal and formal math skills; 2) Language abilities impacts formal math skills partially through the mediation of informal math skills. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "The role of early language abilities on math skills among Chinese children",
+          "score": 11.449041
+        },
+        {
+          "id": "10.1371/journal.pone.0332997",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-09-30T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Xiaofen Wang",
+            "Ying Jiang"
+          ],
+          "abstract": [
+            "\nPhysical literacy in children has become a significant research topic in both education and psychology. Recently, machine learning, as a cutting-edge AI technology, has started to play a crucial role in these fields. This study aimed to apply machine learning models to predict physical literacy in 4\u20136-year-old children and to comprehensively analyze the influence of individual and family factors. We evaluated the physical literacy of 1,734 children aged 4\u20136 and systematically examined the impact of both individual factors (such as gender, age, body type, sedentary behavior, screen time, moderate-to-vigorous physical activity (MVPA), sleep duration, and sleep quality) and family factors (such as parents\u2019 education level, occupation, exercise frequency, support for children\u2019s physical activity, household annual income, and family exercise environment) using various machine learning models. Results showed that the ensemble learning model achieved the best performance in predicting physical literacy, with an AUC of 86.2%. Among all predictive factors, mother\u2019s exercise frequency, family exercise environment, and time spent on MVPA were identified as the most important. These findings provide new insights into enhancing children\u2019s physical literacy and underscore the critical role of family environment and lifestyle in its development.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Application of machine learning models in predicting physical literacy in 4\u20136-year-old children: A comprehensive analysis of individual and family factors",
+          "score": 11.443759
+        },
+        {
+          "id": "10.1371/journal.pone.0338299",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-12-31T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Radwan Qasrawi",
+            "Reema Tayyem",
+            "Suliman Thwib",
+            "Ghada Issa",
+            "Malak Amro",
+            "Razan AbuGhoush",
+            "Haleama Al Sabbah",
+            "Khlood Bookari",
+            "Noor Alawadhi",
+            "Sabika Allehdan",
+            "Hana Trigui",
+            "Elie Sokhn",
+            "Yousef Khader",
+            "Eman Badran",
+            "Iman Kamel",
+            "Atiyeh Abdallah",
+            "Mohamed Jema\u00e0",
+            "Emmanuel Musa",
+            "Jude Dzevela Kong"
+          ],
+          "abstract": [
+            "Background: Digital determinants of health include key technological factors such as internet access, digital literacy, and the quality of online health information. These elements critically influence health outcomes and behaviors. Methods: This study examined the impact of digital health determinants on health improvement across ten Arab countries: Bahrain, Palestine, Lebanon, Jordan, Kuwait, the United Arab Emirates, Saudi Arabia, Egypt, Morocco, and Tunisia. The study analyzed a dataset of 12,522 samples after implementing SMOTE-ENN to balance underrepresented demographics, capturing data on digital literacy, internet access, and the impact of online health information on personal health. Results: Results showed that 93.9% of participants reported having internet access, yet 71.4% did not receive formal education on internet usage. Morocco, Tunisia, and Jordan reported the highest percentages of individuals without such education. Regarding health impacts, 32.9% of participants reported significant personal health improvements linked to digital determinants. Egypt, Lebanon, and Saudi Arabia had higher rates of positive health impacts, while Morocco, Jordan, and Bahrain reported the lowest health improvements. Higher digital literacy and reliable internet access were positively associated with better health outcomes across all countries, whereas specific sociodemographic and digital factors varied: younger age and urban residence were linked to greater benefit in the Gulf; education level and healthcare access were especially influential in North Africa; and in the Levant, digital literacy and use of trusted health sources showed strong impact. These findings show both shared and region-specific drivers of digital health benefits. Conclusion: Improving health outcomes requires diversification: foundational education on internet usage must be combined with broader digital literacy initiatives, efforts to build and maintain trust in credible online health platforms, and strategies that actively foster patient engagement through interactive digital tools. Policies should also ensure reliable internet infrastructure and tailor interventions to regional and sociodemographic contexts to improve overall health outcomes. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Digital health determinants & divide in the Arab world: A cross-sectional study",
+          "score": 11.4419365
+        },
+        {
+          "id": "10.1371/journal.pgph.0004651",
+          "journal": "PLOS Global Public Health",
+          "eissn": "2767-3375",
+          "publication_date": "2025-05-28T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Miriam Bosire",
+            "Doreen Mitaru",
+            "Joanna Olale",
+            "Schiller Mbuka",
+            "Melvine Obuya",
+            "Rodgers Ochieng",
+            "Boniface Oyugi",
+            "Erastus Muniu",
+            "Joseph Mutai",
+            "Divya Parmar",
+            "Lydia Kaduka",
+            "Seeromanie Harding"
+          ],
+          "abstract": [
+            "\nSedentary lifestyle is a major risk factor for cardiovascular diseases (CVDs) which account for 8% of Kenya\u2019s non-communicable disease (NCD) burden. Prevalence of physical inactivity remains high globally. There is paucity of data on physical activity levels in rural Sub-Saharan Africa to inform effective interventions. This study sought to establish levels and factors associated with physical activity in a rural population in Kenya. This was a cross-sectional study in Vihiga, a predominantly rural County in Kenya. Participants were adults aged \u226518 years drawn from four community markets. Stratified sampling by ecological zones and rural/urban status was used to select the four markets and Sampling the Next Customer Exiting the Market method for the respondents. Researcher administered e-questionnaire adapted from International Physical Activity Questionnaire (IPAQ) was used to collect data. Physical activity was calculated as the sum of all Metabolic Equivalents (MET)-minutes/week. Multivariable binary logistic regression analysis was used to identify correlates of physical activity. Out of the total 375 (m: 49%; f: 51%) participants, 27% were physically inactive (m: 22%; f: 32%;) and 42% engaged in low level physical activity. Majority of the respondents (75.5%) engaged in transportation-related physical activity while 32% engaged in leisure physical activities. The odds of being physically inactive were 1.93 times higher for females, 2.62 higher for those aged \u226565 years, and 3.62 higher for those with high health literacy. 48% with high health literacy were in the early working age group (15\u201324 years). Majority (53%) received health information from healthcare workers, especially for the 60% physically inactive participants. This study highlights the need for targeted community interventions to address the observed physical inactivity especially among women and older adults in rural Kenya.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Physical activity levels and its associated factors among adults in Vihiga county, Kenya",
+          "score": 11.441491
+        },
+        {
+          "id": "10.1371/journal.pone.0330203",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-09-12T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Ila Fazzio",
+            "Siddharudha Shivalli",
+            "Nicholas Magill",
+            "Diana Elbourne",
+            "Suzanne Keddie",
+            "Dropti Sharma",
+            "Sajjan Singh Shekhawat",
+            "Arjun Agarwal",
+            "Rukmini Banerji",
+            "Sridevi Karnati",
+            "Harshavardhan Reddy",
+            "Tony Brady",
+            "Piotr Gawron",
+            "Pei-Tseng Jenny Hsieh",
+            "Alex Eble",
+            "Peter Boone",
+            "Chris Frost"
+          ],
+          "abstract": [
+            "Introduction: Rates of primary school enrolment have improved in India, but levels of learning achievement remain low. In the Support To Rural India\u2019s Public Education System (STRIPES) trial, a para-instructor intervention improved numeracy and literacy levels in Telangana, India (2008\u221210). The STRIPES2 trial was designed to assess whether a similar intervention in a younger cohort of children would have similar effects in Satna and Maihar districts of Madhya Pradesh, India, and be cost-effective. Methods: In this Madhya Pradesh cluster-randomized controlled trial, 196 villages (clusters) were randomized to receive either a health (CHAMPION2: community health promotion and medical provision and impact on neonates) or education (STRIPES2) intervention. Villages receiving the health intervention were controls for the education intervention and vice versa. For children newly enrolled in primary school, the STRIPES2 intervention comprised before/after-school classes (2 hours per day, 6 days a week) given by trained para-instructors from the local community, frequent monitoring, and engagement with caregivers to motivate children, delivered by the Pratham Education Foundation. STRIPES2 activities had to be suspended twice for around ten and a half months, and some components of the intervention modified due to the COVID-19 pandemic. The period of the trial was extended with the primary outcome (a composite literacy and numeracy score of Early Grade Reading and Mathematics Assessments) assessed around 30 months after classes started. Results: Composite test scores were significantly higher in the intervention arm (98 villages; 3054 children) than in the control arm (98 villages; 3275 children) at the end of the trial. The mean difference on a percentage point scale was 14.17; 95% CI 11.36 to 16.97; p\u2009<\u20090.001, equating to a 0.58 (95% CI 0.47 to 0.71) standard deviation difference. The cost per child per 0.1 SD increase in composite test score was INR 2476 (US$33.5). Conclusion: Despite COVID-19 interruptions and disruptions, STRIPES2 resulted in a major improvement in children\u2019s literacy and numeracy. However, the cost of achieving such benefits was substantial. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Support To Rural India\u2019s Public Education System (STRIPES2) and impact on numeracy and literacy scores: A cluster randomized trial in rural villages of Madhya Pradesh, India",
+          "score": 11.429509
+        },
+        {
+          "id": "10.1371/journal.pone.0198083",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2018-05-31T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Nahed O. ElHassan",
+            "Shasha Bai",
+            "Neal Gibson",
+            "Greg Holland",
+            "James M. Robbins",
+            "Jeffrey R. Kaiser"
+          ],
+          "abstract": [
+            "Background: The relative influence of prematurity vs. maternal social factors (socioeconomic status and education level) on academic performance has rarely been examined. Objective: To examine the impact of prematurity and maternal social factors on academic performance from 3rd through 8th grade. Methods: We conducted a retrospective cohort study of infants born in 1998 at the University of Arkansas for Medical Sciences. The study sample included 58 extremely low gestational age newborns (ELGANs, 23\u2012<28 weeks), 171 preterm (\u226528\u2012<34 weeks), 228 late preterm (\u226534\u2012<37 weeks), and 967 term ((\u226537\u2012<42 weeks) infants. Neonatal and maternal variables were collected including maternal insurance status (proxy measure for socioeconomic status) and education level. The primary outcomes were literacy and mathematics achievement-test scores from 3rd through 8th grade. Linear mixed models were used to identify significant predictors of academic performance. All two-way interactions between grade level, gestational-age (GA) groups, and social factors were tested for statistical significance. Results: Prematurity, social factors, gender, race, gravidity, and Apgar score at one minute were critical determinants of academic performance. Favorable social factors were associated with a significant increase in both literacy and mathematic scores, while prematurity was associated with a significant decrease in mathematic scores. Examination of GA categories and social factors interaction suggested that the impact of social factors on test scores was similar for all GA groups. Furthermore, the impact of social factors varied from grade to grade for literacy, while the influence of either GA groups or social factors was constant across grades for mathematics. For example, an ELGAN with favorable social factors had a predicted literacy score 104.1 (P <.001), 98.2 (P <.001), and 76.4 (P <.01) points higher than an otherwise similar disadvantaged term infant at grades 3, 5, and 8, respectively. The difference in their predicted mathematic scores was 33.4 points for all grades (P <.05). Conclusion: While there were significant deficits in academic performance for ELGANs compared to PT, LPT, and term infants, the deficit could be offset by higher SES and better-educated mothers. These favorable social factors were critical to a child\u2019s academic achievement. The role of socioeconomic factors should be incorporated in discussions on outcome with families of preterm infants. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "The impact of prematurity and maternal socioeconomic status and education level on achievement-test scores up to 8<sup>th</sup> grade",
+          "score": 11.427694
+        },
+        {
+          "id": "10.1371/journal.pone.0250248",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2021-04-23T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Su-Jung Nam",
+            "Hyesun Hwang"
+          ],
+          "abstract": [
+            "\nThis study examined the relationship between consumers\u2019 characteristics and social media use, focusing on consumers\u2019 information-related activities such as creating content, sharing information, and providing feedback on information. The results showed that consumers\u2019 creating content, sharing information, and providing of feedback on information were affected by their digital literacy, need for cognition, and self-esteem. Information literacy and need for cognition had positive effects on engagement in these information-related activities, but self-esteem exerted a negative effect.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Consumers\u2019 participation in information-related activities on social media",
+          "score": 11.427508
+        },
+        {
+          "id": "10.1371/journal.pone.0324142",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-05-29T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Syaza Kamarudin",
+            "Bee Koon Poh",
+            "Hanis Mastura Yahya",
+            "Norazmir Md Nor",
+            "Raduan Sharif",
+            "Ruzita Abd Talib"
+          ],
+          "abstract": [
+            "\nMaking informed food choices is crucial for all ages, especially adolescents who are involved in selecting and buying food. Understanding nutrition labels helps guide choices and ensures nutritional needs are met. This study aims to assess the prevalence and level of food label literacy among school-going adolescents aged 13\u201316 in Malaysia. This study involved a cross-sectional online survey and was sampled by random sampling involving secondary school adolescents aged 13\u201316, totaling 1983 subjects across five regions in Malaysia: Central, Southern, Northern, and East Coast of Peninsular Malaysia, as well as East Malaysia (Sabah and Sarawak). The questionnaire includes sections on sociodemographic and anthropometric information, as well as three main food label literacy domains: comprehension and interpretation of food labels, skills in using food labels, and attitudes towards food labels. A total of 89.7% of adolescents read food labels with a moderate level of literacy across all three domains (comprehension and interpretation, skills in usage, and attitudes) classified using predefined score ranges based on previous studies. A significant relationship (p\u2009<\u20090.05) was found between age and body mass index-for-age z-score (BAZ) with the level of food label literacy, indicating higher literacy values in older adolescents. Mean scores of all domains A, B, and C across the five regions indicated significant differences at F(4,1978) = 25.8, p\u2009=\u20090.000, F(4,1978) = 17.43, p\u2009=\u20090.000, and F(4,1978) = 25.20, p\u2009=\u20090.000. In conclusion, the proportion of Malaysian adolescents reading food labels is high (89.7%). Nevertheless, the food label literacy level across all three domains is moderate. Hence, the promotion of the importance of nutrition labels in schools through organised programs such as interactive hands-on label reading activities and school-based nutrition campaigns are recommended. A crucial gap in health education can be addressed by fostering proper comprehension, skills, and attitudes toward food labels and facilitating informed dietary practices among adolescents.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Food label literacy among Malaysian school adolescents: A prevalence study",
+          "score": 11.413426
+        }
+      ]
+    }
+  }
+}

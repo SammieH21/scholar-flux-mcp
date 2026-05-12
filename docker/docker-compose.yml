@@ -1,0 +1,215 @@
+# ScholarFluxMCP Server Docker Compose Configuration
+# 
+# This configuration provides:
+# - ScholarFluxMCP Server (stdio or HTTP transport)
+# - MongoDB for persistent caching
+# - Optional Redis for session caching
+#
+# Usage:
+#   docker compose up -d              # Start all services
+#   docker compose logs -f mcp        # View MCP server logs
+#   docker compose down               # Stop all services
+#
+# For MCP client configuration, see README.md
+
+services:
+  # ===========================================================================
+  # ScholarFluxMCP
+  # ===========================================================================
+  mcp:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: scholar-flux-mcp
+    restart: unless-stopped
+    
+    # For stdio transport (default), use stdin_open and tty
+    stdin_open: true
+    tty: true
+    
+    # For HTTP transport, uncomment and set the following env variables in addition the port:
+    # SCHOLAR_FLUX_MCP_HOST, SCHOLAR_FLUX_MCP_PORT, and SCHOLAR_FLUX_MCP_TRANSPORT
+    # ports:
+    #   - "8000:8000"
+    
+    environment:
+
+      # ScholarFlux configuration
+      - SCHOLAR_FLUX_MCP_TRANSPORT=stdio # default - options: (stdio, sse, streamable-http)
+      - SCHOLAR_FLUX_MCP_PORT=8000  # relevant if using sse or streamable-http transport
+      - SCHOLAR_FLUX_MCP_HOST=0.0.0.0  # also relevant only if using sse or streamable-http transport
+      - SCHOLAR_FLUX_HOME=/app/scholar-flux
+      - SCHOLAR_FLUX_ENABLE_LOGGING=TRUE
+      - SCHOLAR_FLUX_LOG_LEVEL=WARNING
+      - SCHOLAR_FLUX_MCP_LOG_LEVEL=INFO
+      
+      # Cache backends
+      - SCHOLAR_FLUX_DEFAULT_SESSION_CACHE_BACKEND=mongodb
+      - SCHOLAR_FLUX_DEFAULT_RESPONSE_CACHE_STORAGE=mongodb
+      
+      # MongoDB connection
+      - SCHOLAR_FLUX_MONGODB_HOST=mongodb
+      - SCHOLAR_FLUX_MONGODB_PORT=27017
+      
+      # API Keys (set these in .env file)
+      - PUBMED_API_KEY=${PUBMED_API_KEY:-}
+      - SPRINGER_NATURE_API_KEY=${SPRINGER_NATURE_API_KEY:-}
+      - CORE_API_KEY=${CORE_API_KEY:-}
+
+      # Embedding settings
+      - SCHOLAR_FLUX_MCP_RECORD_TRUNCATION_LENGTH=${SCHOLAR_FLUX_MCP_RECORD_TRUNCATION_LENGTH:-3000}
+      - SCHOLAR_FLUX_MCP_GROUNDING_TOKEN_LIMIT=${SCHOLAR_FLUX_MCP_GROUNDING_TOKEN_LIMIT:-120000}
+      - SCHOLAR_FLUX_MCP_RECORD_EMBEDDING_TOKEN_LIMIT=${SCHOLAR_FLUX_MCP_RECORD_EMBEDDING_TOKEN_LIMIT:-2000}
+      
+      # AI Model configuration
+      - SCHOLAR_FLUX_MCP_DEFAULT_MODEL_PROVIDER=${SCHOLAR_FLUX_MCP_DEFAULT_MODEL_PROVIDER:-}
+      - SCHOLAR_FLUX_MCP_DEFAULT_EMBEDDING_MODEL_PROVIDER=${SCHOLAR_FLUX_MCP_DEFAULT_EMBEDDING_MODEL_PROVIDER:-}
+      - OLLAMA_API_KEY=${OLLAMA_API_KEY:-}
+      - SCHOLAR_FLUX_MCP_OLLAMA_BASE_URL=${SCHOLAR_FLUX_MCP_OLLAMA_BASE_URL:-http://ollama:11434}
+      - SCHOLAR_FLUX_MCP_OLLAMA_MODEL=${SCHOLAR_FLUX_MCP_OLLAMA_MODEL:-}           
+      - SCHOLAR_FLUX_MCP_OLLAMA_EMBEDDING_MODEL=${SCHOLAR_FLUX_MCP_OLLAMA_EMBEDDING_MODEL:-}           
+      - SCHOLAR_FLUX_MCP_OLLAMA_CLOUD_BASE_URL=https://ollama.com/v1
+      - SCHOLAR_FLUX_MCP_OLLAMA_CLOUD_MODEL=${SCHOLAR_FLUX_MCP_OLLAMA_CLOUD_MODEL:-}           
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - SCHOLAR_FLUX_MCP_ANTHROPIC_MODEL=${SCHOLAR_FLUX_MCP_ANTHROPIC_MODEL:-}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY:-${GEMINI_API_KEY:-}}
+      - SCHOLAR_FLUX_MCP_GOOGLE_MODEL=${SCHOLAR_FLUX_MCP_GOOGLE_MODEL:-} 
+      - SCHOLAR_FLUX_MCP_GOOGLE_EMBEDDING_MODEL=${SCHOLAR_FLUX_MCP_GOOGLE_EMBEDDING_MODEL:-}           
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - SCHOLAR_FLUX_MCP_OPENAI_MODEL=${SCHOLAR_FLUX_MCP_OPENAI_MODEL:-} 
+      - SCHOLAR_FLUX_MCP_OPENAI_PROVIDER=${SCHOLAR_FLUX_MCP_OPENAI_PROVIDER:-} 
+      - SCHOLAR_FLUX_MCP_OPENAI_ENDPOINT=${SCHOLAR_FLUX_MCP_OPENAI_ENDPOINT:-} 
+      - SCHOLAR_FLUX_MCP_OPENAI_EMBEDDING_MODEL=${SCHOLAR_FLUX_MCP_OPENAI_EMBEDDING_MODEL:-}           
+      - SCHOLAR_FLUX_MCP_OPENAI_EMBEDDING_ENDPOINT=${SCHOLAR_FLUX_MCP_OPENAI_EMBEDDING_ENDPOINT:-} 
+      - SCHOLAR_FLUX_MCP_OPENAI_EMBEDDING_PROVIDER=${SCHOLAR_FLUX_MCP_OPENAI_EMBEDDING_PROVIDER:-} 
+    
+    volumes:
+      # Persist cache and logs
+      - scholarflux-data:/app/scholar-flux
+    
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    
+    networks:
+      - scholarflux-network
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+        reservations:
+          memory: 256M
+
+  # ===========================================================================
+  # MongoDB - Persistent Cache Storage
+  # ===========================================================================
+  mongodb:
+    image: mongo:7.0
+    container_name: scholarflux-mongodb
+    restart: unless-stopped
+    
+    environment:
+      - MONGO_INITDB_DATABASE=scholarflux_cache
+    
+    volumes:
+      - mongodb-data:/data/db
+    
+    # Expose for debugging (remove in production)
+    # ports:
+    #   - "27017:27017"
+    
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    
+    networks:
+      - scholarflux-network
+    
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+        reservations:
+          memory: 128M
+
+  # ===========================================================================
+  # Redis (Optional) - Session Cache
+  # ===========================================================================
+  redis:
+    image: redis:7-alpine
+    container_name: scholarflux-redis
+    restart: unless-stopped
+    profiles:
+      - with-redis  # Only starts with: docker compose --profile with-redis up
+    
+    volumes:
+      - redis-data:/data
+    
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    
+    networks:
+      - scholarflux-network
+    
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+
+  # ===========================================================================
+  # Ollama (Optional) - Local LLM for Synthesis
+  # ===========================================================================
+  ollama:
+    image: ollama/ollama:latest
+    container_name: scholarflux-ollama
+    restart: unless-stopped
+    profiles:
+      - with-ollama  # Only starts with: docker compose --profile with-ollama up
+
+    environment:
+      - OLLAMA_MODEL=${SCHOLAR_FLUX_MCP_OLLAMA_CLOUD_MODEL:-devstral-2:123b-cloud}
+      - OLLAMA_EMBEDDING_MODEL=${SCHOLAR_FLUX_MCP_OLLAMA_EMBEDDING_MODEL:-embeddinggemma:latest}
+    
+    volumes:
+      - ollama-data:/root/.ollama
+    entrypoint: ["/bin/sh", "-c", "ollama serve & sleep 5 && ollama pull $$OLLAMA_MODEL && ollama pull $$OLLAMA_EMBEDDING_MODEL && wait"]
+    
+    # GPU support (uncomment if available)
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+    
+    networks:
+      - scholarflux-network
+
+# =============================================================================
+# Networks
+# =============================================================================
+networks:
+  scholarflux-network:
+    driver: bridge
+
+# =============================================================================
+# Volumes
+# =============================================================================
+volumes:
+  scholarflux-data:
+    driver: local
+  mongodb-data:
+    driver: local
+  redis-data:
+    driver: local
+  ollama-data:
+    driver: local

@@ -1,0 +1,943 @@
+{
+  "created_at": "2026-02-09T02:30:39.944207+00:00",
+  "elapsed": 0.241381,
+  "encoding": "utf-8",
+  "headers": {
+    "Access-Control-Allow-Credentials": "true",
+    "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+    "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Max-Age": "1728000",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=utf-8",
+    "Date": "Mon, 09 Feb 2026 02:30:39 GMT",
+    "ETag": "\"Njc4NzIwMDAwMDAwMDAwMFNvbHI=\"",
+    "Last-Modified": "Sun, 08 Feb 2026 19:34:00 GMT",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "Transfer-Encoding": "chunked",
+    "X-Cache-Status": "MISS"
+  },
+  "reason": "OK",
+  "request": {
+    "body": "",
+    "method": "GET",
+    "url": "https://api.plos.org/search?q=Learning+AI&rows=50&start=100"
+  },
+  "status_code": 200,
+  "url": "https://api.plos.org/search?q=Learning+AI&rows=50&start=100",
+  "_decoded_content": {
+    "response": {
+      "numFound": 93342,
+      "start": 100,
+      "maxScore": 3.1941595,
+      "docs": [
+        {
+          "id": "10.1371/journal.pone.0316858",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2025-01-14T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Esther C. Hamoen",
+            "Floris M. van Blankenstein",
+            "Peter G. M. de Jong",
+            "Marlies E. J. Reinders"
+          ],
+          "abstract": [
+            "\nClinical workplace learning is often suboptimal due to the dynamics of the clinical learning environment and several challenges encountered in clinical practice. At LUMC, clinical teachers introduced a novel blended learning program that included both the introduction of a Clinical Teaching Unit (CTU) and Small Private Online Course (SPOC). This study aimed to analyze the educational content and design of our educational interventions, by categorizing and comparing the dimensions of the learning program before and after the interventions. The novel blended learning program was integrated into a clerkship internal medicine, aiming to optimize clerks\u2019 clinical workplace learning. Therefore, a traditional inpatient ward was transformed into a CTU, featuring the introduction of learning activities that promoted multidisciplinary and interprofessional learning. It included an integrated SPOC, aiming to improve clinical reasoning skills, feedback and collaboration of the clerks. The authors analyzed the clerkships\u2019 content and design, by categorizing the social-epistemological dimensions of the teaching modes offered before (traditional clerkship) and after (including CTU and SPOC) the intervention. These dimensions consisted of individual versus group (collaborative), and objectivist versus constructive learning categories. The CTU model added eleven group activities to the clinical workplace, of which nine were characterized as constructivist-group activities. It also led to more active learning of the clerks, compared to the traditional clerkship. Analysis of the SPOC revealed 344 teaching modes in total, which included 113 objectivist\u2013individual, 205 constructive\u2013individual and 23 constructive\u2013group activities. Compared to a traditional clerkship, the CTU with SPOC led to more constructivist and collaborative learning and a more diverse educational program. This study illustrates a methodology to address active and collaborative learning activities in an educational program, and offers tools to evaluate and redesign one\u2019s teaching program. The methods and models described can be applied to clinical environments in other areas of medicine.\n"
+          ],
+          "title_display": "Analysis of the social-epistemological dimensions of a Clinical Teaching Unit and Small Private Online Course compared to a traditional clerkship Internal Medicine",
+          "score": 3.1842062
+        },
+        {
+          "id": "10.1371/journal.pone.0040233",
+          "eissn": "1932-6203",
+          "publication_date": "2012-08-06T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "R\u0103zvan V. Florian"
+          ],
+          "abstract": [
+            "\n        In many cases, neurons process information carried by the precise timings of spikes. Here we show how neurons can learn to generate specific temporally precise output spikes in response to input patterns of spikes having precise timings, thus processing and memorizing information that is entirely temporally coded, both as input and as output. We introduce two new supervised learning rules for spiking neurons with temporal coding of information (chronotrons), one that provides high memory capacity (E-learning), and one that has a higher biological plausibility (I-learning). With I-learning, the neuron learns to fire the target spike trains through synaptic changes that are proportional to the synaptic currents at the timings of real and target output spikes. We study these learning rules in computer simulations where we train integrate-and-fire neurons. Both learning rules allow neurons to fire at the desired timings, with sub-millisecond precision. We show how chronotrons can learn to classify their inputs, by firing identical, temporally precise spike trains for different inputs belonging to the same class. When the input is noisy, the classification also leads to noise reduction. We compute lower bounds for the memory capacity of chronotrons and explore the influence of various parameters on chronotrons' performance. The chronotrons can model neurons that encode information in the time of the first spike relative to the onset of salient stimuli or neurons in oscillatory networks that encode information in the phases of spikes relative to the background oscillation. Our results show that firing one spike per cycle optimizes memory capacity in neurons encoding information in the phase of firing relative to a background rhythm.\n      "
+          ],
+          "title_display": "The Chronotron: A Neuron That Learns to Fire Temporally Precise Spike Patterns",
+          "score": 3.1841824
+        },
+        {
+          "id": "10.1371/journal.pone.0263388",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-02-02T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Naiire Salmani",
+            "Imane Bagheri",
+            "Atena Dadgari"
+          ],
+          "abstract": [
+            "Introduction: With the emergence of the COVID-19 pandemic, universities immediately responded to protect students\u2019 lives by implementing e-learning in order to stop the spread of the communicable disease within the academic population. This study aimed to describe iranian nursing students\u2019 experiences of e-learning during the COVID-19 pandemic. Materials and methods: The current study used a qualitative descriptive study. Ten nursing undergraduate students from a single Iranian university identified using purposive sampling methods. Face-to-face semi-structured interview conducted from May to July 2021 and analyzed through thematic analysis. Lincoln and Goba criteria were used to obtain data validity and reliability. Results: Four themes emerged including\"novelty of e-learning\",\"advantages of e-learning\", \"disadvantages of e-learning\"and\"passage of time and the desire to return to face education\". Participants evaluated e-learning as a novel method without proper infrastructure, it was initially confusing but became the new normal as their knowledge of the way to use it improved. Advantages included self-centered flexible learning and reduction in their concerns experienced with face-to-face learning. Disadvantages including changing the way they interact with teachers, decreasing interactions with classmates, problems with education files, superficial learning, hardware problems, family members\u2019 perceptions of the student role, interference of home affairs with e-learning, cheating on exams and assignments and being far away from the clinical context. Conclusion: The findings revealed that e-learning has been introduced as a new method for the current research participants and despite the perceived benefits, these students believed that e-learning could supplement face education but not replace it. "
+          ],
+          "title_display": "Iranian nursing students experiences regarding the status of e-learning during COVID-19 pandemic",
+          "score": 3.1841614
+        },
+        {
+          "id": "10.1371/journal.pone.0308630",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-12-13T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Shanshan Xu",
+            "Yangxin Wang",
+            "Wenbo Luo"
+          ],
+          "abstract": [
+            "\nBased on the Expectation Confirmation Model (ECM), this study explores the impact of perceived educational and emotional support on university students\u2019 continuance intention to engage in e-learning. Researchers conducted a survey using structured questionnaires among 368 university students from three universities in Jiangxi Province. They measured their self-reported responses on six constructs: perceived educational support, perceived emotional support, perceived usefulness, confirmation, satisfaction, and continuance intention. The relationships between predictors and continuance intention, characterized by non-compensatory and non-linear dynamics, were analyzed using Structural Equation Modeling combined with Artificial Neural Networks. Apart from the direct effects of perceived educational and emotional support on perceived usefulness being non-significant, all other hypotheses were confirmed. Furthermore, according to the normalized importance derived from the multilayer perceptron analysis, satisfaction was identified as the most critical predictor (100%), followed by confirmation (29.9%), perceived usefulness (28.3%), perceived educational support (22.6%), and perceived emotional support (21.6%). These constructs explained 62.1% of the total variance in the students\u2019 continuance intention to engage in e-learning. This study utilized a two-stage analytical approach, enhancing the depth and accuracy of data processing and expanding the methodological scope of research in educational technology. The findings of this study contribute to the United Nations\u2019 Sustainable Development Goal 4, which aims to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all by 2030. It provides direction for future research in different environmental and cultural contexts.\n"
+          ],
+          "title_display": "Hybrid SEM-ANN model for predicting undergraduates\u2019 e-learning continuance intention based on perceived educational and emotional support",
+          "score": 3.1840677
+        },
+        {
+          "id": "10.1371/journal.pone.0059466",
+          "journal": "PLoS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2013-03-15T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Martina Zellin",
+            "Markus Conci",
+            "Adrian von M\u00fchlenen",
+            "Hermann J. M\u00fcller"
+          ],
+          "abstract": [
+            "\n        Visual search for a target object can be facilitated by the repeated presentation of an invariant configuration of nontargets (\u2018contextual cueing\u2019). Here, we tested adaptation of learned contextual associations after a sudden, but permanent, relocation of the target. After an initial learning phase targets were relocated within their invariant contexts and repeatedly presented at new locations, before they returned to the initial locations. Contextual cueing for relocated targets was neither observed after numerous presentations nor after insertion of an overnight break. Further experiments investigated whether learning of additional, previously unseen context-target configurations is comparable to adaptation of existing contextual associations to change. In contrast to the lack of adaptation to changed target locations, contextual cueing developed for additional invariant configurations under identical training conditions. Moreover, across all experiments, presenting relocated targets or additional contexts did not interfere with contextual cueing of initially learned invariant configurations. Overall, the adaptation of contextual memory to changed target locations was severely constrained and unsuccessful in comparison to learning of an additional set of contexts, which suggests that contextual cueing facilitates search for only one repeated target location.\n      "
+          ],
+          "title_display": "Here Today, Gone Tomorrow \u2013 Adaptation to Change in Memory-Guided Visual Search",
+          "score": 3.184045
+        },
+        {
+          "id": "10.1371/journal.pone.0137260",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2015-08-28T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Rachel Clark",
+            "Michael Freedberg",
+            "Eliot Hazeltine",
+            "Michelle W. Voss"
+          ],
+          "abstract": [
+            "\nAge is often associated with a decline in cognitive abilities that are important for maintaining functional independence, such as learning new skills. Many forms of motor learning appear to be relatively well preserved with age, while learning tasks that involve associative binding tend to be negatively affected. The current study aimed to determine whether age differences exist on a configural response learning task, which includes aspects of motor learning and associative binding. Young (M = 24 years) and older adults (M = 66.5 years) completed a modified version of a configural learning task. Given the requirement of associative binding in the configural relationships between responses, we predicted older adults would show significantly less learning than young adults. Older adults demonstrated lower performance (slower reaction time and lower accuracy). However, contrary to our prediction, older adults showed similar rates of learning as indexed by a configural learning score compared to young adults. These results suggest that the ability to acquire knowledge incidentally about configural response relationships is largely unaffected by cognitive aging. The configural response learning task provides insight into the task demands that constrain learning abilities in older adults.\n"
+          ],
+          "title_display": "Are There Age-Related Differences in the Ability to Learn Configural Responses?",
+          "score": 3.1839921
+        },
+        {
+          "id": "10.1371/journal.pone.0237749",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2020-08-18T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Yan Wang",
+            "Peng Jia",
+            "Luping Liu",
+            "Cheng Huang",
+            "Zhonglin Liu"
+          ],
+          "abstract": [
+            "\nSecurity vulnerabilities play a vital role in network security system. Fuzzing technology is widely used as a vulnerability discovery technology to reduce damage in advance. However, traditional fuzz testing faces many challenges, such as how to mutate input seed files, how to increase code coverage, and how to bypass the format verification effectively. Therefore machine learning techniques have been introduced as a new method into fuzz testing to alleviate these challenges. This paper reviews the research progress of using machine learning techniques for fuzz testing in recent years, analyzes how machine learning improves the fuzzing process and results, and sheds light on future work in fuzzing. Firstly, this paper discusses the reasons why machine learning techniques can be used for fuzzing scenarios and identifies five different stages in which machine learning has been used. Then this paper systematically studies machine learning-based fuzzing models from five dimensions of selection of machine learning algorithms, pre-processing methods, datasets, evaluation metrics, and hyperparameters setting. Secondly, this paper assesses the performance of the machine learning techniques in existing research for fuzz testing. The results of the evaluation prove that machine learning techniques have an acceptable capability of prediction for fuzzing. Finally, the capability of discovering vulnerabilities both traditional fuzzers and machine learning-based fuzzers is analyzed. The results depict that the introduction of machine learning techniques can improve the performance of fuzzing. We hope to provide researchers with a systematic and more in-depth understanding of fuzzing based on machine learning techniques and provide some references for this field through analysis and summarization of multiple dimensions.\n"
+          ],
+          "title_display": "A systematic review of fuzzing based on machine learning techniques",
+          "score": 3.1839764
+        },
+        {
+          "id": "10.1371/journal.pone.0236862",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2020-08-28T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Nadia Refat",
+            "Hafizoah Kassim",
+            "Md Arafatur Rahman",
+            "Ramdan bin Razali"
+          ],
+          "abstract": [
+            "\nLanguage learning is an emerging research area where researchers have done significant contributions by incorporating technological assistantship (i.e., computer- and mobile-assistant learning). However, it has been revealed from the recent empirical studies that little attention is given on grammar learning with the proper instructional materials design and the motivational framework for designing an efficient mobile-assisted grammar learning tool. This paper hence, reports a preliminary study that investigated learner motivation when a mobile-assisted tool for tense learning was used. This study applied the Attention-Relevance-Confidence-Satisfaction (ARCS) model. It was hypothesized that with the use of the designed mobile- assisted tense learning tool students would be motivated to learn grammar (English tense). In addition, with the increase of motivation, performance outcome in paper- based test would also be improved. With the purpose to investigate the impact of the tool, a sequential mixed-method research design was employed with the use of three research instruments; Instructional Materials Motivation Survey (IMMS), a paper-based test and an interview protocol using a semi-structured interview. Participants were 115 undergraduate students, who were enrolled in a remedial English course. The findings showed that with the effective design of instructional materials, students were motivated to learn grammar, where they were positive at improving their attitude towards learning (male 86%, female 80%). The IMMS findings revealed that students\u2019 motivation increased after using the tool. Moreover, students improved their performance level that was revealed from the outcome of paper-based instrument. Therefore, it is confirmed that the study contributed to designing an effective multimedia based instructions for a mobile-assisted tool that increased learners\u2019 motivational attitude which resulted in an improved learning performance.\n"
+          ],
+          "title_display": "Measuring student motivation on the use of a mobile assisted grammar learning tool",
+          "score": 3.1838481
+        },
+        {
+          "id": "10.1371/journal.pone.0290706",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-04-16T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Anna Kravchenko",
+            "Rhodri Cusack"
+          ],
+          "abstract": [
+            "\nIn many applications, artificial neural networks are best trained for a task by following a curriculum, in which simpler concepts are learned before more complex ones. This curriculum can be hand-crafted by the engineer or optimised like other hyperparameters, by evaluating many curricula. However, this is computationally intensive and the hyperparameters are unlikely to generalise to new datasets. An attractive alternative, demonstrated in influential prior works, is that the network could choose its own curriculum by monitoring its learning. This would be particularly beneficial for continual learning, in which the network must learn from an environment that is changing over time, relevant both to practical applications and in the modelling of human development. In this paper we test the generality of this approach using a proof-of-principle model, training a network on two sequential tasks under static and continual conditions, and investigating both the benefits of a curriculum and the handicap induced by continuous learning. Additionally, we test a variety of prior task-switching metrics, and find that in some cases even in this simple scenario the a network is often unable to choose the optimal curriculum, as the benefits are sometimes only apparent with hindsight, at the end of training. We discuss the implications of the results for network engineering and models of human development.\n"
+          ],
+          "title_display": "The limitations of automatically generated curricula for continual learning",
+          "score": 3.1838078
+        },
+        {
+          "id": "10.1371/journal.pone.0314088",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-11-21T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Hui Zhang"
+          ],
+          "abstract": [
+            "\nChinese vocational colleges, under global and educational pressures, encounter challenges in IT integration for English teaching, which risks dampening student motivation due to heightened cognitive load. This study addresses the need to elucidate the mediating role of cognitive load in the relationship between self-efficacy and learning motivation among these students. By integrating Social Cognitive Theory(SCT) and Cognitive Load Theory(CLT), the research employs a structural equation model to analyze survey data, revealing that self-efficacy positively impacts deep and achievement motivation and negatively influences cognitive load, which in turn affects learning motivation. These insights underscore the importance of fostering self-efficacy and managing cognitive load to enhance vocational students\u2019 English learning motivation, offering valuable guidance for educational practices and curriculum development in the face of global challenges.\n"
+          ],
+          "title_display": "Cognitive load as a mediator in self-efficacy and English learning motivation among vocational college students",
+          "score": 3.183765
+        },
+        {
+          "id": "10.1371/journal.pone.0292843",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-10-13T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Heoncheol Yun",
+            "Seon Kim",
+            "Eui-Ryoung Han"
+          ],
+          "abstract": [
+            "\nTutor performance is a critical factor for the success of a problem-based learning (PBL) curriculum. This study investigated medical students\u2019 perceptions of the effectiveness of tutor performance and the relationships with learning engagement (behavioral, emotional, and cognitive engagement) in the blended PBL approach. This study employed a cross-sectional survey and data were collected from 238 first-year and second-year medical students. Latent profile analysis (LPA) was used to investigate how individual students\u2019 perceptions of tutor performance can be clustered. Follow-up multiple one-way analyses of covariance (ANCOVA) were performed to examine the relationships with students\u2019 learning engagement in PBL activities. The effectiveness of tutor performance perceived by students was classified into lowly, moderately, and highly effective tutors. These clustering profiles were significantly related to the different types of learning engagement in the blended PBL process. Hence, this study highlights that the tutor is one of the key aspects of assessing the implementation of blended PBL since student performance is positively associated with the perception of tutor effectiveness.\n"
+          ],
+          "title_display": "Latent profile analysis on the effectiveness of tutor performance: Influence on medical students\u2019 engagement in blended problem-based learning",
+          "score": 3.1837065
+        },
+        {
+          "id": "10.1371/journal.pcbi.1004953",
+          "journal": "PLOS Computational Biology",
+          "eissn": "1553-7358",
+          "publication_date": "2016-06-20T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Stefano Palminteri",
+            "Emma J. Kilford",
+            "Giorgio Coricelli",
+            "Sarah-Jayne Blakemore"
+          ],
+          "abstract": [
+            "\nAdolescence is a period of life characterised by changes in learning and decision-making. Learning and decision-making do not rely on a unitary system, but instead require the coordination of different cognitive processes that can be mathematically formalised as dissociable computational modules. Here, we aimed to trace the developmental time-course of the computational modules responsible for learning from reward or punishment, and learning from counterfactual feedback. Adolescents and adults carried out a novel reinforcement learning paradigm in which participants learned the association between cues and probabilistic outcomes, where the outcomes differed in valence (reward versus punishment) and feedback was either partial or complete (either the outcome of the chosen option only, or the outcomes of both the chosen and unchosen option, were displayed). Computational strategies changed during development: whereas adolescents\u2019 behaviour was better explained by a basic reinforcement learning algorithm, adults\u2019 behaviour integrated increasingly complex computational features, namely a counterfactual learning module (enabling enhanced performance in the presence of complete feedback) and a value contextualisation module (enabling symmetrical reward and punishment learning). Unlike adults, adolescent performance did not benefit from counterfactual (complete) feedback. In addition, while adults learned symmetrically from both reward and punishment, adolescents learned from reward but were less likely to learn from punishment. This tendency to rely on rewards and not to consider alternative consequences of actions might contribute to our understanding of decision-making in adolescence.\nAuthor Summary: We employed a novel learning task to investigate how adolescents and adults learn from reward versus punishment, and to counterfactual feedback about decisions. Computational analyses revealed that adults and adolescents did not implement the same algorithm to solve the learning task. In contrast to adults, adolescents\u2019 performance did not take into account counterfactual information; adolescents also learned preferentially to seek rewards rather than to avoid punishments, whereas adults learned to seek and avoid both equally. Increasing our understanding of computational changes in reinforcement learning during adolescence may provide insights into adolescent value-based decision-making. Our results might also have implications for education, since they suggest that adolescents benefit more from positive feedback than from negative feedback in learning tasks. "
+          ],
+          "title_display": "The Computational Development of Reinforcement Learning during Adolescence",
+          "score": 3.183675
+        },
+        {
+          "id": "10.1371/journal.pone.0329208",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-08-06T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Qingyun Li",
+            "Kimberley Kong",
+            "Qian Li",
+            "Qian Wang"
+          ],
+          "abstract": [
+            "\nEnglish learning among Chinese preschoolers has increased in recent years. Despite policies that strongly oppose external English instruction for this age group, many parents are unrelenting and persist in providing English learning opportunities for their children. This study seeks to address how formal and informal literacy activities within the Home Literacy Environment (HLE) mediate the relationship between parental beliefs and Chinese children\u2019s attitudes towards learning English in a foreign language context. Specifically, it explores: (1) how formal literacy activities within the HLE mediate this relationship, (2) how informal literacy activities within the HLE mediate this relationship. The study involved 405 participants who completed a questionnaire on family demographics, beliefs about the importance of early English education, the HLE, and children\u2019s attitudes towards English learning. Quantitative data were analyzed using Structural Equation Modeling (SEM) with a Partial Least Squares (PLS) approach. Parental beliefs positively influence children\u2019s attitudes towards English through formal and informal learning. These results highlight the importance of fostering a supportive and engaging HLE to enhance children\u2019s positive attitudes towards learning English. The implications suggest that policy and practice should recognize the value of various literacy activities in early childhood education, particularly in the context of a foreign language and academically focused Asian society.\n"
+          ],
+          "title_display": "Parental beliefs and the influence of formal and informal literacy environments on preschoolers\u2019 attitudes toward English learning",
+          "score": 3.1835985
+        },
+        {
+          "id": "10.1371/journal.pone.0031375",
+          "journal": "PLoS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2012-02-10T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Miriam S. Nokia",
+            "Helene M. Sisti",
+            "Monica R. Choksi",
+            "Tracey J. Shors"
+          ],
+          "abstract": [
+            "\n        Animals in the natural world continuously encounter learning experiences of varying degrees of novelty. New neurons in the hippocampus are especially responsive to learning associations between novel events and more cells survive if a novel and challenging task is learned. One might wonder whether new neurons would be rescued from death upon each new learning experience or whether there is an internal control system that limits the number of cells that are retained as a function of learning. In this experiment, it was hypothesized that learning a task that was similar in content to one already learned previously would not increase cell survival. We further hypothesized that in situations in which the cells are rescued hippocampal theta oscillations (3\u201312 Hz) would be involved and perhaps necessary for increasing cell survival. Both hypotheses were disproved. Adult male Sprague-Dawley rats were trained on two similar hippocampus-dependent tasks, trace and very-long delay eyeblink conditioning, while recording hippocampal local-field potentials. Cells that were generated after training on the first task were labeled with bromodeoxyuridine and quantified after training on both tasks had ceased. Spontaneous theta activity predicted performance on the first task and the conditioned stimulus induced a theta-band response early in learning the first task. As expected, performance on the first task correlated with performance on the second task. However, theta activity did not increase during training on the second task, even though more cells were present in animals that had learned. Therefore, as long as learning occurs, relatively small changes in the environment are sufficient to increase the number of surviving neurons in the adult hippocampus and they can do so in the absence of an increase in theta activity. In conclusion, these data argue against an upper limit on the number of neurons that can be rescued from death by learning.\n      "
+          ],
+          "title_display": "Learning to Learn: Theta Oscillations Predict New Learning, which Enhances Related Learning and Neurogenesis",
+          "score": 3.1835961
+        },
+        {
+          "id": "10.1371/journal.pone.0298079",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-03-26T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Rita Mojtahedzadeh",
+            "Shirin Hasanvand",
+            "Aeen Mohammadi",
+            "Sahar Malmir",
+            "Mehdi Vatankhah"
+          ],
+          "abstract": [
+            "Background: Online Interaction is a critical characteristic of distance learning, and effective online communication models empower students. Purpose: This research aimed to explain students\u2019 experiences on the quality of interpersonal interactions in e-learning. Method: This study was conducted from November 2021 to October 2022. The qualitative descriptive design via conventional content analysis was utilized. Purposeful and maximum variation methods recruited sixteen participants from three medical science universities in Iran. The data were collected through semi-structured, in-depth, face-to-face, or online interviews. Interviews were recorded through a digital recorder, and analysis was achieved simultaneously with data collection using Graneheim and Lundman (2004). The Lincoln and Guba criteria, including credibility, dependability, transferability, and confirmability, were used to improve the trustworthiness of the findings. Results: The results indicated the importance of different dimensions related to teaching-learning. It seems crucial to develop a comfortable and safe environment to improve interpersonal interactions. Educators should be provided with pedagogical skills to support interactions. In addition, focusing on some learners\u2019 soft skills is also vital. In addition to the significance of the teacher\u2019s inclusive role, the educational content must have critical standards. Constructive feedback and the proper use of simultaneous and non-simultaneous communication tools and social networks are other important issues in strengthening interpersonal relationships. Ultimately, comprehensive and ongoing support of learners improves the quality of interpersonal interactions. Conclusions: The results indicated the significance of different dimensions of teaching-learning as facilitating factors of interpersonal interactions. The proper use of simultaneous and non-simultaneous communication tools and social networks are other important issues in strengthening interpersonal relationships. Ultimately, comprehensive and ongoing support of learners improves the quality of interpersonal interactions. Implications: The results of this study give teachers the insight to keep essential issues in mind when developing their online courses and students to be aware of their roles in the online learning process. Also, the characteristics of simultaneous and non-synchronous platforms, social messaging networks, and learner support are crucial. "
+          ],
+          "title_display": "Students\u2019 experience of interpersonal interactions quality in e-Learning: A qualitative research",
+          "score": 3.1835961
+        },
+        {
+          "id": "10.1371/journal.pone.0276086",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-11-15T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Paulette Vincent-Ruz",
+            "Nathan R. B. Boase"
+          ],
+          "abstract": [
+            "\nIn tertiary science education, students are encouraged to engage in discipline specific thinking, to learn their chosen subject. The challenge for educators is engaging all students equitably, despite their educational backgrounds and depth of discipline specific knowledge. Personalising learning in the context of large-scale tertiary courses can only be achieved by using digital technologies. In the context of chemistry education, this project has investigated how an adaptive learning technology can effectively and consistently engage students in discipline specific thinking, by personalising their learning pathway. Adaptive learning has been integrated into a foundational chemistry subject and through quantitative analysis there is empirical evidence to support the benefit adaptive learning has on outcomes, in both the short and long term. This study shows adaptive learning can equitably meet the needs for all students and can lead to improvements in educational behaviour beyond grades. The evidence supports adaptive learning as one critical tool for chemistry educators, and educators in other disciplines of science, to include in their suite of pedagogical strategies to meet the needs of all their students.\n"
+          ],
+          "title_display": "Activating discipline specific thinking with adaptive learning: A digital tool to enhance learning in chemistry",
+          "score": 3.183595
+        },
+        {
+          "id": "10.1371/journal.pcbi.1001003",
+          "journal": "PLoS Computational Biology",
+          "eissn": "1553-7358",
+          "publication_date": "2010-12-02T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Daniel E. Acu\u00f1a",
+            "Paul Schrater"
+          ],
+          "abstract": [
+            "\nStudies of sequential decision-making in humans frequently find suboptimal performance relative to an ideal actor that has perfect knowledge of the model of how rewards and events are generated in the environment. Rather than being suboptimal, we argue that the learning problem humans face is more complex, in that it also involves learning the structure of reward generation in the environment. We formulate the problem of structure learning in sequential decision tasks using Bayesian reinforcement learning, and show that learning the generative model for rewards qualitatively changes the behavior of an optimal learning agent. To test whether people exhibit structure learning, we performed experiments involving a mixture of one-armed and two-armed bandit reward models, where structure learning produces many of the qualitative behaviors deemed suboptimal in previous studies. Our results demonstrate humans can perform structure learning in a near-optimal manner.\nAuthor Summary: Every decision-making experiment has a structure that specifies how rewards are obtained, which is usually explained to the subject at the beginning of the experiment. Participants frequently fail to act as if they understand the experimental structure, even in tasks as simple as determining which of two biased coins they should choose to maximize the number of trials that produce \u201cheads\u201d. We hypothesize that participants' behavior is not driven by top-down instructions\u2014rather, participants must learn through experience how the rewards are generated. We formalize this hypothesis using a fully rational optimal Bayesian reinforcement learning approach that models optimal structure learning in sequential decision making. In an experimental test of structure learning in humans, we show that humans learn reward structure from experience in a near optimal manner. Our results demonstrate that behavior purported to show that humans are error-prone and suboptimal decision makers can result from an optimal learning approach. Our findings provide a compelling new family of rational hypotheses for behavior previously deemed irrational, including under- and over-exploration. "
+          ],
+          "title_display": "Structure Learning in Human Sequential Decision-Making",
+          "score": 3.1835933
+        },
+        {
+          "id": "10.1371/journal.pbio.0060197",
+          "journal": "PLoS Biology",
+          "eissn": "1545-7885",
+          "publication_date": "2008-08-12T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Jun-Yun Zhang",
+            "Shu-Guang Kuai",
+            "Lu-Qi Xiao",
+            "Stanley A Klein",
+            "Dennis M Levi",
+            "Cong Yu"
+          ],
+          "abstract": [
+            "\n        Perceptual learning of visual features occurs when multiple stimuli are presented in a fixed sequence (temporal patterning), but not when they are presented in random order (roving). This points to the need for proper stimulus coding in order for learning of multiple stimuli to occur. We examined the stimulus coding rules for learning with multiple stimuli. Our results demonstrate that: (1) stimulus rhythm is necessary for temporal patterning to take effect during practice; (2) learning consolidation is subject to disruption by roving up to 4 h after each practice session; (3) importantly, after completion of temporal-patterned learning, performance is undisrupted by extended roving training; (4) roving is ineffective if each stimulus is presented for five or more consecutive trials; and (5) roving is also ineffective if each stimulus has a distinct identity. We propose that for multi-stimulus learning to occur, the brain needs to conceptually \u201ctag\u201d each stimulus, in order to switch attention to the appropriate perceptual template. Stimulus temporal patterning assists in tagging stimuli and switching attention through its rhythmic stimulus sequence.\n      : When a person learns to judge several stimuli in succession, like baseball pitches arriving at various speeds and spins, judgments may improve with practice only if these stimuli are presented in a fixed temporal sequence, rather than in a random order. These contrary effects suggest the need for proper stimulus coding for multi-stimulus learning in the brain. We studied how the temporal order of the stimuli affects the encoding, consolidation, and retrieval stages of perceptual learning that describe the basic stimulus coding rules throughout the learning process. We also studied why fixed stimulus sequences are required for multi-stimulus learning. Our results suggest that for multi-stimulus learning to occur, the brain needs to identify or tag each stimulus conceptually or semantically, so that the neural activity specific to each stimulus can be properly attended to. This high-level conceptual process adds to the current understanding of the mechanisms underlying perceptual learning and may have important implications for sensory training and rehabilitation. \n        Visual discrimination skills are more easily learned when stimuli are presented in a fixed rhythm.\n      "
+          ],
+          "title_display": "Stimulus Coding Rules for Perceptual Learning",
+          "score": 3.1835918
+        },
+        {
+          "id": "10.1371/journal.pone.0284882",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-05-19T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Archana Prabu Kumar",
+            "Abirami Omprakash",
+            "Prabu Kumar Chokkalingam Mani",
+            "Maheshkumar Kuppusamy",
+            "Doaa Wael",
+            "B. W. C. Sathiyasekaran",
+            "P. V. Vijayaraghavan",
+            "Padmavathi Ramasamy"
+          ],
+          "abstract": [
+            "Background: Application of e-learning and e-modules in medical education has been shown to have a positive impact on learning outcomes among all types of learners, across diverse educational settings. Despite its benefits, e-learning and e-modules has not yet reached its full potential in medical education in India. Objective of this study is to evaluate the perception of undergraduate students regarding e-learning and e-modules using an appreciative inquiry tool SOAR (Strengths, Opportunities, Aspirations, Results) analysis, and to identify the barriers and challenges for the same. Methods: This longitudinal study was conducted among participants from three consecutive batches (n = 250 x 3) of first-year medical students and two consecutive batches (n = 100 x 2) of first-year dental students. The sample was selected using a purposive sampling method. Two structured and validated questionnaires were developed for this study based on the modified Zhou\u2019s Mixed Methods Model; the \u2018Knowledge, Attitude and Practice\u2019 Questionnaire (KAPQ) on e-learning and the feedback questionnaire (FBQ) on e-modules. The questionnaires were administered via MOODLE / hard copy, before and after the implementation of e-modules, respectively. Identified strengths, potential opportunities, probable aspirations and likely results for e-learning and e-modules were tabulated based on the qualitative analysis of perceptions of large number students sampled across three years. Results: Six hundred and ninety students returned both questionnaires representing a response rate of 76.6%. Nine themes were identified in the \u201cStrengths\u201d domain as follows: Regular Update of Knowledge, Innovative Learning, Availability, Knowledge Sharing, Abundance of Information, Accessibility, Source of Knowledge, Creativity, and Increased Engagement. Eleven themes were identified in the \u201cOpportunities\u201d domain as follows: Clinical Skills training, Timesaving, Flexibility, Creativity, Increased engagement, Standardized content, Capacity building for students, Capacity building for faculty, Skills training, and Self-assessment. Thirteen themes were identified under the \u201cAspirations\u201d domain with the three key themes being \u201cmaintaining and building on current strengths\u201d, \u201cincreasing potential opportunities\u201d, and \u201caddressing the barriers and challenges identified in the responses to the KAPQ and FBQ questionnaire\u201d. Four themes identified for \u2018Barriers\u2019 were eye strain, distractions, preference for conventional methodologies, and internet connectivity. Conclusions: The findings of this qualitative study are based on the responses received from first-year medical and dental students of a Private University in Chennai, India. In this population of students, implementation of e-learning as blended learning using structured and interactive e-modules may provide more engagement during learning as well as support self-directed learning (SDL) directly or indirectly. Adoption of blended learning with e-modules as an integral part of curriculum planning may be beneficial for the achievement of Competency-Based Medical Education (CBME) goals in India. "
+          ],
+          "title_display": "E-learning and E-modules in medical education\u2014A SOAR analysis using perception of undergraduate students",
+          "score": 3.1835897
+        },
+        {
+          "id": "10.1371/journal.pone.0332296",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-09-17T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Libor Juha\u0148\u00e1k",
+            "Karla Br\u00fccknerov\u00e1",
+            "Jakub Jarina",
+            "Ji\u0159\u00ed Zounek",
+            "Vojt\u011bch Ju\u0159\u00edk"
+          ],
+          "abstract": [
+            "\nLearning Analytics (LA) has advanced significantly in recent years; however, its findings often suffer from limited generalizability and transferability due to reliance on data from a small number of courses. Course design variability is a critical factor influencing students\u2019 learning behavior in online learning environments (OLEs). This study examines how differences in instructional design, specifically in self-regulated learning (SRL) support, predict the intensity and regularity of students\u2019 learning behavior in OLEs. Using qualitative content analysis, we developed the SRL-S coding scheme to systematically assess the extent to which course design supports specific SRL processes. The coding scheme was validated by three independent researchers and applied to 76 courses. Multilevel modeling analysis confirmed substantial variability in student learning behavior across courses. Higher SRL support was associated with more frequent course visits (\u03b2\u2009=\u2009.46, p\u2009<\u2009.001), greater regularity of visits (\u03b2\u2009=\u2009\u2212.31, p\u2009<\u2009.001), and increased total time spent in a course (\u03b2\u2009=\u2009.45, p\u2009<\u2009.001). In contrast, perceived instructional support from the teacher significantly influenced total time spent (\u03b2\u2009=\u2009.12, p\u2009=\u2009.004) but not the visit frequency (p\u2009=\u2009.324) or regularity (p\u2009=\u2009.951). Moreover, SRL support significantly predicted perceived instructional support (\u03b2\u2009=\u2009.17, p\u2009=\u2009.002). Mediation analysis revealed a small but significant indirect effect of SRL support on total time spent (\u03b2\u2009=\u2009.021, p\u2009=\u2009.012), while no mediation was found for visit frequency (p\u2009=\u2009.360) or regularity (p\u2009=\u2009.836). These findings highlight the pivotal role of structured SRL support in shaping student engagement. Our approach contextualizes LA indicators by accounting for course design differences and suggests that the SRL-S coding scheme could serve as a research-based guideline for enhancing SRL support in online courses.\n"
+          ],
+          "title_display": "Effects of perceived instructional support and self-regulated learning support on students\u2019 learning behavior in an online learning environment",
+          "score": 3.183518
+        },
+        {
+          "id": "10.1371/journal.pcbi.1010751",
+          "journal": "PLOS Computational Biology",
+          "eissn": "1553-7358",
+          "publication_date": "2023-07-24T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Yinmei Ni",
+            "Jingwei Sun",
+            "Jian Li"
+          ],
+          "abstract": [
+            "\nEvidence for positivity and optimism bias abounds in high-level belief updates. However, no consensus has been reached regarding whether learning asymmetries exist in more elementary forms of updates such as reinforcement learning (RL). In RL, the learning asymmetry concerns the sensitivity difference in incorporating positive and negative prediction errors (PE) into value estimation, namely the asymmetry of learning rates associated with positive and negative PEs. Although RL has been established as a canonical framework in characterizing interactions between agent and environment, the direction of learning asymmetry remains controversial. Here, we propose that part of the controversy stems from the fact that people may have different value expectations before entering the learning environment. Such a default value expectation influences how PEs are calculated and consequently biases subjects\u2019 choices. We test this hypothesis in two learning experiments with stable or varying reinforcement probabilities, across monetary gains, losses, and gain-loss mixed environments. Our results consistently support the model incorporating both asymmetric learning rates and the initial value expectation, highlighting the role of initial expectation in value updating and choice preference. Further simulation and model parameter recovery analyses confirm the unique contribution of initial value expectation in accessing learning rate asymmetry.\nAuthor summary: While Reinforcement learning models have long been applied to characterize learning behavior, where value update stands at the core of the learning process, it remains controversial whether and how learning is biased when updating from positive and negative PEs. Here, through model comparison, simulation, and recovery analyses, we show that accurate identification of learning asymmetry is contingent on taking into account of subjects\u2019 default value expectation in both monetary gain and loss environments. Our results stress the importance of initial expectation specification, especially in studies investigating learning asymmetry. "
+          ],
+          "title_display": "The shadowing effect of initial expectation on learning asymmetry",
+          "score": 3.1835063
+        },
+        {
+          "id": "10.1371/journal.pone.0255177",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2021-07-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Zahid Shafait",
+            "Muhammad Asif Khan",
+            "Yuriy Bilan",
+            "Judit Ol\u00e1h"
+          ],
+          "abstract": [
+            "\nObjective: Drawing on the knowledge-based view and ability-based theories of emotional intelligence (EI), in this study, we investigate the effects of EI on learning outcomes related to academics and administrators in Chinese research universities and we also test the direct association between learning outcomes and creative performance. In addition, we examine the mediating role of self-directed learning (SDL) and knowledge management processes (KMPs) on the relationship between EI and learning outcomes. Methods: The sample, for this study, consisted of 547 academic and administrative personnel at Chinese higher educational institutions (HEIs), and the hypothesized associations were examined through partial least squares structural equation modeling. Results: Our results indicated that EI has no significant influence on learning outcomes. However, an indirect relationship between EI and learning outcomes is established through SDL and KMPs. Conclusions: This study strengthens the professional understanding of EI and supports that the personnel at HEIs should value SDL and KMPs, which in turn enhances their learning outcomes. Although EI has received increased importance in higher education institutions, there are few studies that have investigated the relationship of EI, SDL, KMP, and learning outcomes. This is one of the initial studies that has empirically examined the interface of EI and learning outcomes in HEIs and also provides timely insights into the understanding of the mediating role of SDL and KMP.\n"
+          ],
+          "title_display": "RETRACTED: Modeling the mediating roles of self-directed learning and knowledge management processes between emotional intelligence and learning outcomes in higher education",
+          "score": 3.1835063
+        },
+        {
+          "id": "10.1371/journal.pone.0281117",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-02-23T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Sherzad A. Shabu"
+          ],
+          "abstract": [
+            "Background: Protective measures like social distancing and staying home when possible were imposed by the public health authorities to combat the COVID-19 pandemic. Educational institutions which had previously experienced only face-to-face traditional methods of service delivery suffered from huge difficulties in maintaining an effective teaching process. This cross-sectional study investigates the experiences of students of Hawler Medical University (Erbil, Iraqi Kurdistan), exploring their e-learning experience and satisfaction when conventional classroom learning was suspended due to lockdown. Methods: A self-administered online questionnaire designed on Google Forms was administered from 14 to 31 March 2020. The main section of the questionnaire asked participants to rate their agreement with statements concerning e-learning satisfaction using a five-point Likert scale, with answers ranging from strongly disagree to strongly agree. Results: From an initial 1550 participants, 808 ultimately completed the processual stage. The majority of respondents were female, from the College of Medicine, of urban residence, and of an average economic situation. Three-quarters of the respondents had not participated in any online course before, 27.7% did not have the required electronic devices, 43.3% did not have the sufficient computer skills for the e-learning, and 38% thought that the University did not support the use of the e-learning system. During the processual stage, only 24.4% thought that the internet connection was good and helpful, 14.6% easily attended the online sessions, 35.6% thought that teachers have enough time to answer students\u2019 questions and concerns, and 18% that the teaching materials contributed to the course objectives and overall learning outcome. Conclusions: Hawler Medical students were not well prepared to engage in the e-learning process. The majority experienced internet access and other technical problems in accessing the online sessions. They did not feel that the e-learning process has contributed to the achievement of course objectives and overall learning outcomes. "
+          ],
+          "title_display": "Hawler Medical University students\u2019 perceptions of e-learning during the COVID-19 pandemic",
+          "score": 3.183459
+        },
+        {
+          "id": "10.1371/journal.pcbi.0030112",
+          "journal": "PLoS Computational Biology",
+          "eissn": "1553-7358",
+          "publication_date": "2007-06-29T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Henning Sprekeler",
+            "Christian Michaelis",
+            "Laurenz Wiskott"
+          ],
+          "abstract": [
+            "\n        Our nervous system can efficiently recognize objects in spite of changes in contextual variables such as perspective or lighting conditions. Several lines of research have proposed that this ability for invariant recognition is learned by exploiting the fact that object identities typically vary more slowly in time than contextual variables or noise. Here, we study the question of how this \u201ctemporal stability\u201d or \u201cslowness\u201d approach can be implemented within the limits of biologically realistic spike-based learning rules. We first show that slow feature analysis, an algorithm that is based on slowness, can be implemented in linear continuous model neurons by means of a modified Hebbian learning rule. This approach provides a link to the trace rule, which is another implementation of slowness learning. Then, we show analytically that for linear Poisson neurons, slowness learning can be implemented by spike-timing\u2013dependent plasticity (STDP) with a specific learning window. By studying the learning dynamics of STDP, we show that for functional interpretations of STDP, it is not the learning window alone that is relevant but rather the convolution of the learning window with the postsynaptic potential. We then derive STDP learning windows that implement slow feature analysis and the \u201ctrace rule.\u201d The resulting learning windows are compatible with physiological data both in shape and timescale. Moreover, our analysis shows that the learning window can be split into two functionally different components that are sensitive to reversible and irreversible aspects of the input statistics, respectively. The theory indicates that irreversible input statistics are not in favor of stable weight distributions but may generate oscillatory weight dynamics. Our analysis offers a novel interpretation for the functional role of STDP in physiological neurons.\n      : Neurons interact by exchanging information via small connection sites, so-called synapses. Interestingly, the efficiency of synapses in transmitting neuronal signals is not static, but changes dynamically depending on the signals that the associated neurons emit. As neurons receive thousands of synaptic input signals, they can thus \u201cchoose\u201d the input signals they are interested in by adjusting their synapses accordingly. This adaptation mechanism, known as synaptic plasticity, has long been hypothesized to form the neuronal correlate of learning. It raises a difficult question: what aspects of the input signals are the neurons interested in, given that the adaptation of the synapses follows a certain mechanistic rule? We address this question for spike-timing\u2013dependent plasticity, a type of synaptic plasticity that has raised a lot of interest in the last decade. We show that under certain assumptions regarding neuronal information transmission, spike-timing\u2013dependent plasticity focuses on aspects of the input signals that vary slowly in time. This relates spike-timing\u2013dependent plasticity to a class of abstract learning rules that were previously proposed as a means of learning to recognize objects in spite of contextual changes such as size or position. Based on this link, we propose a novel functional interpretation of spike-timing\u2013dependent plasticity. "
+          ],
+          "title_display": "Slowness: An Objective for Spike-Timing\u2013Dependent Plasticity?",
+          "score": 3.1833878
+        },
+        {
+          "id": "10.1371/journal.pone.0285389",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-05-12T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Feifei Han"
+          ],
+          "abstract": [
+            "\nAdopting an ecological perspective on student learning, this study compares the cognitive, social, and material elements of the learning experience of 193 domestic and 120 international students in blended courses. For cognitive elements, domestic students adopted relatively more deep approaches to learning while international students held more positive perceptions towards the blended learning environment. In terms of the social elements, domestic group had a higher proportion of students who chose to collaborate than international group. The domestic and international students also differed with regard to their experience of material elements that international students were more likely to select the option of showing the answer for solving multiple choice questions. International students particularly need help in the improvement of their collaborative learning experience, which may be enhanced by strategies, such as mixing domestic and international students in group work and training international students\u2019 intercultural communication strategies.\n"
+          ],
+          "title_display": "Learning experience of domestic and international students in blended courses: An ecological perspective",
+          "score": 3.1833878
+        },
+        {
+          "id": "10.1371/journal.pone.0201875",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2018-08-15T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Pruet Putjorn",
+            "Panote Siriaraya",
+            "Farzin Deravi",
+            "Chee Siang Ang"
+          ],
+          "abstract": [
+            "\nA novel sensor-based Internet of Educational Things (IoET) platform named OBSY was iteratively designed, developed and evaluated to support education in rural regions in Thailand. To assess the effectiveness of this platform, a study was carried out at four primary schools located near the Thai northern border with 244 students and 8 teachers. Participants were asked to carry out three science-based learning activities and were measured for improvements in learning outcome and learning engagement. Overall, the results showed that students in the IoET group who had used OBSY to learn showed significantly higher learning outcome and had better learning engagement than those in the control condition. In addition, for those in the IoET group, there was no significant effect regarding gender, home location (Urban or Rural), age, prior experience with technology and ethnicity on learning outcome. For learning engagement, only age was found to influence interest/enjoyment. The study demonstrated the potential of IoET technologies in underprivileged area, through a co-design approach with teachers and students, taking into account the local contexts.\n"
+          ],
+          "title_display": "Investigating the use of sensor-based IoET to facilitate learning for children in rural Thailand",
+          "score": 3.1833687
+        },
+        {
+          "id": "10.1371/journal.pone.0221966",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2019-09-19T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Emese Szegedi-Hallgat\u00f3",
+            "Karolina Janacsek",
+            "Dezso Nemeth"
+          ],
+          "abstract": [
+            "\nIn this paper, we reexamined the typical analysis methods of a visuomotor sequence learning task, namely the ASRT task (J. H. Howard & Howard, 1997). We pointed out that the current analysis of data could be improved by paying more attention to pre-existing biases (i.e. by eliminating artifacts by using new filters) and by introducing a new data grouping that is more in line with the task\u2019s inherent statistical structure. These suggestions result in more types of learning scores that can be quantified and also in purer measures. Importantly, the filtering method proposed in this paper also results in higher individual variability, possibly indicating that it had been masked previously with the usual methods. The implications of our findings relate to other sequence learning tasks as well, and opens up opportunities to study different types of implicit learning phenomena.\n"
+          ],
+          "title_display": "Different levels of statistical learning - Hidden potentials of sequence learning tasks",
+          "score": 3.1833496
+        },
+        {
+          "id": "10.1371/journal.pone.0157588",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2016-06-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Ken Takiyama",
+            "Masahiro Shinya"
+          ],
+          "abstract": [
+            "\nMost motor learning experiments have been conducted in a laboratory setting. In this type of setting, a huge and expensive manipulandum is frequently used, requiring a large budget and wide open space. Subjects also need to travel to the laboratory, which is a burden for them. This burden is particularly severe for patients with neurological disorders. Here, we describe the development of a novel application based on Unity3D and smart devices, e.g., smartphones or tablet devices, that can be used to conduct motor learning experiments at any time and in any place, without requiring a large budget and wide open space and without the burden of travel on subjects. We refer to our application as POrtable Motor learning LABoratory, or PoMLab. PoMLab is a multiplatform application that is available and sharable for free. We investigated whether PoMLab could be an alternative to the laboratory setting using a visuomotor rotation paradigm that causes sensory prediction error, enabling the investigation of how subjects minimize the error. In the first experiment, subjects could adapt to a constant visuomotor rotation that was abruptly applied at a specific trial. The learning curve for the first experiment could be modeled well using a state space model, a mathematical model that describes the motor leaning process. In the second experiment, subjects could adapt to a visuomotor rotation that gradually increased each trial. The subjects adapted to the gradually increasing visuomotor rotation without being aware of the visuomotor rotation. These experimental results have been reported for conventional experiments conducted in a laboratory setting, and our PoMLab application could reproduce these results. PoMLab can thus be considered an alternative to the laboratory setting. We also conducted follow-up experiments in university physical education classes. A state space model that was fit to the data obtained in the laboratory experiments could predict the learning curves obtained in the follow-up experiments. Further, we investigated the influence of vibration function, weight, and screen size on learning curves. Finally, we compared the learning curves obtained in the PoMLab experiments to those obtained in the conventional reaching experiments. The results of the in-class experiments show that PoMLab can be used to conduct motor learning experiments at any time and place.\n"
+          ],
+          "title_display": "Development of a Portable Motor Learning Laboratory (PoMLab)",
+          "score": 3.18334
+        },
+        {
+          "id": "10.1371/journal.pone.0221765",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2019-09-05T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Ali Alammary"
+          ],
+          "abstract": [
+            "\nTeaching introductory programming courses is not an easy task. Instructors of introductory programming courses are facing many challenges related to the nature of programming, the students\u2019 characteristics and the traditional teaching methods that they are using. Blended learning seems to be a promising approach to address these challenges. Many studies concluded that blended learning can be more effective than traditional teaching and can improve students\u2019 learning experience. However, the current state of knowledge and practice in applying blended learning to introductory programming courses is limited. In an attempt to begin remedying this gap, this review synthesizes the different blended learning approaches that have been applied in introductory programming courses. It classifies them into five models then discusses the impact of each of these models on the learning experience of novice programmers. It concludes by providing some recommendations for instructors who want to blend their courses as well as some implications for future research.\n"
+          ],
+          "title_display": "Blended learning models for introductory programming courses: A systematic review",
+          "score": 3.1832116
+        },
+        {
+          "id": "10.1371/journal.pone.0165260",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2016-10-20T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Florian Kattner",
+            "Christopher R. Cox",
+            "C. Shawn Green"
+          ],
+          "abstract": [
+            "\nWhile learning is often highly specific to the exact stimuli and tasks used during training, there are cases where training results in learning that generalizes more broadly. It has been previously argued that the degree of specificity can be predicted based upon the learning solution(s) dictated by the particular demands of the training task. Here we applied this logic in the domain of rule-based categorization learning. Participants were presented with stimuli corresponding to four different categories and were asked to perform either a category discrimination task (which permits learning specific rule to discriminate two categories) or a category identification task (which does not permit learning a specific discrimination rule). In a subsequent transfer stage, all participants were asked to discriminate stimuli belonging to two of the categories which they had seen, but had never directly discriminated before (i.e., this particular discrimination was omitted from training). As predicted, learning in the category-discrimination tasks tended to be specific, while the category-identification task produced learning that transferred to the transfer discrimination task. These results suggest that the discrimination and identification tasks fostered the acquisition of different category representations which were more or less generalizable.\n"
+          ],
+          "title_display": "Transfer in Rule-Based Category Learning Depends on the Training Task",
+          "score": 3.183206
+        },
+        {
+          "id": "10.1371/journal.pcbi.1012872",
+          "journal": "PLOS Computational Biology",
+          "eissn": "1553-7358",
+          "publication_date": "2025-09-26T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Jennifer D. Senta",
+            "Sonia J. Bishop",
+            "Anne G.E. Collins"
+          ],
+          "abstract": [
+            "\nAnxiety has been robustly linked to deficits in frontal executive function including working memory (WM) and attentional control processes. However, although anxiety has also been associated with impaired performance on learning tasks, computational investigations of reinforcement learning (RL) impairment in anxiety have yielded mixed results. WM processes are known to contribute to learning behavior in parallel to RL processes and to modulate the effective learning rate as a function of load. However, WM processes have typically not been modeled in investigations of anxiety and RL. In the current study, we leveraged an experimental paradigm (RLWM) which manipulates the relative contributions of WM and RL processes in a reinforcement learning and retention task using multiple stimulus set sizes. Using a computational model of interactive RL and WM processes, we investigated whether individual differences in physiological or cognitive anxiety impacted task performance via deficits in RL or WM. Elevated physiological, but not cognitive, anxiety scores were strongly associated with worse performance during learning and retention testing across all set sizes. Computationally, higher physiological anxiety scores were significantly related to reduced learning rate and increased rate of WM decay. To highlight the importance of modeling WM contributions to learning, we considered the effect of fitting RL models without WM modules to the data. Here we found that reduced learning performance for higher physiological anxiety was at least partially misattributed to stochastic decision noise in 9 out of 10 RL-only models considered. These findings reveal a dual-process impairment in learning in anxiety that is linked to a more physiological than cognitive anxiety phenotype. More broadly, this work also points to the importance of accounting for the contribution of WM to RL when investigating psychopathology-related deficits in learning.\nAuthor summary: Individuals with anxiety may have difficulties with learning, memory, and attentional control. Computational studies investigating the specific learning processes that are impaired in anxiety have yielded inconsistent results, possibly because they generally fail to account for the role of supporting systems such as working memory (WM). Moreover, anxiety itself is a multi-dimensional construct with symptoms which vary across individuals. In the current study, we employed an experimental paradigm which accounted for the supporting role of WM in reinforcement learning (RL) in a learning and retention task. We tested physiological and cognitive dimensions of anxiety against RL and supporting processes. We found that physiological, but not cognitive, anxiety was behaviorally linked to reduced learning and testing performance. Computationally, we found that these performance deficits were attributable to both RL (via reduced learning rate) and WM (via increased forgetting rate) systems. To highlight the importance of modeling WM contributions to learning, we tested a series of simpler RL-only models on our data. Here we found that models which did not account for WM tended to at least partially misattribute performance deficits to noise. "
+          ],
+          "title_display": "Dual process impairments in reinforcement learning and working memory systems underlie learning deficits in physiological anxiety",
+          "score": 3.183178
+        },
+        {
+          "id": "10.1371/journal.pcbi.1006504",
+          "journal": "PLOS Computational Biology",
+          "eissn": "1553-7358",
+          "publication_date": "2018-11-08T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Michael Muthukrishna",
+            "Michael Doebeli",
+            "Maciej Chudek",
+            "Joseph Henrich"
+          ],
+          "abstract": [
+            "\nIn the last few million years, the hominin brain more than tripled in size. Comparisons across evolutionary lineages suggest that this expansion may be part of a broader trend toward larger, more complex brains in many taxa. Efforts to understand the evolutionary forces driving brain expansion have focused on climatic, ecological, and social factors. Here, building on existing research on learning, we analytically and computationally model the predictions of two closely related hypotheses: The Cultural Brain Hypothesis and the Cumulative Cultural Brain Hypothesis. The Cultural Brain Hypothesis posits that brains have been selected for their ability to store and manage information, acquired through asocial or social learning. The model of the Cultural Brain Hypothesis reveals relationships between brain size, group size, innovation, social learning, mating structures, and the length of the juvenile period that are supported by the existing empirical literature. From this model, we derive a set of predictions\u2014the Cumulative Cultural Brain Hypothesis\u2014for the conditions that favor an autocatalytic take-off characteristic of human evolution. This narrow evolutionary pathway, created by cumulative cultural evolution, may help explain the rapid expansion of human brains and other aspects of our species\u2019 life history and psychology.\nAuthor summary: Humans have extraordinarily large brains, which tripled in size in the last few million years. Other animals also experienced a significant, though smaller, increase in brain size. These increases are puzzling, because brain tissue is energetically expensive\u2014a smaller brain is easier to maintain in terms of calories. Here we present a theory, captured in an analytic and computational model, that explains these increases in brain size: The Cultural Brain Hypothesis. The theory relies on the idea that brains expand to store and manage more information. Brains expand in response to the availability of information and calories. Information availability is affected by learning strategies (e.g. learning from others or learning by yourself), group size, mating structure, and the length of the juvenile period, which co-evolve with brain size. The model captures this co-evolution under different conditions and describes the specific and narrow conditions that can lead to a take-off in brain size\u2014a possible pathway that led to the extraordinary expansion in our own species. We call these conditions the Cumulative Cultural Brain Hypothesis. These theories are supported by our tests using existing empirical data. "
+          ],
+          "title_display": "The Cultural Brain Hypothesis: How culture drives brain expansion, sociality, and life history",
+          "score": 3.183162
+        },
+        {
+          "id": "10.1371/journal.pone.0233022",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2020-05-15T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Kin Cheung",
+            "Tsz Leung Yip",
+            "C. L. Johnny Wan",
+            "Hilda Tsang",
+            "Lillian Weiwei Zhang",
+            "Anna Parpala"
+          ],
+          "abstract": [
+            "\nUnlike the studies of freshmen entrants, the learning experiences of community college transfer (CCT) students in the receiving university is a topic that has only started to gain attention in recent decades. Little is known about the differences between CCT and freshmen entrants with regard to their study workload stress and its relationship with their perceptions of the teaching and learning environment, approaches to learning, self-efficacy and generic skills. The purpose of our study was to address this gap. This was a cross-sectional survey study conducted from April 2018 to November 2018 in a university in Hong Kong. The HowULearn questionnaire was adapted to local usage and validated for data collection. In total, 841 CCT students and 978 freshmen entrants completed the survey. The respondents were aged between 19 and 52 years (mean = 21.6, SD = 1.92), and 66.0% were women. The HowULearn questionnaire was determined by factor analyses to have eight factors. The reliabilities of the eight factors were found to be acceptable (Cronbach alphas = 0.709\u20130.918). The CCT students scored significantly higher than the freshmen entrants for perceived study workload stress and surface approaches to learning, but lower on teaching for understanding & encouraging learning, peer support, and self-efficacy beliefs. The surface approach to learning, deep & organized studying, alignment & constructive feedback, and generic skills were found to be predictors of study workload stress in both groups of students, and in the overall student data. This study has shown that CCT students and freshmen entrants differed with regard to their study workload stress and learning experiences. Our findings provide a message, both for educators in higher education and policy makers in the government\u2014there is not a one-size-fits-all approach to different student populations when it comes to enhancing their learning experiences.\n"
+          ],
+          "title_display": "Differences in study workload stress and its associated factors between transfer students and freshmen entrants in an Asian higher education context",
+          "score": 3.1831324
+        },
+        {
+          "id": "10.1371/journal.pone.0281788",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-03-23T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "\u00c1gnes Luk\u00e1cs",
+            "Dorottya Dob\u00f3",
+            "\u00c1gnes Sz\u0151ll\u0151si",
+            "Korn\u00e9l N\u00e9meth",
+            "Krisztina S\u00e1ra Lukics"
+          ],
+          "abstract": [
+            "\nThe vulnerability of statistical learning has been demonstrated in reading difficulties in both the visual and acoustic modalities. We examined segmentation abilities of Hungarian speaking adolescents with different levels of reading fluency in the acoustic verbal and visual nonverbal domains. We applied online target detection tasks, where the extent of learning is reflected in differences between reaction times to predictable versus unpredictable targets. Explicit judgments of well-formedness were also elicited in an offline two-alternative forced choice (2AFC) task. Learning was evident in both the acoustic verbal and visual nonverbal tasks, both in online and offline measures, but learning effects were larger both in online and offline tasks in the verbal acoustic condition. We haven\u2019t found evidence for a significant relationship between statistical learning and reading fluency in adolescents in either modality. Together with earlier findings, these results suggest that the relationship between reading and statistical learning is dependent on the domain, modality and nature of the statistical learning task, on the reading task, on the age of participants, and on the specific language. The online target detection task is a promising tool which can be adapted to a wider set of tasks to further explore the contribution of statistical learning to reading acquisition in participants from different populations.\n"
+          ],
+          "title_display": "Reading fluency and statistical learning across modalities and domains: Online and offline measures",
+          "score": 3.183106
+        },
+        {
+          "id": "10.1371/journal.pone.0312124",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2025-01-02T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Tingting Tong",
+            "Zhen Li"
+          ],
+          "abstract": [
+            "\nPredicting learning achievement is a crucial strategy to address high dropout rates. However, existing prediction models often exhibit biases, limiting their accuracy. Moreover, the lack of interpretability in current machine learning methods restricts their practical application in education. To overcome these challenges, this research combines the strengths of various machine learning algorithms to design a robust model that performs well across multiple metrics, and uses interpretability analysis to elucidate the prediction results. This study introduces a predictive framework for learning achievement based on ensemble learning techniques. Specifically, six distinct machine learning models are utilized to establish a base learner, with logistic regression serving as the meta learner to construct an ensemble model for predicting learning achievement. The SHapley Additive exPlanation (SHAP) model is then employed to explain the prediction results. Through the experiments on XuetangX dataset, the effectiveness of the proposed model is verified. The proposed model outperforms traditional machine learning and deep learning model in terms of prediction accuracy. The results demonstrate that the ensemble learning-based predictive framework significantly outperforms traditional machine learning methods. Through feature importance analysis, the SHAP method enhances model interpretability and improves the reliability of the prediction results, enabling more personalized interventions to support students.\n"
+          ],
+          "title_display": "Predicting learning achievement using ensemble learning with result explanation",
+          "score": 3.183106
+        },
+        {
+          "id": "10.1371/journal.pcbi.1009803",
+          "journal": "PLOS Computational Biology",
+          "eissn": "1553-7358",
+          "publication_date": "2022-03-24T00:00:00Z",
+          "article_type": "Education",
+          "author_display": [
+            "Benjamin D. Lee",
+            "Anthony Gitter",
+            "Casey S. Greene",
+            "Sebastian Raschka",
+            "Finlay Maguire",
+            "Alexander J. Titus",
+            "Michael D. Kessler",
+            "Alexandra J. Lee",
+            "Marc G. Chevrette",
+            "Paul Allen Stewart",
+            "Thiago Britto-Borges",
+            "Evan M. Cofer",
+            "Kun-Hsing Yu",
+            "Juan Jose Carmona",
+            "Elana J. Fertig",
+            "Alexandr A. Kalinin",
+            "Brandon Signal",
+            "Benjamin J. Lengerich",
+            "Timothy J. Triche Jr.",
+            "Simina M. Boca"
+          ],
+          "abstract": [
+            ""
+          ],
+          "title_display": "Ten quick tips for deep learning in biology",
+          "score": 3.183033
+        },
+        {
+          "id": "10.1371/journal.pone.0202172",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2018-08-20T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Vladimir Trajkovik",
+            "Toni Malinovski",
+            "Tatjana Vasileva-Stojanovska",
+            "Marina Vasileva"
+          ],
+          "abstract": [
+            "\nThis study promotes a novel teaching approach for integration of children\u2019s traditional games in elementary school program. It gives description of six traditional games and their educational prospects, implemented in six learning sessions in five elementary schools in Macedonia, involving 102 students. The comparison of learning achievements between these learning sessions and standard classes revealed increased students\u2019 learning performance on comparable topics. To understand the reason for improvement, we have surveyed students after each session and tested the gathered data set via the development of a structural equation model that examines the relationships between student\u2019s personality traits, motivation and experience with learning outcomes. The findings show that students\u2019 achievements were directly influenced by students\u2019 intrinsic and extrinsic motivational factors, as well as perceived experience. Additionally, the integration of traditional games in the elementary school classroom was equally accepted among all students, since their personality traits did not directly influence their experience or learning outcomes. Still, the link between the students\u2019 personality dimensions and motivation revealed that introvert children might have slightly increased motivation and possibility to open up during game-play in such collaborative environments.\n"
+          ],
+          "title_display": "Traditional games in elementary school: Relationships of student\u2019s personality traits, motivation and experience with learning outcomes",
+          "score": 3.1830304
+        },
+        {
+          "id": "10.1371/journal.pone.0305856",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-07-05T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Gideon Kowadlo",
+            "Abdelrahman Ahmed",
+            "Amir Mayan",
+            "David Rawlinson"
+          ],
+          "abstract": [
+            "\nContinual learning and few-shot learning are important frontiers in progress toward broader Machine Learning (ML) capabilities. Recently, there has been intense interest in combining both. One of the first examples to do so was the Continual few-shot Learning (CFSL) framework of Antoniou et al. (2020). In this study, we extend CFSL in two ways that capture a broader range of challenges, important for intelligent agent behaviour in real-world conditions. First, we increased the number of classes by an order of magnitude, making the results more comparable to standard continual learning experiments. Second, we introduced an \u2018instance test\u2019 which requires recognition of specific instances of classes\u2014a capability of animal cognition that is usually neglected in ML. For an initial exploration of ML model performance under these conditions, we selected representative baseline models from the original CFSL work and added a model variant with replay. As expected, learning more classes is more difficult than the original CFSL experiments, and interestingly, the way in which image instances and classes are presented affects classification performance. Surprisingly, accuracy in the baseline instance test is comparable to other classification tasks, but poor given significant occlusion and noise. The use of replay for consolidation substantially improves performance for both types of tasks, but particularly for the instance test.\n"
+          ],
+          "title_display": "Expanding continual few-shot learning benchmarks to include recognition of specific instances",
+          "score": 3.1828964
+        },
+        {
+          "id": "10.1371/journal.pone.0249423",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2021-04-02T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Indy Man Kit Ho",
+            "Kai Yuen Cheong",
+            "Anthony Weldon"
+          ],
+          "abstract": [
+            "\nDespite the wide adoption of emergency remote learning (ERL) in higher education during the COVID-19 pandemic, there is insufficient understanding of influencing factors predicting student satisfaction for this novel learning environment in crisis. The present study investigated important predictors in determining the satisfaction of undergraduate students (N = 425) from multiple departments in using ERL at a self-funded university in Hong Kong while Moodle and Microsoft Team are the key learning tools. By comparing the predictive accuracy between multiple regression and machine learning models before and after the use of random forest recursive feature elimination, all multiple regression, and machine learning models showed improved accuracy while the most accurate model was the elastic net regression with 65.2% explained variance. The results show only neutral (4.11 on a 7-point Likert scale) regarding the overall satisfaction score on ERL. Even majority of students are competent in technology and have no obvious issue in accessing learning devices or Wi-Fi, face-to-face learning is more preferable compared to ERL and this is found to be the most important predictor. Besides, the level of efforts made by instructors, the agreement on the appropriateness of the adjusted assessment methods, and the perception of online learning being well delivered are shown to be highly important in determining the satisfaction scores. The results suggest that the need of reviewing the quality and quantity of modified assessment accommodated for ERL and structured class delivery with the suitable amount of interactive learning according to the learning culture and program nature.\n"
+          ],
+          "title_display": "Predicting student satisfaction of emergency remote learning in higher education during COVID-19 using machine learning techniques",
+          "score": 3.1828132
+        },
+        {
+          "id": "10.1371/journal.pone.0195404",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2018-04-25T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Yosuke Yawata",
+            "Kenichi Makino",
+            "Yuji Ikegaya"
+          ],
+          "abstract": [
+            "\nAppropriate decisions involve at least two aspects: the speed of the decision and the correctness of the decision. Although a quick and correct decision is generally believed to work favorably, these two aspects may be interdependent in terms of overall task performance. In this study, we scrutinized learning behaviors in an operant task in which rats were required to poke their noses into either of two holes by referring to a light cue. All 22 rats reached the learning criterion, an 80% correct rate, within 4 days of testing, but they were diverse in the number of sessions spent to reach the learning criterion. Individual analyses revealed that the mean latency for responding was negatively correlated with the number of sessions until learning, suggesting that the rats that responded more rapidly to the cues learned the task more slowly. For individual trials, the mean latency for responding in correct trials (LC) was significantly longer than that in incorrect trials (LI), suggesting that, on average, long deliberation times led to correct answers in the trials. The success ratio before learning was not correlated with the learning speed. Thus, deliberative decision-making, rather than overall correctness, is critical for learning.\n"
+          ],
+          "title_display": "Answering hastily retards learning",
+          "score": 3.1827898
+        },
+        {
+          "id": "10.1371/journal.pone.0212242",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2019-05-31T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Emily Marchant",
+            "Charlotte Todd",
+            "Roxanne Cooksey",
+            "Samuel Dredge",
+            "Hope Jones",
+            "David Reynolds",
+            "Gareth Stratton",
+            "Russell Dwyer",
+            "Ronan Lyons",
+            "Sinead Brophy"
+          ],
+          "abstract": [
+            "\nThe relationship between child health, wellbeing and education demonstrates that healthier and happier children achieve higher educational attainment. An engaging curriculum that facilitates children in achieving their academic potential has strong implications for educational outcomes, future employment prospects, and health and wellbeing during adulthood. Outdoor learning is a pedagogical approach used to enrich learning, enhance school engagement and improve pupil health and wellbeing. However, its non-traditional means of achieving curricular aims are not yet recognised beyond the early years by education inspectorates. This requires evidence into its acceptability from those at the forefront of delivery. This study aimed to explore headteachers\u2019, teachers\u2019 and pupils\u2019 views and experiences of an outdoor learning programme within the key stage two curriculum (ages 9\u201311) in South Wales, United Kingdom. We examine the process of implementation to offer case study evidence through 1:1 interviews with headteachers (n = 3) and teachers (n = 10) and focus groups with pupils aged 9\u201311 (n = 10) from three primary schools. Interviews and focus groups were conducted at baseline and six months into implementation. Schools introduced regular outdoor learning within the curriculum. This study found a variety of perceived benefits for pupils and schools. Pupils and teachers noticed improvements in pupils\u2019 engagement with learning, concentration and behaviour, as well as positive impacts on health and wellbeing and teachers\u2019 job satisfaction. Curriculum demands including testing and evidencing work were barriers to implementation, in addition to safety concerns, resources and teacher confidence. Participants supported outdoor learning as a curriculum-based programme for older primary school pupils. However, embedding outdoor learning within the curriculum requires education inspectorates to place higher value on this approach in achieving curricular aims, alongside greater acknowledgment of the wider benefits to children which current measurements do not capture.\n"
+          ],
+          "title_display": "Curriculum-based outdoor learning for children aged 9-11: A qualitative analysis of pupils\u2019 and teachers\u2019 views",
+          "score": 3.1826427
+        },
+        {
+          "id": "10.1371/journal.pone.0298861",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-02-28T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Shengnan Wu"
+          ],
+          "abstract": [
+            "\nMultimedia technology holds paramount importance in driving innovation within vocational education, significantly influencing learning satisfaction. Its integration facilitates dynamic and interactive learning environments, catering to diverse learning styles and preferences. Moreover, multimedia technology enables educators to simulate real-world scenarios, providing practical and hands-on training opportunities. This aspect is particularly valuable in vocational education, where practical skills and application are required. The paper investigates the impact of multimedia technology in enhancing learning satisfaction within innovative vocational education. It delves into the utilization of multimedia tools and their correlation with learner satisfaction, exploring how these technologies augment engagement and comprehension in vocational training. The primary data from 515 students of vocational colleges of China has been collected and regression analysis is applied for empirical analysis. The findings of the study highlight that multimedia technology has positive relationship with innovative vocational education and learning outcome. The findings contribute valuable insights for policymakers regarding significant role multimedia plays in fostering enhanced learning experiences and overall satisfaction among vocational learners.\n"
+          ],
+          "title_display": "Application of multimedia technology to innovative vocational education on learning satisfaction in China",
+          "score": 3.1826208
+        },
+        {
+          "id": "10.1371/journal.pone.0157355",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2016-06-15T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Matthias Deliano",
+            "Karsten Tabelow",
+            "Reinhard K\u00f6nig",
+            "J\u00f6rg Polzehl"
+          ],
+          "abstract": [
+            "\nEstimation of learning curves is ubiquitously based on proportions of correct responses within moving trial windows. Thereby, it is tacitly assumed that learning performance is constant within the moving windows, which, however, is often not the case. In the present study we demonstrate that violations of this assumption lead to systematic errors in the analysis of learning curves, and we explored the dependency of these errors on window size, different statistical models, and learning phase. To reduce these errors in the analysis of single-subject data as well as on the population level, we propose adequate statistical methods for the estimation of learning curves and the construction of confidence intervals, trial by trial. Applied to data from an avoidance learning experiment with rodents, these methods revealed performance changes occurring at multiple time scales within and across training sessions which were otherwise obscured in the conventional analysis. Our work shows that the proper assessment of the behavioral dynamics of learning at high temporal resolution can shed new light on specific learning processes, and, thus, allows to refine existing learning concepts. It further disambiguates the interpretation of neurophysiological signal changes recorded during training in relation to learning.\n"
+          ],
+          "title_display": "Improving Accuracy and Temporal Resolution of Learning Curve Estimation for within- and across-Session Analysis",
+          "score": 3.182558
+        },
+        {
+          "id": "10.1371/journal.pone.0166334",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2016-11-04T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Michael Seiter",
+            "Peter Schausberger"
+          ],
+          "abstract": [
+            "\nLearning is widely documented across animal taxa but studies stringently scrutinizing the causes of constitutive or operational variation of learning among populations and individuals are scarce. The ability to learn is genetically determined and subject to constitutive variation while the performance in learning depends on the immediate circumstances and is subject to operational variation. We assessed variation in learning ability and performance of plant-inhabiting predatory mites, Amblyseius swirskii, caused by population origin, rearing diet, and type of experience. Using an early learning foraging paradigm, we determined that homogeneous single prey environments did not select for reduced learning ability, as compared to natural prey-diverse environments, whereas a multi-generational pollen diet resulted in loss of learning, as compared to a diet of live prey. Associative learning produced stronger effects than non-associative learning but both types of experience produced persistent memory. Our study represents a key example of environmentally caused variation in learning ability and performance.\n"
+          ],
+          "title_display": "Constitutive and Operational Variation of Learning in Foraging Predatory Mites",
+          "score": 3.182558
+        },
+        {
+          "id": "10.1371/journal.pone.0293065",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-01-17T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Adriana Aletta Steyn",
+            "Craig van Slyke",
+            "Geoffrey Dick",
+            "Hossana Twinomurinzi",
+            "Lateef Babatunde Amusa"
+          ],
+          "abstract": [
+            "\nThe aftermath of COVID changed how students learn, mainly moving to a distance learning model. The research reported in this paper investigated the organizational and individual factors that influence the preference for continuing with distance / online learning post-COVID. Partial least squares structural equation modeling was applied to a model developed for this research, based on data from 452 students from residential universities in South Africa. The key results reveal an overall reluctance to continue with distance learning. This is despite the technological and faculty support offered to university students and how distance learning fits their learning styles. This is likely due to student living conditions and their perception of low institutional concern. On the other hand, faculty support has a more substantial impact on continuance, compared with a generally negative perception of support from the universities. The research underscores the importance of addressing student reluctance to continue with distance learning by improving institutional support and tailoring learning styles. The research enhances our understanding of crucial factors influencing students\u2019 preference for distance/online learning post-COVID. It also underscores the pedagogical shifts brought about by the pandemic, particularly highlighting the changing roles of faculty support and the impact on students\u2019 living conditions.\n"
+          ],
+          "title_display": "Student intentions to continue with distance learning post-COVID: An empirical analysis",
+          "score": 3.182558
+        },
+        {
+          "id": "10.1371/journal.pone.0308248",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-10-18T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Soleiman Ahmady",
+            "Nasrin Khajeali",
+            "Noushin Kohan",
+            "Afagh Zarei",
+            "Bikram Biswas",
+            "Mohammad Barzegar",
+            "Azadeh Kordestani Moghaddam"
+          ],
+          "abstract": [
+            "Introduction: Mobile learning has gained significant attention in medical education in recent years. The COVID-19 crisis has further accelerated its adoption. A lack of research on student perceptions of mobile learning during pandemics limits strategies for maintaining education during these times. This study examines the perceptions of medical students in Iran regarding the mobile learning during COVID-19. It is imperative that these perceptions are understood to optimize mobile learning effectiveness in medical education during disruptions. Method: A cross-sectional study was done in 2022 among 785 medical students in Iran who spent summer semester. Convenience sampling was used to select the sample. We used Biswas et al.\u2019s scale for measuring medical students\u2019 perceptions of mobile learning during pandemics. Face and content validity was determined by qualitative methods. Internal consistency was measured with Cronbach\u2019s Alpha (0.79). Data was collected through an online questionnaire. To analyze the data, descriptive and analytical statistics were conducted with SPSS software at a significance level of p<0.05. Results: In total, 1,200 medical students were asked to complete the survey, and 785 responded, resulting in a 65.4% response rate. Mobile learning has been embraced by majority of medical students, with Android devices being used the most frequently. They also have frequent access to the internet, and they rely on a wide range of apps and platforms for academic purposes. Students perceive mobile devices to be highly advantageous for improving subject knowledge (Mean = 4.71\u00b10.58), accessing study materials (Mean = 4.44\u00b10.75), and providing flexible learning opportunities (Mean = 4.40\u00b10.79). Despite this, participants were less confident about the ability of mobile devices to assist with specific study problems (Mean = 3.12 \u00b1 1.28), facilitate class discussions (Mean = 3.33 \u00b1 1.38), and overcome screen size limitations (Mean = 3.32 \u00b1 1.38). Conclusion: Medical students in Iran have widely adopted mobile learning and perceive it as beneficial for acquiring knowledge, accessing material, and being flexible during COVID-19. M-learning\u2019s effectiveness in specific learning activities must be investigated in further research, and concerns regarding problem-solving, discussion facilitation, and screen size limitations should be addressed. "
+          ],
+          "title_display": "Medical students\u2019 perception of mobile learning during COVID-19 in Iran: A national study",
+          "score": 3.1824696
+        },
+        {
+          "id": "10.1371/journal.pone.0276170",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-11-17T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Midion Mapfumo Chidzonga",
+            "Clara Haruzivishe",
+            "Vasco Chikwasha",
+            "Judith Rukweza"
+          ],
+          "abstract": [
+            "\nThe global societal impact of the COVID-19 pandemic is incalculable with profound social suffering, deep economic hardships and enforced closure of schools, businesses, and higher learning institutions through the imposition of lockdown and social distancing in mitigation of the spread of the SARS-Cov-2 infection. Institutions have had to hastily migrate teaching, learning and assessment to online domains, at times with ill-prepared academics, students and institutions and with unwelcome and disorienting consequences. Our study surveyed perspectives of faculty at the University of Zimbabwe Faculty of Medicine and Health Sciences (UZFMHS) towards the hastily adopted online teaching, learning and assessment implemented in response to the mitigation of the COVID-19 pandemic. Twenty nine (29) faculty in all the major disciplines and career hierarchy. There were mixed responses regarding the use of this modality for teaching, learning and assessment: training before online teaching, learning and assessment, advantages and disadvantages, cost effectiveness, effectiveness for teaching, learning and assessment, effect on student feedback, disruptions from internet connectivity issues, interaction with students, suitability for practical training, and barriers to online teaching, learning and assessment. These results would enable the UZFMHS develop institutional and personalised approaches that would enable execution of online teaching, learning and assessment under the current and post COVID-19 pandemic.\n"
+          ],
+          "title_display": "Health professions faculty\u2019s perceptions of online teaching and learning during the COVID-19 pandemic",
+          "score": 3.182366
+        },
+        {
+          "id": "10.1371/journal.pone.0267692",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-04-28T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Aurora V. Lacaste",
+            "Ming-Min Cheng",
+            "Hsueh-Hua Chuang"
+          ],
+          "abstract": [
+            "\nAs internationalization of higher education has become more prevalent, the search for approaches to support quality learning within multicultural classrooms has become critical. In this study, we presented a blended and collaborative learning (BCL) method and discussed its potential as a viable learning approach for graduate classrooms with culturally-diverse students. We first discussed implementation of a BCL approach in a multicultural graduate course, then explored learnings gained from the BCL experience in terms of three interdependent Community of Inquiry elements: teaching, cognitive, and social presences, and in terms of its implementation in a multicultural setting.\n"
+          ],
+          "title_display": "Blended and collaborative learning: Case of a multicultural graduate classroom in Taiwan",
+          "score": 3.182337
+        },
+        {
+          "id": "10.1371/journal.pone.0285315",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-10-04T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Hamid Sharif Nia",
+            "Jo\u00e3o Mar\u00f4co",
+            "Long She",
+            "Fatemeh Khoshnavay Fomani",
+            "Pardis Rahmatpour",
+            "Ivana Stepanovic Ilic",
+            "Maryam Mohammad Ibrahim",
+            "Fatima Muhammad Ibrahim",
+            "Sumit Narula",
+            "Giovanna Esposito",
+            "Ozkan Gorgulu",
+            "Navaz Naghavi",
+            "Saeed Pahlevan Sharif",
+            "Kelly-Ann Allen",
+            "Omolhoda Kaveh",
+            "Jonathan Reardon"
+          ],
+          "abstract": [
+            "\nThe COVID-19 pandemic caused unprecedented changes to educational institutions, forcing their closure and a subsequent shift to online education to cater to student learning requirements. However, successful online learning depends on several factors and may also vary between countries. As such, this cross-sectional study sought to investigate how engagement of university students, a major driver of online learning, was influenced by course content, online interaction, student acceptance, and satisfaction with online learning, as well as self-efficacy across nine countries (China, India, Iran, Italy, Malaysia, Portugal, Serbia, Turkey, and the United Arab Emirates) during the COVID-19 pandemic. Using a questionnaire-based approach, data collected from 6,489 university students showed that student engagement was strongly linked to perception of the quality of the course content and online interactions (p < .001). The current study also indicated that online interactions are a major determinant of academic efficacy but only if mediated by engagement within the online learning context. A negative correlation between student engagement and satisfaction with online learning was found, demonstrating the importance of students being engaged behaviorally, emotionally, and cognitively to feel satisfied with learning. Academic efficacy and student satisfaction were explained by course content, online interaction, and online learning acceptance, being mediated by student engagement. Student satisfaction and, to a lesser degree academic efficacy, were also associated with online learning acceptance. Overall, the structural equation model was a good fit for the data collected from all nine countries (CFI = .947, TLI = .943; RMSEA = .068; SRMR = .048), despite differences in the percentage variations explained by each factor (no invariance), likely due to differences in levels of technology use, learning management systems, and the preparedness of teachers to migrate to full online instruction. Despite limitations, the results of this study highlight the most important factors affecting online learning, providing insight into potential approaches for improving student experiences in online learning environments.\n"
+          ],
+          "title_display": "Student satisfaction and academic efficacy during online learning with the mediating effect of student engagement: A multi-country study",
+          "score": 3.1823192
+        },
+        {
+          "id": "10.1371/journal.pcbi.1004172",
+          "journal": "PLOS Computational Biology",
+          "eissn": "1553-7358",
+          "publication_date": "2015-03-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Loes C. J. van Dam",
+            "Marc O. Ernst"
+          ],
+          "abstract": [
+            "\nHumans can learn and store multiple visuomotor mappings (dual-adaptation) when feedback for each is provided alternately. Moreover, learned context cues associated with each mapping can be used to switch between the stored mappings. However, little is known about the associative learning between cue and required visuomotor mapping, and how learning generalises to novel but similar conditions. To investigate these questions, participants performed a rapid target-pointing task while we manipulated the offset between visual feedback and movement end-points. The visual feedback was presented with horizontal offsets of different amounts, dependent on the targets shape. Participants thus needed to use different visuomotor mappings between target location and required motor response depending on the target shape in order to \u201chit\u201d it. The target shapes were taken from a continuous set of shapes, morphed between spiky and circular shapes. After training we tested participants performance, without feedback, on different target shapes that had not been learned previously. We compared two hypotheses. First, we hypothesised that participants could (explicitly) extract the linear relationship between target shape and visuomotor mapping and generalise accordingly. Second, using previous findings of visuomotor learning, we developed a (implicit) Bayesian learning model that predicts generalisation that is more consistent with categorisation (i.e. use one mapping or the other). The experimental results show that, although learning the associations requires explicit awareness of the cues\u2019 role, participants apply the mapping corresponding to the trained shape that is most similar to the current one, consistent with the Bayesian learning model. Furthermore, the Bayesian learning model predicts that learning should slow down with increased numbers of training pairs, which was confirmed by the present results. In short, we found a good correspondence between the Bayesian learning model and the empirical results indicating that this model poses a possible mechanism for simultaneously learning multiple visuomotor mappings.\nAuthor Summary: When interacting with the world, for instance, when pointing to targets, humans generally make use of previous experiences to determine the best course of action. For example, based on the context of wearing corrective glasses or taking them off, we instantly adjust our behaviour for the geometric distortions the glasses induce. How do we learn such context-dependent distortions and how does such learning generalise? "
+          ],
+          "title_display": "Mapping Shape to Visuomotor Mapping: Learning and Generalisation of Sensorimotor Behaviour Based on Contextual Information",
+          "score": 3.1823027
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,162 @@
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+**/*.py[cod]
+**/*.so
+
+# Jupyter Notebooks
+**/.ipynb_checkpoints
+**/.jukit
+
+# Databases and Requests Caching
+**/*.sqlite
+**/requests_cache
+**/http_cache/*
+**/testing_encrypted_session_cache/*
+**/examples/output
+**/*.db
+
+# Virtual environment
+**/.env
+**/.venv
+**/venv/
+venv.bak/
+**/env/
+**/env.bak/
+
+# Coverage reports
+.coverage
+.coverage.*
+coverage.xml
+
+# VS Code settings
+.vscode/
+
+# Vale
+.vale.ini
+.vale/
+
+# Python-specific
+*.pyd
+*.pyo
+*.pdb
+*.pyc
+*.python-version
+poetry.lock
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+pip-wheel-metadata/
+*.egg-info/
+.installed.cfg
+pyvenv.cfg
+*.egg
+MANIFEST
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.pytest_cache/
+.pytest.log/
+.cache
+nosetests.xml
+*.cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+docs/_build/doctrees
+docs/_build/html
+docs/source/api
+
+# PyBuilder
+target/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# Other files
+*.swp
+*.swo
+*~
+
+# Other Directories
+notes/
+archive/
+archived/
+/profiling
+**/secrets/
+**/secure/*
+**/logs/*
+
+# ScholarFlux specific
+scholarflux_memory.db
+.scholar_flux/
+
+# Ruff cache
+.ruff_cache/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# AI specific
+graphify-out/
+.claude/
+.idea
+
+# Directories Under Development
+/examples
+
+
+# Claude might add these automatically during automated reviews
+.bash_profile
+.bashrc
+.gitconfig
+.gitmodules
+.mcp.json
+.profile
+.ripgreprc
+.vscode
+.zprofile
+.zshrc
+
+docs/source/conf.py
+docs/Makefile

@@ -1,0 +1,1127 @@
+{
+  "created_at": "2026-03-26T17:50:18.673609+00:00",
+  "elapsed": 0.695201,
+  "encoding": "utf-8",
+  "headers": {
+    "Access-Control-Allow-Credentials": "true",
+    "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+    "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Max-Age": "1728000",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=utf-8",
+    "Date": "Thu, 26 Mar 2026 17:50:18 GMT",
+    "ETag": "\"MjU3ODAwMDAwMDAwMDAwU29scg==\"",
+    "Last-Modified": "Thu, 26 Mar 2026 17:36:38 GMT",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "Transfer-Encoding": "chunked"
+  },
+  "reason": "OK",
+  "request": {
+    "body": "",
+    "method": "GET",
+    "url": "https://api.plos.org/search?q=Student+Computer+Literacy&rows=50&start=0"
+  },
+  "status_code": 200,
+  "url": "https://api.plos.org/search?q=Student+Computer+Literacy&rows=50&start=0",
+  "_decoded_content": {
+    "response": {
+      "numFound": 2823,
+      "start": 0,
+      "maxScore": 12.40972,
+      "docs": [
+        {
+          "id": "10.1371/journal.pone.0249495",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2021-04-20T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Saira Hanif Soroya",
+            "Abdus Sattar Ahmad",
+            "Shakil Ahmad",
+            "Muhammad Shahid Soroya"
+          ],
+          "abstract": [
+            "\nOver the last three decades, Information and Communication Technologies (ICTs) have changed the world in all walks of life. It has not only influenced the ways of human communication but also changed the way of learning. However, to utilize the facility of the Internet in effective manners, people need a certain set of skills called \u201cInternet Literacy Skills\u201d. The purpose of the study was to explore the level of Internet literacy skills of Undergraduate first-year students (Digital Natives) of the University of the Punjab, Lahore, Pakistan. The study is quantitative, and data were gathered through questionnaires. A total of 180 students from three disciplines i.e. Pure Sciences, Social Sciences, and Arts and Humanities were approached for the final data collection. Descriptive (mean and standard deviation) and inferential statistics (regression analysis) were applied to analyze the collected data. Results further revealed that respondents possess very good knowledge to identify legal and illegal activities and information on the Internet. Findings of the study, not only reported the Internet literacy skills of digital natives but also helped to come up with a theoretical model that may be useful to design an efficient and effective Internet literacy module/subject to help students increase their Internet use-related skills.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Mapping internet literacy skills of digital natives: A developing country perspective",
+          "score": 12.40972
+        },
+        {
+          "id": "10.1371/journal.pone.0332175",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-10-01T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Xuefei Lin",
+            "Guangyu Xu",
+            "Bin Xiong"
+          ],
+          "abstract": [
+            "\nThe rapid expansion of AI and the massive use of digital learning are creating a huge change in higher education. In contrast to general higher education, which is at the center of change, the changes in vocational higher education do not seem to have received sufficient attention from researchers. Focusing on artificial intelligence literacy and sustainability of digital learning competences, this study examined the operational behaviors of 1004 students in a practical course in a higher education institution in mainland China by using the COM-B theory. The results showed that AI literacy was positively correlated with sustainable digital learning ability, and AI literacy was positively correlated with students\u2019 sustainable digital learning behaviors through sustainability of digital learning competences. However, students in vocational institutions are not able to translate this learning behavior into a path to achieve good performance in practice, and even sustainability of digital learning competences can be slightly counterproductive. There is no excessive effect on the model after controlling for variables such as gender, family resources, and ethnic minorities, which contributes to benefit equally from quality education.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Artificial intelligence literacy, sustainability of digital learning and practice achievement: A study of vocational college students",
+          "score": 12.387645
+        },
+        {
+          "id": "10.1371/journal.pone.0335166",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-10-24T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Maria Christidis",
+            "Nikolaos Christidis",
+            "Viveca Lindberg",
+            "Kristina Gottberg",
+            "Carina Georg"
+          ],
+          "abstract": [
+            "Introduction: Academic literacy in higher education has been widely studied, but less attention has been given to literacy practices within professional programmes such as nursing education. This study aimed to analyze one Swedish undergraduate nursing programme regarding the presence of academic and professional literacy, and secondarily to explore students\u2019 note-taking as a component of literacy practices. Methods: The study employed a descriptive and exploratory design, analyzing curriculum documents and surveying nursing students. An analysis of the intended curriculum (course syllabi) of a three-year undergraduate nursing programme at Karolinska Institutet was conducted to identify explicit and implicit literacy components. A digital questionnaire focusing on note-taking practices was distributed to second-semester students (n\u2009=\u200967; response rate 40%). Closed questions were analyzed using descriptive statistics, while open-ended responses underwent qualitative content analysis. Results: The curriculum analysis demonstrated that academic literacy was primarily addressed through scientific writing, group projects, and thesis work, particularly in the first two and final two semesters. Professional literacy was integrated across all semesters and included communication with patients, families, and interprofessional teams, documentation, and interpretation of professional texts. Surveyed students reported frequent note-taking, primarily during lectures and prior to examinations, using both pen and paper and digital devices, with a preference for pen and paper. Qualitative data indicated that students use note-taking mainly to support memorization, understanding, and exam preparation, with limited focus on professional literacy needs. Conclusion: The nursing curriculum integrates both academic and professional literacy practices, although with different emphases across the study period. Students\u2019 current note-taking practices are predominantly academically oriented. These findings highlight the need for more explicit integration and scaffolding of both academic and professional literacy throughout nursing education to better prepare students for their future professional roles, i.e., for clinical communication, documentation, and interprofessional collaboration essential to safe and effective patient care. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Intended and experienced literacy practices in a Swedish undergraduate nursing education",
+          "score": 12.367723
+        },
+        {
+          "id": "10.1371/journal.pone.0266515",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-04-08T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Sarath Rathnayake",
+            "Indrajith Prasanna Liyanage"
+          ],
+          "abstract": [
+            "\neHealth Literacy Scale (eHEALS) is the most widely used, valid and reliable tool to assess eHealth literacy skills, but no culturally appropriate tool exists to assess these skills among Sinhala-speaking Sri Lankans, including health professionals. This study aimed to cross-culturally adapt the original eHEALS from English to Sinhala and evaluate its psychometric properties. The study was conducted in two phases. The first phase involved translation and cross-cultural validation of the questionnaire. The second phase involved a cross-sectional survey conducted online among 268 health science students from a state university in Sri Lanka to confirm the psychometric properties of the questionnaire. An analysis of test-retest reliability was conducted with a subset of 72 students. The pre-final version of Sinhala eHEALS (Si-eHEALS) was developed following the cross-cultural adaptation process. The mean score of Si-eHEALS was 28.51\u00b14.87. A satisfactory level of internal consistency was achieved (Cronbach\u2019s alpha = 0.91). The test-retest reliability was acceptable (intraclass correlation coefficient -.776). Content validity index of Si-eHEALS was.97. The principal component analysis supported the unidimensionality of the scale, explaining 61.2 variance. There was a significant positive association between Si-eHEALS score with academic year (rs = .146, p = .017), self-rated internet skills (rs = .122, p = .046), usefulness of internet in health decision making (rs = .212, p < .001) and importance of ability to access health resources on the internet (rs = .230, p < .001), confirming concurrent validity. No significant difference based on gender (U = 5854, p = .550) and degree program (X2(2) = 2.965, p = .564) was found, confirming discriminant validity. In line with many previous validation studies, our study demonstrated good psychometric properties for Si-eHEALS. Si-eHEALS is a valid and reliable tool that assesses eHealth literacy in Sinhala speaking Sri Lankans, particularly health professionals.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Cross-cultural adaptation and psychometric properties of the Sinhala version of electronic health literacy scale: A cross-sectional validation study",
+          "score": 12.308015
+        },
+        {
+          "id": "10.1371/journal.pone.0291229",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-10-04T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Ariesta Milanti",
+            "Dorothy Ngo Sheung Chan",
+            "Anselmus Aristo Parut",
+            "Winnie Kwok Wei So"
+          ],
+          "abstract": [
+            "Background: eHealth has shown many benefits in health promotion and disease prevention. For engaging in and taking advantage of eHealth, eHealth literacy is essential. This systematic review aims to summarise and examine the existing evidence on determinants and outcomes of eHealth literacy in healthy adults. Methods: We searched the relevant peer-reviewed articles published in English in six databases: MEDLINE, EMBASE, PsycINFO, CINAHL, Cochrane Library and ProQuest. The inclusion criteria of the review were: 1) studies examining \u2018eHealth literacy\u2019, which refers to the ability to search, select, judge and apply online health information to address or solve health problems and to improve wellbeing; 2) the type of study included observational and experimental studies, mixed method studies or qualitative studies; 3) the participants were healthy adults; 4) the main outcomes were the determinants (i.e. influencing or associated factors) and outcomes (i.e. benefits and disadvantages) of eHealth literacy. Articles were assessed by two reviewers using the Joanna Briggs Institute critical appraisal tool. A conceptual model to map the determinants and outcomes of eHealth literacy in healthy adults into the non-modifiable, individual, social and community networks and structural layers was developed to classify the identified determinants and outcomes. Results: Forty-four studies were included in this review, of which 43 studies were cross-sectional and one was qualitative. eHealth literacy determinants included age, sex, literacy factors, socioeconomic factors and language. eHealth literacy outcomes included better general health promotion behavior, COVID-19 preventive behaviors, psychological wellbeing, social support, self-rated health and health service utilisation. Conclusions: Our results showed that eHealth literacy has multi-layered determinants and positive outcomes. Different strategies at different policy levels are needed to improve the eHealth literacy levels of healthy adults. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Determinants and outcomes of eHealth literacy in healthy adults: A systematic review",
+          "score": 12.298882
+        },
+        {
+          "id": "10.1371/journal.pone.0312306",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2025-01-03T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Charanjit Kaur",
+            "Pei P. Tan",
+            "Nurjannah Nurjannah",
+            "Ririn Yuniasih"
+          ],
+          "abstract": [
+            "\nData is becoming increasingly ubiquitous today, and data literacy has emerged an essential skill in the workplace. Therefore, it is necessary to equip high school students with data literacy skills in order to prepare them for further learning and future employment. In Indonesia, there is a growing shift towards integrating data literacy in the high school curriculum. As part of a pilot intervention project, academics from two leading Universities organised data literacy boot camps for high school students across various cities in Indonesia. The boot camps aimed at increasing participants\u2019 awareness of the power of analytical and exploration skills, which in turn, would contribute to creating independent and data-literate students. This paper explores student participants\u2019 self-perception of their data literacy as a result of the skills acquired from the boot camps. Qualitative and quantitative data were collected through student surveys and a focus group discussion, and were used to analyse student perception post-intervention. The findings indicate that students became more aware of the usefulness of data literacy and its application in future studies and work after participating in the boot camp. Of the materials delivered at the boot camps, students found the greatest benefit in learning basic statistical concepts and applying them through the use of Microsoft Excel as a tool for basic data analysis. These findings provide valuable policy recommendations that educators and policymakers can use as guidelines for effective data literacy teaching in high schools.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Exploring data literacy self-perception among Indonesian high school students",
+          "score": 12.288403
+        },
+        {
+          "id": "10.1371/journal.pone.0337582",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-12-10T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Helen Phelan",
+            "Fran Garry",
+            "Ailish Hannigan"
+          ],
+          "abstract": [
+            "\nWith the growing use of personal and public data in everyday life, data literacy is increasing in importance. There is a significant body of research indicating the role of artistic practice in the regulation of our response to information and experience, particularly as these relate to experiences of trust and social bonding. However, there is a gap in the literature concerning a review of current publications investigating the use of artistic practices to enhance data literacy. The aim of this study was to conduct a scoping review to identify and map the extent of evidence available on this topic. Specifically, the review aims to contribute to a better understanding of which artistic practices and art forms were being used, the profile of population groups and settings, and the rationale provided for using the arts. Our review utilized Arksey and O\u2019Malley\u2019s methodological framework. The review includes an updated search, conducted in April 2025, to provide a comprehensive overview of recent studies. Following abstract and full text screening, a total of 51 publications were deemed eligible for review. The findings indicate the use of a broad spectrum of artistic practices, with visual arts and storytelling being the most prevalent. Most of the research to date has been conducted within educational settings. The arts were identified as key tools in enhancing accessibility, engagement and critical thinking when engaging with data. Limits in the value of harnessing artistic practices for data literacy were noted, including the sometimes competing demands of artistic freedom and scientific exactitude. Further research is needed to more fully understand the importance of cultural context in how the arts are deployed in the dynamic and rapidly changing world of data.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "A scoping review of the role of the arts in enhancing data literacy",
+          "score": 12.23744
+        },
+        {
+          "id": "10.1371/journal.pone.0330637",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-08-29T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Ning Zhou",
+            "Fanzheng Mu",
+            "Yao Zhang",
+            "Dingyou Zang",
+            "Weidong Zhu",
+            "Xiaoyu Wang",
+            "Wei Wang",
+            "Haoyu Li",
+            "Jiaqiang Wang",
+            "Xingyu Zhang",
+            "Chenxi Li",
+            "Yuhan Li",
+            "Mohan He",
+            "Wenhao Zhang",
+            "Qi Liu",
+            "Bochun Lu",
+            "Shanshan Han",
+            "Yaxing Li",
+            "Yangsheng Zhang",
+            "Lingli Xu",
+            "Yuyan Qian",
+            "Lei Ding",
+            "Chuanyi Xu",
+            "Han Li",
+            "Shuo Feng",
+            "Lanlan Yang",
+            "Yong Wei",
+            "Bo Li"
+          ],
+          "abstract": [
+            "Purpose: This study examines how eHealth literacy influences exercise behaviour among university students through a moderated mediation model. Specifically, peer relationships are positioned as mediators, while sleep quality moderates the effect of eHealth literacy on exercise behaviour among university students. The study explores the intricate interactions involved and elucidates how eHealth literacy affects exercise behaviour through multiple dimensions. Methods: Student data were collected via questionnaire surveys across multiple academies. A stratified\u00a0purpose\u00a0sampling approach was employed for participant selection, targeting four specific universities to ensure regional and\u00a0typhological\u00a0representation: Nanjing Xiaozhuang University, Yangzhou University, Shangqiu University, and Yangzhou Polytechnic Institute. This process resulted in 14,892 valid responses for analysis, and SPSS 26.0 along with the PROCESS macro was used to\u00a0analyses\u00a0variables such as electronic health literacy, physical activity, sleep quality, and peer relationships. Results: The structural equation modeling revealed a significant direct effect of eHealth literacy on university\u00a0students\u00a0physical activity behaviour (\u03b2=0.065, p<0.001). Mediation analysis delineated an indirect pathway through peer relationships: eHealth literacy significantly enhanced peer relationship quality (\u03b2=0.251, p<0.001), which subsequently predicted increased physical activity (\u03b2=0.058, p<0.001). Peer relationships significantly mediate between eHealth literacy and university\u00a0students\u00a0physical activity (\u03b2=0.251, p<0.001). Additionally, sleep quality serves as a moderating variable (\u03b2=0.029, p<0.001), significantly moderating the direct effect of eHealth literacy on university\u00a0students\u00a0physical activity, with the 95% confidence intervals consistently excluding zero. Conclusion: EHealth literacy among university students can significantly and positively predict their exercise behaviour. Peer relationships mediate the effect of eHealth literacy on exercise behaviour. At the same time, sleep quality is a moderating variable influencing eHealth\u00a0literacy's\u00a0direct impact on university\u00a0students\u00a0exercise behaviour. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "How electronic health literacy influences physical activity behaviour among university students: A moderated mediation model",
+          "score": 12.187605
+        },
+        {
+          "id": "10.1371/journal.pone.0323349",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-05-09T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Dang Wu",
+            "Jianyang Zhang"
+          ],
+          "abstract": [
+            "\nAs generative artificial intelligence (AI) rapidly transforms educational landscapes, understanding its impact on students\u2019 core competencies has become increasingly critical for educators and policymakers. Despite growing integration of AI technologies in classrooms, there remains a significant knowledge gap regarding how these tools influence the development of essential 21st-century skills in secondary education contexts. This study addresses this gap by investigating the relationships between generative AI applications and two critical student outcomes: innovation capability and digital literacy. Through structural equation modeling analysis of data collected from 500 students across grades 7\u201312, the research reveals three key findings: Firstly, generative AI applications demonstrate a substantial positive effect on students\u2019 innovation capability (\u03b2\u2009=\u20090.862, p\u2009<\u2009.001), enhancing critical thinking, creative problem-solving, and adaptive learning processes. Secondly, AI integration significantly improves digital literacy (\u03b2\u2009=\u20090.835, p\u2009<\u2009.001) by facilitating sophisticated information processing and active technological engagement. Thirdly, a strong bidirectional relationship exists between innovation capability and digital literacy (\u03b2\u2009=\u20090.791, p\u2009<\u2009.001), suggesting these competencies mutually reinforce each other in AI-enhanced learning environments. The model demonstrates robust explanatory power with excellent fit indices. By integrating the Technology Acceptance Model with Diffusion of Innovations theory, this study advances theoretical understanding of AI\u2019s educational impact while providing practical guidelines for educators. The findings underscore the importance of strategic AI integration in educational curricula and suggest specific pathways for developing critical student competencies in the digital age.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Generative artificial intelligence in secondary education: Applications and effects on students\u2019 innovation skills and digital literacy",
+          "score": 12.180303
+        },
+        {
+          "id": "10.1371/journal.pdig.0000719",
+          "journal": "PLOS Digital Health",
+          "eissn": "2767-3170",
+          "publication_date": "2025-01-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Alex Ayenew Chereka",
+            "Adamu Ambachew Shibabaw",
+            "Fikadu Wake Butta",
+            "Mathias Nega Tadesse",
+            "Mekashaw Tareke Abebe",
+            "Fekadu Ayelgn Atanie",
+            "Gemeda Wakgari Kitil"
+          ],
+          "abstract": [
+            "Background: The Internet is a crucial source of health information, providing access to vast volumes of high-quality, up-to-date, and relevant healthcare information. Its impact extends beyond information access, influencing medical practice through the widespread adoption of telemedicine and evidence-based medicine. Despite the significant global increase in internet usage, Africa lags in internet penetration, particularly in utilizing the internet for health information. This study aims to systematically review the literature to explore barriers to accessing health information on the Internet in African countries. Methods: The study was conducted from January 1 to February 28, 2023. It followed the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guideline to systematically review published studies investigating the utilization of the Internet for health information in African countries. A comprehensive search was conducted across various databases, including Google Scholar, PubMed, Cochrane Library, Hinari, CINAHL, and Global Health. The inclusion criteria were applied, resulting in the selection of six studies that formed the basis for our analysis. Result: This systematic review identifies eleven barriers to accessing health information on the internet. These include a lack of ownership of smart electronic devices, infrequent internet use, limited internet access, low E-health and computer literacy, slow internet connection, high cost of internet access, insufficient information search skills, residing in rural areas, dealing with diverse fields, and having low perceptions. Conclusion: Improving our understanding of barriers to accessing health information online is essential for policymakers, governments, academics, and healthcare professionals. To enhance the use of the Internet for health information and strengthen the overall health system, policymakers should prioritize increasing Internet accessibility, reducing costs, improving connections, offering basic computer skills training, and ensuring the availability of electronic devices in all institutions. Author summary: The internet is an essential source of health information, offering individuals the opportunity to access timely and accurate data to inform health decisions. However, in African countries, substantial barriers hinder the effective use of this resource. This systematic review investigates these barriers, identifying key challenges such as socioeconomic inequalities, limited digital literacy, high costs of internet access, and inadequate infrastructure. Cultural factors, mistrust of online health information, and the lack of content tailored to local languages and contexts further exacerbate these issues. Our findings emphasize the need for targeted interventions to overcome these barriers. Strategies such as improving digital infrastructure, reducing internet costs, enhancing digital health literacy, and developing culturally relevant health content are critical for promoting equitable access to online health information. Addressing these barriers has the potential to improve health outcomes, reduce disparities, and foster digital inclusion in healthcare across African countries. This study provides valuable insights for researchers, policymakers, and stakeholders seeking to understand and address the digital health divide. It serves as a foundation for designing effective policies and programs to support internet-based health information access, ultimately contributing to better health equity in African settings. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Explore barriers to using the internet for health information access in African countries: A systematic review",
+          "score": 12.165866
+        },
+        {
+          "id": "10.1371/journal.pone.0322104",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-04-28T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Jeonghyun Kim",
+            "Lingzi Hong",
+            "Ayoung Yoon"
+          ],
+          "abstract": [
+            "\nAs data literacy has emerged as a critical skill for professionals across industries, educators in higher education have incorporated it into their curricula and instruction. Understanding and evaluating the factors that shape an individual\u2019s data literacy is important for benchmarking proficiency and tailoring curricula, yet the underlying components and structure of data literacy for students in four-year institutions are unknown. This study validated the Data Literacy Self-Efficacy Scale (DLSES) with 1,816 students enrolled in two four-year institutions. Exploratory and confirmatory factor analyses were conducted to determine the construct of the scale, and the item analysis was used to address the validity of the items on the scale. The exploratory factor analysis identified eight distinct factors comprising 29 items. The results of confirmatory factor analysis showed a good model fit, CFI = 0.994, TLI = 0.994, RMSEA = 0.053, SRMR = 0.044. This study demonstrated the 29-item refined version of the DLSES to be a reliable and valid tool for measuring individuals\u2019 self-efficacy levels for data literacy. Furthermore, the scale could form the basis for curriculum development and help educators design targeted interventions that address specific learning needs.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "University students\u2019 self-assessment of data literacy: A validation study",
+          "score": 12.162628
+        },
+        {
+          "id": "10.1371/journal.pone.0259954",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-03-18T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Heriyanto",
+            "Lydia Christiani",
+            "Rukiyah"
+          ],
+          "abstract": [
+            "\nThe advent of coronavirus disease 2019, or COVID-19, continues to trigger several important disruptions/innovations in practically every sector around the world. Additionally, the impacts are predominant in certain educational systems and in creating opportunities. Previous studies had addressed possible effective methods in handling distant learning and student interactions. This qualitative study explored lecturers\u2019 information literacy experience during online classes as a result of the pandemic. Semi-structured interview techniques were applied among participants, made up of 15 lecturers in the Humanities Faculty, Diponegoro University, Indonesia, and thematic analysis was used to analyze the data obtained. The results showed the focus of lecturers\u2019 information literacy experience was primarily on student interactions and knowledge of various online learning platforms. However, information repackaging was a significant initial consideration during virtual classes, after identifying salient student characteristics. In summary, the present study have contributed to the theoretical understanding of information literacy and may be of benefit to the teaching faculties for enhancing teaching and learning activities, as well as providing student support.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Lecturers\u2019 information literacy experience in remote teaching during the COVID-19 pandemic",
+          "score": 12.13151
+        },
+        {
+          "id": "10.1371/journal.pone.0271191",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-07-08T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Heather Wild",
+            "Aki-Juhani Kyr\u00f6l\u00e4inen",
+            "Victor Kuperman"
+          ],
+          "abstract": [
+            "\nPsychological research, including research into adult reading, is frequently based on convenience samples of undergraduate students. This practice raises concerns about the external validity of many accepted findings. The present study seeks to determine how strong this student sampling bias is in literacy and numeracy research. We use the nationally representative cross-national data from the Programme for the International Assessment of Adult Competencies to quantify skill differences between (i) students and the general population aged 16\u201365, and (ii) students and age-matched non-students aged 16\u201325. The median effect size for the comparison (i) of literacy scores across 32 countries was d = .56, and for comparison (ii) d = .55, which exceeds the average effect size in psychological experiments (d = .40). Numeracy comparisons (i) and (ii) showed similarly strong differences. The observed differences indicate that undergraduate students are not representative of the general population nor age-matched non-students.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "How representative are student convenience samples? A study of literacy and numeracy skills in 32 countries",
+          "score": 12.118681
+        },
+        {
+          "id": "10.1371/journal.pdig.0000279",
+          "journal": "PLOS Digital Health",
+          "eissn": "2767-3170",
+          "publication_date": "2023-10-12T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Maria del Pilar Arias L\u00f3pez",
+            "Bradley A. Ong",
+            "Xavier Borrat Frigola",
+            "Ariel L. Fern\u00e1ndez",
+            "Rachel S. Hicklent",
+            "Arianne J. T. Obeles",
+            "Aubrey M. Rocimo",
+            "Leo A. Celi"
+          ],
+          "abstract": [
+            "Introduction: Harnessing new digital technologies can improve access to health care but can also widen the health divide for those with poor digital literacy. This scoping review aims to assess the current situation of low digital health literacy in terms of its definition, reach, impact on health and interventions for its mitigation. Methods: A comprehensive literature search strategy was composed by a qualified medical librarian. Literature databases [Medline (Ovid), Embase (Ovid), Scopus, and Google Scholar] were queried using appropriate natural language and controlled vocabulary terms along with hand-searching and citation chaining. We focused on recent and highly cited references published in English. Reviews were excluded. This scoping review was conducted following the methodological framework of Arksey and O\u2019Malley. Results: A total of 268 articles were identified (263 from the initial search and 5 more added from the references of the original papers), 53 of which were finally selected for full text analysis. Digital health literacy is the most frequently used descriptor to refer to the ability to find and use health information with the goal of addressing or solving a health problem using technology. The most utilized tool to assess digital health literacy is the eHealth literacy scale (eHEALS), a self-reported measurement tool that evaluates six core dimensions and is available in various languages. Individuals with higher digital health literacy scores have better self-management and participation in their own medical decisions, mental and psychological state and quality of life. Effective interventions addressing poor digital health literacy included education/training and social support. Conclusions: Although there is interest in the study and impact of poor digital health literacy, there is still a long way to go to improve measurement tools and find effective interventions to reduce the digital health divide. Author summary: This scoping review aimed to investigate the impact of low digital literacy (DL) on health as well as DL and digital health definitions, instruments used to assess it and interventions useful for its mitigation. We performed a comprehensive literature search strategy which identified 53 articles for analysis. Digital health literacy was the most commonly used term to describe the ability to find and use health information using technology. The eHealth literacy scale (eHEALS) was found to be the most utilized tool to assess digital health literacy. Higher scores on the eHEALS were linked to better self-management and participation in medical decisions, improved mental health, and overall quality of life. Overall, this study highlights the need to address the digital health divide and improve access to digital health information and tools for those with low DL. This can be achieved by developing effective interventions to improve digital health literacy, like education/training and social support and increasing awareness of the importance of digital health literacy for better health outcomes. The findings of this study can inform policymakers and healthcare providers on the need to address the issue of low digital health literacy to improve health equity and outcomes. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Digital literacy as a new determinant of health: A scoping review",
+          "score": 12.112224
+        },
+        {
+          "id": "10.1371/journal.pone.0282195",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-03-03T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Sisay Maru Wubante",
+            "Masresha Derese Tegegne",
+            "Mequannent Sharew Melaku",
+            "Mulugeta Hayelom Kalayou",
+            "Yeshambel Andargie Tarekegn",
+            "Sintayehu Simie Tsega",
+            "Nebyu Demeke Mengestie",
+            "Addisalem Workie Demsash",
+            "Agmasie Damtew Walle"
+          ],
+          "abstract": [
+            "Introduction: Electronic health has the potential benefit to the health system by improving health service quality efficiency effectiveness and reducing the cost of care. Having good e-health literacy level is considered essential for improving healthcare delivery and quality of care as well as empowers caregivers and patients to influence control care decisions. Many studies have done on eHealth literacy and its determinants among adults, however, inconsistent findings from those studies were found. Therefore, this study was conducted to determine the pooled magnitude of eHealth literacy and to identify associated factors among adults in Ethiopia through systematic review and meta-analysis. Method: Search of PubMed, Scopus, and web of science, and Google Scholar was conducted to find out relevant articles published from January 2028 to 2022. The Newcastle-Ottawa scale tool was used to assess the quality of included studies. Two reviewers extracted the data independently by using standard extraction formats and exported in to Stata version11 for meta-analysis. The degree of heterogeneity between studies was measured using I2 statistics. The publication bias between studies also checked by using egger test. The pooled magnitude of eHealth literacy was performed using fixed effect model. Result: After go through 138 studies, five studies with total participants of 1758 were included in this systematic review and Meta-analysis. The pooled estimate of eHealth literacy in Ethiopia was found 59.39% (95%CI: 47.10\u201371.68). Perceived usefulness (AOR = 2.46; 95% CI: 1.36, 3.12),educational status(AOR = 2.28; 95% CI: 1.11, 4.68), internet access (AOR = 2.35; 95% CI: 1.67, 3.30), knowledge on electronic health information sources(AOR = 2.60; 95% CI: 1.78, 3.78), electronic health information sources utilization (AOR = 2.55; 95%CI: 1.85, 3.52), gender (AOR = 1.82; 95% CI: 1.38, 2.41) were identified significant predictors of e-health literacy. Conclusion and recommendation: This systematic review and meta-analysis found that more than half of study participants were eHealth literate. This finding recommends that creating awareness about importance of eHealth usefulness and capacity building to enhance and encouraging to use electronic sources and availability of internet has para amount to solution to increase eHealth literacy level of study participants. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "eHealth literacy and its associated factors in Ethiopia: Systematic review and meta-analysis",
+          "score": 12.067611
+        },
+        {
+          "id": "10.1371/journal.pone.0283634",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-03-24T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Yang Liu",
+            "Nannan Wu",
+            "Jie Yan",
+            "Junjie Yu",
+            "Liping Liao",
+            "Hong Wang"
+          ],
+          "abstract": [
+            "Background: Internet addiction has emerged as a major global concern as a potential adverse impact of internet exposure on adolescents. Internet addiction is associated with many demographic variables; however, there is a lack of consensus on its relationship with health literacy. Therefore, the aim of the present study was to assess the rates of internet addiction and health literacy level among middle school students (grades 7 to 12) in Chongqing, China, as well as to investigate the association between them. Methods: A cross-sectional, questionnaire-based study was conducted among 8971 students who were randomly selected by using stratified cluster sampling between November and December 2019. The Internet Addiction Diagnostic Questionnaire, Adolescent Health Literacy Scale and a self-designed basic information questionnaire were used to collect data. Chi-square tests were performed to compare the differences in the distribution of internet addiction across health literacy levels as well as some sociodemographic characteristics. Multivariate logistic regression analyses were conducted to identify the association between health literacy and internet addiction. Results: The prevalence of internet addiction among middle school students in Chongqing was 6.1%. The percentage of the students who spent more than 4 hours online every day in the past week was 14.3%. In addition, 26.7%, 26.0%, 28.3% and 26.3% of the participants reported low functional, interactive, critical and total health literacy, respectively. After adjusting for the confounding effects of demographics, multivariate regression analysis showed that critical health literacy was a protective variable for internet addiction, while functional, and interactive health literacy were the risk variable (P<0.05). Furthermore, the internet addiction rates were higher among boys, students with good peer relationships, and students without parental supervision, whereas internet addiction rates were lowest among students in grade 12. Conclusions: The prevalence of internet addiction among middle school students in Chongqing is relatively high. Internet addiction is strongly negatively associated with critical health literacy, but it is positively associated with functional and interactive health literacy but not total health literacy. This study provides preliminary evidence for the predictive role of health literacy in internet addiction of adolescents. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "The relationship between health literacy and internet addiction among middle school students in Chongqing, China: A cross-sectional survey study",
+          "score": 12.056716
+        },
+        {
+          "id": "10.1371/journal.pone.0318561",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2025-02-14T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Liyuan Zheng",
+            "Di Ge"
+          ],
+          "abstract": [
+            "\nThe development of students\u2019 core disciplinary competencies is crucial to the quality of talent cultivation against the background of China\u2019s New Engineering Education initiative. We condensed a literacy\u2013ability\u2013knowledge model of the core competence structure of university students based on the results of a survey and then applied this model with a special focus on competence structures. We coded the core competency indicators of the course area using a software engineering course as an example to construct a map of the core competencies of the course (area). New teaching and instruction methods to promote the development of students\u2019 core competencies were then explored. Finally, to shape core subject competence, we suggest building a course recommendation system that aligns with an employment guidance service based on the certification of core subject competence to realize a new mode of cultivating competence.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Cultivating key disciplinary competencies among university students against the background of China\u2019s new engineering education initiative",
+          "score": 12.053784
+        },
+        {
+          "id": "10.1371/journal.pone.0342853",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2026-03-05T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Berker Kurt",
+            "G\u00f6zdeg\u00fcl Ar\u0131k Karam\u0131k",
+            "Ali \u00d6zkaya"
+          ],
+          "abstract": [
+            "\nThis study examines Generative Artificial Intelligence (GenAI) acceptance and Artificial Intelligence Literacy (AIL) levels among prospective teachers, using variables for comparative analysis and identifying influencing factors. The research uses an explanatory sequential mixed methods approach. Quantitative data were obtained from 723 prospective teachers and qualitative data from 48 prospective teachers. Data collection included an Information Form, GenAI Acceptance Scale, and AIL Scale for quantitative data, with interview forms for qualitative data. Parametric tests, independent samples t-test, ANOVA, and Pearson correlation analyzed quantitative data, while factors influencing GenAI acceptance and AIL were identified through themes using MAXQDA. Acceptance levels showed no significant differences by gender or daily internet use; however, differences emerged regarding department, grade level, AI tools used, and self-perceived proficiency. AIL showed significant differences in gender, department, grade, tool usage, and proficiency level, with higher scores among those trained in artificial intelligence. Qualitative data clarify the quantitative findings. Factors affecting GenAI acceptance include daily use, problem-solving, learning applications, mentor usage, assistance from others, proficiency, productivity, discipline-specific skills, and task efficiency. Factors influencing AIL include understanding AI importance, ethical considerations, AI support in daily life, explaining AI, understanding deep learning and machine learning relationships, big data knowledge, AI decision-making processes, knowledge of AI tools, interpretation of AI technologies, critical evaluation, data privacy importance, machine learning knowledge, and evaluation of AI applications in their discipline.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Investigating the correlation between candidate teachers\u2019 acceptance of generative artificial intelligence and artificial intelligence literacy across various disciplines",
+          "score": 12.036178
+        },
+        {
+          "id": "10.1371/journal.pone.0235474",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2020-07-02T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Nicola Diviani",
+            "Jelena Obrenovic",
+            "Cassandra L. Montoya",
+            "Katarzyna Karcz"
+          ],
+          "abstract": [
+            "Background: The ability to critically appraise health information\u2013often referred to as critical health literacy\u2013is recognized as a crucial component of health literacy. Yet to date, it is not clear what specific abilities are needed to adequately accomplish this task, thereby hindering both its assessment and the development and evaluation of related interventions. By systematically building on past research, this study aimed to operationally define the concept of health information appraisal competence. Methods: We systematically searched five scholarly databases to identify the conceptualizations and operational definitions of information appraisal in different disciplines. The resulting operationalization was subsequently validated through an online consultation exercise among 85 Swiss stakeholders. Results: Ninety-four publications were included in the review to the point of saturation. We extracted 646 skills, attitudes, and knowledge for health information appraisal. We then collated overlapping or duplicate statements, which produced a list of 43 unique statements belonging to six emergent themes or core competences: (1) basic competence, (2) predisposition, (3) identification competence, (4) critical evaluation competence, (5) selection competence, and (6) application competence. The consultation exercise enriched the operationalization of some of the core competences and confirmed the importance of all competences. Most skills, attitudes, and knowledge, however, were assigned low feasibility by the stakeholders. Conclusions: This study was the first attempt to systematically operationalize health information appraisal competence. From a theoretical perspective, it sheds light on an understudied, health literacy domain, thus contributing to clarity around the concept. From a practical perspective, it provides a strong theoretical basis for the development of a tool to measure health information appraisal competence. This could be used routinely as a screening tool, as an outcome measure for public health interventions, or to identify citizens who are most at risk. Furthermore, it will provide support for the development of future interventions to build health information appraisal competence in the population. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Disentangling health information appraisal competence: Results from an interdisciplinary scoping review and online consultation among Swiss stakeholders",
+          "score": 12.022564
+        },
+        {
+          "id": "10.1371/journal.pone.0333890",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-10-09T00:00:00Z",
+          "article_type": "Study Protocol",
+          "author_display": [
+            "Yuan Jiang",
+            "Normah Mustaffa",
+            "Jamaluddin Aziz",
+            "XiaoChun Cai"
+          ],
+          "abstract": [
+            "\nBackground Media and information literacy (MIL) is one of the most essential competencies people need in the 21st century. Although extensive research has focused on children and students, the MIL status of mothers, who are not only huge seekers and consumers of media and information but also crucial interventionists in family MIL, remains in its infancy.\nObjective The objective of this scoping review is to systematically map the existing studies on mothers\u2019 MIL in the 21st century. Specifically, it aims to perform a bibliometric analysis of relevant research; clarify the condition of mothers\u2019 MIL in the 21st century; summarize the theoretical frameworks and measurement methodologies; and identify key influencing variables.\nInclusion criteria All primary or peer-reviewed articles on mothers\u2019 MIL published after 2000 will be included, regardless of language or region. There are no participant restrictions, such as age, region, marital status, etc. All relevant concepts, such as \u201ccomputer literacy,\u201d \u201cdigital literacy,\u201d \u201cInformation and Communications Technology (ICT) literacy,\u201d \u201cinformation literacy,\u201d \u201cMIL,\u201d \u201cmedia literacy,\u201d \u201cnews literacy,\u201d \u201csocial media literacy,\u201d \u201ctechnology literacy,\u201d and \u201cvisual literacy\u201d are included.\nMethods The review will adhere to the JBI\u2019s Scoping Review Guidelines and utilize the PRISMA-ScR reporting standards. A comprehensive search strategy based on the PCC framework will be applied across four databases: Web of Science, Scopus, EBSCOhost and Taylor& Francis. Two reviewers will separately search the databases in a two-round screening and extract data using a designated extraction instrument to respond to review queries. The search strategy and the instrument had been refined through a pilot test. A PRISMA flow diagram will be used to depict the entire screening procedure.\nRegistration This scoping review protocol has been registered in the Open Science Framework (https://doi.org/10.17605/OSF.IO/2N5V7).\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Media and information literacy among mothers in the 21st century: A scoping review protocol",
+          "score": 12.011537
+        },
+        {
+          "id": "10.1371/journal.pone.0266276",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-04-13T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Mila Nu Nu Htay",
+            "Laurence Lloyd Parial",
+            "Ma. Carmen Tolabing",
+            "Kevin Dadaczynski",
+            "Orkan Okan",
+            "Angela Yee Man Leung",
+            "Tin Tin Su"
+          ],
+          "abstract": [
+            "\nDuring the COVID-19 pandemic, there is a growing interest in online information about coronavirus worldwide. This study aimed to investigate the digital health literacy (DHL) level, information-seeking behaviour, and satisfaction of information on COVID-19 among East and South-East Asia university students. This cross-sectional web-based study was conducted between April to June 2020 by recruiting students from universities in China, Malaysia, and the Philippines. University students who have Internet access were invited to participate in the study. Items on sociodemographic variables, DHL, information-seeking behaviour, and information satisfaction were included in the questionnaire. Descriptive statistics and logistic regression analysis were conducted. A total of 5302 university students responded to the survey. The overall mean score across the four DHL subscales was 2.89 (SD: 0.42). Search engines (e.g., Google, Bing, Yahoo) (92.0%) and social media (88.4%) were highly utilized by the students, whereas Websites of doctors or health insurance companies were of lower utilization (64.7%). Across the domains (i.e., adding self-generated content, determining relevance, evaluating reliability, and protecting privacy) higher DHL was positively associated with higher usage of trustworthy resources. Providing online information on COVID-19 at official university websites and conducting health talks or web-based information dissemination about the strategies for mental health challenges during pandemic could be beneficial to the students. Strengthening DHL among university students will enhance their critical thinking and evaluation of online resources, which could direct them to the quality and trustworthy information sources on COVID-19.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Digital health literacy, online information-seeking behaviour, and satisfaction of Covid-19 information among the university students of East and South-East Asia",
+          "score": 12.01091
+        },
+        {
+          "id": "10.1371/journal.pone.0317077",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-07-02T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Crystal Uminski",
+            "Christian Cammarota",
+            "Brian A. Couch",
+            "L. Kate Wright",
+            "Dina L. Newman"
+          ],
+          "abstract": [
+            "\nVisual models are a necessary part of molecular biology education because submicroscopic compounds and processes cannot be directly observed. Accurately interpreting the biological information conveyed by the shapes and symbols in these visual models requires engaging visual literacy skills. For students to develop expertise in molecular biology visual literacy, they need to have structured experiences using and creating visual models, but there is little evidence to gauge how often undergraduate biology students are provided such opportunities. To investigate students\u2019 visual literacy experiences, we surveyed 66 instructors who taught lower division undergraduate biology courses with a focus on molecular biology concepts. We collected self-reported data about the frequency with which the instructors teach with visual models and we analyzed course exams to determine how instructors incorporated visual models into their assessments. We found that most instructors reported teaching with models in their courses, yet only 16% of exam items in the sample contained a visual model. There was not a statistically significant relationship between instructors\u2019 self-reported frequency of teaching with models and extent to which their exams contained models, signaling a potential mismatch between teaching and assessment practices. Although exam items containing models have the potential to elicit higher-order cognitive skills through model-based reasoning, we found that when instructors included visual models in their exams the majority of the items only targeted the lower-order cognitive skills of Bloom\u2019s Taxonomy. Together, our findings highlight that despite the importance of visual models in molecular biology, students may not often have opportunities to demonstrate their understanding of these models on assessments.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Biology exams rarely use visual models to engage higher-order cognitive skills",
+          "score": 12.008353
+        },
+        {
+          "id": "10.1371/journal.pone.0203105",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2018-08-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Siu Ming Choi",
+            "Raymond Kim Wai Sum",
+            "Elean Fung Lin Leung",
+            "Robert Siu Kuen Ng"
+          ],
+          "abstract": [
+            "\nThis study explores the relationship between the perceived physical literacy (PL) and physical activity (PA) levels of Hong Kong adolescents by using a cross-sectional study design. A total of 1,945 adolescents aged between 12 and 18, (1,028 male and 917 female) with a mean age of 14.98 (\u00b11.65 years), took part in this study. A Perceived Physical Literacy Instrument (PPLI) and an International Physical Activity Questionnaire for Adolescents (IPAQ-A) were distributed to the participants within the first 15 minutes of PE lessons at their schools. The correlation between perceived PL and PA levels was low but significant (r = 0.227, p < 0.01), as was the correlation between the attributes of PL and PA intensity and the domains of PA (r = 0.067\u20130.292, p < 0.01). A significant linear equation was computed (F (3, 1941) = 35.679, p < 0.01), with an R2 of 0.052. The metabolic equivalent (MET) minutes representing participants\u2019 predicted PA levels were \u20135490 + 366.1 (sense of self and self-confidence) + 221.866 (self-expression and communication with others) + 287.748 (knowledge and understanding). Looking at individual factors, the correlation between perceived PL and PA levels showed no significant difference across gender (r male = 0.234; r female = 0.198) but showed a significant difference across grade level (r junior = 0.302; r senior = 0.197), school bands (r band 1 = 0.31; r band 2 = 0.263; r band 3 = 0.191) and socio-economic status (SES) (rlow = 0.225; rmedium = 0.35; rhigh = 0.191). The relationship between perceived PL and PA levels was significantly low but was closely related to the recreational PA, including individual factors such as gender, grade levels, school band and SES. Future studies could focus on school-based PA intervention programmes for perceived PL and the relationship between perceived PL and objective PA levels.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Relationship between perceived physical literacy and physical activity levels among Hong Kong adolescents",
+          "score": 12.004772
+        },
+        {
+          "id": "10.1371/journal.pone.0308074",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2025-01-16T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Friederike Hertweck",
+            "Judith Lehner"
+          ],
+          "abstract": [
+            "\nSkills shortage in the fields of Sciences, Technology, Engineering, and Mathematics (STEM) poses a significant challenge for industries globally. To overcome shortage of STEM talent, the selection into STEM fields must be fully understood. We contribute to existing research on the selection of STEM careers by analysing the interplay between teenagers\u2019 proficiency in Information and Communication Technology (ICT) and their career preferences in the STEM domain. Based on representative data for German teenagers, our study shows that female teenagers are less likely to choose a career in STEM unless they have strong ICT skills in secondary school. The relationship does not hold for male students. An increase in girls\u2019 ICT skills by 10 percentage points in ninth grade is associated with an increase in the probability to choose a STEM career by 2.95 percentage points. Our findings can be explained with evidence that teenagers sort into occupations they believe to be good at and that female teenagers rather underestimate their true potential. Using different empirical approaches, we also show that ICT skills act as a moderator and not as a mediator in the gender-specific choice of training upon graduating from secondary school. By addressing the interplay between gender, ICT skills, and educational choices, the present study uncovers an additional lever of how to mitigate skills shortage in STEM.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "The gender gap in STEM: (Female) teenagers\u2019 ICT skills and subsequent career paths",
+          "score": 11.9998
+        },
+        {
+          "id": "10.1371/journal.pdig.0001075",
+          "journal": "PLOS Digital Health",
+          "eissn": "2767-3170",
+          "publication_date": "2025-11-24T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "R. Constance Wiener",
+            "Bayan J. Abuhalimeh"
+          ],
+          "abstract": [
+            "\nOnline/digital health literacy is important for individuals to evaluate the influence of such input in their care and consent for treatment. The purpose of this systematic review is to examine the digital health literacy level among adults in studies that used the eHealth Literacy Scale (eHEALS) as a measure of digital health literacy. The authors searched Google Scholar, PubMed, Scopus, and Web of Science for evidence following the Preferred Reporting Items for Systematic Reviews and Meta-Analysis Statement, 2020 (PRISMA). Included were articles in which the researchers evaluated the level of digital health literacy using eHEALS, were peer reviewed, written in English or in which English translation was provided, and were published between 2020\u20132025. There were 200 articles initially identified in the search, 180 were excluded resulting in a sample of 20 publications. EHEALS scores, with possibilities from 8-40, had a weighted mean of 24.3 (95%CI: 17.1-31.6). The lowest mean score was 12.57; and the highest mean score was 35.1. The highest eHEALS score was from a qualitative interview study. Nine other studies reported overall means\u2009\u2265\u200930. There were three with eHEALS scores below 20. Globally, there is a wide range of reported digital health literacy levels. It is critical that the public gains skill and confidence in digital health literacy for healthcare decisions. The results of this study provide evidence of a large range of digital health literacy.\nAuthor summary: There is variation in digital health literacy in global reports. With the emerging influence of the internet, it is important that the level of digital health literacy is evaluated to be able to inform healthcare policies. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Evaluating adult digital health literacy, 2020\u20132025: A systematic review",
+          "score": 11.96514
+        },
+        {
+          "id": "10.1371/journal.pone.0326928",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-07-09T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Thomas Nygren",
+            "Evgenia Efimova"
+          ],
+          "abstract": [
+            "\nThis study examines the long-term effects of educational interventions aimed at improving upper-secondary students\u2019 ability to identify and evaluate (mis)information. Using an experimental design with 459 students in authentic classroom settings, we tested three types of interventions: prebunking through the Bad News game, fact-checking skills via the News Evaluator workshop, and subject-specific disciplinary literacy interventions. Additionally, we investigated factors influencing students\u2019 abilities to identify credible and misleading news, including credibility importance, democratic ideals, actively open-minded thinking (AOT), self-rated fact-checking skills, and educational orientation.\nNeither the Bad News game nor the News Evaluator workshop significantly improved students\u2019 ability to evaluate credible and misleading news. Although students in the News Evaluator workshop slightly improved in evaluating a difficult-to-fact-check item, this effect was marginal. Furthermore, students did not report increased use of digital verification tools three months after the intervention, suggesting that isolated fact-checking instruction may be insufficient for fostering lasting behavioural change. The subject-specific interventions also failed to yield significant long-term effects.\nStudents who rated access to credible information as important were better at identifying accurate news, while those who valued democracy were better at recognising false news. AOT was not associated with better discernment but increased scepticism toward both true and false news. Self-rated confidence in news evaluation did not predict actual performance, and students in vocational programs performed worse in identifying trustworthy news.\nWhile interventions promoting prebunking, fact-checking, and disciplinary literacy provide promising frameworks for misinformation education, their effects may diminish without sustained reinforcement. This study underscores the need for more embedded, repeated, and adaptive approaches that integrate retrieval practice, spaced learning, and digital tools to foster long-term engagement with credible information. Future research should explore how to enhance the impact of classroom-based misinformation education and investigate scalable strategies for reinforcing digital source evaluation skills over time.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Investigating the long-term impact of misinformation interventions in upper secondary education",
+          "score": 11.9439945
+        },
+        {
+          "id": "10.1371/journal.pone.0250545",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2021-05-05T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Kathryn Woods-Townsend",
+            "Polly Hardy-Johnson",
+            "Lisa Bagust",
+            "Mary Barker",
+            "Hannah Davey",
+            "Janice Griffiths",
+            "Marcus Grace",
+            "Wendy Lawrence",
+            "Donna Lovelock",
+            "Mark Hanson",
+            "Keith M. Godfrey",
+            "Hazel Inskip"
+          ],
+          "abstract": [
+            "\nAdolescence offers a window of opportunity during which improvements in health behaviours could benefit long-term health, and enable preparation for parenthood\u2014albeit a long way off, passing on good health prospects to future children. This study was carried out to evaluate whether an educational intervention, which engages adolescents in science, can improve their health literacy and behaviours. A cluster-randomised controlled trial of 38 secondary schools in England, UK was conducted. The intervention (LifeLab) drew on principles of education, psychology and public health to engage students with science for health literacy, focused on the message \u201cMe, my health and my children\u2019s health\u201d. The programme comprised: \u2022 Professional development for teachers. \u2022 A 2\u20133 week module of work for 13-14-year-olds. \u2022 A \u201chands-on\u201d practical health science day visit to a dedicated facility in a university teaching hospital. Data were collected from 2929 adolescents (aged 13\u201314 years) at baseline and 2487 (84.9%) at 12-month follow-up. The primary outcome was change in theoretical health literacy from pre- to 12 months post- intervention. This study is registered (ISRCTN71951436) and the trial status is complete. Participation in the LifeLab educational intervention was associated with an increase in the students\u2019 standardised total theoretical health literacy score (adjusted difference between groups = 0.27 SDs (95%CI = 0.12, 0.42)) at 12-month follow-up. There was an indication that intervention participants subsequently judged their own lifestyles more critically than controls, with fewer reporting their behaviours as healthy (53.4% vs. 59.5%; adjusted PRR = 0.94 [0.87, 1.01]). We conclude that experiencing LifeLab led to improved health literacy in adolescents and that they demonstrated a move towards a more critical judgement of health behaviour 12 months after the intervention. Further work is needed to examine whether this leads to sustained behaviour change, and whether other activities are needed to support this change.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "A cluster-randomised controlled trial of the LifeLab education intervention to improve health literacy in adolescents",
+          "score": 11.940542
+        },
+        {
+          "id": "10.1371/journal.pone.0337686",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-12-02T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Liane Platz",
+            "Michael Juettler"
+          ],
+          "abstract": [
+            "\nGame-based learning (GBL) supports the development of domain-specific competencies, especially knowledge, more effectively than traditional learning methods. However, it is still unclear which elements of GBL positively impact learning outcomes such as motivation and attitudes. This study involved 293 upper-secondary students in a quasi-experiment using a 2\u2009\u00d7\u20092 control group design with five measurement points to test the effects of game mechanics and reflection prompts. This approach aimed to assess their effects on the basic needs experience and attitude towards financial planning among upper-secondary school students. We applied a multivariate analysis of variance and a moderated mediation path model to address two questions: (a) whether game experiences differ depending on core mechanics and reflection prompt design, and (b) whether game mechanics influence changes in finance-related attitude through basic needs experience, moderated by reflection prompts. The findings demonstrate that games offering a higher degree of strategic decision-making options and direct reflection prompts positively impact students\u2019 basic needs experience with a moderate effect size. However, the path model did not reveal a group-specific influence on finance-related attitude. Therefore, this study provides initial results from an experimental approach to identifying the influence of different game mechanics and reflection prompts, offering valuable empirical insights into the implementation of GBL in educational settings across domains.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Development of basic-needs experience and finance-related attitude through game-based learning: The role of game mechanics and debriefing",
+          "score": 11.925777
+        },
+        {
+          "id": "10.1371/journal.pone.0039904",
+          "journal": "PLoS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2012-07-10T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "David Reilly"
+          ],
+          "abstract": [
+            "\n        Although gender differences in cognitive abilities are frequently reported, the magnitude of these differences and whether they hold practical significance in the educational outcomes of boys and girls is highly debated. Furthermore, when gender gaps in reading, mathematics and science literacy are reported they are often attributed to innate, biological differences rather than social and cultural factors. Cross-cultural evidence may contribute to this debate, and this study reports national gender differences in reading, mathematics and science literacy from 65 nations participating in the 2009 round of the Programme for International Student Assessment (PISA). Consistently across all nations, girls outperform boys in reading literacy, d\u200a=\u200a\u2212.44. Boys outperform girls in mathematics in the USA, d\u200a=\u200a.22 and across OECD nations, d\u200a=\u200a.13. For science literacy, while the USA showed the largest gender difference across all OECD nations, d\u200a=\u200a.14, gender differences across OECD nations were non-significant, and a small female advantage was found for non-OECD nations, d\u200a=\u200a\u2212.09. Across all three domains, these differences were more pronounced at both tails of the distribution for low- and high-achievers. Considerable cross-cultural variability was also observed, and national gender differences were correlated with gender equity measures, economic prosperity, and Hofstede\u2019s cultural dimension of power distance. Educational and societal implications of such gender gaps are addressed, as well as the mechanisms by which gender differences in cognitive abilities are culturally mediated.\n      "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Gender, Culture, and Sex-Typed Cognitive Abilities",
+          "score": 11.905558
+        },
+        {
+          "id": "10.1371/journal.pone.0315365",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-12-16T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Merga Garoma Jatu",
+            "Desalew Tilahun Beyene",
+            "Dechasa Befikadu W. Senbat",
+            "Tesfaye Asfaw Alemayehu",
+            "Diribsa Tizazu Hailu",
+            "Serkalem Aschalew Jima",
+            "Midhagsaa Dhinsa Kitila",
+            "Ebissa Bayana Kebede"
+          ],
+          "abstract": [
+            "Objectives: This study aimed to assess the level of health literacy and its associated factors among Jimma town public high school adolescents, Jimma, Oromia, Southwest Ethiopia, 2023. Methods: A facility-based cross-sectional study was conducted in June 2023 among 604 Jimma town public high school adolescents. A multistage sampling technique was employed to recruit study participants. A pretested self-administered questionnaire was used to collect data. Data was entered into epidata 4.6 and exported to SPSS version 26.0 for analysis. Bivariable and multivariable logistic regressions were performed to identify factors associated with the level of health literacy. P-values less than 0.05 at 95% CI were used to declare statistically significant associations. The results were presented by text, tables and charts as necessary. Results: From 634 total sample size about 604 participated. About 317 (52.5%) were males. The age of participants ranged from 14 to 19 years, with a mean age of 16.95+1.52. The finding revealed that only 35.26% (95% CI; 31.44, 39.09) of participants had desired health literacy, while 64.74% of them had limited health literacy levels. Age of 18\u201319 [AOR = 3.99(2.41, 6.60): p<0.001], being in 11\u201312 grade level [AOR = 2.38(1.44, 3.95); p = 0.001], being from currently employed father [AOR = 4.20(1.98, 8.92); p<0.001] and being from currently employed mother [AOR = 4.54(2.82, 7.31); p<0.001] were factors positively associated with the level of desired health literacy. Conclusion: Since a significant number of students in our study area had limited health literacy, we recommend schools to integrate a school health service that contains health education services. Moreover, efforts should be undertaken to raise adolescent health literacy for middle adolescents, early adolescents, and students whose families were not employed. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Level of health literacy and associated factors among Jimma town public high school adolescent students: A cross-sectional study",
+          "score": 11.882345
+        },
+        {
+          "id": "10.1371/journal.pone.0155610",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2016-05-19T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Raymond Kim Wai Sum",
+            "Amy Sau Ching Ha",
+            "Chih Fu Cheng",
+            "Pak Kwong Chung",
+            "Kenny Tat Choi Yiu",
+            "Che Chun Kuo",
+            "Chung Kai Yu",
+            "Fong Jia Wang"
+          ],
+          "abstract": [
+            "\nThe purpose of this study was to construct and validate a \u201cPerceived Physical Literacy Instrument\u201d (PPLI) for physical education teachers. Based on literature review and focus group interviews, an 18-item instrument was developed for the initial tests. This self-report measure, using a 5-point Likert scale, formed the PPLI and was administered to 336 physical education teachers in Hong Kong. The sample was randomly split, and exploratory and confirmatory factor analyses resulted in a 9-item, 3-factor scale. Exploratory factor analysis (EFA) item loadings ranged from 0.69 to 0.87, and Cronbach\u2019s alpha ranged from 0.73 to 0.76. Confirmatory factor analysis (CFA) showed that the construct demonstrated good fit to the model. The PPLI thus appeared to be reliable and valid to measure the perceived physical literacy of physical education teachers. It is argued that the instrument can be used for both research and applied purposes and potential uses for the instrument in physical education, medical and health settings are discussed.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Construction and Validation of a Perceived Physical Literacy Instrument for Physical Education Teachers",
+          "score": 11.874902
+        },
+        {
+          "id": "10.1371/journal.pone.0314099",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-11-25T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Mariane Carolina Faria Barbosa",
+            "Ana Luiza Peres Baldiotti",
+            "J\u00falia Lara Resende",
+            "Matheus de Fran\u00e7a Perazzo",
+            "Ramon Targino Firmino",
+            "Ana Fl\u00e1via Granville-Garcia",
+            "Saul Martins Paiva",
+            "Fernanda de Morais Ferreira"
+          ],
+          "abstract": [
+            "\nWith the increase in digitalization of adolescents and health services, the population must demonstrate digital health literacy skills to be able to navigate online health information, as well as identify, evaluate, and apply relevant information. The present study aimed to investigate the psychometric properties of the adapted version of the eHealth Literacy Scale (eHEALS-BrA) for Brazilian adolescents. This study was conducted between September 2022 and May 2023, involving a total of 260 adolescents aged 13 to 19, with a mean age of 15.64 years (SD = 1.84), all of whom were enrolled in public schools in Brazil. Structural validity was evaluated by confirmatory factor analysis (CFA). The reliability of the instrument was assessed using Cronbach\u2019s alpha (\u03b1) and McDonald\u2019s omega (\u03c9), and test-retest reliability. Questionnaires about sociodemographic aspects, health-related characteristics, and internet use were administered and used as discriminant validation measures. Convergent Validity was determined by correction with the domains of the World Health Organization Quality of Life-Bref (WHOQOL-Bref) instrument. For test-retest reliability, 67 participants completed the eHEALS-BrA a fortnight later. The average eHEALS-BrA score was 28.05 points (SD = 5.05). CFA revealed that the model with the best fit had a single factor (\u03c72 = 49.884 [df = 20, p = 0.0002], CFI = 0.934, TLI = 0.908, RMSEA = 0.076(CI:0.05\u20130.10), and SRMR = 0.045). The instrument demonstrated good reliability, with satisfactory internal consistency (\u03b1 and \u03c9 = 0.71) and stability (ICC = 0.82, 95% CI:0.70\u20130.89). The eHEALS-BrA was correlated with the physical, psychological, and environmental domains of the WHOQOL-Bref (p = 0.001) (convergent validity). Higher scores were found among male adolescents, individuals who practiced physical activity, those with better self-rated health, those who considered the internet useful for searching for health information (discriminant validity), and those with better self-rated skills related to using the internet (convergent validity) (p < 0.05). The eHEALS-BrA demonstrated adequate psychometric properties for measuring digital health literacy in Brazilian adolescents.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Assessment of the psychometric properties of the eHealth Literacy Scale for Brazilian adolescents",
+          "score": 11.853967
+        },
+        {
+          "id": "10.1371/journal.pone.0296893",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-04-18T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Ariesta Milanti",
+            "Dorothy Ngo Sheung Chan",
+            "Kai Chow Choi",
+            "Winnie Kwok Wei So"
+          ],
+          "abstract": [
+            "Background: Health communication in the COVID-19 pandemic can be effectively implemented if all members of the populations, including marginalized population such as migrant domestic workers (MDWs), have good eHealth literacy. Lessons learned during this critical period may help improve planning and mitigation of the impacts of future health crises. Methods: This study aimed to examine and explore the eHealth literacy levels of the MDWs in Hong Kong during the COVID-19 pandemic by using a convergent mixed methods research design. A total of 1156 Hong Kong MDWs participated in a paper-based survey using a multistage cluster random sampling design for the quantitative component. eHealth literacy was measured using an eHealth literacy Scale (eHEALS). For the qualitative component, a purposive sampling of 19 MDWs participated in face-to-face, semi-structured, in-depth interviews. Descriptive statistics and multiple regression analyses were used to carry out the quantitative analysis, while thematic analysis was used for the qualitative analysis. Both quantitative and qualitative data were merged and integrated for mixed-methods analysis. Results: The meta-inferences of the quantitative and qualitative results mainly confirmed that MDWs in Hong Kong had good levels of eHealth literacy. The use of Instagram, YouTube and WhatsApp as the COVID-19 information sources, in addition to having an interest in the topic of the current spread of COVID-19 together with the Hong Kong government\u2019s policies related to COVID-19, were found to be associated with eHealth literacy. Conclusions: The eHealth literacy level of MDWs in Hong Kong was shown to be good and it was influenced by the use of popular social media platforms including Instagram, YouTube, and WhatsApp. It is realistic to suggest that such platforms should be harnessed for health communication during the pandemic. Yet, regulations to combat false information on these media are also urgently needed. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "eHealth literacy of migrant domestic workers in Hong Kong in the COVID-19 pandemic: A mixed methods study",
+          "score": 11.847976
+        },
+        {
+          "id": "10.1371/journal.pone.0295606",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-12-21T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Naym\u00e9 Salas",
+            "Mariona Pascual"
+          ],
+          "abstract": [
+            "\nEffective literacy skills are essential to actively participate in today\u2019s society. However, little research has been conducted that examined the impact of contextual variables on literacy development. The present paper addressed whether and how the socioeconomic status of the school (S-SES) children attend affects their literacy achievements. Eight-hundred and seventy-eight 2nd and 4th grade children participated in the study. Data were collected in low-SES (vulnerable) and in mid-high-SES (non-vulnerable) schools. Children completed a large battery of language, cognitive, and literacy tasks in Catalan, a language spoken in a region in Spain where virtually all children are at least bilingual (they also speak Spanish) and it is the main language of instruction. Results showed that children in vulnerable schools were outperformed by children in non-vulnerable schools across all literacy competencies, but particularly affected higher order skills; that is, text quality and reading comprehension. Differences with their non-vulnerable peers remained, even after controlling for context-level covariates, including familial SES. However, S-SES ceased to exert significant influence once children\u2019s cognitive and, especially, linguistic skills were considered. The study adds to previous research claiming that school SES has an effect on students\u2019 literacy skills, above and beyond children\u2019s home SES. However, our findings also suggest that literacy performance is ultimately mostly dependent on educationally actionable, subject-level skills. Educational implications are discussed.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Impact of school SES on literacy development",
+          "score": 11.842558
+        },
+        {
+          "id": "10.1371/journal.pone.0294350",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-01-11T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Youling Li",
+            "Di Chen",
+            "Xinxia Deng"
+          ],
+          "abstract": [
+            "\nThe utilization of digital educational infrastructure in schools has propelled digital educational games to the forefront of educational innovation. Despite an abundance of empirical studies on the relationship between digital educational games and student\u2019s motivation for learning, a consensus has yet to be reached. This study aims to bridge existing research gaps by adopting a mixed-methods approach grounded in behaviorist learning theory and contextual cognitive theory. A detailed questionnaire was disseminated to students from three distinct university in Thailand. After the exclusion of invalid responses, a robust sample of 434 valid responses was curated and utilized for analysis. Utilizing SPSS and MPLUS software, empirical analyses were conducted to explore the impact of digital educational games on student\u2019s motivation for learning. Research results indicate that: First, digital educational games positively influence student\u2019s motivation for learning; Second, learning engagement serves as a mediator between digital educational games and student\u2019s motivation for learning; Third, the digital environment moderates the relationship between digital educational games and student\u2019s learning engagement. Notably, the positive impact of digital educational games on student learning engagement is amplified in a more immersive digital environment. This study contributes to behaviorist theory and social cognition theory by elucidating how digital educational games affect student\u2019s motivation for learning through their engagement and by highlighting the moderating role of the digital environment. Practically, these findings underscore the significance of digital educational games and the digital environments in schools to enhance student\u2019s motivation for learning.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "The impact of digital educational games on student\u2019s motivation for learning: The mediating effect of learning engagement and the moderating effect of the digital environment",
+          "score": 11.837025
+        },
+        {
+          "id": "10.1371/journal.pone.0094186",
+          "journal": "PLoS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2014-04-07T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Kenneth Lee",
+            "Kreshnik Hoti",
+            "Jeffery D. Hughes",
+            "Lynne M. Emmerton"
+          ],
+          "abstract": [
+            "Background: Health information on the Internet is ubiquitous, and its use by health consumers prevalent. Finding and understanding relevant online health information, and determining content reliability, pose real challenges for many health consumers. Purpose: To identify the types of interventions that have been implemented to assist health consumers to find reliable online health information, and where possible, describe and compare the types of outcomes studied. Data Sources: PubMed, PsycINFO, CINAHL Plus and Cochrane Library databases; WorldCat and Scirus \u2018gray literature\u2019 search engines; and manual review of reference lists of selected publications. Study Selection: Publications were selected by firstly screening title, abstract, and then full text. Data Extraction: Seven publications met the inclusion criteria, and were summarized in a data extraction form. The form incorporated the PICOS (Population Intervention Comparators Outcomes and Study Design) Model. Two eligible gray literature papers were also reported. Data Synthesis: Relevant data from included studies were tabulated to enable descriptive comparison. A brief critique of each study was included in the tables. This review was unable to follow systematic review methods due to the paucity of research and humanistic interventions reported. Limitations: While extensive, the gray literature search may have had limited reach in some countries. The paucity of research on this topic limits conclusions that may be drawn. Conclusions: The few eligible studies predominantly adopted a didactic approach to assisting health consumers, whereby consumers were either taught how to find credible websites, or how to use the Internet. Common types of outcomes studied include knowledge and skills pertaining to Internet use and searching for reliable health information. These outcomes were predominantly self-assessed by participants. There is potential for further research to explore other avenues for assisting health consumers to find reliable online health information, and to assess outcomes via objective measures. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Interventions to Assist Health Consumers to Find Reliable Online Health Information: A Comprehensive Review",
+          "score": 11.820415
+        },
+        {
+          "id": "10.1371/journal.pone.0279534",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-02-09T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Fengshuo Rao",
+            "Minyu Xiao"
+          ],
+          "abstract": [
+            "\nClassroom teaching quality evaluation is an important link in the curriculum quality assurance system. It has important guiding significance for the timely feedback of classroom teaching effects, the achievement of teachers\u2019 teaching goals, and the implementation of teaching plans. The evaluation system is scientific, objective and accurate. The classroom teaching quality evaluation is an important way to improve the level of teacher education and teaching and then determine the quality of talent training in various majors. At present, although the evaluation work has played a positive role, the backwardness of the evaluation system has seriously restricted the effectiveness of teaching feedback. The classroom teaching quality evaluation of college basketball training is viewed as the multi-attribute decision-making (MADM). In this article, we combine the generalized Heronian mean (GHM) operator and power average (PA) with 2-tuple linguistic neutrosophic sets (2TLNSs) to propose the generalized 2-tuple linguistic neutrosophic power HM (G2TLNPHM) operator. The G2TLNPHM operator is built for MADM. Finally, an example for classroom teaching quality evaluation of college basketball training is used to show the proposed methods.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "A novel MADM algorithm for physical education teaching quality evaluation based on 2-tuple linguistic neutrosophic numbers power heronian mean operators",
+          "score": 11.819074
+        },
+        {
+          "id": "10.1371/journal.pone.0295646",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2024-01-03T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "XiaoShu Xu",
+            "XiBing Wang",
+            "YunFeng Zhang",
+            "Rong Zheng"
+          ],
+          "abstract": [
+            "\nThis paper investigates the capacity of ChatGPT, an advanced language model created by OpenAI, to mitigate the side effects encountered by learners in Personal Learning Environments (PLEs) within higher education. A series of semi-structured interviews were conducted with six professors and three Information and Communication Technology (ICT) experts. Employing thematic analysis, the interview data were assessed, revealing that the side effects stemming from the learner and learning perspectives could be primarily categorized into cognitive, non-cognitive, and metacognitive challenges. The findings of the thematic analysis indicate that, from a cognitive standpoint, ChatGPT can generate relevant and trustworthy information, furnish personalized learning resources, and facilitate interdisciplinary learning to fully actualize learners\u2019 potential. Moreover, ChatGPT can aid learners in cultivating non-cognitive skills, including motivation, perseverance, self-regulation, and self-efficacy, as well as metacognitive abilities such as self-determination, self-efficacy, and self-regulation, by providing tailored feedback, fostering creativity, and stimulating critical thinking activities. This study offers valuable insights for integrating artificial intelligence technologies to unleash the full potential of PLEs in higher education.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Applying ChatGPT to tackle the side effects of personal learning environments from learner and learning perspective: An interview of experts in higher education",
+          "score": 11.816922
+        },
+        {
+          "id": "10.1371/journal.pone.0249574",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2021-04-19T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Alexandra Wicht",
+            "Stephen Reder",
+            "Clemens M. Lechner"
+          ],
+          "abstract": [
+            "\nWe develop an integrative conceptual framework that seeks to explain individual differences in the ability to use information and communication technologies (ICT skills). Building on practice engagement theory, this framework views the continued usage of digital technologies at work and in everyday life (ICT use) as the key prerequisite for the acquisition of ICT skills. At the same time, the framework highlights that ICT use is itself contingent upon individual and contextual preconditions. We apply this framework to data from two recent German large-scale studies (N = 2,495 and N = 2,786, respectively) that offer objective measures of adults\u2019 ICT skills. Findings support our framework\u2019s view of ICT use as a key prerequisite for ICT skills. Moreover, they demonstrate that literacy skills have strong associations with ICT skills, largely by virtue of their indirect associations through ICT use. By comparison, regional digital cultures (as proxied by internet domain registration rates) evince only limited explanatory power for individual differences in ICT skills.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Sources of individual differences in adults\u2019 ICT skills: A large-scale empirical test of a new guiding framework",
+          "score": 11.806305
+        },
+        {
+          "id": "10.1371/journal.pone.0321426",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-05-28T00:00:00Z",
+          "article_type": "Study Protocol",
+          "author_display": [
+            "Yao Xie",
+            "Kayode Philip Fadahunsi",
+            "John Broughan",
+            "John O\u2019 Donoghue",
+            "Joseph Gallagher",
+            "Walter Cullen"
+          ],
+          "abstract": [
+            "Introduction: AI-powered conversational agents have proven effective in alleviating psychological distress, however, concerns about autonomy and authentic psychological development remain, especially in youth during critical stages of identity and resilience formation. Despite the increasing use of AI technologies, there is a significant gap in well-being literacy within educational systems. This gap leaves young adults ill-prepared to navigate the complexities of real world challenges, contributing to rising rates of anxiety, stress, and depression. Furthermore, the lack of AI literacy can exacerbate psychological distress, negatively impacting academic performance and overall well-being. As young adults actively engage with AI, efforts should focus not on resisting technological progress but on fostering their development as users who are capable, aware, and ethical in addressing their contextual well-being needs. Methods and analysis: The research is an exploratory sequential mixed methods Study, combining semi-structured interviews and an electronic Delphi study (eDelphi) to gather insights for consensus building. The study adopts a pragmatism paradigm with a foresight approach, ideal for addressing the dynamic, evolving intersection of AI and well-being. Interpretative phenomenological analysis, reflective thematic analysis and descriptive statistical analysis will be used accordingly. Medical students (aged 18\u201330) were selected as a social microcosm study cohort representing youth. Ethics and dissemination: This study was approved by the University College Dublin Human Research Ethics Committee (HREC); Reference: LS-C-24-375-Xie-Cullen.The outcomes of the study will be communicated through publications in peer-reviewed journals, presentations at academic conferences. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Artificial intelligence for contextual well-being: Protocol for an exploratory sequential mixed methods study with medical students as a social microcosm",
+          "score": 11.798378
+        },
+        {
+          "id": "10.1371/journal.pone.0179196",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2017-06-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Aazam Doustmohammadian",
+            "Nasrin Omidvar",
+            "Nastaran Keshavarz-Mohammadi",
+            "Morteza Abdollahi",
+            "Maryam Amini",
+            "Hassan Eini-Zinab"
+          ],
+          "abstract": [
+            "Background: Food and nutrition literacy is an emerging term which is increasingly used in policy and research. Though research in this area is growing, progression is limited by the lack of an accepted method to measure food and nutrition literacy. The aim of this study is to develop a valid and reliable questionnaire to assess food and nutrition literacy in elementary school children in the city of Tehran. Methods: The study was conducted in three phases. To develop Food and Nutrition Literacy (FNLIT) questionnaire, a comprehensive literature review and a qualitative study were initially performed to identify food and nutrition literacy dimensions and its components. Content and face validity of the questionnaire were evaluated by an expert panel as well as students. In the second phase, construct validity of the scale was evaluated using Explanatory Factor Analyses (EFA) and Confirmatory Factor Analyses (CFA). In the last phase (confirmatory phase), the final version of the questionnaire was evaluated on 400 students. Results: Findings show Content Validity Ratio (CVR) and Content Validity Index (CVI) of the 62-item questionnaire at acceptable levels of 0.87 and 0.92, respectively. EFA suggested a six-factor construct, namely, understanding food and nutrition information, knowledge, functional, interactive, food choice, and critical. The results of CFA indicated acceptable fit indices for the proposed models. All subscales demonstrated satisfactory internal consistency (Cronbach\u2019s alpha\u22650.70), except for critical skill subscale (0.48). The intraclass correlation coefficient (ICC = 0.90, CI: 0.83\u20130.94) indicated that Food and Nutrition Literacy (FNLIT) scale had satisfactory stability. Each phase of development progressively improved the questionnaire, which resulted in a 46-item (42 likert-type items and 4 true-false items) Food and Nutrition Literacy (FNLIT) scale. The questionnaire measured two domains with 6 subscales, including: 1) cognitive domain: understanding and knowledge; 2) skill domain: functional, food choice, interactive, and critical skills. Conclusion: The developed food and nutrition literacy scale is a valid and reliable instrument to measure food and nutrition literacy in children. This measure lays a solid empirical and theoretical foundation for future research and tailored interventions to promote food and nutrition literacy in this age group. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Developing and validating a scale to measure Food and Nutrition Literacy (FNLIT) in elementary school children in Iran",
+          "score": 11.788208
+        },
+        {
+          "id": "10.1371/journal.pone.0340100",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2026-02-09T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Winnifred Wijnker",
+            "Peter Burger",
+            "Ionica Smeets",
+            "Sanne Willems"
+          ],
+          "abstract": [
+            "\nMisleading graphs can give readers a distorted view of the underlying data. We want to know how to most effectively correct misleading graphs and if it matters whether a correction uses the full-design of the original or a clean design with all embellishment and colors removed. We focus on vocationally educated young adults, a group that is vulnerable to misinformation and has so far been underrepresented in research. We use a mixed-method approach with a qualitative think-aloud task (n\u2009=\u200910, data collected in April 2023) and a quantitative survey (n\u2009=\u2009130, data collected between July and October 2023). The think-aloud task showed that vocational students use a combination of calculating and estimating to process graphs, which contradicts existing literature, and that their perception is heavily influenced by context. The survey showed that graph corrections work in reducing misleading effects and also have a learning effect such that students are less misled by new misleading graphs of the same type. There was no difference between full-design and clean design corrections. These results imply that vocationally educated young adults can benefit from seeing corrections of misleading graphs.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Debunking misleading graphs effectively: How vocationally educated young adults perceive graphs",
+          "score": 11.785313
+        },
+        {
+          "id": "10.1371/journal.pone.0333470",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-10-07T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Liangliang Zhao",
+            "He Jiang",
+            "Sri Azra Attan",
+            "Ku Faridah Ku Ibrahim",
+            "Bo Han"
+          ],
+          "abstract": [
+            "\nThis study explores the impact of the classroom climate, encompassing both the physical environment (PE) and teacher\u2013student interactions (TSI), on music aesthetic literacy (MAL) among nonmusic-major college students. Utilizing a cross-sectional design and convenience sampling, data were collected from 305 valid respondents enrolled in music aesthetics courses. Pearson correlation and linear regression analyses were conducted to investigate the relationships between PE, TSI, and four MAL dimensions: Habit, Attitude, Knowledge, and Performance and Appreciation Skill (PAS). Results indicate that both PE and TSI influence MAL significantly and positively, with TSI having a stronger impact. Specifically, TSI demonstrated greater effects on Attitude, Habit, Knowledge, and PAS, while PE had a notable impact on Knowledge and Habit but less influence on PAS. Linear regression results revealed that PE and TSI collectively explained 43.6% of the variance in MAL (F(2,302) = 116.635, p\u2009<\u20090.05), underscoring the importance of the classroom climate in shaping students\u2019 music aesthetic literacy. These findings suggest that enhancing TSI and creating favorable PEs can effectively support music education in higher education.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Exploring the impact of classroom climate on music aesthetic literacy in nonmusic majors",
+          "score": 11.769554
+        },
+        {
+          "id": "10.1371/journal.pone.0314045",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2025-02-12T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Tahmina Maqbool",
+            "Humera Ishaq",
+            "Sadia Shakeel",
+            "Ayeshah Zaib un Nisa",
+            "Hina Rehman",
+            "Shadab Kashif",
+            "Halima Sadia",
+            "Safila Naveed",
+            "Nazish Mumtaz",
+            "Sidra Siddiqui",
+            "Shazia Jamshed"
+          ],
+          "abstract": [
+            "\nIn an evolutionary era of medical education, \u201cArtificial intelligence\u201d (AI) is applied to replicate human intellect, encompassing abilities, logical reasoning and effective problem-solving skills. Previous research has explored the attitude of medical and dental students, toward the assimilation of AI in medicine; however, a significant gap exists in appraising the understanding and concerns of pharmacy students. Therefore, the current study was designed to explore undergraduate pharmacy students\u2019 perceptions of integrating AI into education and practice. Methods: A cross-sectional study was conducted among final-year pharmacy students from different public and private sector universities in Karachi. The sample size on 60% anticipated response rate and 99% CI was calculated to be 390. Data was collected after acquiring ethical approval using convenient sampling. Frequency and percentage of the socio-demographic features were analyzed and then goodness of fit and Pearson\u2019s chi-squared test of correlation was applied. Results were considered significant when p < 0.05. Results: The overall response rate of the study was 67%. More than 80% of the respondents were female. The students 35% (n = 202) strongly agreed and 59% (n = 334) agreed that AI plays an important role in healthcare, (\u03c72 = 505.6, p < 0.001). Around 79% (n = 453, \u03c72 = 384.3, p < 0.001) of students agreed on the replacement of patient care specialties with AI in the future, whereas 495 students (87%, \u03c72 = 682.3, p < 0.001) stated that they possess a strong comprehension of the fundamental principles governing the operation of AI. More than 80% of the students were comfortable in using AI terminologies (n = 475, \u03c72 = 598, p < 0.001) and 93% (n = 529, \u03c72 = 290, p < 0.001) were sure that AI inclusion in pharmacy education will develop a positive influence into the pharmacy curriculum (95%, n = 549, \u03c72 = 566.9, p < 0.001). A high and positive correlation was observed between the perception and willingness of students to adopt the AI changes in teaching undergraduate students (\u03c1 = 0.491, p < 0.001). Furthermore, the outcomes showed students at private-sector universities stood out in computer literacy compared to public-sector universities (\u03c72 = 6.546, p < 0.05). Conclusion: The current outcomes revealed the higher willingness of pharmacy students towards AI-infused learning. They understood the prerequisite of having both formal and informal learning experiences on the clinical application, technological constraints, and ethical considerations of the AI tools to be successful in this endeavor. The policymakers must take action to ensure that future pharmacists have a strong foundation of AI literacy and take initiatives to foster the interests and abilities of imminent pharmacists who will spearhead innovation in the field.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Future pharmacy practitioners\u2019 insights towards integration of artificial intelligence in healthcare education: Preliminary findings from Karachi, Pakistan",
+          "score": 11.7659
+        },
+        {
+          "id": "10.1371/journal.pone.0326575",
+          "journal": "PLOS One",
+          "eissn": "1932-6203",
+          "publication_date": "2025-06-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Jorge Ros\u00e1rio",
+            "Joana Correia Pires",
+            "S\u00f3nia Dias",
+            "Ana Rita Pedro"
+          ],
+          "abstract": [
+            "Introduction: Health Literacy (HL), defined as the ability to access, understand, appraise and apply health information to make informed decisions, is essential for individual and public health. However, in rural regions such as Alentejo, Portugal, higher education students often encounter specific challenges that hinder the development and effective use of these skills. This study aimed to explore the perceptions of higher education students in Alentejo, Portugal, with regard to health literacy, access to and utilisation of healthcare, and to identify barriers, facilitators and interventions to inform strategies that promote equity, build student capacity and sustainably improve health outcomes. Methodology: A qualitative, exploratory, and descriptive study was conducted using three focus groups held on 11th, 13th, and 18th December 2023, with a purposive non-probability sample of 29 participants across first-year, intermediate, and final-year levels. The participants shared their experiences, challenges, and resources related to health literacy, healthcare access, and utilisation. The focus group discussions were audio-recorded, transcribed verbatim, and analysed through a systematic process of open, axial, and selective coding. Codes were organised into categories, and thematic identification was facilitated using a constant comparative method. Content analysis was conducted with MAXQDA\u00ae 22 software. Ethical approval was obtained from the Ethics Committee of the University of \u00c9vora, Portugal, and informed consent was secured from all participants. Results: The students\u2019 perception was that health literacy, access to and utilisation of healthcare are influenced by a dynamic interaction of barriers and facilitators. The identified barriers encompassed the presence of misinformation, financial and logistical challenges, and emotional stigma, particularly in the context of mental and sexual health. Conversely, facilitators were identified as encompassing access to digital tools, a family and peer support network, professional guidance and institutional resources such as libraries and workshops. The students recommended that interventions to improve health literacy be integrated into the higher education curriculum, that navigation support systems be improved and that structural inequalities be explored in order to improve access to and participation in healthcare. Conclusion: Digital resources have the potential to improve access to health information; however, persistent challenges such as misinformation, financial constraints and stigma limit their impact. This study underscores the significance of specific interventions to enhance health literacy and healthcare navigation skills. These interventions include the integration of health literacy into academic curricula, the provision of specialised workshops, and the facilitation of access to healthcare services. The study identifies nursing interventions and institutional support as key strategies to promote equitable access to healthcare and improve student wellbeing. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Exploring perceptions of health literacy, healthcare access, and utilisation among higher education students in Alentejo, Southern Portugal: A qualitative study",
+          "score": 11.76445
+        },
+        {
+          "id": "10.1371/journal.pone.0266802",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-04-14T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Michelle Anne Reyes",
+            "Heather D. Vance-Chalcraft"
+          ],
+          "abstract": [
+            "\neHealth has grown exponentially alongside technology and has become widely accessed by some populations, but little is documented about how undergraduate students use eHealth or perceive their eHealth literacy. As access to online information and non-traditional options for interacting with providers has increased, patient views of the provider-patient relationship may also be changing. This study evaluates how frequently undergraduates use eHealth, how they perceive their ability to use eHealth appropriately, and how they view their patient-provider relationships. A mixed methods approach was used to address the research questions, with quantitative data from a survey and qualitative data from follow-up interviews of twelve of the survey respondents. The survey was distributed to over 650 undergraduate students in introductory biology laboratory courses for students of all fields of interest at one university. Based on 527 survey responses and 12 interviews, students reported commonly using eHealth but being skeptical of telehealth appointments. Although students generally felt capable of finding and interpreting eHealth sources, they were not strongly confident in their ability to do so. Use of eHealth was not seen as altering the patient-provider relationship, but students expressed a desire for their physician to act more as a counselor or advisor than a guardian. Students from minority populations were more likely to use eHealth in comparison to their peers. In addition, student comfort with their provider differed by race and ethnicity, as well as whether they shared the same gender identity as their provider. This research highlights how undergraduate students, who are often making medical decisions for themselves for the first time as adults, access health information and view the patient-provider relationship differently than the traditional guardian or paternalistic model. In addition, having diverse, culturally competent medical providers are critical for students to develop the relationship with their provider that they desire.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Understanding undergraduate students\u2019 eHealth usage and views of the patient-provider relationship",
+          "score": 11.751718
+        },
+        {
+          "id": "10.1371/journal.pone.0284843",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2023-04-25T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Hualing Gong",
+            "Da Yan"
+          ],
+          "abstract": [
+            "\nAdvancement of research in education has propelled the augmentation of theoretical and practical knowledge in learning-oriented feedback. In recent years, the channels, modes, and orientations of feedback became manifold. Copious empirical evidence from the body of literature supported the strength of feedback in enhancing learning outcomes and promoting the motivation of learners. However, compared to the popularity in implementation and fruitfulness of findings in other educational domains, the application of state-of-the-art technology-enhanced feedback in fostering students\u2019 L2 oral abilities remain few and far between. To address the knowledge gap, the present study endeavored to investigate the effect of Danmaku-based and synchronous peer feedback on L2 oral performance and the acceptance thereof among students. Adopting a mixed-method design, the study recruited 74 (n = 74) undergraduate English majors from a Chinese university for a 16-week 2x2 experiment. The collected data were analyzed through statistical and thematic analysis respectively. The findings revealed that Danmaku-based and synchronous peer feed-back was impactful on students\u2019 performance in L2 oral production. Furthermore, the impacts of peer feedback on subdomains of L2 competence were statistically analyzed. Regarding students\u2019 perceptions, the incorporation of peer feedback was generally favored by participants who were satisfied and motivated in the learning process but lacked confidence in their assessment literacy. Furthermore, students expressed their agreement with the benefit of reflective learning and the subsequent enrichment in knowledge and horizon. The research was significant for its conceptual and practical contribution for follow-up researchers and educators in L2 education and learning-oriented feedback.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "The impact of Danmaku-based and synchronous peer feedback on L2 oral performance: A mixed-method investigation",
+          "score": 11.731911
+        },
+        {
+          "id": "10.1371/journal.pone.0277228",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-11-03T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Da Yan",
+            "Qiongqiong Fan"
+          ],
+          "abstract": [
+            "\nSudden shifts towards online education since the outbreak of Covid-19 propelled the unprepared changes in teaching and learning over the world. The impact of transferring Interpreter training from face-to-face instruction and practices to a fully online environment was viewed differently. Issues such as relatively inferior engagement in learning and dissatisfied performance in competence building were highlighted and compounded by the concern of academic burnout and learning stress caused by the abiding pandemic. To curb the unsatisfactory situation, alternative learning methods and innovative pedagogical approaches were advocated. The present study was a pioneering effort to integrate informal learning into remote interpreter training by developing and implementing an online informal learning communities for undergraduate interpreting trainees in a Chinese university. The researcher recruited 36 students (n = 36) from the institution as participants in the 1.5-year piloting project. The findings of the research revealed the impact of informal learning in supplementing formal education by engaging involved students. Student-centered learning supported by collaborative and experiential activities in an informal environment was well-received for its ability to galvanize student\u2019s engagement and academic achievements. The perceptions from participants revealed preference and expectation from students for expanded roles of trainers in interpreter training.\n"
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Online informal learning community for interpreter training amid COVID-19: A pilot evaluation",
+          "score": 11.729803
+        },
+        {
+          "id": "10.1371/journal.pone.0271524",
+          "journal": "PLOS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2022-07-15T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Mahmoud Tavousi",
+            "Samira Mohammadi",
+            "Jila Sadighi",
+            "Fatemeh Zarei",
+            "Ramin Mozafari Kermani",
+            "Rahele Rostami",
+            "Ali Montazeri"
+          ],
+          "abstract": [
+            "Background: It has been about 30 years since the first health literacy instrument was developed. This study aimed to review all existing instruments to summarize the current knowledge on the development of existing measurement instruments and their possible translation and validation in other languages different from the original languages. Methods: The review was conducted using PubMed, Web of Science, Scopus, and Google Scholar on all published papers on health literacy instrument development and psychometric properties in English biomedical journals from 1993 to the end of 2021. Results: The findings were summarized and synthesized on several headings, including general instruments, condition specific health literacy instruments (disease & content), population- specific instruments, and electronic health. Overall, 4848 citations were retrieved. After removing duplicates (n = 2336) and non-related papers (n = 2175), 361 studies (162 papers introducing an instrument and 199 papers reporting translation and psychometric properties of an original instrument) were selected for the final review. The original instruments included 39 general health literacy instruments, 90 condition specific (disease or content) health literacy instruments, 22 population- specific instruments, and 11 electronic health literacy instruments. Almost all papers reported reliability and validity, and the findings indicated that most existing health literacy instruments benefit from some relatively good psychometric properties. Conclusion: This review highlighted that there were more than enough instruments for measuring health literacy. In addition, we found that a number of instruments did not report psychometric properties sufficiently. However, evidence suggest that well developed instruments and those reported adequate measures of validation could be helpful if appropriately selected based on objectives of a given study. Perhaps an authorized institution such as World Health Organization should take responsibility and provide a clear guideline for measuring health literacy as appropriate. "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Measuring health literacy: A systematic review and bibliometric analysis of instruments from 1993 to 2021",
+          "score": 11.725215
+        },
+        {
+          "id": "10.1371/journal.pone.0052194",
+          "journal": "PLoS ONE",
+          "eissn": "1932-6203",
+          "publication_date": "2012-12-27T00:00:00Z",
+          "article_type": "Research Article",
+          "author_display": [
+            "Kevin Durkin",
+            "Gina Conti-Ramsden"
+          ],
+          "abstract": [
+            "\n        Computer use draws on linguistic abilities. Using this medium thus presents challenges for young people with Specific Language Impairment (SLI) and raises questions of whether computer-based tasks are appropriate for them. We consider theoretical arguments predicting impaired performance and negative outcomes relative to peers without SLI versus the possibility of positive gains. We examine the relationship between frequency of computer use (for leisure and educational purposes) and educational achievement; in particular examination performance at the end of compulsory education and level of educational progress two years later. Participants were 49 young people with SLI and 56 typically developing (TD) young people. At around age 17, the two groups did not differ in frequency of educational computer use or leisure computer use. There were no associations between computer use and educational outcomes in the TD group. In the SLI group, after PIQ was controlled for, educational computer use at around 17 years of age contributed substantially to the prediction of educational progress at 19 years. The findings suggest that educational uses of computers are conducive to educational progress in young people with SLI.\n      "
+          ],
+          "abstract_toc": [
+            ""
+          ],
+          "title_display": "Frequency of Educational Computer Use as a Longitudinal Predictor of Educational Outcome in Young People with Specific Language Impairment",
+          "score": 11.71349
+        }
+      ]
+    }
+  }
+}

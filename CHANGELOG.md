@@ -1,0 +1,20 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.1.0] — 2026-05-12
+
+### Added
+
+- **MCP Server**: Modular implementation featuring 9 tools—each registered via FastMCP: `record_search`, `record_relevance_search`, `synthesize_research_summary`, `list_recent_history`, `list_record_history`, `get_history_output`, `clear_history`, `list_providers`, and `health_check`.
+- **Multi-Provider Academic Search**: The core of the retrieval step is handled via ScholarFlux. The core ScholarFlux package handles rate limited, multithreaded queries across PubMed, PLOS, OpenAlex, Crossref, arXiv, CORE, and Springer Nature behind the scenes with per-provider rate limiting, two-tier caching, and schema normalization under the hood. While the core library focuses on the API interaction implementation details, ScholarFlux MCP focuses on expanding functionality to support advanced AI use cases.
+- **Relevance Search Pipeline**: The core process that filters irrelevant results before unrelated studies are included in downstream conversations and research syntheses. After the retrieval of the core data via ScholarFlux, this pipeline uses `rapidfuzz` to first deduplicate research studies across several databases before it uses embedding-based record-topic similarity scoring (PydanticAI), to rank and filter results through a configurable similarity threshold and result limit.
+- **AI-Powered Research Synthesis**: The PydanticAI `SynthesisAgent` provides a structured agent implementation that steers LLM syntheses toward more easily verifiable research generation. Pydantic AI enforces consistent output requirements including a synthesis text summary, key findings, evidence summaries with index-based `[N]` citations, known limitations, suggested follow-ups, and confidence scoring. As a result, research synthesis grounding can focus on structured result validation.
+- **Post-Synthesis Citation Grounding**: `GroundingService` validates every citation index and referenced text against source records via rapidfuzz similarity scoring. Every synthesis also reports `references_grounded` and `references_rejected` counts with `rejected_evidence_items` persisted for observability.
+- **Zero-Config Model Selection**: For ease of configuration, this package implements automatic LLM and embedding provider detection cascade to detect supported models prior to performing the first relevance search or synthesis (Ollama local → Ollama Cloud → Anthropic → Google → OpenAI). This cascade automatically adapts to available API keys and local services to choose the supported embedding and LLM models supported by the user's environment.
+- **Output History**: Output retrieval integrates a custom `HistoryService` with SQLModel-based relational storage, TTL support, and record-level retrieval to support the retrieval of previously stored search, relevance search, and synthesis results for repeated queries, thus preventing repeated embedding and synthesis requests when previously cached results would otherwise suffice. When making requests, simply add `from_history_cache=True` to first attempt to retrieve a cached result before sending a fresh request.
+- **Docker Deployment**: ScholarFlux MCP is designed with a full Docker Compose stack, optionally including MongoDB, optional Redis and Ollama profiles for caching and synthesis. With health checks, dedicated resource limits, and automatic downloading of selected Ollama models, docker containerization is designed to reduce hardware-specific friction while enforcing separation between personal and project-specific deployments.
+- **Package Configuration**: ScholarFlux MCP uses environment variables to configure core functionality and supported MCP transport types including stdio (default), SSE, and streamable HTTP. Embedding models, LLMs, and other settings can be directly set via environment variables. See the [README.md](README.md) for more details.
