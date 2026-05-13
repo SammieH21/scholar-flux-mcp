@@ -26,7 +26,7 @@ class AppContext:
     history_service: HistoryService = field(default_factory=lambda: HistoryService(enable=False))
 
     def __post_init__(self) -> None:
-        """Post initialization validation step to ensure that assignments are the correct service types"""
+        """Post initialization validation step to ensure that assignments are the correct service types."""
         self.validate(self.search_service, SearchService)
         self.validate(self.relevance_search_service, RelevanceSearchService)
         self.validate(self.synthesis_service, SynthesisService)
@@ -89,7 +89,6 @@ class AppContext:
             TypeError: If the value is not of the specified type.
 
         """
-
         if not isinstance(obj, expected_type):
             context_name = cls.__name__
             expected_type_name = expected_type.__name__

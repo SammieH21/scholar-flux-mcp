@@ -1,4 +1,4 @@
-"""Verifies that the MCP server and its tools are usable directly via the `FastMCP` client and asyncio"."""
+"""Verifies that the MCP server and its tools are usable directly via the `FastMCP` client and `asyncio`."""
 
 from __future__ import annotations
 
@@ -34,7 +34,11 @@ RESPONSE_CACHE_STORAGE_DEVICES = ("sqlite", "sql", "mongodb", "mongo", "null", "
 
 @pytest.fixture
 def reload_mcp_module():
-    """Fixture for reloading the ScholarFluxMCP server. Helpful for loading updated env variables for later testing."""
+    """Fixture for reloading the ScholarFluxMCP server.
+
+    Helpful for loading updated env variables for later testing.
+
+    """
     import scholar_flux_mcp.server.main
 
     importlib.reload(scholar_flux_mcp.server.main)
@@ -53,7 +57,7 @@ async def main_mcp_client():
 
 @pytest.fixture
 def mock_lifespan(mock_ai_synthesis_app_context):
-    """Helper for mocking the synthesis context"""
+    """Helper for mocking the synthesis context."""
 
     @contextlib.asynccontextmanager
     async def _mock_lifespan(server):
@@ -118,7 +122,6 @@ async def mock_mcp_client_with_pydantic_ai_test_mocks(
 
 def extract_json_text(result: CallToolResult) -> dict | list | CallToolResult | None:
     """Helper method for extracting JSON TextContent from tool output."""
-
     with contextlib.suppress(ValueError, TypeError, AttributeError):
         json_content = result.content or []
         content_text = (
@@ -256,7 +259,6 @@ async def test_relevance_search(
     from scholar_flux_mcp.server.main import mcp
 
     mock_ai_synthesis_app_context.synthesis_service.record_topic_similarity_embedder.get_or_create_embedder()
-    mock_ai_synthesis_app_context.synthesis_service.synthesis_agent.get_or_create_agent()
     with mock_ai_synthesis_app_context.synthesis_service.record_topic_similarity_embedder.embedder.override(
         model=mock_embedding_model
     ):
@@ -358,7 +360,6 @@ async def test_relevance_search_on_unexpected_error(
     from scholar_flux_mcp.server.main import mcp
 
     mock_ai_synthesis_app_context.synthesis_service.record_topic_similarity_embedder.get_or_create_embedder()
-    mock_ai_synthesis_app_context.synthesis_service.synthesis_agent.get_or_create_agent()
 
     with mock_ai_synthesis_app_context.synthesis_service.record_topic_similarity_embedder.embedder.override(
         model=mock_embedding_model
@@ -427,6 +428,7 @@ async def test_history_output_retrieval(
     mock_computer_literacy_relevance_search_output,
 ):
     """Verifies that the `HistoryService` correctly enables the retrieval of previously stored output history."""
+
     async with Client(transport=mock_mcp_client_with_history) as mcp_client:
         recent_history_tool_output = await mcp_client.call_tool(
             name="scholar_flux_list_recent_history",
@@ -450,6 +452,7 @@ async def test_record_history_json_output_retrieval(
     mock_ai_synthesis_output,
 ):
     """Verifies that the `HistoryService` correctly enables the retrieval of previously stored JSON record history."""
+
     async with Client(transport=mock_mcp_client_with_history) as mcp_client:
         record_history_tool_output = await mcp_client.call_tool(
             name="scholar_flux_list_record_history",
@@ -474,6 +477,7 @@ async def test_record_history_markdown_output_retrieval(
     mock_ai_synthesis_output,
 ):
     """Verifies that the `HistoryService` correctly enables the retrieval of stored markdown record history."""
+
     async with Client(transport=mock_mcp_client_with_history) as mcp_client:
         record_history_tool_output = await mcp_client.call_tool(
             name="scholar_flux_list_record_history",
@@ -537,6 +541,7 @@ async def test_get_history_synthesis_output(
     mock_ai_synthesis_output,
 ):
     """Verifies that synthesis output history can be retrieved by input hash via `scholar_flux_get_history_output`."""
+
     async with Client(transport=mock_mcp_client_with_history) as mcp_client:
         last_associated_history_output = await mcp_client.call_tool(
             name="scholar_flux_get_history_output",
@@ -557,6 +562,7 @@ async def test_get_nonexistent_history_output(
     mock_mcp_client_with_history,
 ):
     """Verifies that `scholar_flux_get_history_output` gracefully indicates when an input hash doesn't exist."""
+
     async with Client(transport=mock_mcp_client_with_history) as mcp_client:
         last_associated_history_output = await mcp_client.call_tool(
             name="scholar_flux_get_history_output",
@@ -573,6 +579,7 @@ async def test_history_output_clear(
     mock_ai_synthesis_output,
 ):
     """Verifies that the history cache is cleared when the `scholar_flux_clear_history` tool is called."""
+
     async with Client(transport=mock_mcp_client_with_history) as mcp_client:
         clear_history_tool_result = await mcp_client.call_tool(
             name="scholar_flux_clear_history",
@@ -676,7 +683,8 @@ async def test_unexpected_health_status_from_bad_history_service(
     mock_lifespan,
     monkeypatch,
 ):
-    """Verifies that the history service handles unexpected errors during initialization to survive `.check_health()`."""
+    """Verifies that the history service handles unexpected errors during initialization to survive
+    `.check_health()`."""
     from scholar_flux_mcp.server.main import mcp
 
     monkeypatch.setattr(mcp._mcp_server, "lifespan", mock_lifespan)
@@ -855,6 +863,7 @@ async def test_health_check_status_healthy_on_startup(
     `unhealthy` whereas a disabled cache server should instead show `disabled` and treated differently from `unhealthy`.
 
     """
+
     async with Client(transport=mock_mcp_client_with_pydantic_ai_test_mocks) as mcp_client:
         recent_health_check_tool_output = await mcp_client.call_tool(
             name="scholar_flux_health_check",
@@ -888,6 +897,7 @@ async def test_health_check_status_markdown_format(
     mock_mcp_client_with_history,
 ):
     """Verifies that the `HealthStatus` of the package is correctly displayed in markdown format."""
+
     async with Client(transport=mock_mcp_client_with_history) as mcp_client:
         recent_health_check_tool_markdown_output = await mcp_client.call_tool(
             name="scholar_flux_health_check",

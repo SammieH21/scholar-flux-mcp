@@ -31,13 +31,13 @@ SCHOLAR_FLUX_MCP_RECORD_TRUNCATION_LENGTH ?= 3000
 # A simple help command to list available targets
 help:
 	@echo "Available commands:"
-	@echo "  install        Installs the ScholarFlux MCP package for development with all extras"
+	@echo "  install        Installs the ScholarFlux MCP server for development with all extras"
 	@echo "  test           Runs tests with pytest within the poetry environment"
 	@echo "  lint           Runs linting and type checking tools (e.g., ruff, mypy, docstr-coverage)"
 	@echo "  format         Runs Ruff for stylistic code changes and Ruff with --fix for potential linting issues"
 	@echo "  docs           Autogenerates Sphinx documentation from in-code docstrings and rst files"
 	@echo "  spell_check    Uses cspell to check spelling in python files (docstrings, etc.)"
-	@echo "  mcp            Sets up a basic npm mcp inspector session for debugging scholar-flux-mcp configurations"
+	@echo "  mcp            Starts an MCPInspector session for testing tools and debugging ScholarFlux MCP configurations"
 	@echo "  shell          Activates the project's virtual environment shell"
 
 # Installs dependencies from poetry.lock

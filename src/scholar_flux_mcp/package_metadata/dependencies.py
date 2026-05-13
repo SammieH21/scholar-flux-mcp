@@ -74,6 +74,7 @@ class ScholarFluxMCPDependencies(Enum):
 
         Returns:
             bool: True if the dependency is available, False otherwise.
+
         """
         return importlib.util.find_spec(dependency_name) is not None
 

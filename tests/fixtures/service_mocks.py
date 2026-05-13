@@ -7,6 +7,7 @@ services, and test data generators.
 
 from __future__ import annotations
 
+import os
 from typing import TYPE_CHECKING
 from unittest.mock import AsyncMock, MagicMock
 
@@ -211,7 +212,7 @@ def mock_synthesis_search_records() -> list[SearchRecord]:
             page=1,
             query="Anxiety",
             provider_name="test_provider_two",
-            title="Comparison of CBT and Psycotropic Medication Literature Review",
+            title="Comparison of CBT and Psychotropic Medication Literature Review",
             doi="10.2000/test.422",
             year=2024,
         ),
@@ -457,9 +458,9 @@ def sample_synthesis_input() -> SynthesisInput:
 def mock_embedding_model(monkeypatch) -> Generator[TestEmbeddingModel, None, None]:
     """Creates a mock TestEmbeddingModel for use with the SynthesisService to test the synthesis pipeline.
 
-    The settings for the PydanticAIEmbeddingModelFactory are defined to use the `embeddinggemma`  model
-    as a fallback in case `with embedding.override(model=mock_embedding_model): ...` isn't set. `embeddinggemma`
-    should still be displayed as the model being used by the synthesis agent.
+    The settings for the PydanticAIEmbeddingModelFactory are defined to use the `embeddinggemma`  model as a fallback in
+    case `with embedding.override(model=mock_embedding_model): ...` isn't set. `embeddinggemma` should still be
+    displayed as the model being used by the synthesis agent.
 
     """
     from pydantic_ai.embeddings.test import TestEmbeddingModel
@@ -468,7 +469,7 @@ def mock_embedding_model(monkeypatch) -> Generator[TestEmbeddingModel, None, Non
         # Constrain the output to OLLAMA (this is later patched with embedding.override)
         m.setenv("SCHOLAR_FLUX_MCP_DEFAULT_EMBEDDING_PROVIDER", "OLLAMA")  # in case the embedding model isn't mocked
         m.setenv("SCHOLAR_FLUX_MCP_DEFAULT_OLLAMA_EMBEDDING_MODEL", "embeddinggemma:latest")
-        m.setattr(PydanticAIEmbeddingModelFactory, "_check_ollama_available", lambda: True)
+        m.setattr(PydanticAIEmbeddingModelFactory, "_check_ollama_endpoint_available", lambda: True)
         yield TestEmbeddingModel()
 
 
@@ -485,9 +486,10 @@ def mock_pydantic_ai_agent(monkeypatch) -> Generator[TestModel, None, None]:
     with monkeypatch.context() as m:
         # Constrain the output to OLLAMA (this is later patched with embedding.override)
         m.setenv("SCHOLAR_FLUX_MCP_DEFAULT_PROVIDER", "OLLAMA")
-        m.setenv("SCHOLAR_FLUX_MCP_DEFAULT_OLLMA_MODEL", "rnj-1:latest")  # also in case the agent isn't mocked
+        if not os.getenv("SCHOLAR_FLUX_MCP_DEFAULT_OLLAMA_MODEL"):
+            m.setenv("SCHOLAR_FLUX_MCP_DEFAULT_OLLAMA_MODEL", "rnj-1:latest")  # in case the agent isn't mocked
         m.setenv("SCHOLAR_FLUX_MCP_GROUNDING_TEXT_TOKEN_LIMIT", "30000")
-        m.setattr(PydanticAIModelFactory, "_check_ollama_available", lambda: True)
+        m.setattr(PydanticAIModelFactory, "_check_ollama_endpoint_available", lambda: True)
         yield TestModel()
 
 

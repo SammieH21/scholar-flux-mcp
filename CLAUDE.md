@@ -116,7 +116,7 @@ FastMCP Server (server/main.py)
      │
      ├── Exceptions (exceptions/)        — Custom exception hierarchy
      │   ├── agent_exceptions.py         — Agent/Embedder exceptions
-     │   ├── import_exceptions.py        — MCPImportError, ScholarFluxImportError, PydanticAIImportError, SQLModelImportError, RapidFuzzImportError
+     │   ├── import_exceptions.py        — MCPImportError, ScholarFluxImportError, PydanticAIImportError, PydanticAIProviderExtraImportError, SQLModelImportError, RapidFuzzImportError
      │   ├── history_exceptions.py       — HistoryCache exceptions (init, retrieval, storage, deletion)
      │   ├── mcp_server_exceptions.py    — MCPServerException, MCPServerInitializationException
      │   └── synthesis_exceptions.py     — Grounding/dedup exceptions

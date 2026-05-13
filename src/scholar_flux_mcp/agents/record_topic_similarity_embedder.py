@@ -234,8 +234,8 @@ class RecordTopicSimilarityEmbedder(EmbedderABC):
         search_record_embeddings: SearchRecordEmbedding | list[SearchRecordEmbedding],
         research_topic_embedding: TopicEmbedding,
     ) -> list[RecordTopicSimilarity]:
-        """Uses the query and record contents in addition to their embeddings to create a new RecordTopicSimilarity list."""
-
+        """Uses the query and record contents in addition to their embeddings to create a new RecordTopicSimilarity
+        list."""
         return [
             RecordTopicSimilarity(
                 record_embedding=search_record_embedding,
@@ -253,7 +253,11 @@ class RecordTopicSimilarityEmbedder(EmbedderABC):
         indexed_record_embedding_similarity: tuple[int, RecordTopicSimilarity],
         precision: int | None = None,
     ) -> tuple[float, int]:
-        """Sorting method used to sort record embeddings by similarity. Preserves original order otherwise."""
+        """Sorting method used to sort record embeddings by similarity.
+
+        Preserves original order otherwise.
+
+        """
         index, record_embedding_similarity = indexed_record_embedding_similarity
         similarity_score = cls.similarity_score_sort_order(record_embedding_similarity, precision)
         return similarity_score, index
@@ -264,7 +268,11 @@ class RecordTopicSimilarityEmbedder(EmbedderABC):
         record_embedding_similarity: RecordTopicSimilarity,
         precision: int | None = None,
     ) -> float:
-        """Sorting method used to sort record embeddings by similarity. Preserves original order otherwise."""
+        """Sorting method used to sort record embeddings by similarity.
+
+        Preserves original order otherwise.
+
+        """
         precision = precision if isinstance(precision, int) else cls.TOPIC_SIMILARITY_RANKING_PRECISION
         similarity_score = (
             round(record_embedding_similarity.topic_similarity_score, precision)
@@ -341,7 +349,6 @@ class RecordTopicSimilarityEmbedder(EmbedderABC):
             dict[str, Any]: Embedding model configuration including the embedding initialization status and model name.
 
         """
-
         try:
             embedder = self.get_or_create_embedder()
             return {"initialized": True, "model_name": self.get_model_name(embedder)}

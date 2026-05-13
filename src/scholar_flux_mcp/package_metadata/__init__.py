@@ -1,7 +1,7 @@
 """Helper module containing metadata relevant to the initialization of scholar-flux-mcp.
 
-This module is currently responsible for the retrieval of the current package version and the enumeration of
-current dependencies.
+This module is currently responsible for the retrieval of the current package version and the enumeration of current
+dependencies.
 
 """
 

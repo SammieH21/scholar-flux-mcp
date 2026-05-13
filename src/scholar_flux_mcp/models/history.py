@@ -202,8 +202,8 @@ class ResponseSummaryElement(SQLModel, table=True):
 class ResponseSummaryHistory(SQLModel, table=True):
     """SQL Model for storing summaries of responses retrieved from academic APIs.
 
-    This model maps each unique `response_hash` to a `ResponseSummaryHistory`, ensuring that the relation
-    between an output and a record is clearly defined.
+    This model maps each unique `response_hash` to a `ResponseSummaryHistory`, ensuring that the relation between an
+    output and a record is clearly defined.
 
     """
 
@@ -245,8 +245,8 @@ class ResponseSummaryHistory(SQLModel, table=True):
 class SearchRecordHistory(SQLModel, table=True):
     """SQL Model for storing normalized academic records retrieved from academic APIs.
 
-    This model maps each unique `record_hash` to a `SearchOutputHistory`, ensuring that the relation
-    between an output and a record is clearly defined.
+    This model maps each unique `record_hash` to a `SearchOutputHistory`, ensuring that the relation between an output
+    and a record is clearly defined.
 
     """
 
@@ -1027,7 +1027,6 @@ class RelevanceSearchOutputHistory(BaseOutputHistory, table=True):
         **kwargs: Any,
     ) -> Self:
         """Creates a RelevanceSearchOutputHistory from a RelevanceSearchOutput model defined within the core schema."""
-
         record_topic_similarity_output = (
             RecordTopicSimilarityOutputHistory.from_record_topic_similarity_output(
                 output.record_topic_similarity_output

@@ -1,7 +1,8 @@
-"""Tests the functionality agentic helpers used in research synthesis."""
+"""Tests the embedding/agentic functionality used in relevance searches and research synthesis."""
 
 import importlib
 import logging
+import re
 import uuid
 from unittest.mock import MagicMock, patch
 
@@ -20,6 +21,8 @@ from scholar_flux_mcp.exceptions import (
     AgentInitializationException,
     AgentUnavailableException,
     InvalidAgentParameterException,
+    PydanticAIImportError,
+    PydanticAIProviderExtraImportError,
 )
 
 
@@ -57,12 +60,44 @@ def patch_check_provider_available(monkeypatch):
     yield
 
 
+@pytest.fixture
+def mock_no_model_provider_available(monkeypatch):
+    """Helper for mocking scenarios where no LLM/embedding model provider is available."""
+    with monkeypatch.context() as m:
+        m.setattr(PydanticAIModelFactory, "_check_ollama_endpoint_available", lambda: False)
+        m.setattr(PydanticAIEmbeddingModelFactory, "_check_ollama_endpoint_available", lambda: False)
+        m.delenv("OLLAMA_API_KEY")
+        m.delenv("ANTHROPIC_API_KEY")
+        m.delenv("GOOGLE_API_KEY")
+        m.delenv("GEMINI_API_KEY")
+        m.delenv("OPENAI_API_KEY")
+        m.delenv("SCHOLAR_FLUX_MCP_OPENAI_ENDPOINT", raising=False)
+        m.delenv("SCHOLAR_FLUX_MCP_OPENAI_PROVIDER", raising=False)
+        m.delenv("SCHOLAR_FLUX_MCP_OPENAI_EMBEDDING_ENDPOINT", raising=False)
+        m.delenv("SCHOLAR_FLUX_MCP_OPENAI_EMBEDDING_PROVIDER", raising=False)
+        yield
+
+
+@pytest.fixture
+def pydantic_ai_modules():
+    """Fixture used to dynamically test missing PydanticAI extra dependency behavior."""
+    return {
+        "pydantic_ai": None,
+        "pydantic_ai.embeddings.openai": None,
+        "pydantic_ai.embeddings.google": None,
+        "pydantic_ai.models.openai": None,
+        "pydantic_ai.models.anthropic": None,
+        "pydantic_ai.models.google": None,
+        "pydantic_ai.providers.openai": None,
+        "pydantic_ai.providers.ollama": None,
+    }
+
+
 @pytest.mark.parametrize(
     "model_name,base_url", (("my-new-model", "http://localhost:11434"), ("another-new-model", "http://ollama:11435"))
 )
 def test_model_factory_create_ollama_model(model_name, base_url, monkeypatch):
     """Verifies that the _create_ollama_model factory method works as intended."""
-
     with monkeypatch.context() as m:
         m.setenv("SCHOLAR_FLUX_MCP_OLLAMA_MODEL", model_name)
         m.setenv("SCHOLAR_FLUX_MCP_OLLAMA_BASE_URL", base_url)
@@ -74,14 +109,13 @@ def test_model_factory_create_ollama_model(model_name, base_url, monkeypatch):
 
 def test_model_factory_ollama_default(monkeypatch, patch_check_provider_available, caplog):
     """Verifies that the _create_ollama_model factory method works as intended."""
-
     model_name = "llama3.3:8b"
     base_url = "http://localhost:11437"
     with monkeypatch.context() as m, caplog.at_level(logging.INFO):
         m.setenv("SCHOLAR_FLUX_MCP_OLLAMA_MODEL", model_name)
         m.setenv("SCHOLAR_FLUX_MCP_OLLAMA_BASE_URL", base_url)
 
-        assert PydanticAIModelFactory._check_ollama_available()
+        assert PydanticAIModelFactory._check_ollama_endpoint_available()
         model = PydanticAIModelFactory.create()
         assert isinstance(model, OpenAIChatModel)
         assert model.base_url == f"{base_url}/v1/"
@@ -90,14 +124,13 @@ def test_model_factory_ollama_default(monkeypatch, patch_check_provider_availabl
 
 def test_embedding_model_factory_ollama_default(monkeypatch, patch_check_provider_available, caplog):
     """Verifies that the _create_ollama_model factory method works as intended."""
-
     model_name = "embeddinggemma:latest"
     base_url = "http://localhost:11437"
     with monkeypatch.context() as m, caplog.at_level(logging.INFO):
         m.setenv("SCHOLAR_FLUX_MCP_OLLAMA_EMBEDDING_MODEL", model_name)
         m.setenv("SCHOLAR_FLUX_MCP_OLLAMA_EMBEDDING_BASE_URL", base_url)
 
-        assert PydanticAIEmbeddingModelFactory._check_ollama_available()
+        assert PydanticAIEmbeddingModelFactory._check_ollama_endpoint_available()
         embedder = PydanticAIEmbeddingModelFactory.create()
         assert isinstance(embedder.model, OpenAIEmbeddingModel)
         assert embedder.model.base_url == f"{base_url}/v1/"
@@ -107,15 +140,15 @@ def test_embedding_model_factory_ollama_default(monkeypatch, patch_check_provide
 def test_model_factory_ollama_cloud_default(monkeypatch, caplog, mock_api_keys):
     """Verifies that the PydanticAIModelFactory uses Ollama Cloud if possible when local ollama is not available."""
     with monkeypatch.context() as m, caplog.at_level(logging.INFO):
-        m.setattr(PydanticAIModelFactory, "_check_ollama_available", lambda: False)
+        m.setattr(PydanticAIModelFactory, "_check_ollama_endpoint_available", lambda: False)
         model = PydanticAIModelFactory.create()
         assert model.base_url.removesuffix("/") == "https://ollama.com/v1"
 
 
 def test_model_factory_anthropic_default(monkeypatch, caplog, mock_api_keys):
-    """Verifies that that the model factory defaults to Anthropic when neither Ollama and Ollama cloud are available."""
+    """Verifies that the model factory defaults to Anthropic when Ollama and Ollama cloud are not available."""
     with monkeypatch.context() as m, caplog.at_level(logging.INFO):
-        m.setattr(PydanticAIModelFactory, "_check_ollama_available", lambda: False)
+        m.setattr(PydanticAIModelFactory, "_check_ollama_endpoint_available", lambda: False)
         m.delenv("OLLAMA_API_KEY")
 
         model = PydanticAIModelFactory.create()
@@ -124,70 +157,51 @@ def test_model_factory_anthropic_default(monkeypatch, caplog, mock_api_keys):
 
 
 def test_model_factory_gemini_default(monkeypatch, caplog, mock_api_keys):
-    """Verifies that that the model factory defaults to Google neither Ollama and Anthropic are available."""
+    """Verifies that the model factory defaults to Google when neither Ollama and Anthropic are available."""
     with monkeypatch.context() as m, caplog.at_level(logging.INFO):
-        m.setattr(PydanticAIModelFactory, "_check_ollama_available", lambda: False)
+        m.setattr(PydanticAIModelFactory, "_check_ollama_endpoint_available", lambda: False)
         m.delenv("OLLAMA_API_KEY")
         m.delenv("ANTHROPIC_API_KEY")
 
-        # assert not PydanticAIModelFactory._check_ollama_available()
         model = PydanticAIModelFactory.create()
         assert isinstance(model, GoogleModel)
         assert "Using Google Gen-AI for research synthesis" in caplog.text
 
 
 def test_model_factory_openai_default(monkeypatch, caplog, mock_api_keys):
-    """Verifies that that the model factory defaults to OpenAI as a fallback."""
+    """Verifies that the model factory defaults to OpenAI as the final fallback when no other models are available."""
     with monkeypatch.context() as m, caplog.at_level(logging.INFO):
-        m.setattr(PydanticAIModelFactory, "_check_ollama_available", lambda: False)
+        m.setattr(PydanticAIModelFactory, "_check_ollama_endpoint_available", lambda: False)
         m.delenv("OLLAMA_API_KEY")
         m.delenv("ANTHROPIC_API_KEY")
         m.delenv("GOOGLE_API_KEY")
         m.delenv("GEMINI_API_KEY")
 
-        # assert not PydanticAIModelFactory._check_ollama_available()
         model = PydanticAIModelFactory.create()
         assert isinstance(model, OpenAIChatModel)
         assert "Using OpenAI for research synthesis" in caplog.text
 
 
-def test_model_factory_raises_on_unavailable_models(monkeypatch, caplog, mock_api_keys):
-    """Verifies that the `PydanticAIModelFactory` raises an AgentUnavailableException when no model is available."""
-    with monkeypatch.context() as m, caplog.at_level(logging.INFO):
-        m.setattr(PydanticAIModelFactory, "_check_ollama_available", lambda: False)
-        m.delenv("OLLAMA_API_KEY")
-        m.delenv("ANTHROPIC_API_KEY")
-        m.delenv("GOOGLE_API_KEY")
-        m.delenv("GEMINI_API_KEY")
-        m.delenv("OPENAI_API_KEY")
-
-        # assert not PydanticAIModelFactory._check_ollama_available()
-        with pytest.raises(AgentUnavailableException) as excinfo:
-            _ = PydanticAIModelFactory.create()
-        assert "No suitable model matches the provided default: [Any]" in str(excinfo.value)
+def test_model_factory_raises_on_unavailable_models(mock_no_model_provider_available, caplog, mock_api_keys):
+    """Verifies that the `PydanticAIModelFactory` raises an `AgentUnavailableException` when no model is available."""
+    with caplog.at_level(logging.INFO), pytest.raises(AgentUnavailableException) as excinfo:
+        _ = PydanticAIModelFactory.create()
+    assert "No suitable model matches the provided default: [Any]" in str(excinfo.value)
 
 
-def test_embedding_model_factory_raises_on_unavailable_models(monkeypatch, caplog, mock_api_keys):
+def test_embedding_model_factory_raises_on_unavailable_models(mock_no_model_provider_available, caplog, mock_api_keys):
     """Verifies that the embedding model factory raises an EmbedderUnavailableException when no model is available."""
-    with monkeypatch.context() as m, caplog.at_level(logging.INFO):
-        m.setattr(PydanticAIEmbeddingModelFactory, "_check_ollama_available", lambda: False)
-        m.delenv("OLLAMA_API_KEY")
-        m.delenv("GOOGLE_API_KEY")
-        m.delenv("GEMINI_API_KEY")
-        m.delenv("OPENAI_API_KEY")
-
-        # assert not PydanticAIModelFactory._check_ollama_available()
-        with pytest.raises(Exception) as excinfo:
-            _ = PydanticAIEmbeddingModelFactory.create()
-        assert "No suitable embedding model matches the provided default: [Any]" in str(excinfo.value)
+    with caplog.at_level(logging.INFO), pytest.raises(Exception) as excinfo:
+        _ = PydanticAIEmbeddingModelFactory.create()
+    assert "No suitable embedding model matches the provided default: [Any]" in str(excinfo.value)
 
 
 @pytest.mark.parametrize("url", ({"url": "incorrect"}, "localhost:11434", 23, [1, 2, 3]))
-def test_model_factory_check_ollama_available_detects_bad_urls(url, monkeypatch):
-    """Verifies that `_check_ollama_available` is able to correctly handle edge cases, returning False for bad URLs."""
+def test_model_factory_check_ollama_endpoint_available_detects_bad_urls(url, monkeypatch):
+    """Verifies that `_check_ollama_endpoint_available` correctly handles edge cases, returning False for bad URLs."""
     with monkeypatch.context() as m:
         m.setenv("SCHOLAR_FLUX_MCP_OLLAMA_BASE_URL", str(url))
-        assert PydanticAIModelFactory._check_ollama_available() is False
+        assert PydanticAIModelFactory._check_ollama_endpoint_available() is False
 
 
 @pytest.mark.parametrize(
@@ -200,7 +214,6 @@ def test_model_factory_check_ollama_available_detects_bad_urls(url, monkeypatch)
 )
 def test_model_factory_create_openai_model(model_name, provider_name, endpoint, monkeypatch, mock_api_keys):
     """Verifies that the _create_openai_model factory method works as intended."""
-
     with monkeypatch.context() as m:
         m.setenv("SCHOLAR_FLUX_MCP_OPENAI_MODEL", str(model_name))
         m.setenv("SCHOLAR_FLUX_MCP_OPENAI_PROVIDER", provider_name)
@@ -251,16 +264,9 @@ def test_models_providers_get_with_invalid_names_returns_none(non_provider_name)
     assert ModelProviders.get(non_provider_name) is None
 
 
-def test_synthesis_agent_raises_on_unavailable_models(monkeypatch, caplog, mock_api_keys):
-    """Verifies that the SynthesisAgent raises a AgentInitializationException when all models are unavailable."""
-    with monkeypatch.context() as m, caplog.at_level(logging.INFO):
-        m.setattr(PydanticAIModelFactory, "_check_ollama_available", lambda: False)
-        m.delenv("OLLAMA_API_KEY")
-        m.delenv("ANTHROPIC_API_KEY")
-        m.delenv("GOOGLE_API_KEY")
-        m.delenv("GEMINI_API_KEY")
-        m.delenv("OPENAI_API_KEY")
-
+def test_synthesis_agent_raises_on_unavailable_models(mock_no_model_provider_available, caplog, mock_api_keys):
+    """Verifies that the SynthesisAgent raises an AgentInitializationException when all models are unavailable."""
+    with caplog.at_level(logging.INFO):
         synthesis_agent = SynthesisAgent()
         with pytest.raises(AgentInitializationException) as excinfo:
             _ = synthesis_agent.get_or_create_agent()
@@ -288,12 +294,12 @@ def test_synthesis_agent_raises_initialization_exception_for_user_errors(monkeyp
     )
 
 
-def test_pydantic_ai_missing():
+def test_pydantic_ai_missing(pydantic_ai_modules):
     """Verifies the behavior of the `scholar_flux_mcp.agents.models` module when pydantic_ai is missing."""
     import scholar_flux_mcp.agents.models
 
     try:
-        with patch.dict("sys.modules", {"pydantic_ai": None}):
+        with patch.dict("sys.modules", pydantic_ai_modules):
             importlib.reload(scholar_flux_mcp.agents.models)
             importlib.reload(scholar_flux_mcp.agents.synthesis_agent)
             from scholar_flux_mcp.agents.models import (
@@ -312,7 +318,6 @@ def test_pydantic_ai_missing():
                 OpenAIChatModelSettings,
                 OpenAIEmbeddingSettings,
                 OpenAIProvider,
-                PydanticAIImportError,
                 PydanticAIModelFactory,
             )
             from scholar_flux_mcp.agents.synthesis_agent import SynthesisAgent
@@ -346,3 +351,36 @@ def test_pydantic_ai_missing():
     finally:
         importlib.reload(scholar_flux_mcp.agents.models)
         importlib.reload(scholar_flux_mcp.agents.synthesis_agent)
+
+
+@pytest.mark.parametrize("provider", ("openai", "ollama", "anthropic", "google"))
+def test_pydantic_ai_extra_dependency_missing(provider, pydantic_ai_modules, mock_api_keys, patch_ollama_available):
+    """Verifies the behavior of the `scholar_flux_mcp.agents.models` module when pydantic_ai extra deps are missing."""
+    import scholar_flux_mcp.agents.models
+
+    dep_modules = {mod: None for mod in pydantic_ai_modules if provider in mod}
+
+    try:
+        with patch.dict("sys.modules", dep_modules):
+            importlib.reload(scholar_flux_mcp.agents.models)
+            from scholar_flux_mcp.agents.models import (
+                EmbeddingModelProviders,
+                PydanticAIModelFactory,
+            )
+
+            extra = f"pydantic-ai-slim['{provider}'] "
+            installation_command = f"via `pip install {extra.rstrip()}` "
+            err = (
+                rf"The PydanticAI extra ({re.escape(extra)})for.*is not installed. Restart the ScholarFluxMCP server "
+                rf"after installing the missing extra {re.escape(installation_command)}to use the provider."
+            )
+
+            with pytest.raises(PydanticAIProviderExtraImportError, match=err):
+                _ = PydanticAIModelFactory.create(provider)
+
+            if EmbeddingModelProviders.get(provider):
+                with pytest.raises(PydanticAIProviderExtraImportError, match=err):
+                    _ = PydanticAIEmbeddingModelFactory.create(provider)
+
+    finally:
+        importlib.reload(scholar_flux_mcp.agents.models)

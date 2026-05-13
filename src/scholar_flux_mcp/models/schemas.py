@@ -350,7 +350,6 @@ class SearchInput(BaseSearchParams):
         cls, queries: str | list[str], providers: str | list[str] | list[APIProviders] | None = None, **kwargs: Any
     ) -> SearchInput:
         """Creates a new `SearchInput` model instance by taking `queries` and `providers` directly."""
-
         query_list = [queries] if isinstance(queries, str) or not isinstance(queries, Iterable) else queries
         providers = providers or list(cls.DEFAULT_PROVIDERS)
 
@@ -651,7 +650,6 @@ class IndexedSearchRecord(SearchRecord, frozen=True):
         index (int): The index of the record after sorting and/or reranking via topic similarity.
         topic_similarity_score (float | None): The topic similarity score for the record.
 
-
     """
 
     index: int = Field(description="The index of the record after sorting and/or reranking via topic similarity.")
@@ -854,7 +852,6 @@ class ResearchTopic(JSONDataModel):
         cls, queries: str | list[str], question: str, categories: str | list[ResearchCategory] | None = None
     ) -> str:
         """Prepares the topic string for use with later fuzzy finding and embedding approaches."""
-
         category_string = ", ".join(
             ", ".join(ResearchCategory(category).value.terms) for category in as_tuple(categories)
         )
@@ -936,7 +933,7 @@ class RecordTopicSimilarity(BaseModel):
 
     @property
     def record(self) -> SearchRecord:
-        """The embedded record retrieved from an academic API"""
+        """The embedded record retrieved from an academic API."""
         return self.record_embedding.record
 
     @property
@@ -1413,8 +1410,7 @@ class RelevanceSearchInput(BaseRelevanceSearchParams):
         similarity_threshold: float | None = None,
         **kwargs: Any,
     ) -> RelevanceSearchInput:
-        """Creates a new `RelevanceSearchInput` instance from `question`, `queries`, 'providers and `categories` fields."""
-
+        """Creates a new `RelevanceSearchInput` instance from `question`, `queries`, 'providers and `categories`."""
         query_list = list(as_tuple(queries))
         api_providers_list = [APIProviders(provider) for provider in as_tuple(providers)]
         research_categories_list = [ResearchCategory(category) for category in as_tuple(categories)]
@@ -1478,7 +1474,6 @@ class SynthesisInput(BaseSynthesisParams):
         **kwargs: Any,
     ) -> SynthesisInput:
         """Creates a new `SynthesisInput` instance from `question`, `queries`, 'providers and `categories` fields."""
-
         query_list = list(as_tuple(queries))
         api_providers_list = [APIProviders(provider) for provider in as_tuple(providers)]
         research_categories_list = [ResearchCategory(category) for category in as_tuple(categories)]
@@ -1837,10 +1832,11 @@ class ServiceHealth(BaseModel):
 class HealthStatus(BaseModel):
     """Health check response model.
 
-    status (str): "Overall Health status (e.g., 'healthy' or 'unhealthy').
-    version (str): ScholarFlux version.
-    services (dict[str, ServiceHealth]): Health checks for individual components.
-    timestamp (datetime): The timestamp indicating when the health status was last generated/updated.
+    Attributes:
+        status (str): "Overall Health status (e.g., 'healthy' or 'unhealthy').
+        version (str): ScholarFlux version.
+        services (dict[str, ServiceHealth]): Health checks for individual components.
+        timestamp (datetime): The timestamp indicating when the health status was last generated/updated.
 
     """
 

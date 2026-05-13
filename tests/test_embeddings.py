@@ -28,7 +28,6 @@ def test_document_embedder_initialization(mock_embedding_model):
 
 def test_document_embedder_invalid_assignment(caplog, mock_embedding_model):
     """Verifies that the RecordTopicSimilarityEmbedder will not accept non-Embedder instances."""
-
     document_embedder = RecordTopicSimilarityEmbedder()
     invalid_value = 42
     with pytest.raises(InvalidEmbedderParameterException) as excinfo:
@@ -43,8 +42,7 @@ def test_document_embedder_invalid_assignment(caplog, mock_embedding_model):
 
 
 def test_document_embedder_rankings(mock_indexed_search_record_list):
-    """Verifies that the RecordTopicSimilarityEmbedder successfully enables re-sorting and filtering based on selected options."""
-
+    """Verifies that the RecordTopicSimilarityEmbedder enables re-sorting and filtering based on selected options."""
     assert mock_indexed_search_record_list
     embedding_similarity_results = [
         RecordTopicSimilarity(
@@ -116,7 +114,6 @@ def test_document_embedder_rankings(mock_indexed_search_record_list):
 @pytest.mark.asyncio
 async def test_document_embedder_embed_text(caplog, mock_embedding_model):
     """Verifies that the basic `RecordTopicSimilarityEmbedder.embed` method correctly embeds text."""
-
     document_embedder = RecordTopicSimilarityEmbedder()
     document_embedder.get_or_create_embedder()
     doc = "Hello world!!"

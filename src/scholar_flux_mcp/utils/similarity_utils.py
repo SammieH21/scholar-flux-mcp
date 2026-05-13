@@ -28,7 +28,6 @@ def cosine_similarity(a: Sequence[float], b: Sequence[float], normalize: bool = 
         float: The cosine similarity between vectors `a` and `b`
 
     """
-
     if isinstance(a, Iterator):
         a = tuple(a)
 

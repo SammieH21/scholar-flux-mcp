@@ -8,7 +8,6 @@ from typing import Optional
 
 def enable_debugging():
     """Helper function that defines the environment variables needed to enable logging by default in ScholarFlux."""
-
     # Logs
     os.environ["SCHOLAR_FLUX_ENABLE_LOGGING"] = "true"
     os.environ["SCHOLAR_FLUX_PROPAGATE_LOGS"] = "true"

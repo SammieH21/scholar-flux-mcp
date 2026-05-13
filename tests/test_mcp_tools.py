@@ -33,7 +33,6 @@ from scholar_flux_mcp.server.io.synthesis import SynthesisFormatter, SynthesisTo
 @pytest.mark.asyncio
 async def test_search_records_tool_input_validation():
     """Test scholar_flux_search_records input validation."""
-
     # Valid input
     params = SearchToolInput(
         queries="depression treatment",  # type: ignore
@@ -63,7 +62,6 @@ async def test_app_context_with_creation(mock_computer_literacy_relevance_search
 @pytest.mark.asyncio
 async def test_search_records_tool_defaults():
     """Test scholar_flux_search_records has correct defaults."""
-
     params = SearchToolInput(queries=["test query"])
 
     assert set(params.providers) == {"pubmed", "plos", "openalex"}
@@ -77,7 +75,6 @@ async def test_search_records_tool_with_mock(
     mock_output_search_service, mock_search_record_list, mock_search_response_summary_list
 ):
     """Test search tool execution with mock service."""
-
     search_input = SearchInput.create(
         queries="depression treatment",
         providers=[APIProviders.PUBMED, APIProviders.PLOS],
@@ -102,7 +99,6 @@ async def test_search_records_tool_with_mock(
 @pytest.mark.asyncio
 async def test_search_records_json_output(mock_output_search_service):
     """Test search tool JSON output format."""
-
     search_input = SearchInput.create(
         queries="anxiety biomarkers",
         providers=[APIProviders.PUBMED],
@@ -123,7 +119,6 @@ async def test_search_records_json_output(mock_output_search_service):
 @pytest.mark.asyncio
 async def test_synthesis_tool_input_validation():
     """Test scholar_flux_synthesize_research_summary input validation."""
-
     params = SynthesisToolInput(
         question="What is the efficacy of CBT for depression?",
         categories=["depression", "intervention"],
@@ -138,7 +133,6 @@ async def test_synthesis_tool_input_validation():
 @pytest.mark.asyncio
 async def test_synthesis_tool_defaults():
     """Verifies that scholar_flux_synthesize_research_summary defaults is constrained to valid/reasonable values."""
-
     params = SynthesisToolInput(question="Test research question for synthesis?", categories=["general_wellbeing"])
 
     assert params.categories == ["general_wellbeing"]
@@ -150,7 +144,6 @@ async def test_synthesis_tool_defaults():
 @pytest.mark.asyncio
 async def test_synthesis_tool_with_missing_query():
     """Verifies that scholar_flux_synthesize_research_summary defaults is constrained to valid/reasonable values."""
-
     err = "A valid query has not been specified and could not be inferred from the provided research categories"
 
     with pytest.raises(ValidationError) as excinfo:
@@ -162,7 +155,6 @@ async def test_synthesis_tool_with_missing_query():
 @pytest.mark.asyncio
 async def test_synthesis_tool_with_mock(mock_output_synthesis_service):
     """Test synthesis tool execution with mock service."""
-
     synthesis_input = SynthesisInput(
         question="What is the efficacy of CBT for depression?",
         categories=[ResearchCategory.DEPRESSION],
@@ -180,7 +172,6 @@ async def test_synthesis_tool_with_mock(mock_output_synthesis_service):
 @pytest.mark.asyncio
 async def test_synthesis_markdown_output(mock_output_synthesis_service):
     """Verifies that synthesis markdown output formatting contains the expected categories."""
-
     synthesis_input = SynthesisInput(
         question="Test question?",
         categories=[ResearchCategory.DEPRESSION],
@@ -201,7 +192,6 @@ async def test_synthesis_markdown_output(mock_output_synthesis_service):
 @pytest.mark.asyncio
 async def test_list_providers_tool(mock_output_provider_service):
     """Verifies that the scholar_flux_list_providers output matches the expected supported provider list."""
-
     providers = await mock_output_provider_service.get_providers()
     provider_names = [APIProviders.normalize_name(provider_info.name) for provider_info in providers]
 
@@ -211,7 +201,7 @@ async def test_list_providers_tool(mock_output_provider_service):
 
 
 def test_provider_info_completeness():
-    """Verifies that that the provider metadata descriptions have all required fields."""
+    """Verifies that the provider metadata descriptions have all required fields."""
     for provider in APIProviders:
         if provider in ProviderMetadataDescriptions:
             info = ProviderMetadataDescriptions(provider).value
@@ -223,14 +213,12 @@ def test_provider_info_completeness():
 
 def test_search_input_query_min_length():
     """Test search input enforces minimum query length."""
-
     with pytest.raises(ValidationError):
         SearchToolInput(queries=["a"])  # Too short
 
 
 def test_search_input_max_records_bounds():
     """Test search input enforces max_records bounds."""
-
     with pytest.raises(ValidationError):
         SearchToolInput(queries=["test"], max_records=500)  # Too high
 
@@ -240,7 +228,6 @@ def test_search_input_max_records_bounds():
 
 def test_synthesis_input_question_min_length():
     """Test synthesis input enforces minimum question length."""
-
     with pytest.raises(ValidationError):
         SynthesisToolInput(question="Short?")  # Too short
 

@@ -33,7 +33,6 @@ async def test_scholar_flux_mcp_multi_provider_multisearch_integration(
     SearchService.
 
     """
-
     search_service = mock_ai_synthesis_app_context.search_service
     assert search_service
 

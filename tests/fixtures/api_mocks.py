@@ -5,7 +5,10 @@ import uuid
 import pytest
 
 from scholar_flux_mcp.agents.models import (
+    EmbeddingModelProviders,
     ModelProviders,
+    PydanticAIEmbeddingModelFactory,
+    PydanticAIModelFactory,
 )
 
 
@@ -34,13 +37,41 @@ def mock_ollama_base_url(monkeypatch):
 
 @pytest.fixture
 def patch_ollama_available(monkeypatch):
-    """Temporarily patches the PydanticAIProviderInfo._check_ollama_available to mock URL availability."""
-    from scholar_flux_mcp.agents.models import PydanticAIModelFactory
+    """Temporarily patches the PydanticAIModelFactory and PydanticAIEmbeddingModelFactory to show ollama as available.
 
-    if not PydanticAIModelFactory._check_ollama_available():
+    Models for all other providers are checked normally.
+
+    """
+    check_llm_available = PydanticAIModelFactory._check_provider_available
+    check_embedder_available = PydanticAIEmbeddingModelFactory._check_provider_available
+
+    def mock_check_llm_provider_available(provider: str | ModelProviders) -> bool:
+        """Mocks the underlying Ollama LLM as available for use."""
+        model_provider = ModelProviders.get(provider)
+        if model_provider is ModelProviders.OLLAMA:
+            return True
+        # For other providers, call the original method
+        return check_llm_available(provider)
+
+    def mock_check_embedding_provider_available(provider: str | EmbeddingModelProviders) -> bool:
+        """Mocks the underlying Ollama embedding model as available for use."""
+        model_provider = EmbeddingModelProviders.get(provider)
+        if model_provider is EmbeddingModelProviders.OLLAMA:
+            return True
+        return check_embedder_available(provider)
+
+    embedder_factory = "scholar_flux_mcp.agents.record_topic_similarity_embedder.PydanticAIEmbeddingModelFactory"
+    llm_model_factory = "scholar_flux_mcp.agents.synthesis_agent.PydanticAIModelFactory"
+
+    if not PydanticAIModelFactory._check_ollama_endpoint_available():
+        monkeypatch.setattr(PydanticAIModelFactory, "_check_provider_available", mock_check_llm_provider_available)
+        monkeypatch.setattr(f"{llm_model_factory}._check_provider_available", mock_check_llm_provider_available)
+
+    if not PydanticAIEmbeddingModelFactory._check_ollama_endpoint_available():
         monkeypatch.setattr(
-            PydanticAIModelFactory, "create", lambda *args, **kwargs: PydanticAIModelFactory._create_ollama_model()
+            PydanticAIEmbeddingModelFactory, "_check_provider_available", mock_check_embedding_provider_available
         )
+        monkeypatch.setattr(f"{embedder_factory}._check_provider_available", mock_check_embedding_provider_available)
     yield
 
 

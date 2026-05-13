@@ -196,6 +196,7 @@ class HistoryService:
     @asynccontextmanager
     async def initialize_session(self) -> AsyncIterator[sqlmodel.Session]:
         """Initializes a new asynchronous session with the initialized engine of the HistoryService."""
+
         async with self.lock:
             with self.session as session:
                 yield session
@@ -605,7 +606,8 @@ class HistoryService:
 
         Args:
             history_items (Sequence[SupportsTopicSimilarity] | Iterator[SupportsTopicSimilarity]):
-                A sequence or iterator of history items with topic fields.
+                A sequence or iterator of history items with topic fields. Supported items include
+                ResearchToolInput, ResearchHistoryOutput, SearchRecord, SearchRecordHistory instances.
             topic (str):
                 The topic string to compare against history items.
             similarity_threshold (int | float | None):
@@ -848,7 +850,6 @@ class HistoryService:
                 An optional session used to retrieve previously stored history records. If not provided, a new session
                 is initialized instead.
 
-
         """
         raise_on_error = raise_on_error if raise_on_error is not None else self.raise_on_error
         try:
@@ -1077,11 +1078,14 @@ class HistoryService:
 
     @classmethod
     def is_available(cls, url: str | None = None, verbose: bool = True) -> bool:
-        """Tests whether the SQL service can be accessed. If so, this function returns True, otherwise False.
+        """Tests whether the SQL service can be accessed.
 
         Args:
             url (str): Indicates the location to attempt a connection
             verbose (bool): Indicates whether to log at the levels, DEBUG and lower, or to log warnings only
+
+        Returns:
+            bool: True if the SQL service is accessible and false otherwise.
 
         """
         db_url: str = url or cls.get_default_config()["url"]()
@@ -1107,6 +1111,21 @@ def _calculate_fuzzy_topic_similarity_worker(
 
     Because multiprocessing methods aren't compatible with lambda or partials (on package reloading)< this worker is
     defined outside of the `HistoryService`, preventing multiprocessing issues in the process.
+
+    Args:
+        history_item (ResearchToolInput | ResearchHistoryOutput | SearchRecord | SearchRecordHistory):
+            A research tool input, output, or record to calculate fuzzy string similarity to the topic.
+        topic (str | None):
+            An optional topic string used to filter and sort records by fuzzy similarity. When provided, results
+            are filtered to those exceeding `similarity_threshold` and ordered by similarity score descending.
+        similarity_threshold (int | float | None):
+            The minimum fuzzy similarity score (0.0–1.0) required for a record to be included. Only applied
+            when `topic` is provided.
+
+    Returns:
+        tuple[SupportsTopicSimilarity, PartialRatioSimilarity]:
+            A tuple containing the original history item and a `PartialRatioSimilarity` containing its calculated
+            fuzzy similarity to the topic.
 
     """
     similarity = PartialRatioSimilarity.calculate(

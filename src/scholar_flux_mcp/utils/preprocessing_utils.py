@@ -225,7 +225,6 @@ class SearchRecordPreprocessingUtils:
         cls, queries: str | list[str], question: str, categories: str | list[ResearchCategory] | None = None
     ) -> str:
         """Prepares the query embedding string for use with later embedding approaches during synthesis."""
-
         category_string = ", ".join(
             ", ".join(ResearchCategory(category).value.terms) for category in as_tuple(categories)
         )

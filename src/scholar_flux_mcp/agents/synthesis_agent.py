@@ -10,11 +10,11 @@ from __future__ import annotations
 import contextlib
 import logging
 from dataclasses import fields, is_dataclass
-from textwrap import dedent
 from typing import TYPE_CHECKING, Any
 
 from scholar_flux_mcp.agents.models import AgentABC, PydanticAIModelFactory
 from scholar_flux_mcp.models import ServiceHealth, SynthesisAgentOutput, SynthesisContext
+from scholar_flux_mcp.server.io.base import BaseFormatter
 from scholar_flux_mcp.utils import SearchRecordPreprocessingUtils
 
 if TYPE_CHECKING:
@@ -43,11 +43,9 @@ logger = logging.getLogger(__name__)
 class SynthesisAgent(AgentABC):
     """Helper class that encapsulates the logic used to create and interface with LLMs."""
 
-    SYNTHESIS_INSTRUCTIONS: str = dedent(
-        """
-        You are an expert academic research synthesizer specializing in academic literature.
-        Your task is to analyze academic records and synthesize their findings into a coherent,
-        evidence-based response to research questions.
+    SYNTHESIS_INSTRUCTIONS: str = BaseFormatter.format_multiline_string(
+        """You are an expert academic research synthesizer specializing in academic literature. Your task is to analyze
+        academic records and synthesize their findings into a coherent, evidence-based response to research questions.
 
         ## Guidelines
 
@@ -71,7 +69,7 @@ class SynthesisAgent(AgentABC):
         - Note any limitations in the available evidence
         - Suggest follow-up queries for deeper investigation
 
-    """
+        """
     )
 
     def __init__(self, agent: Agent[SynthesisContext, SynthesisAgentOutput] | None = None):
@@ -135,7 +133,7 @@ class SynthesisAgent(AgentABC):
             record_contexts = SearchRecordPreprocessingUtils.build_record_context(context.records, *args, **kwargs)
             record_summaries = "\n".join(record_contexts) if record_contexts else "No records available."
 
-            prompt = dedent(
+            prompt = BaseFormatter.format_multiline_string(
                 f"""
                 IMPORTANT: Reference records by their index number ONLY.
                 Do NOT invent, modify, or hallucinate record metadata.
@@ -224,7 +222,6 @@ class SynthesisAgent(AgentABC):
             dict[str, Any]: Agent initialization status and model name.
 
         """
-
         try:
             agent = self.get_or_create_agent()
             return {

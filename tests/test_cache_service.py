@@ -1,7 +1,7 @@
 """Tests for the CacheService.
 
-This module tests cache initialization and configuration.
-Note: Full integration tests require Redis/MongoDB which are mocked here.
+This module tests cache initialization and configuration. Some tests may require redis, skipping if the
+`redis` module is not available.
 
 """
 
@@ -22,13 +22,11 @@ class TestCacheServiceConfiguration:
 
     def test_default_namespace(self):
         """Test default namespace is set."""
-
         service = CacheService()
         assert service._namespace == "mcp_cache"
 
     def test_custom_namespace(self):
         """Test custom namespace is used."""
-
         service = CacheService(namespace="custom_namespace")
         assert service._namespace == "custom_namespace"
 
@@ -75,6 +73,7 @@ class TestCacheServiceInitialization:
     @pytest.mark.asyncio
     async def test_initialize_with_redis_backend(self, restore_config):
         """Test initialize() uses redis backend from environment."""
+        _ = pytest.importorskip("redis")
         config_settings.set("SCHOLAR_FLUX_DEFAULT_RESPONSE_CACHE_STORAGE", "redis")
         config_settings.set("SCHOLAR_FLUX_DEFAULT_SESSION_CACHE_BACKEND", "redis")
         service = CacheService(namespace="test", ttl=7200)
@@ -121,6 +120,7 @@ class TestCacheServiceInitialization:
     @pytest.mark.asyncio
     async def test_initialize_graceful_fallback_on_error(self, restore_config, monkeypatch):
         """Test initialize() falls back gracefully when backend fails."""
+        _ = pytest.importorskip("redis")
         config_settings.set("SCHOLAR_FLUX_DEFAULT_RESPONSE_CACHE_STORAGE", "redis")
 
         with patch(
@@ -153,6 +153,7 @@ class TestCacheServiceInitialization:
         restore_config,
     ):
         """Test initialize() raises when raise_on_error is True."""
+        _ = pytest.importorskip("redis")
         config_settings.set("SCHOLAR_FLUX_DEFAULT_RESPONSE_CACHE_STORAGE", "redis")
 
         with patch("scholar_flux.DataCacheManager.with_storage", raise_error(ConnectionError)):
@@ -307,7 +308,6 @@ class TestCacheServiceContextManager:
     @pytest.mark.asyncio
     async def test_context_manager_initializes_service(self):
         """Test context manager initializes service on entry."""
-
         with (
             patch("scholar_flux_mcp.services.cache_service.CacheService.initialize") as mock_init,
             suppress(ScholarFluxImportError),

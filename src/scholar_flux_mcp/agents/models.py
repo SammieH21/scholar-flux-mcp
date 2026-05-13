@@ -44,6 +44,7 @@ from scholar_flux_mcp.exceptions import (
     InvalidAgentParameterException,
     InvalidEmbedderParameterException,
     PydanticAIImportError,
+    PydanticAIProviderExtraImportError,
 )
 
 if TYPE_CHECKING:
@@ -62,36 +63,48 @@ else:
     try:
         from pydantic_ai import Agent
         from pydantic_ai.embeddings import Embedder, EmbeddingResult, EmbeddingSettings
-        from pydantic_ai.embeddings.google import GoogleEmbeddingModel, GoogleEmbeddingSettings
-        from pydantic_ai.embeddings.openai import OpenAIEmbeddingModel, OpenAIEmbeddingSettings
         from pydantic_ai.models import Model
-        from pydantic_ai.models.anthropic import AnthropicModel, AnthropicModelSettings
-        from pydantic_ai.models.google import GoogleModel, GoogleModelSettings
-        from pydantic_ai.models.openai import OpenAIChatModel, OpenAIChatModelSettings
-        from pydantic_ai.providers.ollama import OllamaProvider
-        from pydantic_ai.providers.openai import OpenAIProvider
         from pydantic_ai.settings import ModelSettings
     except ImportError:
         Agent = None
-        Model = None
         Embedder = None
-        AnthropicModel = None
+        EmbeddingResult = None
+        Model = None
+        # ModelSettings are dicts: Prevent issues with loading when PydanticAI/Google is not already installed
+        ModelSettings = dict
+        EmbeddingSettings = dict
+
+    try:
+        from pydantic_ai.embeddings.google import GoogleEmbeddingModel, GoogleEmbeddingSettings
+        from pydantic_ai.models.google import GoogleModel, GoogleModelSettings
+    except ImportError:
         GoogleModel = None
         GoogleEmbeddingModel = None
+        GoogleModelSettings = dict
+        GoogleEmbeddingSettings = dict
+    try:
+        from pydantic_ai.models.anthropic import AnthropicModel, AnthropicModelSettings
+    except ImportError:
+        AnthropicModel = None
+        AnthropicModelSettings = dict
+    try:
+        # Shared Ollama and OpenAI settings:
+        from pydantic_ai.embeddings.openai import OpenAIEmbeddingModel, OpenAIEmbeddingSettings
+        from pydantic_ai.models.openai import OpenAIChatModel, OpenAIChatModelSettings
+    except ImportError:
         OpenAIChatModel = None
         OpenAIEmbeddingModel = None
-        OllamaProvider = None
-        OpenAIProvider = None
-        EmbeddingResult = None
-        # Prevent issues with loading when PydanticAI is not already installed
-        ModelSettings = dict
         OpenAIChatModelSettings = dict
-        AnthropicModelSettings = dict
-        GoogleModelSettings = dict
-        EmbeddingSettings = dict
-        GoogleEmbeddingSettings = dict
         OpenAIEmbeddingSettings = dict
-
+    try:
+        # attempt import separately from shared config for Ollama and OpenAI
+        from pydantic_ai.providers.openai import OpenAIProvider
+    except ImportError:
+        OpenAIProvider = None
+    try:
+        from pydantic_ai.providers.ollama import OllamaProvider
+    except ImportError:
+        OllamaProvider = None
 
 from scholar_flux_mcp.utils.helpers import coerce_numeric
 
@@ -112,6 +125,8 @@ class BaseProviderSettings:
     _url_env_var: str | None = None
     _provider_env_var: str | None = None
     _api_key_env_var: str | list[str] | None = None
+    _pydantic_ai_extra: str | None = None
+    _dependency_available: bool = True  # defined at runtime by checking imports
 
     @property
     def base_url(self) -> str:
@@ -125,6 +140,23 @@ class BaseProviderSettings:
         custom_provider = os.getenv(self._provider_env_var) if self._provider_env_var else None
         provider = custom_provider or self.name
         return provider.lower()
+
+    @property
+    def dependency_available(self) -> bool:
+        """Indicates whether the extra dependency needed for the PydanticAI provider is available."""
+        if not self._dependency_available:
+            logger.debug(f"The PydanticAI extra dependency for the provider, `{self.name}`, is not installed.")
+        return self._dependency_available
+
+    def validate_dependency(self) -> None:
+        """Verifies that the PydanticAI extra dependency for the current provider is available."""
+        if not self._dependency_available:
+            extra = f"pydantic-ai-slim['{self._pydantic_ai_extra}'] " if self._pydantic_ai_extra else ""
+            installation_command = f"via `pip install {extra.rstrip()}` " if extra else ""
+            raise PydanticAIProviderExtraImportError(
+                f"The PydanticAI extra {extra}for `{self.__class__.__name__}` is not installed. Restart the "
+                f"ScholarFluxMCP server after installing the missing extra {installation_command}to use the provider."
+            )
 
     @property
     def api_key_available(self) -> bool:
@@ -177,6 +209,8 @@ class ModelProviders(Enum):
         _model_env_var="SCHOLAR_FLUX_MCP_OLLAMA_MODEL",
         _url_env_var="SCHOLAR_FLUX_MCP_OLLAMA_BASE_URL",
         _api_key_env_var="OLLAMA_API_KEY",
+        _pydantic_ai_extra="ollama",
+        _dependency_available=OllamaProvider is not None and OpenAIChatModel is not None,
     )
 
     OLLAMA_CLOUD = ModelProviderSettings(
@@ -186,6 +220,8 @@ class ModelProviders(Enum):
         _model_env_var="SCHOLAR_FLUX_MCP_OLLAMA_CLOUD_MODEL",
         _url_env_var="SCHOLAR_FLUX_MCP_OLLAMA_CLOUD_BASE_URL",
         _api_key_env_var="OLLAMA_API_KEY",
+        _pydantic_ai_extra="ollama",
+        _dependency_available=OllamaProvider is not None and OpenAIChatModel is not None,
     )
 
     ANTHROPIC = ModelProviderSettings(
@@ -198,12 +234,16 @@ class ModelProviders(Enum):
         ),
         _model_env_var="SCHOLAR_FLUX_MCP_ANTHROPIC_MODEL",
         _api_key_env_var="ANTHROPIC_API_KEY",
+        _pydantic_ai_extra="anthropic",
+        _dependency_available=AnthropicModel is not None,
     )
     GOOGLE = ModelProviderSettings(
         name="google",
         default_model="gemini-2.5-flash",
         _model_env_var="SCHOLAR_FLUX_MCP_GOOGLE_MODEL",
         _api_key_env_var=["GOOGLE_API_KEY", "GEMINI_API_KEY"],
+        _pydantic_ai_extra="google",
+        _dependency_available=GoogleModel is not None,
     )
     OPENAI = ModelProviderSettings(
         name="openai",
@@ -219,6 +259,8 @@ class ModelProviders(Enum):
         _url_env_var="SCHOLAR_FLUX_MCP_OPENAI_ENDPOINT",
         _provider_env_var="SCHOLAR_FLUX_MCP_OPENAI_PROVIDER",
         _api_key_env_var="OPENAI_API_KEY",
+        _pydantic_ai_extra="openai",
+        _dependency_available=OpenAIChatModel is not None and OpenAIProvider is not None,
     )
 
     @classmethod
@@ -250,6 +292,8 @@ class EmbeddingModelProviders(Enum):
         _embedding_model_env_var="SCHOLAR_FLUX_MCP_OLLAMA_EMBEDDING_MODEL",
         _url_env_var="SCHOLAR_FLUX_MCP_OLLAMA_EMBEDDING_BASE_URL",
         _api_key_env_var="OLLAMA_API_KEY",
+        _pydantic_ai_extra="ollama",
+        _dependency_available=OllamaProvider is not None and OpenAIEmbeddingModel is not None,
     )
 
     GOOGLE = EmbeddingModelProviderSettings(
@@ -257,6 +301,8 @@ class EmbeddingModelProviders(Enum):
         default_model="gemini-embedding-001",
         _embedding_model_env_var="SCHOLAR_FLUX_MCP_GOOGLE_EMBEDDING_MODEL",
         _api_key_env_var=["GOOGLE_API_KEY", "GEMINI_API_KEY"],
+        _pydantic_ai_extra="google",
+        _dependency_available=GoogleEmbeddingModel is not None,
     )
     OPENAI = EmbeddingModelProviderSettings(
         name="openai",
@@ -265,6 +311,8 @@ class EmbeddingModelProviders(Enum):
         _url_env_var="SCHOLAR_FLUX_MCP_OPENAI_EMBEDDING_ENDPOINT",
         _provider_env_var="SCHOLAR_FLUX_MCP_OPENAI_EMBEDDING_PROVIDER",
         _api_key_env_var="OPENAI_API_KEY",
+        _pydantic_ai_extra="openai",
+        _dependency_available=OpenAIProvider is not None and OpenAIEmbeddingModel is not None,
     )
 
     @classmethod
@@ -312,7 +360,7 @@ class PydanticAIModelFactory:
     DEFAULT_REQUEST_TIMEOUT: float = coerce_numeric(os.getenv("SCHOLAR_FLUX_MCP_REQUEST_TIMEOUT")) or 120
 
     @classmethod
-    def _check_ollama_available(cls, base_url: str | None = None) -> bool:
+    def _check_ollama_endpoint_available(cls, base_url: str | None = None) -> bool:
         """Check if Ollama server is running."""
         endpoint = f"{base_url or ModelProviders.OLLAMA.value.base_url}/api/tags"
         return PydanticAIProviderInfo._check_endpoint_available(endpoint)
@@ -322,18 +370,18 @@ class PydanticAIModelFactory:
         """Check whether a provider is available and whether an API key (if needed) can be found from the OS env."""
         model_provider = ModelProviders.get(provider)
         if model_provider is ModelProviders.OLLAMA:
-            return cls._check_ollama_available()
+            ollama_available = cls._check_ollama_endpoint_available()
+            return ollama_available and model_provider.value.dependency_available
         if model_provider is ModelProviders.OLLAMA_CLOUD:
-            return ModelProviders.OLLAMA_CLOUD.value.api_key_available
+            return ModelProviders.OLLAMA_CLOUD.value.api_key_available and model_provider.value.dependency_available
         if model_provider is ModelProviders.ANTHROPIC:
-            return ModelProviders.ANTHROPIC.value.api_key_available
+            return ModelProviders.ANTHROPIC.value.api_key_available and model_provider.value.dependency_available
         if model_provider is ModelProviders.GOOGLE:
-            return ModelProviders.GOOGLE.value.api_key_available
+            return ModelProviders.GOOGLE.value.api_key_available and model_provider.value.dependency_available
         if model_provider is ModelProviders.OPENAI:
-            return (
-                not model_provider.value.base_url
-                and model_provider.value.provider.lower() == "openai"  # OpenAI default
-            ) or ModelProviders.OPENAI.value.api_key_available
+            requires_api_key = not model_provider.value.base_url and model_provider.value.provider.lower() == "openai"
+            api_key_missing = requires_api_key and not model_provider.value.api_key_available
+            return not api_key_missing and model_provider.value.dependency_available
         return False
 
     @classmethod
@@ -364,11 +412,11 @@ class PydanticAIModelFactory:
         # Check explicit preference
         provider_settings = ModelProviders.get(provider_default) if provider_default else None
 
-        if provider_default is None or provider_settings is ModelProviders.OLLAMA:
-            if cls._check_ollama_available():
-                logger.info("Using Ollama for research synthesis")
-                return cls._create_ollama_model()
-            logger.warning("Ollama requested but unavailable, falling back to Anthropic")
+        if (
+            provider_default is None and cls._check_provider_available(ModelProviders.OLLAMA)
+        ) or provider_settings is ModelProviders.OLLAMA:
+            logger.info("Using Ollama for research synthesis")
+            return cls._create_ollama_model()
         if (
             provider_default is None and cls._check_provider_available(ModelProviders.OLLAMA_CLOUD)
         ) or provider_settings is ModelProviders.OLLAMA_CLOUD:
@@ -413,6 +461,7 @@ class PydanticAIModelFactory:
     ) -> OpenAIChatModel:
         """Creates an Ollama configuration via the OpenAIChatModel compatible endpoint."""
         ollama_cloud_defaults = ModelProviders.OLLAMA_CLOUD.value
+        ollama_cloud_defaults.validate_dependency()
         model_settings = cls._add_timeout(
             settings or ollama_cloud_defaults.model_settings or OpenAIChatModelSettings(),
             timeout=timeout or ollama_cloud_defaults.timeout,
@@ -430,6 +479,7 @@ class PydanticAIModelFactory:
     ) -> OpenAIChatModel:
         """Creates an Ollama configuration via the OpenAIChatModel compatible endpoint."""
         ollama_defaults = ModelProviders.OLLAMA.value
+        ollama_defaults.validate_dependency()
         model_name: str = ollama_defaults.model
         base_url: str = ollama_defaults.base_url
         model_settings = cls._add_timeout(
@@ -449,6 +499,7 @@ class PydanticAIModelFactory:
     ) -> AnthropicModel:
         """Creates an AnthropicModel configuration."""
         anthropic_defaults = ModelProviders.ANTHROPIC.value
+        anthropic_defaults.validate_dependency()
         model_name: str = anthropic_defaults.model
         model_settings = cls._add_timeout(
             settings or anthropic_defaults.model_settings or AnthropicModelSettings(),
@@ -466,6 +517,8 @@ class PydanticAIModelFactory:
     ) -> GoogleModel:
         """Creates a Google Model configuration."""
         google_defaults = ModelProviders.GOOGLE.value
+        google_defaults.validate_dependency()
+
         model_settings = cls._add_timeout(
             settings or google_defaults.model_settings or GoogleModelSettings(),
             timeout=timeout or google_defaults.timeout,
@@ -482,6 +535,7 @@ class PydanticAIModelFactory:
     ) -> OpenAIChatModel:
         """Create an OpenAIChatModel configuration."""
         openai_defaults = ModelProviders.OPENAI.value
+        openai_defaults.validate_dependency()
         provider_name: str = openai_defaults.provider
         base_url: str | None = openai_defaults.base_url
         model_settings = cls._add_timeout(
@@ -523,7 +577,7 @@ class PydanticAIEmbeddingModelFactory:
     DEFAULT_MODEL_PROVIDER: str | None = os.getenv("SCHOLAR_FLUX_MCP_DEFAULT_EMBEDDING_MODEL_PROVIDER") or None
 
     @classmethod
-    def _check_ollama_available(cls, base_url: str | None = None) -> bool:
+    def _check_ollama_endpoint_available(cls, base_url: str | None = None) -> bool:
         """Check if Ollama server is running."""
         endpoint = f"{base_url or EmbeddingModelProviders.OLLAMA.value.base_url}/api/tags"
         return PydanticAIProviderInfo._check_endpoint_available(endpoint)
@@ -533,14 +587,15 @@ class PydanticAIEmbeddingModelFactory:
         """Check if an embedding provider is available and whether an API key (if needed) can be found from the env."""
         model_provider = EmbeddingModelProviders.get(provider)
         if model_provider is EmbeddingModelProviders.OLLAMA:
-            return cls._check_ollama_available()
+            ollama_available = cls._check_ollama_endpoint_available()
+            return ollama_available and model_provider.value.dependency_available
         if model_provider is EmbeddingModelProviders.GOOGLE:
-            return EmbeddingModelProviders.GOOGLE.value.api_key_available
+            return model_provider.value.dependency_available and model_provider.value.api_key_available
         if model_provider is EmbeddingModelProviders.OPENAI:
-            return (
-                not model_provider.value.base_url
-                and model_provider.value.provider.lower() == "openai"  # OpenAI default
-            ) or model_provider.value.api_key_available
+            # OpenAI services that is known to require an api key
+            requires_api_key = not model_provider.value.base_url and model_provider.value.provider.lower() == "openai"
+            api_key_missing = requires_api_key and not model_provider.value.api_key_available
+            return not api_key_missing and model_provider.value.dependency_available
         return False
 
     @classmethod
@@ -573,11 +628,11 @@ class PydanticAIEmbeddingModelFactory:
         # Check explicit preference
         provider_settings = EmbeddingModelProviders.get(provider_default) if provider_default else None
 
-        if provider_default is None or provider_settings is EmbeddingModelProviders.OLLAMA:
-            if cls._check_ollama_available():
-                logger.info("Using Ollama for embeddings")
-                return cls._create_ollama_model()
-            logger.warning("Ollama requested but unavailable, falling back to Google Gen-AI")
+        if (
+            provider_default is None and cls._check_provider_available(EmbeddingModelProviders.OLLAMA)
+        ) or provider_settings is EmbeddingModelProviders.OLLAMA:
+            logger.info("Using Ollama for embeddings")
+            return cls._create_ollama_model()
 
         if (
             provider_default is None and cls._check_provider_available(EmbeddingModelProviders.GOOGLE)
@@ -610,6 +665,7 @@ class PydanticAIEmbeddingModelFactory:
     def _create_ollama_model(cls, settings: OpenAIEmbeddingSettings | EmbeddingSettings | None = None) -> Embedder:
         """Create a local Ollama embedding model configuration."""
         ollama_defaults = EmbeddingModelProviders.OLLAMA.value
+        ollama_defaults.validate_dependency()
         model_name: str = ollama_defaults.model
         base_url: str | None = ollama_defaults.base_url
 
@@ -624,6 +680,7 @@ class PydanticAIEmbeddingModelFactory:
     def _create_google_model(cls, settings: GoogleEmbeddingSettings | EmbeddingSettings | None = None) -> Embedder:
         """Create a Google embedding model configuration."""
         google_defaults = EmbeddingModelProviders.GOOGLE.value
+        google_defaults.validate_dependency()
         model_name: str = google_defaults.model
 
         model = GoogleEmbeddingModel(
@@ -635,6 +692,7 @@ class PydanticAIEmbeddingModelFactory:
     def _create_openai_model(cls, settings: OpenAIEmbeddingSettings | EmbeddingSettings | None = None) -> Embedder:
         """Create an OpenAI embedding model configuration."""
         openai_defaults = EmbeddingModelProviders.OPENAI.value
+        openai_defaults.validate_dependency()
         base_url: str | None = openai_defaults.base_url
         provider_name: str = openai_defaults.provider
 

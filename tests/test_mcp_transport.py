@@ -80,7 +80,6 @@ def test_transport_selection_with_unknown_setting(transport):
 )
 def test_transport_env_settings_modifies_mcp_transport_protocol(transport, expected, monkeypatch):
     """Verifies that the `SCHOLAR_FLUX_MCP_TRANSPORT` correctly sets the transport type when specified."""
-
     with monkeypatch.context() as m:
         m.setenv("SCHOLAR_FLUX_MCP_TRANSPORT", transport)
         setting = MCPTransports.get_default()
@@ -89,7 +88,6 @@ def test_transport_env_settings_modifies_mcp_transport_protocol(transport, expec
 
 def test_transport_setting_selection_defaults_stdio_without_assigned_env(monkeypatch):
     """Verifies that the MCP transport setting defaults to STDIO when `SCHOLAR_FLUX_MCP_TRANSPORT` is None."""
-
     with monkeypatch.context() as m:
         m.delenv("SCHOLAR_FLUX_MCP_TRANSPORT", raising=False)
 

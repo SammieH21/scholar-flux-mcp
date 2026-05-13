@@ -275,7 +275,6 @@ class CacheService:
 
     async def check_health(self) -> ServiceHealth:
         """Helper used to check the health status of the CacheService."""
-
         stats = await self.get_stats()
         cache_healthy = self.initialized and self._error is None
 

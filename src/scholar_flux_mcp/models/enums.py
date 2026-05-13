@@ -169,7 +169,6 @@ class ResearchCategory(Enum):
     @classmethod
     def get(cls, subject: str | SubjectInfo | ResearchCategory) -> ResearchCategory | None:
         """Helper method for extracting the current subject information from a schema."""
-
         try:
             return cls(subject)
         except (KeyError, TypeError, ValueError):
@@ -491,7 +490,7 @@ class ProviderInfo(ProviderMetadata):
 
     @computed_cached_property
     def available(self) -> bool:
-        """Indicates whether the provider is available for direct use by MCP tools"""
+        """Indicates whether the provider is available for direct use by MCP tools."""
         return bool(APIProviders.get(self.name))
 
     def annotate(self, metadata: ProviderMetadata | dict) -> ProviderInfo:

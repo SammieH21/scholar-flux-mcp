@@ -72,7 +72,7 @@ def mock_computer_literacy_api_searches(
 def mock_computer_literacy_relevance_search_markdown_input() -> RelevanceSearchToolInput:
     """RelevanceSearchToolInput for verifying the output structure of relevance-based searches."""
     return RelevanceSearchToolInput(
-        question="Student success computer programming academics colleage",
+        question="Student success computer programming academics college",
         providers=["openalex", "plos"],
         categories=["COMPUTATION"],
         queries=["Student Computer Literacy"],
@@ -87,7 +87,7 @@ def mock_computer_literacy_relevance_search_markdown_input() -> RelevanceSearchT
 def mock_computer_literacy_relevance_search_json_input() -> RelevanceSearchToolInput:
     """RelevanceSearchToolInput for verifying the output structure of relevance-based searches."""
     return RelevanceSearchToolInput(
-        question="Student success computer programming academics colleage",
+        question="Student success computer programming academics college",
         providers=["openalex", "plos"],
         categories=["COMPUTATION"],
         queries=["Student Computer Literacy"],
@@ -130,7 +130,6 @@ def mocks_computer_literacy_session_cache_context(
     mocks_computer_literacy_session_cache_backend, mocks_computer_literacy_cache_name, mocks_computer_literacy_directory
 ):
     """Sets the env context to reused the cache computer literacy data for testing."""
-
     config_settings.set("SCHOLAR_FLUX_DEFAULT_SESSION_CACHE_BACKEND", mocks_computer_literacy_session_cache_backend)
     config_settings.set("SCHOLAR_FLUX_SESSION_CACHE_NAME", mocks_computer_literacy_cache_name)
     config_settings.set("SCHOLAR_FLUX_SESSION_CACHE_DIRECTORY", mocks_computer_literacy_directory)

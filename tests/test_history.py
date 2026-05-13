@@ -121,7 +121,7 @@ def test_search_executions(mock_ai_search_markdown_input, mock_ai_search_output)
 
 
 def test_synthesis_executions(mock_ai_synthesis_markdown_input, mock_ai_synthesis_output):
-    """Verifies that SynthesisExecution objects correctly initialize with the required SynthesisInput and SynthesisOutput."""
+    """Verifies that SynthesisExecution objects initializes with the required SynthesisInput and SynthesisOutput."""
     search_execution = None
     relevance_search_execution = None
     synthesis_execution = SynthesisExecution.from_research_synthesis(
@@ -247,8 +247,7 @@ def test_synthesis_history_creation():
 def test_synthesis_full_specification_executions(
     mock_ai_synthesis_markdown_input, mock_ai_synthesis_execution, mock_ai_synthesis_output
 ):
-    """Verifies that SynthesisExecution objects correctly initialize with the required SynthesisInput and SynthesisOutput."""
-
+    """Verifies that SynthesisExecution objects initialize with the required SynthesisInput and SynthesisOutput."""
     assert isinstance(mock_ai_synthesis_execution, SynthesisExecution)
     synthesis_execution = mock_ai_synthesis_execution
 
@@ -382,8 +381,7 @@ def test_multi_output_sqlmodel_executions(
 
 
 def test_sqlmodel_timestamp_filtering(mock_ai_synthesis_output):
-    """Verifies that stored_at can be used to calculated the expiration time of a cached record and filter after x seconds."""
-
+    """Verifies that `stored_at` enables the calculation of cached record expiration times for later filtering."""
     engine = sqlmodel.create_engine("sqlite:///:memory:")
     sqlmodel.SQLModel.metadata.create_all(engine)
 

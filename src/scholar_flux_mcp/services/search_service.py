@@ -1,7 +1,7 @@
 """Search service for ScholarFlux MCP server.
 
-Provides multi-provider academic record search with normalization.
-Single responsibility: Coordinating searches across academic databases.
+Provides multi-provider academic record search with normalization. Single responsibility: Coordinating searches across
+academic databases.
 
 """
 
@@ -76,7 +76,6 @@ class SearchService(BaseResearchService):
 
     def sort_records_by_provider(self, records: NormalizedRecordList) -> NormalizedRecordList:
         """Helper for sorting normalized records by record index followed by provider name."""
-
         records_by_provider: dict[str, NormalizedRecordList] = defaultdict(list)
 
         for record in records:

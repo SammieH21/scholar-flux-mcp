@@ -326,7 +326,6 @@ async def test_history_service_methods_with_uninitialized_db(mock_computer_liter
 
 async def test_history_service_deps_missing():
     """Verifies the behavior of the history service when `sqlmodel` and `history_models` are missing."""
-
     import scholar_flux_mcp.models.history
     import scholar_flux_mcp.models.type_aliases
     import scholar_flux_mcp.package_metadata

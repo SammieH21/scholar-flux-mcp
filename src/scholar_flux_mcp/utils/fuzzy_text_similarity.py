@@ -46,7 +46,11 @@ class BaseTextSimilarity(ABC):
 
     @classmethod
     def validate_dependency(cls) -> None:
-        """Verifies that the rapidfuzz dependency is available for use. Can be overridden to support other methods."""
+        """Verifies that the rapidfuzz dependency is available for use.
+
+        Can be overridden to support other methods.
+
+        """
         if fuzz is None:
             raise RapidFuzzImportError()
 

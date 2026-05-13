@@ -66,7 +66,6 @@ class SynthesisService(BaseResearchService):
                 The `PydanticAI` agent used to generate the research synthesis given the provided input parameters.
             **kwargs: Additional keyword arguments used to initialize the BaseResearchService.
 
-
         """
         self.relevance_search_service = relevance_search_service
         self.grounding_service = grounding_service or GroundingService()
@@ -95,7 +94,6 @@ class SynthesisService(BaseResearchService):
                 The record-topic similarity embedder used to rerank and filter records by topic similarity.
             synthesis_agent (SynthesisAgent | None):
                 The `PydanticAI` agent used to generate the research synthesis given the provided input parameters.
-
 
         """
         relevance_search_service = RelevanceSearchService(

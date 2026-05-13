@@ -135,7 +135,7 @@ class MCPTransports(Enum):
     def get_transport_setting(
         cls, transport_type: MCPTransports | TransportSettings | str | TransportType | None = None
     ) -> TransportSettings | None:
-        """Retrieve the current transport setting by resolving against the MCPTransports Enum. Returns None otherwise."""
+        """Retrieves the current transport setting resolved against MCPTransports, returning None if not available."""
         return mcp_transport.value if (mcp_transport := cls.get(transport_type)) else None
 
     @classmethod

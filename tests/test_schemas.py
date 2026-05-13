@@ -58,7 +58,7 @@ class MockDataModelWithComputedProperties(MockDataModel):
 
     @computed_property
     def d(self) -> int:
-        """Computed property that sums `c`. Should be returned by default on serialization."""
+        """Computed property that sums `c` and should be returned by default on serialization."""
         return sum(self.c)
 
 
@@ -78,7 +78,6 @@ class TestJsonDataModelSerializer:
 
     def test_hidden_field_filtering(self):
         """Verifies that hidden fields are successfully hidden during model serialization."""
-
         mock_data_model = MockDataModel()
 
         json_data = mock_data_model.model_dump()
@@ -90,7 +89,6 @@ class TestJsonDataModelSerializer:
 
     def test_hidden_field_identification(self):
         """Verifies that computed fields that are not hidden are also shown during serialization."""
-
         mock_data_model = MockDataModelWithComputedProperties()
         expected = {"a", "b", "d"}
         assert set(mock_data_model.model_dump()) == expected
@@ -98,7 +96,6 @@ class TestJsonDataModelSerializer:
 
     def test_hidden_field_with_overrides(self):
         """Verifies that hidden fields with overrides can still be included during serialization."""
-
         mock_data_model = MockDataModelHiddenOverrides()
         expected = {"b", "c"}
         all_keys = {"a", "b", "c", "d"}
@@ -368,7 +365,7 @@ class TestSearchRecord:
         assert adapter.validate_python(search_record_dictionaries[0]) == [mock_search_record_list[0]]
 
     def test_invalid_search_record_value(self):
-        """Verifies that non-SearchRecord types are successfully flagged as invalid when identified"""
+        """Verifies that non-SearchRecord types are successfully flagged as invalid when identified."""
         adapter: TypeAdapter[SearchRecordList] = TypeAdapter(SearchRecordList)
         invalid_list: list = [1, 2, 3]
         with pytest.raises(ValidationError) as excinfo:
@@ -544,7 +541,6 @@ class TestSynthesisInput:
 
     def test_base_synthesis_input_defaults(self):
         """Tests whether BaseSynthesisParams input has defaults within the range of common sense."""
-
         params = BaseSynthesisParams(question="Test question for synthesis?")
 
         assert params.max_records > 5 and params.max_records <= 200
@@ -564,7 +560,6 @@ class TestSynthesisInput:
 
     def test_synthesis_input_question_validation(self):
         """Test question length validation."""
-
         # Too short
         with pytest.raises(ValidationError):
             SynthesisInput(question="Short?")

@@ -235,13 +235,13 @@ poetry run mypy src tests
 A `Makefile` provides quick commands for common tasks during active development:
 
 ```bash
-make help      # Show all available commands
-make install   # Install ScholarFluxMCP with the dependencies for development, testing, and documentation
-make test      # Run the test suite with coverage (current Python version only)
-make lint      # Check code quality (ruff, docstr-coverage, mypy)
-make docs      # Build documentation locally
-make shell     # Enter the Poetry virtual environment
-make mcp       # Start MCP Inspector to directly test MCP tools
+make help      # Shows all available commands
+make install   # Installs the ScholarFlux MCP server with the dependencies for development, testing, and documentation
+make test      # Runs the test suite with coverage (current Python version only)
+make lint      # Checks code quality (ruff, docstr-coverage, mypy)
+make docs      # Builds documentation locally
+make shell     # Enters the Poetry virtual environment
+make mcp       # Starts MCP Inspector to directly use or test MCP tools
 ```
 
 ## What Can I Contribute?

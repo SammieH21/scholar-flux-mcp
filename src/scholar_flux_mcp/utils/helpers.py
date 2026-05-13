@@ -104,7 +104,7 @@ def try_none(value: T) -> None | T:
 def try_none(
     value: object, none_indicators: tuple[object, ...] = ("none", "unspecified", "unknown", "n/a")
 ) -> object | None:
-    """Converts empty strings, 'none', and empty data containers into None. Otherwise, the original value is returned.
+    """Converts empty strings, 'none', and empty data containers into None, returning the original value otherwise.
 
     Args:
         value (object): The value to convert into None when possible

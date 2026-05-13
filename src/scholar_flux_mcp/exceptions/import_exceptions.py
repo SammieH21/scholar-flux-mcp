@@ -76,11 +76,16 @@ class PydanticAIImportError(CoreDependencyImportError, dependency_name="pydantic
         )
 
 
+class PydanticAIProviderExtraImportError(PydanticAIImportError, dependency_name="pydantic_ai"):
+    """Import error raised when a specific PydanticAI provider extra is not available."""
+
+
 __all__ = [
     "CoreDependencyImportError",
     "ScholarFluxImportError",
     "SQLModelImportError",
     "MCPImportError",
     "PydanticAIImportError",
+    "PydanticAIProviderExtraImportError",
     "RapidFuzzImportError",
 ]

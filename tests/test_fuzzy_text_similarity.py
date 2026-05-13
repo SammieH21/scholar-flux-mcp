@@ -26,7 +26,7 @@ def test_partial_ratio_calculate(sub_text, text, expected):
 
 
 def test_fuzzy_ratio_same_strings():
-    """Verifies that identifical strings result in a similarity score of 100."""
+    """Verifies that identical strings result in a similarity score of 100."""
     result = FuzzyRatioSimilarity.calculate("identical", "identical")
     result = FuzzyRatioSimilarity.calculate(":)", ":)")
     assert result.score == 1.0
@@ -57,7 +57,7 @@ def test_exceeds_threshold_below():
 
 
 def test_base_class_abstract_calculate():
-    """Verifies that the `calculate()` constructor raises a NotImplementedError when the base class is not overidden."""
+    """Verifies that `calculate()` raises a `NotImplementedError` when the base class is not overridden."""
     with pytest.raises(NotImplementedError):
         _ = BaseTextSimilarity.calculate()
 
@@ -93,8 +93,7 @@ def test_rapidfuzz_missing():
 
 
 def test_base_class_abstract_initialization():
-    """Verifies that initialization of the `BaseTextSimilarity` class raises a `TypeError` when not overidden."""
-
+    """Verifies that initialization of the `BaseTextSimilarity` class raises a `TypeError` when not overridden."""
     err = "Can't instantiate abstract class BaseTextSimilarity with.*"
     with pytest.raises(TypeError, match=err):
         _ = BaseTextSimilarity(score=10, threshold=0.30)  # type: ignore
