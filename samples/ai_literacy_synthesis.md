@@ -35,12 +35,15 @@
 > What are the current, most explored concepts in the area of artificial intelligence literacy?
 
 **Categories**: ['Computation', 'Mathematics', 'Quantitative']
+
 **Queries**:
 - Artificial Intelligence Literacy
 - computer science machine learning literacy
 
 **Records Analyzed**: 65
+
 **Confidence Score**: 85%
+
 **Evidence Grounding**: 8 verified records, 0 rejected
 
 
@@ -66,7 +69,7 @@ The current research landscape on artificial intelligence literacy reveals sever
 ## Supporting Evidence
 
 
-1. **Towards an Integrated Artificial Intelligence Literacy Framework in Education** (2025) DOI: `10.4018/979-8-3373-2297-1.ch008` [Link](https://doi.org/10.4018/979-8-3373-2297-1.ch008)
+1. **Towards an Integrated Artificial Intelligence Literacy Framework in Education** (2025) DOI: `10.4018/979-8-3373-2297-1.ch008` [[Link]](https://doi.org/10.4018/979-8-3373-2297-1.ch008)
 
 **Authors**: Elisha Mupaikwa
 
@@ -84,7 +87,7 @@ The current research landscape on artificial intelligence literacy reveals sever
 
 
 
-2. **What are artificial intelligence literacy and competency? A comprehensive framework to support them** (2024) DOI: `10.1016/j.caeo.2024.100171` [Link](https://doi.org/10.1016/j.caeo.2024.100171)
+2. **What are artificial intelligence literacy and competency? A comprehensive framework to support them** (2024) DOI: `10.1016/j.caeo.2024.100171` [[Link]](https://doi.org/10.1016/j.caeo.2024.100171)
 
 **Authors**: Thomas K. F. Chiu, Zubair Ahmad, Murod Ismailov et al.
 
@@ -102,7 +105,7 @@ The current research landscape on artificial intelligence literacy reveals sever
 
 
 
-3. **Charting Competence: A Holistic Scale for Measuring Proficiency in Artificial Intelligence Literacy** (2024) DOI: `10.1177/07356331241261206` [Link](https://doi.org/10.1177/07356331241261206)
+3. **Charting Competence: A Holistic Scale for Measuring Proficiency in Artificial Intelligence Literacy** (2024) DOI: `10.1177/07356331241261206` [[Link]](https://doi.org/10.1177/07356331241261206)
 
 **Authors**: Chien Wen Yuan, Hsin-yi Sandy Tsai, Yu-Ting Chen
 
@@ -120,7 +123,7 @@ The current research landscape on artificial intelligence literacy reveals sever
 
 
 
-4. **The Development and Validation of the Artificial Intelligence Literacy Scale for Chinese College Students (AILS-CCS)** (2024) DOI: `10.1109/access.2024.3468378` [Link](https://doi.org/10.1109/access.2024.3468378)
+4. **The Development and Validation of the Artificial Intelligence Literacy Scale for Chinese College Students (AILS-CCS)** (2024) DOI: `10.1109/access.2024.3468378` [[Link]](https://doi.org/10.1109/access.2024.3468378)
 
 **Authors**: Shuai Ma, Zhenzhen Chen
 
@@ -138,7 +141,7 @@ The current research landscape on artificial intelligence literacy reveals sever
 
 
 
-5. **Global initiatives and challenges in integrating artificial intelligence literacy in elementary education: Mapping policies and empirical literature** (2024) DOI: `10.1002/fer3.59` [Link](https://doi.org/10.1002/fer3.59)
+5. **Global initiatives and challenges in integrating artificial intelligence literacy in elementary education: Mapping policies and empirical literature** (2024) DOI: `10.1002/fer3.59` [[Link]](https://doi.org/10.1002/fer3.59)
 
 **Authors**: Ibrahim H. Yeter, Weipeng Yang, Joshita B. Sturgess
 
@@ -156,7 +159,7 @@ The current research landscape on artificial intelligence literacy reveals sever
 
 
 
-6. **Critical Artificial Intelligence literacy: A scoping review and framework synthesis** (2024) DOI: `10.1016/j.ijcci.2024.100708` [Link](https://doi.org/10.1016/j.ijcci.2024.100708)
+6. **Critical Artificial Intelligence literacy: A scoping review and framework synthesis** (2024) DOI: `10.1016/j.ijcci.2024.100708` [[Link]](https://doi.org/10.1016/j.ijcci.2024.100708)
 
 **Authors**: Annemiek Veldhuis, Priscilla Lo, Sadhbh Kenny et al.
 
@@ -174,7 +177,7 @@ The current research landscape on artificial intelligence literacy reveals sever
 
 
 
-7. **Exploring the Determinants of Artificial Intelligence (AI) Literacy: Digital Divide, Computational Thinking, Cognitive Absorption** (2023) DOI: `10.1016/j.tele.2023.102026` [Link](https://doi.org/10.1016/j.tele.2023.102026)
+7. **Exploring the Determinants of Artificial Intelligence (AI) Literacy: Digital Divide, Computational Thinking, Cognitive Absorption** (2023) DOI: `10.1016/j.tele.2023.102026` [[Link]](https://doi.org/10.1016/j.tele.2023.102026)
 
 **Authors**: İsmail Çelik
 
@@ -192,7 +195,7 @@ The current research landscape on artificial intelligence literacy reveals sever
 
 
 
-8. **Artificial Intelligence Literacy Among Healthcare Professionals and Students: A Systematic Review** (2023) DOI: `10.30699/fhi.v12i0.524` [Link](https://doi.org/10.30699/fhi.v12i0.524)
+8. **Artificial Intelligence Literacy Among Healthcare Professionals and Students: A Systematic Review** (2023) DOI: `10.30699/fhi.v12i0.524` [[Link]](https://doi.org/10.30699/fhi.v12i0.524)
 
 **Authors**: Khalil Kimiafar, Masoumeh Sarbaz, Seyyed Mohammad Tabatabaei et al.
 

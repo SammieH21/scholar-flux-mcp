@@ -51,7 +51,7 @@ from scholar_flux_mcp.server.io import (
 )
 from scholar_flux_mcp.utils.fuzzy_text_similarity import PartialRatioSimilarity
 from scholar_flux_mcp.utils.helpers import coerce_bool, coerce_numeric, coerce_str, try_none
-from scholar_flux_mcp.utils.logging import masker
+from scholar_flux_mcp.utils.initializer import masker
 
 if TYPE_CHECKING:
     from collections.abc import AsyncIterator, Iterator, Sequence
@@ -80,6 +80,38 @@ URI_SCHEMA_PATTERN: re.Pattern = re.compile(r"^[a-zA-Z0-9+]+:///?")
 
 
 logger = logging.getLogger(__name__)
+
+
+def _calculate_fuzzy_topic_similarity_worker(
+    history_item: SupportsTopicSimilarity,
+    topic: str,
+    similarity_threshold: int | float | None,
+) -> tuple[SupportsTopicSimilarity, PartialRatioSimilarity]:
+    """Internal helper used to generate tuples calculating the similarity of the item to the current topic.
+
+    Because multiprocessing methods aren't compatible with lambda or partials (on package reloading)< this worker is
+    defined outside of the `HistoryService`, preventing multiprocessing issues in the process.
+
+    Args:
+        history_item (ResearchToolInput | ResearchHistoryOutput | SearchRecord | SearchRecordHistory):
+            A research tool input, output, or record to calculate fuzzy string similarity to the topic.
+        topic (str | None):
+            An optional topic string used to filter and sort records by fuzzy similarity. When provided, results
+            are filtered to those exceeding `similarity_threshold` and ordered by similarity score descending.
+        similarity_threshold (int | float | None):
+            The minimum fuzzy similarity score (0.0–1.0) required for a record to be included. Only applied
+            when `topic` is provided.
+
+    Returns:
+        tuple[SupportsTopicSimilarity, PartialRatioSimilarity]:
+            A tuple containing the original history item and a `PartialRatioSimilarity` containing its calculated
+            fuzzy similarity to the topic.
+
+    """
+    similarity = PartialRatioSimilarity.calculate(
+        sub_text=topic, text=history_item.topic, threshold=similarity_threshold
+    )
+    return (history_item, similarity)
 
 
 class HistoryService:
@@ -121,7 +153,7 @@ class HistoryService:
             **sqlmodel_config:
                 Additional SQLModel engine/session options passed to sqlalchemy.create_engine Typical parameters include
                 the following:
-                    - url (str): Indicates what server to connect to. Defaults to sqlite in the package directory.
+                - url (str): Indicates what server to connect to. Defaults to sqlite in the package directory.
 
         """
         default_config = self.get_default_config()
@@ -1101,37 +1133,34 @@ class HistoryService:
             logger.warning(f"An active {cls.STORAGE_TYPE} service could not be found at {db_url}: {e}")
             return False
 
+    @classmethod
+    def calculate_fuzzy_topic_similarity(
+        cls,
+        history_item: SupportsTopicSimilarity,
+        topic: str,
+        similarity_threshold: int | float | None,
+    ) -> PartialRatioSimilarity:
+        """Convenience method for calculating the similarity of the item to the current topic.
 
-def _calculate_fuzzy_topic_similarity_worker(
-    history_item: SupportsTopicSimilarity,
-    topic: str,
-    similarity_threshold: int | float | None,
-) -> tuple[SupportsTopicSimilarity, PartialRatioSimilarity]:
-    """Internal helper used to generate tuples calculating the similarity of the item to the current topic.
+        Args:
+            history_item (ResearchToolInput | ResearchHistoryOutput | SearchRecord | SearchRecordHistory):
+                A research tool input, output, or record to calculate fuzzy string similarity to the topic.
+            topic (str | None):
+                An optional topic string used to filter and sort records by fuzzy similarity. When provided, results
+                are filtered to those exceeding `similarity_threshold` and ordered by similarity score descending.
+            similarity_threshold (int | float | None):
+                The minimum fuzzy similarity score (0.0–1.0) required for a record to be included. Only applied
+                when `topic` is provided.
 
-    Because multiprocessing methods aren't compatible with lambda or partials (on package reloading)< this worker is
-    defined outside of the `HistoryService`, preventing multiprocessing issues in the process.
+        Returns:
+            tuple[SupportsTopicSimilarity, PartialRatioSimilarity]:
+                A  `PartialRatioSimilarity` result indicating the similarity between the history item and the topic.
 
-    Args:
-        history_item (ResearchToolInput | ResearchHistoryOutput | SearchRecord | SearchRecordHistory):
-            A research tool input, output, or record to calculate fuzzy string similarity to the topic.
-        topic (str | None):
-            An optional topic string used to filter and sort records by fuzzy similarity. When provided, results
-            are filtered to those exceeding `similarity_threshold` and ordered by similarity score descending.
-        similarity_threshold (int | float | None):
-            The minimum fuzzy similarity score (0.0–1.0) required for a record to be included. Only applied
-            when `topic` is provided.
-
-    Returns:
-        tuple[SupportsTopicSimilarity, PartialRatioSimilarity]:
-            A tuple containing the original history item and a `PartialRatioSimilarity` containing its calculated
-            fuzzy similarity to the topic.
-
-    """
-    similarity = PartialRatioSimilarity.calculate(
-        sub_text=topic, text=history_item.topic, threshold=similarity_threshold
-    )
-    return (history_item, similarity)
+        """
+        similarity_result = _calculate_fuzzy_topic_similarity_worker(
+            history_item, topic=topic, similarity_threshold=similarity_threshold
+        )
+        return similarity_result[1]
 
 
-__all__ = ["HistoryService", "ResearchHistoryOutput"]
+__all__ = ["HistoryService"]

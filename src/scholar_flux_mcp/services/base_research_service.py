@@ -188,3 +188,6 @@ class BaseResearchService:
         if missing_required or unexpected_type:
             raise TypeError(f"{class_name} expected a {expected_type_name}, but received {type(obj).__name__}")
         return obj
+
+
+__all__ = ["BaseResearchService"]

@@ -9,15 +9,12 @@ from __future__ import annotations
 
 import logging
 import os
-from contextlib import asynccontextmanager
 from typing import TYPE_CHECKING, Any, Literal
 
 from requests import Session
 from requests_cache import CachedSession
 
 if TYPE_CHECKING:
-    from collections.abc import AsyncGenerator
-
     from scholar_flux import CachedSessionManager, DataCacheManager, SessionManager
 else:
     try:
@@ -43,12 +40,12 @@ class CacheService:
     configuration from environment variables via scholar-flux's config system.
 
     Environment variables used (via scholar-flux):
-        SCHOLAR_FLUX_DEFAULT_RESPONSE_CACHE_STORAGE: Data cache backend (redis, sql, mongodb, inmemory)
-        SCHOLAR_FLUX_DEFAULT_SESSION_CACHE_BACKEND: Session cache backend (redis, sqlite, mongodb, memory)
-        SCHOLAR_FLUX_REDIS_HOST: Redis host (if using redis backend)
-        SCHOLAR_FLUX_REDIS_PORT: Redis port (if using redis backend)
-        SCHOLAR_FLUX_MONGODB_HOST: MongoDB host (if using mongodb backend)
-        SCHOLAR_FLUX_MONGODB_PORT: MongoDB port (if using mongodb backend)
+    - SCHOLAR_FLUX_DEFAULT_RESPONSE_CACHE_STORAGE: Data cache backend (redis, sql, mongodb, inmemory)
+    - SCHOLAR_FLUX_DEFAULT_SESSION_CACHE_BACKEND: Session cache backend (redis, sqlite, mongodb, memory)
+    - SCHOLAR_FLUX_REDIS_HOST: Redis host (if using redis backend)
+    - SCHOLAR_FLUX_REDIS_PORT: Redis port (if using redis backend)
+    - SCHOLAR_FLUX_MONGODB_HOST: MongoDB host (if using mongodb backend)
+    - SCHOLAR_FLUX_MONGODB_PORT: MongoDB port (if using mongodb backend)
 
     """
 
@@ -335,44 +332,4 @@ class CacheService:
             return False
 
 
-@asynccontextmanager
-async def get_cache_service(
-    namespace: str = "mcp_cache",
-    ttl: int | None = None,
-    user_agent: str | None = None,
-    session_expire_after: int | None = None,
-    raise_on_error: bool = False,
-) -> AsyncGenerator[CacheService, None]:
-    """Context manager for cache service lifecycle.
-
-    Initializes cache service on entry and cleans up on exit.
-
-    Args:
-        namespace: Cache namespace for isolation.
-        ttl: Time-to-live for cache entries in seconds.
-        user_agent: User-Agent string for HTTP sessions. If None, resolved from config.
-        session_expire_after: Session cache expiration in seconds.
-        raise_on_error: Whether to raise exceptions on initialization failure.
-
-    Yields:
-        CacheService: Initialized cache service instance.
-
-    Example:
-        async with get_cache_service() as cache:
-            session = cache.create_session()
-            # ... use session
-
-    """
-    service = CacheService(
-        namespace=namespace,
-        ttl=ttl,
-        user_agent=user_agent,
-        session_expire_after=session_expire_after,
-        raise_on_error=raise_on_error,
-    )
-    try:
-        await service.initialize()
-        yield service
-    finally:
-        # Cleanup if needed (currently no explicit cleanup required)
-        pass
+__all__ = ["CacheService"]

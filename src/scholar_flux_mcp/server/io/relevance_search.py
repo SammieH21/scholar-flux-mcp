@@ -179,7 +179,9 @@ class RelevanceSearchFormatter(BaseFormatter):
             {header}
             ### Record Totals:
 
+
             **Record-Topic Similarity Threshold**: {similarity_threshold}
+
             **Filtered Record Count**: {len(output.records)}
 
             **Sources**:

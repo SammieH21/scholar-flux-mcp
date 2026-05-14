@@ -34,6 +34,7 @@
 > What is the current state of citation hallucination and fabrication in AI-generated academic content, and what verification methods have been proposed to address this problem?
 
 **Categories**: ['Computation']
+
 **Queries**:
 - LLM citation hallucination academic research
 - AI generated citations verification scholarly
@@ -41,7 +42,9 @@
 - large language model citation accuracy peer review
 
 **Records Analyzed**: 80
+
 **Confidence Score**: 85%
+
 **Evidence Grounding**: 9 verified records, 0 rejected
 
 
@@ -73,7 +76,7 @@ Key limitations in the current evidence include: the rapidly evolving nature of 
 ## Supporting Evidence
 
 
-1. **Authors’ Reply: Citation Accuracy Challenges Posed by Large Language Models** (2025) DOI: `10.2196/73698` [Link](https://doi.org/10.2196/73698)
+1. **Authors’ Reply: Citation Accuracy Challenges Posed by Large Language Models** (2025) DOI: `10.2196/73698` [[Link]](https://doi.org/10.2196/73698)
 
 **Authors**: Mohamad‐Hani Temsah, Ayman Al‐Eyadhy, Amr Jamal et al.
 
@@ -91,7 +94,7 @@ Key limitations in the current evidence include: the rapidly evolving nature of 
 
 
 
-2. **Enabling Large Language Models to Generate Text with Citations** (2023) DOI: `10.18653/v1/2023.emnlp-main.398` [Link](https://doi.org/10.18653/v1/2023.emnlp-main.398)
+2. **Enabling Large Language Models to Generate Text with Citations** (2023) DOI: `10.18653/v1/2023.emnlp-main.398` [[Link]](https://doi.org/10.18653/v1/2023.emnlp-main.398)
 
 **Authors**: Tianyu Gao, H. W. Yen, Jiatong Yu et al.
 
@@ -109,7 +112,7 @@ Key limitations in the current evidence include: the rapidly evolving nature of 
 
 
 
-3. **Citation Hallucination Determines Success: An Empirical Comparison of Six Medical AI Research Systems** (2026) DOI: `10.64898/2026.04.02.26350091` [Link](https://doi.org/10.64898/2026.04.02.26350091)
+3. **Citation Hallucination Determines Success: An Empirical Comparison of Six Medical AI Research Systems** (2026) DOI: `10.64898/2026.04.02.26350091` [[Link]](https://doi.org/10.64898/2026.04.02.26350091)
 
 **Authors**: Xuefei Shi, Zhanxiao Tian, Shuping Tan et al.
 
@@ -127,7 +130,7 @@ Key limitations in the current evidence include: the rapidly evolving nature of 
 
 
 
-4. **Evaluation of Large Language Model Performance and Reliability for Citations and References in Scholarly Writing: Cross-Disciplinary Study** (2024) DOI: `10.2196/52935` [Link](https://doi.org/10.2196/52935)
+4. **Evaluation of Large Language Model Performance and Reliability for Citations and References in Scholarly Writing: Cross-Disciplinary Study** (2024) DOI: `10.2196/52935` [[Link]](https://doi.org/10.2196/52935)
 
 **Authors**: Joseph Mugaanyi, Liuying Cai, Sumei Cheng et al.
 
@@ -145,7 +148,7 @@ Key limitations in the current evidence include: the rapidly evolving nature of 
 
 
 
-5. **Influence of Topic Familiarity and Prompt Specificity on Citation Fabrication in Mental Health Research Using Large Language Models: Experimental Study** (2025) DOI: `10.2196/80371` [Link](https://doi.org/10.2196/80371)
+5. **Influence of Topic Familiarity and Prompt Specificity on Citation Fabrication in Mental Health Research Using Large Language Models: Experimental Study** (2025) DOI: `10.2196/80371` [[Link]](https://doi.org/10.2196/80371)
 
 **Authors**: Jake Linardon, Hannah K. Jarman, Zoe McClure et al.
 
@@ -163,7 +166,7 @@ Key limitations in the current evidence include: the rapidly evolving nature of 
 
 
 
-6. **Hallucination Rates and Reference Accuracy of ChatGPT and Bard for Systematic Reviews: Comparative Analysis** (2024) DOI: `10.2196/53164` [Link](https://doi.org/10.2196/53164)
+6. **Hallucination Rates and Reference Accuracy of ChatGPT and Bard for Systematic Reviews: Comparative Analysis** (2024) DOI: `10.2196/53164` [[Link]](https://doi.org/10.2196/53164)
 
 **Authors**: Mikaël Chelli, Jules Descamps, Vincent Lavoué et al.
 
@@ -181,7 +184,7 @@ Key limitations in the current evidence include: the rapidly evolving nature of 
 
 
 
-7. **The Scoring Problem in Multi-Model LLM Benchmarks: How Unreported Methodological Choices Change Hallucination Measurement by 3.5×** (2026) DOI: `10.21203/rs.3.rs-9240163/v1` [Link](https://doi.org/10.21203/rs.3.rs-9240163/v1)
+7. **The Scoring Problem in Multi-Model LLM Benchmarks: How Unreported Methodological Choices Change Hallucination Measurement by 3.5×** (2026) DOI: `10.21203/rs.3.rs-9240163/v1` [[Link]](https://doi.org/10.21203/rs.3.rs-9240163/v1)
 
 **Authors**: AZRIL BIN HAMZAH, SHASHA TENG
 
@@ -199,7 +202,7 @@ Key limitations in the current evidence include: the rapidly evolving nature of 
 
 
 
-8. **Hallucination‐Free? Assessing the Reliability of Leading <scp>AI</scp> Legal Research Tools** (2025) DOI: `10.1111/jels.12413` [Link](https://doi.org/10.1111/jels.12413)
+8. **Hallucination‐Free? Assessing the Reliability of Leading <scp>AI</scp> Legal Research Tools** (2025) DOI: `10.1111/jels.12413` [[Link]](https://doi.org/10.1111/jels.12413)
 
 **Authors**: Varun Magesh, Faiz Surani, Matthew Dahl et al.
 
@@ -217,7 +220,7 @@ Key limitations in the current evidence include: the rapidly evolving nature of 
 
 
 
-9. **Valsci: an open-source, self-hostable literature review utility for automated large-batch scientific claim verification using large language models** (2025) DOI: `10.1186/s12859-025-06159-4` [Link](https://doi.org/10.1186/s12859-025-06159-4)
+9. **Valsci: an open-source, self-hostable literature review utility for automated large-batch scientific claim verification using large language models** (2025) DOI: `10.1186/s12859-025-06159-4` [[Link]](https://doi.org/10.1186/s12859-025-06159-4)
 
 **Authors**: Brice Edelman, Jeffrey Skolnick
 

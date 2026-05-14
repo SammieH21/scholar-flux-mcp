@@ -121,3 +121,6 @@ class ProviderService:
             provider_info.annotate(ProviderMetadataDescriptions.get_fields(provider_info.name) or {})
             for provider_info in provider_info_list
         ]
+
+
+__all__ = ["ProviderService"]

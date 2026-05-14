@@ -23,9 +23,11 @@ import re
 from collections.abc import Generator, Mapping, MutableSequence
 from contextlib import contextmanager
 from datetime import datetime, timezone
+from textwrap import dedent
 from typing import TypeVar, overload
 
 T = TypeVar("T", bound=object)
+D = TypeVar("D", bound=object)
 
 
 def coerce_int(value: object) -> int | None:
@@ -400,6 +402,34 @@ def batch_replace(
     )
 
 
+@overload
+def with_fallback(value: T, default: None = None) -> T:
+    """When `T` is received without a default, `None` `T` is returned as is."""
+    ...
+
+
+@overload
+def with_fallback(value: None, default: D) -> D:
+    """When `None` is received, and a default is provided, the default is returned as is."""
+    ...
+
+
+@overload
+def with_fallback(value: T, default: object) -> T:
+    """When `T` and a default is received, T is return only when not None. Otherwise None is returned"""
+    ...
+
+
+def with_fallback(value: object, default: object | None = None) -> object | None:
+    """Helper for declaring configuration fallbacks inline with type checking and minimal repeated code."""
+    return value if value is not None else default
+
+
+def format_multiline_string(txt: str) -> str:
+    """Helper function for preparing multiline strings with dedent and line stripping."""
+    return "\n".join(line.lstrip() if line.strip() else "" for line in dedent(txt).split("\n"))
+
+
 __all__ = [
     "try_none",
     "coerce_int",
@@ -414,4 +444,6 @@ __all__ = [
     "truncate",
     "os_env_context",
     "batch_replace",
+    "with_fallback",
+    "format_multiline_string",
 ]

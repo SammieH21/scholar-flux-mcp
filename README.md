@@ -413,7 +413,8 @@ Retrieve and rank studies via record-topic embedding cosine similarity.
 | `from_history_cache` | bool | false | Retrieve from history cache if available |
 | `store_history_cache` | bool | true | Store output in history cache |
 | `response_format` | string | "markdown" | "markdown" or "json" |
-| `force_refresh` | bool | false | Enables history cache retrieval for record searches while re-executing the relevance search stage|
+| `force_refresh` | bool | false | Enables history cache retrieval for record searches while re-executing the record-topic similarity reranking step |
+```
 
 ### Synthesis Tools
 
@@ -723,6 +724,11 @@ For details on ScholarFlux's orchestration architecture, see the [ScholarFlux do
 | `SCHOLAR_FLUX_HOME` | Data directory | `~/.scholar_flux` |
 | `SCHOLAR_FLUX_LOG_LEVEL` | `ScholarFlux` Logging level | `WARNING` |
 | `SCHOLAR_FLUX_MCP_LOG_LEVEL` | MCP server logging level | `INFO` |
+| `SCHOLAR_FLUX_MCP_LOG_STREAM` | MCP log output stream override (`stdout`, `stderr`, or `False` to disable) | inherited from ScholarFlux |
+| `SCHOLAR_FLUX_MCP_LOG_FILE` | MCP log file name override (enables file logging) | inherited from ScholarFlux |
+| `SCHOLAR_FLUX_MCP_LOG_DIRECTORY` | MCP log directory override. Defaults to scholar-flux log directory. | inherited from ScholarFlux |
+| `SCHOLAR_FLUX_MCP_PROPAGATE_LOGS` | MCP log propagation override. Defaults to False | inherited from ScholarFlux |
+| `SCHOLAR_FLUX_MCP_ENABLE_LOGGING` | Enable/disable MCP logging | `true` |
 | `SCHOLAR_FLUX_REDIS_HOST` | Redis host | `redis` |
 | `SCHOLAR_FLUX_MCP_ENABLE_HISTORY` | Enable history service | `true` |
 | `SCHOLAR_FLUX_MCP_HISTORY_TTL` | Default TTL for cached outputs (seconds) | - |
@@ -924,7 +930,7 @@ Questions or suggestions? Open an issue or email scholar.flux@gmail.com.
 
 ## Project Statistics
 
-- **~19.6k Lines of Code** - ~12.9k LOC source + ~6.7k LOC comprehensive tests
+- **~20.4k Lines of Code** - ~13.4k LOC source + ~7.0k LOC comprehensive tests
 - **93% Test Coverage** - Rigorous testing across core functionality and edge cases
 - **Type-Safe Architecture** - Comprehensive type hints throughout the codebase with mypy strict-mode type checking
 - **Security-Audited** - Automated CVE scanning via CodeQL and Safety CLI, credential masking

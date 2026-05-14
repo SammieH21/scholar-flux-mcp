@@ -290,3 +290,6 @@ class SynthesisService(BaseResearchService):
             synthesis_input=params,
             agent_output=agent_output,
         )
+
+
+__all__ = ["SynthesisService"]

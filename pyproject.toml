@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "scholar-flux-mcp"
-version = "0.1.0b2"
+version = "0.1.0b3"
 authors = ["Sammie L. Haskin <44345113+SammieH21@users.noreply.github.com>"]
 description = "MCP server for academic record retrieval across 7+ providers, featuring embedding-driven record relevance re-ranking and AI-powered research synthesis with citation verification built on ScholarFlux and PydanticAI."
 readme = "README.md"

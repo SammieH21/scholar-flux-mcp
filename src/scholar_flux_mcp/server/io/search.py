@@ -190,6 +190,7 @@ class SearchFormatter(BaseFormatter):
         return cls.format_multiline_string(
             f"""\
             ## Search Results: {query_display}
+
             **Found {total_records} records** across {providers_successful} queries
             """
         )
@@ -227,7 +228,7 @@ class SearchFormatter(BaseFormatter):
         title = record.title or "Untitled"
         year = f" ({record.year})" if record.year else ""
         doi = f" DOI: `{record.doi}`" if record.doi else ""
-        url = f" [Link]({record.url})" if record.url else ""
+        url = f" [[Link]]({record.url})" if record.url else ""
         record_source: str | None = record.journal or record.publisher
         record_source_fmt = f" {record_source}".rstrip(" .") + "." if record_source else ""
         keywords: list | str | None = record.keywords or record.subjects

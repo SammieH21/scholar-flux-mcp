@@ -2,7 +2,7 @@
 
 Quick-reference context for AI coding assistants working on ScholarFlux MCP.
 
-### Last updated 5/12/2026 (**v0.1.0**)
+### Last updated 5/14/2026 (**v0.1.0**)
 
 > For complete, authoritative information, consult:
 > - [README.md](README.md) — overview, features, quickstart, architecture
@@ -38,7 +38,7 @@ poetry run ruff check src tests --fix
 make mcp
 
 # Docker
-cd docker && docker compose up -d                              # Basic (MCP + MongoDB)
+cd docker && docker compose up -d                              # Basic (MCP + Redis/MongoDB)
 docker compose --profile with-redis up -d                      # With Redis caching
 docker compose --profile with-ollama up -d                     # With local Ollama
 docker compose --profile with-redis --profile with-ollama up -d  # Full stack
@@ -75,7 +75,7 @@ After synthesis, the **GroundingService** validates every bracketed `[N]` citati
 
 ```
 FastMCP Server (server/main.py)
-├── create_server()           — Server factory with lifespan management
+├── create_server()           — Server factory with lifespan management (lazy-loaded)
 ├── app_lifespan()            — Async context manager initializing all services
 ├── _register_tools()         — Registers 9 MCP tools with deferred service access
 └── AppContext                — Dataclass container for lazily initialized services
@@ -122,11 +122,14 @@ FastMCP Server (server/main.py)
      │   └── synthesis_exceptions.py     — Grounding/dedup exceptions
      │
      ├── Utils (utils/)                  — Shared utilities
+     │   ├── config.py                   — Package-wide config_settings  + `update_mcp_config_settings()` helper
+     │   ├── initializer.py              — initialize_mcp_package() — config, logging, masker setup (called on root import)
+     │   ├── lazy_loader.py              — lazy_import_attr() for deferred module loading — used in the lazy initialization of `server.main.mcp`
      │   ├── preprocessing_utils.py      — Record conversion, dedup (rapidfuzz), context building
-     │   ├── helpers.py                  — Type coercion, timestamps, truncation
+     │   ├── helpers.py                  — Type coercion, timestamps, truncation, format_multiline_string, with_fallback
      │   ├── similarity_utils.py         — Cosine similarity calculation
      │   ├── fuzzy_text_similarity.py    — Utilities for fuzzy string matching with `rapidfuzz`
-     │   └── logging.py             — Logging setup with sensitive data masking
+     │   └── logging.py                  — setup_mcp_logging (log level/stream/file/directory resolution)
      │
      └── Transport (server/transport.py) — MCP transport configuration
          ├── StdioTransport              — Default (no additional args)
@@ -141,6 +144,8 @@ FastMCP Server (server/main.py)
 - **SynthesisService** returns `_empty_synthesis` with the error reason on agent failure when `raise_on_error=False`,
 - **RelevanceSearchService** falls back to unranked records if embedding fails (configurable via `raise_on_error`)
 - **BaseResearchService** catches `HistoryCacheException` in cache helpers, assignment validation, logs warnings, continues without history
+- **Lazy server loading**: `scholar_flux_mcp.server` components (`create_server`, `mcp`) are lazy-loaded via `__getattr__`; `MCPImportError` is deferred until access
+- **Package initialization**: `initialize_mcp_package()` runs on root import for config, logging, and masking setup. Logs a warning if `scholar-flux` is unavailable
 - **Import guards**: `PydanticAIImportError`, `RapidFuzzImportError`, `MCPImportError`, `ScholarFluxImportError`, `SQLModelImportError`
 
 
@@ -153,6 +158,10 @@ SCHOLAR_FLUX_HOME=~/.scholar_flux
 # Logging
 SCHOLAR_FLUX_LOG_LEVEL=WARNING
 SCHOLAR_FLUX_MCP_LOG_LEVEL=INFO
+SCHOLAR_FLUX_MCP_LOG_STREAM=                              # stdout, stderr, or False to disable
+SCHOLAR_FLUX_MCP_LOG_FILE=                                # enables file logging when set
+SCHOLAR_FLUX_MCP_LOG_DIRECTORY=                           # directory for log files
+SCHOLAR_FLUX_MCP_ENABLE_LOGGING=true                      # set to false to disable MCP logging
 
 # Cache backends
 SCHOLAR_FLUX_DEFAULT_SESSION_CACHE_BACKEND=redis      # mongodb, sqlite, redis, memory, etc.

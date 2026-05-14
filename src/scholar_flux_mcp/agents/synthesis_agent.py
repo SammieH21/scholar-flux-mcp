@@ -14,8 +14,8 @@ from typing import TYPE_CHECKING, Any
 
 from scholar_flux_mcp.agents.models import AgentABC, PydanticAIModelFactory
 from scholar_flux_mcp.models import ServiceHealth, SynthesisAgentOutput, SynthesisContext
-from scholar_flux_mcp.server.io.base import BaseFormatter
 from scholar_flux_mcp.utils import SearchRecordPreprocessingUtils
+from scholar_flux_mcp.utils.helpers import format_multiline_string
 
 if TYPE_CHECKING:
     from pydantic_ai import Agent
@@ -43,9 +43,10 @@ logger = logging.getLogger(__name__)
 class SynthesisAgent(AgentABC):
     """Helper class that encapsulates the logic used to create and interface with LLMs."""
 
-    SYNTHESIS_INSTRUCTIONS: str = BaseFormatter.format_multiline_string(
-        """You are an expert academic research synthesizer specializing in academic literature. Your task is to analyze
-        academic records and synthesize their findings into a coherent, evidence-based response to research questions.
+    SYNTHESIS_INSTRUCTIONS: str = format_multiline_string(
+        """You are an expert academic research synthesizer specializing in academic literature.
+
+        Your task is to analyze academic records and synthesize their findings into a coherent, evidence-based response to research questions.
 
         ## Guidelines
 
@@ -133,7 +134,7 @@ class SynthesisAgent(AgentABC):
             record_contexts = SearchRecordPreprocessingUtils.build_record_context(context.records, *args, **kwargs)
             record_summaries = "\n".join(record_contexts) if record_contexts else "No records available."
 
-            prompt = BaseFormatter.format_multiline_string(
+            prompt = format_multiline_string(
                 f"""
                 IMPORTANT: Reference records by their index number ONLY.
                 Do NOT invent, modify, or hallucinate record metadata.

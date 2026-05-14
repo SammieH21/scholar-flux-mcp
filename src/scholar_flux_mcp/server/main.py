@@ -13,7 +13,6 @@ from typing import TYPE_CHECKING
 
 from scholar_flux_mcp.exceptions.import_exceptions import CoreDependencyImportError, MCPImportError
 from scholar_flux_mcp.exceptions.mcp_server_exceptions import MCPServerInitializationException
-from scholar_flux_mcp.utils import masker, setup_mcp_logging
 
 if TYPE_CHECKING:
     from collections.abc import AsyncIterator
@@ -93,9 +92,6 @@ def create_server(transport: TransportType | TransportSettings | MCPTransports |
         raise MCPImportError("The MCP Server cannot be activated. The python `mcp` module is not installed.")
 
     transport_settings = MCPTransports.get_transport_setting(transport) or MCPTransports.get_default()
-
-    if setup_mcp_logging is not None and masker:
-        setup_mcp_logging(logger, masker=masker)
 
     # Initializes cache, history and provider services
     cache_service = CacheService()

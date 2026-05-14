@@ -94,11 +94,15 @@ class SynthesisFormatter(BaseFormatter):
             > {result.question}
 
             **Categories**: {categories}
+
             **Queries**:
             {query_list}
 
+
             **Records Analyzed**: {result.records_analyzed}
+
             **Confidence Score**: {result.confidence_score:.0%}
+
             """
         )
 
@@ -109,12 +113,12 @@ class SynthesisFormatter(BaseFormatter):
             summary += f"**Evidence Grounding**: {grounded} verified records, {rejected} rejected"
             if grounding_error:
                 summary += (
-                    "\n**Warning**: An internal error occurred during grounding, preventing the verification of all "
+                    "\n\n**Warning**: An internal error occurred during grounding, preventing the verification of all "
                     "available evidence. Verify the results to ensure references and AI generated statements are sound.\n"
                 )
         if result.record_topic_similarity_output is None:
             summary += (
-                "\n**Note**: Embedding-based record relevance reranking was unavailable. Records were not filtered by "
+                "\n\n**Note**: Embedding-based record relevance reranking was unavailable. Records were not filtered by "
                 "topic similarity."
             )
 
@@ -124,8 +128,8 @@ class SynthesisFormatter(BaseFormatter):
     def format_evidence(cls, evidence: GroundedEvidenceItem, i: int) -> str:
         """Prepares and formats the records that are used as evidence for the synthesized report."""
         year = f" ({evidence.year})" if evidence.year else ""
-        url = f" [Link]({evidence.url})" if evidence.url else ""
         doi = f" DOI: `{evidence.doi}`" if evidence.doi else ""
+        url = f" [[Link]]({evidence.url})" if evidence.url else ""
         referenced_text = evidence.referenced_text or ""
         referenced_text_fmt = f"\n**Referenced Text**: {referenced_text}\n" if referenced_text else "\n\n"
 

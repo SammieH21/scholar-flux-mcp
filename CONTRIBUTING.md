@@ -36,13 +36,14 @@ poetry run pytest tests/ -v
 ```
 
 FastMCP Server (src/scholar_flux_mcp/server/main.py)
-├── create_server()           — Server factory with lifespan management
+├── create_server()           — Server factory with lifespan management (lazy-loaded)
 ├── app_lifespan()            — Async context manager initializing all services
 ├── _register_tools()         — Registers 9 MCP tools with deferred service access
+├── _load_mcp()               — Lazy loader for create_server/mcp (defers MCPImportError until access)
 └── AppContext                — Dataclass container for lazily initialized services
      │
      ├── Tool I/O (server/io/)     — Pydantic input validation + markdown/JSON formatting
-     │   ├── base.py               — BaseFormatter, BaseToolInput BaseResearchToolInput (search, relevance search, synthesis)
+     │   ├── base.py               — BaseFormatter, BaseToolInput, BaseResearchToolInput (search, relevance search, synthesis)
      │   ├── health_check.py       — HealthCheckToolInput, HealthCheckFormatter
      │   ├── search.py             — SearchToolInput, SearchFormatter
      │   ├── relevance_search.py   — RelevanceSearchToolInput, RelevanceSearchFormatter
@@ -83,11 +84,14 @@ FastMCP Server (src/scholar_flux_mcp/server/main.py)
      │   └── synthesis_exceptions.py     — Grounding/dedup exceptions
      │
      ├── Utils (utils/)                  — Shared utilities
+     │   ├── config.py                   — MCP config_settings singleton + update_mcp_config_settings helper
+     │   ├── initializer.py              — initialize_mcp_package() — config, logging, masker setup (called on root import)
+     │   ├── lazy_loader.py              — lazy_import_attr() for deferred module loading
      │   ├── preprocessing_utils.py      — Record conversion, dedup (rapidfuzz), context building
-     │   ├── helpers.py                  — Type coercion, timestamps, truncation
+     │   ├── helpers.py                  — Type coercion, timestamps, truncation, format_multiline_string, with_fallback
      │   ├── similarity_utils.py         — Cosine similarity calculation
      │   ├── fuzzy_text_similarity.py    — Utilities for fuzzy string matching with `rapidfuzz`
-     │   └── logging.py                  — Logging setup with sensitive data masking
+     │   └── logging.py                  — setup_mcp_logging (log level/stream/file/directory resolution)
      │
      └── Transport (server/transport.py) — MCP transport configuration
          ├── StdioTransport              — Default (no additional args)
@@ -123,7 +127,8 @@ export CORE_API_KEY=your_key
 
 ### Enabling Debug Logging
 
-ScholarFlux MCP inherits the logging utility and sensitive masker from the base package.
+ScholarFlux MCP inherits configuration, logging, and sensitive data masking from the base `scholar-flux` package. Package initialization (`initialize_mcp_package()`) runs automatically on import, setting up config, logging, and the masker. The MCP server components (`create_server`, `mcp`) are lazy-loaded and only imported when explicitly accessed, deferring any `MCPImportError` until that point.
+
 By default, the log level for the base package and MCP server are set to the `WARNING` log level.
 If you need more detailed logs for development from the base package:
 
@@ -133,11 +138,16 @@ export SCHOLAR_FLUX_LOG_LEVEL=INFO
 export SCHOLAR_FLUX_PROPAGATE_LOGS=TRUE
 ```
 
-To customize the log level for the MCP server:
+To customize logging for the MCP server specifically (these override the base package settings):
 
 ```bash
 export SCHOLAR_FLUX_MCP_LOG_LEVEL=DEBUG
-```   
+export SCHOLAR_FLUX_MCP_LOG_STREAM=stderr          # stdout, stderr, or False to disable
+export SCHOLAR_FLUX_MCP_LOG_FILE=mcp.log            # enables file logging
+export SCHOLAR_FLUX_MCP_LOG_DIRECTORY=/var/log/mcp   # directory for log files
+export SCHOLAR_FLUX_PROPAGATE_LOGS=False             # Propagates logs to the console, IDE, or REPL when enabled
+export SCHOLAR_FLUX_MCP_ENABLE_LOGGING=true          # set to false to disable MCP logging entirely
+```
 
 ## Testing & Code Quality
 

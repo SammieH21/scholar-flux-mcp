@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.0] — 2026-05-12
+## [0.1.0] — 2026-05-14
 
 ### Added
 
@@ -18,3 +18,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Output History**: Output retrieval integrates a custom `HistoryService` with SQLModel-based relational storage, TTL support, and record-level retrieval to support the retrieval of previously stored search, relevance search, and synthesis results for repeated queries, thus preventing repeated embedding and synthesis requests when previously cached results would otherwise suffice. When making requests, simply add `from_history_cache=True` to first attempt to retrieve a cached result before sending a fresh request.
 - **Docker Deployment**: ScholarFlux MCP is designed with a full Docker Compose stack, optionally including MongoDB, optional Redis and Ollama profiles for caching and synthesis. With health checks, dedicated resource limits, and automatic downloading of selected Ollama models, docker containerization is designed to reduce hardware-specific friction while enforcing separation between personal and project-specific deployments.
 - **Package Configuration**: ScholarFlux MCP uses environment variables to configure core functionality and supported MCP transport types including stdio (default), SSE, and streamable HTTP. Embedding models, LLMs, and other settings can be directly set via environment variables. See the [README.md](README.md) for more details.
+- **Graceful Dependency Fallbacks**: Dependencies used in ScholarFlux MCP are designed to raise errors when the functionality is required but not available. The `scholar_flux_mcp.exceptions.import_exceptions.py` module is designed to warn users of missing dependencies on package initialization. The mcp server is designed to lazily initialize only when needed. If the `mcp[cli]` package is missing, a `MCPImportError` is raised only when attempting to use `server` functionality or upon starting the server via MCPInspector or MCPHub. Otherwise, the server starts, and users can see missing dependencies reported within the logs or via the `scholar_flux_check_health` tool.

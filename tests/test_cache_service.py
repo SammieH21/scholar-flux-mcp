@@ -5,7 +5,6 @@ This module tests cache initialization and configuration. Some tests may require
 
 """
 
-from contextlib import suppress
 from unittest.mock import MagicMock, patch
 
 import pytest
@@ -13,7 +12,7 @@ from scholar_flux import CachedSessionManager
 from scholar_flux.utils import config_settings
 
 from scholar_flux_mcp.exceptions import ScholarFluxImportError
-from scholar_flux_mcp.services.cache_service import CacheService, get_cache_service
+from scholar_flux_mcp.services.cache_service import CacheService
 from tests.testing_utilities import raise_error
 
 
@@ -300,42 +299,3 @@ class TestCacheServiceClear:
 
         result = await service.clear_cache()
         assert result is False
-
-
-class TestCacheServiceContextManager:
-    """Tests for cache service context manager."""
-
-    @pytest.mark.asyncio
-    async def test_context_manager_initializes_service(self):
-        """Test context manager initializes service on entry."""
-        with (
-            patch("scholar_flux_mcp.services.cache_service.CacheService.initialize") as mock_init,
-            suppress(ScholarFluxImportError),
-        ):
-            async with get_cache_service() as service:
-                mock_init.assert_called_once()
-                assert service is not None
-
-    @pytest.mark.asyncio
-    async def test_context_manager_with_custom_params(self):
-        """Verifies that the context manager accepts custom parameters."""
-        with (
-            patch.object(CacheService, "__init__", return_value=None) as mock_init,
-            patch.object(CacheService, "initialize"),
-            suppress(ScholarFluxImportError),
-        ):
-            async with get_cache_service(
-                namespace="custom",
-                ttl=7200,
-                user_agent="Test/1.0",
-                session_expire_after=3600,
-                raise_on_error=True,
-            ):
-                # Verify __init__ was called with correct params
-                mock_init.assert_called_once_with(
-                    namespace="custom",
-                    ttl=7200,
-                    user_agent="Test/1.0",
-                    session_expire_after=3600,
-                    raise_on_error=True,
-                )

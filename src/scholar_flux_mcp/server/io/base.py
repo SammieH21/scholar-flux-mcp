@@ -5,13 +5,13 @@ from __future__ import annotations
 import json
 import logging
 from abc import ABC, abstractmethod
-from textwrap import dedent
 from typing import Any, ClassVar, Generic, Protocol, TypeVar, runtime_checkable
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from scholar_flux_mcp.models.enums import ResponseFormat, ResponseFormatString
 from scholar_flux_mcp.models.schemas import BaseSearchParams, QueryList
+from scholar_flux_mcp.utils.helpers import format_multiline_string
 
 logger = logging.getLogger(__name__)
 
@@ -131,7 +131,7 @@ class BaseFormatter(ABC, Generic[T]):
     @classmethod
     def format_multiline_string(cls, txt: str) -> str:
         """Helper function for preparing multiline strings with dedent and line stripping."""
-        return "\n".join(line.lstrip() if line.strip() else "" for line in dedent(txt).split("\n"))
+        return format_multiline_string(txt)  # delegates behavior to the helper, can be overridden on a formatter basis
 
     @classmethod
     def format_error_message(

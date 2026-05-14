@@ -31,12 +31,15 @@
 > What is the current evidence for using large language models to assist in clinical decision support for diabetes management?
 
 **Categories**: general, intervention
+
 **Queries**:
 - AI clinical decision support diabetes
 - large language model diabetes care
 
 **Records Analyzed**: 46
+
 **Confidence Score**: 78%
+
 **Evidence Grounding**: 7 verified records, 0 rejected
 
 
@@ -68,7 +71,7 @@ The evidence base spans from 2022-2026 with most high-quality studies published 
 ## Supporting Evidence
 
 
-1. **Diabetica: Adapting Large Language Model to Enhance Multiple Medical Tasks in Diabetes Care and Management** (2024) [Link](http://arxiv.org/abs/2409.13191) [DOI]10.48550/arxiv.2409.13191) OpenAlex
+1. **Diabetica: Adapting Large Language Model to Enhance Multiple Medical Tasks in Diabetes Care and Management** (2024) DOI: `10.48550/arxiv.2409.13191` [[Link]](http://arxiv.org/abs/2409.13191) OpenAlex
 
 **Index**: [0]
 
@@ -80,7 +83,7 @@ The evidence base spans from 2022-2026 with most high-quality studies published 
 
 
 
-2. **ChatGPT in Diabetes Care: An Overview of the Evolution and Potential of Generative Artificial Intelligence Model Like ChatGPT in Augmenting Clinical and Patient Outcomes in the Management of Diabetes** (2023) [Link](https://doi.org/10.4103/ijdt.ijdt_31_23) [DOI]10.4103/ijdt.ijdt_31_23) OpenAlex
+2. **ChatGPT in Diabetes Care: An Overview of the Evolution and Potential of Generative Artificial Intelligence Model Like ChatGPT in Augmenting Clinical and Patient Outcomes in the Management of Diabetes** (2023) DOI: `10.4103/ijdt.ijdt_31_23` [[Link]](https://doi.org/10.4103/ijdt.ijdt_31_23) OpenAlex
 
 **Index**: [1]
 
@@ -92,7 +95,7 @@ The evidence base spans from 2022-2026 with most high-quality studies published 
 
 
 
-3. **Integrated image-based deep learning and language models for primary diabetes care** (2024) [Link](https://doi.org/10.1038/s41591-024-03139-8) [DOI]10.1038/s41591-024-03139-8) OpenAlex
+3. **Integrated image-based deep learning and language models for primary diabetes care** (2024) DOI: `10.1038/s41591-024-03139-8` [[Link]](https://doi.org/10.1038/s41591-024-03139-8) OpenAlex
 
 **Index**: [2]
 
@@ -104,7 +107,7 @@ The evidence base spans from 2022-2026 with most high-quality studies published 
 
 
 
-4. **Large language models for diabetes training: a prospective study** (2025) [Link](https://doi.org/10.1016/j.scib.2025.01.034) [DOI]10.1016/j.scib.2025.01.034) OpenAlex
+4. **Large language models for diabetes training: a prospective study** (2025) DOI: `10.1016/j.scib.2025.01.034` [[Link]](https://doi.org/10.1016/j.scib.2025.01.034) OpenAlex
 
 **Index**: [3]
 
@@ -116,7 +119,7 @@ The evidence base spans from 2022-2026 with most high-quality studies published 
 
 
 
-5. **Building Trustworthy Generative Artificial Intelligence for Diabetes Care and Limb Preservation: A Medical Knowledge Extraction Case** (2024) [Link](https://doi.org/10.1177/19322968241253568) [DOI]10.1177/19322968241253568) OpenAlex
+5. **Building Trustworthy Generative Artificial Intelligence for Diabetes Care and Limb Preservation: A Medical Knowledge Extraction Case** (2024) DOI: `10.1177/19322968241253568` [[Link]](https://doi.org/10.1177/19322968241253568) OpenAlex
 
 **Index**: [5]
 
@@ -128,7 +131,7 @@ The evidence base spans from 2022-2026 with most high-quality studies published 
 
 
 
-6. **Assessing the User Experience of an LLM-Based Conversational Assistant in Diabetes Mellitus Care** (2026) [Link](http://link.springer.com/openurl/fulltext?id=doi:10.1007/s41666-025-00217-5) [DOI]10.1007/s41666-025-00217-5) Springer Nature
+6. **Assessing the User Experience of an LLM-Based Conversational Assistant in Diabetes Mellitus Care** (2026) DOI: `10.1007/s41666-025-00217-5` [[Link]](http://link.springer.com/openurl/fulltext?id=doi:10.1007/s41666-025-00217-5) Springer Nature
 
 **Index**: [6]
 
@@ -140,7 +143,7 @@ The evidence base spans from 2022-2026 with most high-quality studies published 
 
 
 
-7. **The Use of an Artificial Intelligence Platform OpenEvidence to Augment Clinical Decision-Making for Primary Care Physicians** (2025) [Link](https://doi.org/10.1177/21501319251332215) [DOI]10.1177/21501319251332215) OpenAlex
+7. **The Use of an Artificial Intelligence Platform OpenEvidence to Augment Clinical Decision-Making for Primary Care Physicians** (2025) DOI: `10.1177/21501319251332215` [[Link]](https://doi.org/10.1177/21501319251332215) OpenAlex
 
 **Index**: [24]
 
@@ -227,7 +230,7 @@ Evidence quality varies—several studies involve prospective clinical evaluatio
 ## Supporting Evidence
 
 
-1. **Large language models for diabetes training: a prospective study** (2025) [Link](https://doi.org/10.1016/j.scib.2025.01.034) [DOI]10.1016/j.scib.2025.01.034) OpenAlex
+1. **Large language models for diabetes training: a prospective study** (2025) DOI: `10.1016/j.scib.2025.01.034` [[Link]](https://doi.org/10.1016/j.scib.2025.01.034) OpenAlex
 
 **Index**: [9]
 
@@ -239,7 +242,7 @@ Evidence quality varies—several studies involve prospective clinical evaluatio
 
 
 
-2. **Diabetica: Adapting Large Language Model to Enhance Multiple Medical Tasks in Diabetes Care and Management** (2024) [Link](http://arxiv.org/abs/2409.13191) [DOI]10.48550/arxiv.2409.13191) OpenAlex
+2. **Diabetica: Adapting Large Language Model to Enhance Multiple Medical Tasks in Diabetes Care and Management** (2024) DOI: `10.48550/arxiv.2409.13191` [[Link]](http://arxiv.org/abs/2409.13191) OpenAlex
 
 **Index**: [23]
 
@@ -251,7 +254,7 @@ Evidence quality varies—several studies involve prospective clinical evaluatio
 
 
 
-3. **Integrated image-based deep learning and language models for primary diabetes care** (2024) [Link](https://doi.org/10.1038/s41591-024-03139-8) [DOI]10.1038/s41591-024-03139-8) OpenAlex
+3. **Integrated image-based deep learning and language models for primary diabetes care** (2024) DOI: `10.1038/s41591-024-03139-8` [[Link]](https://doi.org/10.1038/s41591-024-03139-8) OpenAlex
 
 **Index**: [24]
 
@@ -263,7 +266,7 @@ Evidence quality varies—several studies involve prospective clinical evaluatio
 
 
 
-4. **Assessing the User Experience of an LLM-Based Conversational Assistant in Diabetes Mellitus Care** (2026) [Link](http://link.springer.com/openurl/fulltext?id=doi:10.1007/s41666-025-00217-5) [DOI]10.1007/s41666-025-00217-5) Springer Nature
+4. **Assessing the User Experience of an LLM-Based Conversational Assistant in Diabetes Mellitus Care** (2026) DOI: `10.1007/s41666-025-00217-5` [[Link]](http://link.springer.com/openurl/fulltext?id=doi:10.1007/s41666-025-00217-5) Springer Nature
 
 **Index**: [2]
 
@@ -275,7 +278,7 @@ Evidence quality varies—several studies involve prospective clinical evaluatio
 
 
 
-5. **The Use of an Artificial Intelligence Platform OpenEvidence to Augment Clinical Decision-Making for Primary Care Physicians** (2025) [Link](https://doi.org/10.1177/21501319251332215) [DOI]10.1177/21501319251332215) OpenAlex
+5. **The Use of an Artificial Intelligence Platform OpenEvidence to Augment Clinical Decision-Making for Primary Care Physicians** (2025) DOI: `10.1177/21501319251332215` [[Link]](https://doi.org/10.1177/21501319251332215) OpenAlex
 
 **Index**: [5]
 
@@ -287,7 +290,7 @@ Evidence quality varies—several studies involve prospective clinical evaluatio
 
 
 
-6. **Developing Clinical Decision Support System using Machine Learning Methods for Type 2 Diabetes Drug Management** (2022) [Link](https://doi.org/10.4103/ijem.ijem_435_21) [DOI]10.4103/ijem.ijem_435_21) OpenAlex
+6. **Developing Clinical Decision Support System using Machine Learning Methods for Type 2 Diabetes Drug Management** (2022) DOI: `10.4103/ijem.ijem_435_21` [[Link]](https://doi.org/10.4103/ijem.ijem_435_21) OpenAlex
 
 **Index**: [42]
 
@@ -299,7 +302,7 @@ Evidence quality varies—several studies involve prospective clinical evaluatio
 
 
 
-7. **Design of a bi-directional methodology for automated assessment of compliance to continuous application of clinical guidelines, and its evaluation in the type 2 diabetes domain** (2024) [Link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0303542) [DOI]10.1371/journal.pone.0303542) PLOS
+7. **Design of a bi-directional methodology for automated assessment of compliance to continuous application of clinical guidelines, and its evaluation in the type 2 diabetes domain** (2024) DOI: `10.1371/journal.pone.0303542` [[Link]](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0303542) PLOS
 
 **Index**: [30]
 
