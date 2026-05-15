@@ -368,7 +368,9 @@ def test_pydantic_ai_extra_dependency_missing(provider, pydantic_ai_modules, moc
                 PydanticAIModelFactory,
             )
 
-            extra = f"pydantic-ai-slim['{provider}'] "
+            extra_name = "openai" if provider == "ollama" else provider
+
+            extra = f"pydantic-ai-slim['{extra_name}'] "
             installation_command = f"via `pip install {extra.rstrip()}` "
             err = (
                 rf"The PydanticAI extra ({re.escape(extra)})for.*is not installed. Restart the ScholarFluxMCP server "

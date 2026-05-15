@@ -1,5 +1,6 @@
 # ScholarFlux MCP
 
+[![codecov](https://codecov.io/gh/SammieH21/scholar-flux-mcp/graph/badge.svg?token=BYCTBYZNF1)](https://codecov.io/gh/SammieH21/scholar-flux-mcp)
 [![CI](https://github.com/SammieH21/scholar-flux-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/SammieH21/scholar-flux-mcp/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/SammieH21/scholar-flux-mcp/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/SammieH21/scholar-flux-mcp/actions/workflows/github-code-scanning/codeql)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://python.org)
@@ -930,7 +931,7 @@ Questions or suggestions? Open an issue or email scholar.flux@gmail.com.
 
 ## Project Statistics
 
-- **~20.4k Lines of Code** - ~13.4k LOC source + ~7.0k LOC comprehensive tests
+- **~20.5k Lines of Code** - ~13.5k LOC source + ~7.0k LOC comprehensive tests
 - **93% Test Coverage** - Rigorous testing across core functionality and edge cases
 - **Type-Safe Architecture** - Comprehensive type hints throughout the codebase with mypy strict-mode type checking
 - **Security-Audited** - Automated CVE scanning via CodeQL and Safety CLI, credential masking

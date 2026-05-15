@@ -8,10 +8,10 @@ from textwrap import dedent
 from typing import TYPE_CHECKING, overload
 
 from pydantic import TypeAdapter
-from rapidfuzz import fuzz, process
 
 from scholar_flux_mcp.models.enums import ResearchCategory
 from scholar_flux_mcp.models.schemas import IndexedSearchRecordList, SearchRecord, SearchRecordList
+from scholar_flux_mcp.utils.fuzzy_text_similarity import MaxFuzzyRatioSimilarity
 from scholar_flux_mcp.utils.helpers import as_tuple, coerce_int
 
 if TYPE_CHECKING:
@@ -114,7 +114,7 @@ class SearchRecordPreprocessingUtils:
 
     @classmethod
     def deduplicate_records(
-        cls, records: SearchRecordList, fields: list[str] | tuple | None = None, similarity_threshold: float = 90
+        cls, records: SearchRecordList, fields: list[str] | tuple | None = None, similarity_threshold: float = 0.90
     ) -> SearchRecordList:
         """Helper method for deduplicating records prior to grounding."""
         logger.info("Deduplicating records...")
@@ -145,8 +145,10 @@ class SearchRecordPreprocessingUtils:
             if not seen_identifiers or not (
                 record.doi in seen_dois
                 or record.title in seen_titles
-                or process.extractOne(
-                    record_identifier, seen_identifiers, scorer=fuzz.ratio, score_cutoff=similarity_threshold
+                or (
+                    # Deduplicate only for valid thresholds
+                    similarity_threshold is not None
+                    and cls._max_record_identifier_similarity(record_identifier, seen_identifiers, similarity_threshold)
                 )
             ):
                 deduplicated_records.append(record)
@@ -161,6 +163,25 @@ class SearchRecordPreprocessingUtils:
             logger.info(f"Removed {records_removed} duplicated records...")
 
         return deduplicated_records
+
+    @classmethod
+    def _max_record_identifier_similarity(
+        cls,
+        record_identifier: str,
+        comparison_record_identifiers: str | list[str] | set[str],
+        similarity_threshold: float | None = None,
+    ) -> MaxFuzzyRatioSimilarity | None:
+        """Identifies the record in a list of records most similar to the current record identifier."""
+        scaled_threshold = (
+            similarity_threshold / 100
+            if similarity_threshold is not None and similarity_threshold > 1.0
+            else similarity_threshold
+        )
+        return MaxFuzzyRatioSimilarity.calculate(
+            record_identifier,
+            comparison_record_identifiers,
+            threshold=scaled_threshold,
+        )
 
     @classmethod
     def build_record_context(

@@ -238,11 +238,10 @@ async def test_history_service_returns_valid_list_of_records(mock_ai_synthesis_o
     assert len(record_history) == 1
 
 
-async def test_history_record_searches_with_fuzzy_similarity(mock_ai_synthesis_output, monkeypatch, tmp_path, cleanup):
+async def test_history_record_searches_with_fuzzy_similarity(mock_ai_synthesis_output, tmp_path, cleanup):
     """Verifies that the `HistoryService` can successfully use fuzzy search similarity to filter and reorder records."""
     history_service = HistoryService()
     tmp_uri = "sqlite:///" + str(tmp_path / "record_env_testdb.sqlite")
-    monkeypatch.setenv("SCHOLAR_FLUX_MCP_HISTORY_URL", tmp_uri)
     history_service = HistoryService(url=tmp_uri, verify_connection=True)
 
     assert mock_ai_synthesis_output.indexed_records
@@ -259,6 +258,26 @@ async def test_history_record_searches_with_fuzzy_similarity(mock_ai_synthesis_o
         retrieved = await history_service.retrieve_record_history(topic=topic, max_history=1, similarity_threshold=0.9)
 
         assert len(retrieved) == 1 and record == retrieved[0]
+
+
+async def test_history_calculate_fuzzy_similarity(mock_ai_synthesis_output, tmp_path, cleanup):
+    """Verifies that the `HistoryService` can successfully calculate history item-topic similarity."""
+    history_service = HistoryService()
+    tmp_uri = "sqlite:///" + str(tmp_path / "calculate_record_similarity_testdb.sqlite")
+    history_service = HistoryService(url=tmp_uri, verify_connection=True)
+
+    assert mock_ai_synthesis_output.indexed_records
+    await history_service.store(mock_ai_synthesis_output)
+
+    synthesis_records = mock_ai_synthesis_output.search_output.records
+    record = synthesis_records[0]
+    record_two = synthesis_records[1]
+
+    record_topic_similarity = history_service.calculate_fuzzy_topic_similarity(record, topic=record.topic)
+    assert record_topic_similarity.score == 1.0
+
+    record_topic_similarity = history_service.calculate_fuzzy_topic_similarity(record_two, topic=record.topic)
+    assert record_topic_similarity.score < 0.9  # Records would be identified as dupes otherwise
 
 
 async def test_history_output_searches_with_fuzzy_similarity(

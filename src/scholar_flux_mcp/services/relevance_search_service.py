@@ -19,6 +19,7 @@ from scholar_flux_mcp.models.schemas import (
 from scholar_flux_mcp.services.base_research_service import BaseResearchService
 from scholar_flux_mcp.services.search_service import SearchService
 from scholar_flux_mcp.utils import SearchRecordPreprocessingUtils
+from scholar_flux_mcp.utils.fuzzy_text_similarity import BaseTextSimilarity
 
 if TYPE_CHECKING:
     from collections.abc import Sequence
@@ -156,6 +157,9 @@ class RelevanceSearchService(BaseResearchService):
 
             if cached_relevance_search_output is not None:
                 return cached_relevance_search_output
+
+            # Verify that deduplication is available before the record search
+            BaseTextSimilarity.validate_dependency()
 
             ### Data Preparation Phase ###
             search_input = SearchInput.from_search_params(params)

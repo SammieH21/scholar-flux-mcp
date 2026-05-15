@@ -209,7 +209,7 @@ class ModelProviders(Enum):
         _model_env_var="SCHOLAR_FLUX_MCP_OLLAMA_MODEL",
         _url_env_var="SCHOLAR_FLUX_MCP_OLLAMA_BASE_URL",
         _api_key_env_var="OLLAMA_API_KEY",
-        _pydantic_ai_extra="ollama",
+        _pydantic_ai_extra="openai",
         _dependency_available=OllamaProvider is not None and OpenAIChatModel is not None,
     )
 
@@ -220,7 +220,7 @@ class ModelProviders(Enum):
         _model_env_var="SCHOLAR_FLUX_MCP_OLLAMA_CLOUD_MODEL",
         _url_env_var="SCHOLAR_FLUX_MCP_OLLAMA_CLOUD_BASE_URL",
         _api_key_env_var="OLLAMA_API_KEY",
-        _pydantic_ai_extra="ollama",
+        _pydantic_ai_extra="openai",
         _dependency_available=OllamaProvider is not None and OpenAIChatModel is not None,
     )
 
@@ -292,7 +292,7 @@ class EmbeddingModelProviders(Enum):
         _embedding_model_env_var="SCHOLAR_FLUX_MCP_OLLAMA_EMBEDDING_MODEL",
         _url_env_var="SCHOLAR_FLUX_MCP_OLLAMA_EMBEDDING_BASE_URL",
         _api_key_env_var="OLLAMA_API_KEY",
-        _pydantic_ai_extra="ollama",
+        _pydantic_ai_extra="openai",
         _dependency_available=OllamaProvider is not None and OpenAIEmbeddingModel is not None,
     )
 

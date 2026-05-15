@@ -1,19 +1,19 @@
 """Defines data structures for text similarity output, wrapping results for utility and observability."""
 
 from abc import ABC, abstractmethod
-from typing import TYPE_CHECKING, Any, ParamSpec, TypeVar
+from typing import TYPE_CHECKING, Any, ParamSpec, TypeVar, overload
 
 from pydantic import Field
 from pydantic.dataclasses import dataclass
 from typing_extensions import Self
 
 if TYPE_CHECKING:
-    from rapidfuzz import fuzz
+    from rapidfuzz import fuzz, process
 else:
     try:
-        from rapidfuzz import fuzz
+        from rapidfuzz import fuzz, process
     except ImportError:
-        fuzz = None
+        fuzz = process = None
 
 from scholar_flux_mcp.exceptions.import_exceptions import RapidFuzzImportError
 
@@ -96,4 +96,40 @@ class FuzzyRatioSimilarity(BaseTextSimilarity):
         return cls(s1=s1, s2=s2, score=score / 100.0, threshold=threshold)
 
 
-__all__ = ["PartialRatioSimilarity", "FuzzyRatioSimilarity"]
+@dataclass
+class MaxFuzzyRatioSimilarity(BaseTextSimilarity):
+    """Dataclass containing the result of the highest fuzzy ratio similarity pair across several choices."""
+
+    s1: str
+    s2: str
+
+    @classmethod
+    @overload
+    def calculate(cls, text: str, choices: str | list[str] | set[str], threshold: None = None) -> Self:
+        """When a threshold is not provided, a max fuzzy similarity result is returned."""
+        ...
+
+    @classmethod
+    @overload
+    def calculate(cls, text: str, choices: str | list[str] | set[str], threshold: float) -> Self | None:
+        """When a threshold is provided, a max fuzzy similarity result is returned only when it exceeds the cutoff."""
+        ...
+
+    @classmethod
+    def calculate(
+        cls,
+        text: str,
+        choices: str | list[str] | set[str],
+        threshold: float | None = None,
+    ) -> Self | None:
+        """Calculates the fuzzy similarity across several combinations of strings to find the most similar match."""
+        cls.validate_dependency()
+        choice_sequence = [choices] if isinstance(choices, str) else choices
+        scaled_threshold = threshold * 100 if threshold is not None else None
+        if result := process.extractOne(text, choice_sequence, scorer=fuzz.ratio, score_cutoff=scaled_threshold):
+            choice, score, _ = result
+            return cls(s1=text, s2=choice, score=score / 100.0, threshold=threshold)
+        return None
+
+
+__all__ = ["PartialRatioSimilarity", "FuzzyRatioSimilarity", "MaxFuzzyRatioSimilarity"]

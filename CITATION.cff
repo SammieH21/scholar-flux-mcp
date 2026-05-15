@@ -5,6 +5,6 @@ authors:
     given-names: "Sammie"
 title: "ScholarFlux MCP: AI-Powered Academic Research Synthesis and Citation Grounding as MCP Tools"
 version: 0.1.0
-date-released: "2026-05-14"
+date-released: "2026-05-15"
 repository-code: "https://github.com/SammieH21/scholar-flux-mcp"
 license: Apache-2.0

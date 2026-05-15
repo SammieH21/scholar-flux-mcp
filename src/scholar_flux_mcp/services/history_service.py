@@ -1138,7 +1138,7 @@ class HistoryService:
         cls,
         history_item: SupportsTopicSimilarity,
         topic: str,
-        similarity_threshold: int | float | None,
+        similarity_threshold: int | float | None = None,
     ) -> PartialRatioSimilarity:
         """Convenience method for calculating the similarity of the item to the current topic.
 

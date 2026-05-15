@@ -333,6 +333,12 @@ class SearchInput(BaseSearchParams):
 
     """
 
+    model_config = ConfigDict(
+        str_strip_whitespace=True,
+        validate_assignment=True,
+        extra="forbid",
+    )
+
     HIDDEN_FIELDS: ClassVar[set[str]] = {"search_coordinator_config"}
 
     search_coordinator_config: list[SearchCoordinatorConfig] = Field(
@@ -1368,6 +1374,12 @@ class EvidenceGroundingOutput(BaseModel):
 class RelevanceSearchInput(BaseRelevanceSearchParams):
     """Relevance search parameters used to sort and rerank the record retrieved from APIs."""
 
+    model_config = ConfigDict(
+        str_strip_whitespace=True,
+        validate_assignment=True,
+        extra="forbid",
+    )
+
     DEFAULT_PROVIDERS: ClassVar[tuple[APIProviders, ...]] = (
         APIProviders.PUBMED,
         APIProviders.PLOS,
@@ -1437,6 +1449,12 @@ class SynthesisInput(BaseSynthesisParams):
     records across a wid range of academic subjects.
 
     """
+
+    model_config = ConfigDict(
+        str_strip_whitespace=True,
+        validate_assignment=True,
+        extra="forbid",
+    )
 
     DEFAULT_PROVIDERS: ClassVar[tuple[APIProviders, ...]] = (
         APIProviders.PUBMED,

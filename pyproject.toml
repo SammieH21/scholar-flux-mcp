@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "scholar-flux-mcp"
-version = "0.1.0b3"
+version = "0.1.0b4"
 authors = ["Sammie L. Haskin <44345113+SammieH21@users.noreply.github.com>"]
 description = "MCP server for academic record retrieval across 7+ providers, featuring embedding-driven record relevance re-ranking and AI-powered research synthesis with citation verification built on ScholarFlux and PydanticAI."
 readme = "README.md"
@@ -12,8 +12,8 @@ include = ["src/scholar_flux_mcp/py.typed", "README.md", "LICENSE", "NOTICE"]
 python = ">=3.10,<4.0"
 mcp = ">=1.26.0"
 pydantic = "^2.10.6"
-pydantic-ai-slim = {extras = ["ollama", "anthropic", "google", "openai"], version = ">=0.1.0,<2.0.0"}
-scholar-flux = {extras = ["database", "parsing", "cryptography", "duckdb"], version = ">=0.5.2"}
+pydantic-ai-slim = {extras = ["anthropic", "google", "openai"], version = ">=0.1.0,<2.0.0"}
+scholar-flux = {extras = ["database", "parsing", "cryptography"], version = ">=0.5.2"}
 rapidfuzz = ">=3.0.0"
 sqlmodel = ">=0.0.32"
 
