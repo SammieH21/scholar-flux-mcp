@@ -13,6 +13,8 @@ Fallback Chain:
 
 
 Public API:
+  - ModelProviders: Enum indicating the full range of pre-defined LLM providers available for use.
+  - EmbeddingModelProviders: Enum indicating the full range of pre-defined embedding model providers available for use.
   - PydanticAIModelFactory: Helper class used for the (stateless) creation of large language model configurations.
   - AgentABC: An abstract base class defining the structure for all future agents created for ScholarFluxMCP.
   - AgentDepsType: A type variable representing the input dependencies for future agents.
@@ -46,6 +48,7 @@ from scholar_flux_mcp.exceptions import (
     PydanticAIImportError,
     PydanticAIProviderExtraImportError,
 )
+from scholar_flux_mcp.models.core import computed_property
 
 if TYPE_CHECKING:
     from pydantic_ai import Agent
@@ -118,23 +121,41 @@ ModelSettingsType = TypeVar("ModelSettingsType", bound=ModelSettings)
 
 @dataclass
 class BaseProviderSettings:
-    """A model-providers dataclass that defines the model settings associated with a specific provider."""
+    """A model-providers dataclass that defines the model settings associated with a specific provider.
+
+    Attributes:
+        name (str):
+            The name of the current provider.
+        default_base_url (str):
+            The URL for the current provider. Defaults to an empty string.
+        _url_env_var (str | None):
+            Indicates the name of provider URL environment variable that should override the default.
+        _provider_env_var (str | None):
+            Environment variable indicating the name of provider that should override the default (OpenAI-specific).
+        _api_key_env_var (str | list[str] | None):
+            Indicates the API key environment variable for determining provider availability.
+        _pydantic_ai_extra (str | None):
+            Indicates the PydanticAI extra that is required for the current model provider.
+        _dependency_available (bool):
+            Indicates whether the current dependency is available.
+
+    """
 
     name: str = field(kw_only=True)
-    default_base_url: str = ""
-    _url_env_var: str | None = None
-    _provider_env_var: str | None = None
-    _api_key_env_var: str | list[str] | None = None
-    _pydantic_ai_extra: str | None = None
-    _dependency_available: bool = True  # defined at runtime by checking imports
+    default_base_url: str = field(default="")
+    _url_env_var: str | None = field(default=None, repr=False)
+    _provider_env_var: str | None = field(default=None, repr=False)
+    _api_key_env_var: str | list[str] | None = field(default=None, repr=False)
+    _pydantic_ai_extra: str | None = field(default=None, repr=False)
+    _dependency_available: bool = field(default=True, repr=False)  # defined at runtime by checking imports
 
-    @property
+    @computed_property
     def base_url(self) -> str:
         """Returns the base URL for the current provider if applicable to the provider."""
         base_url: str | None = os.getenv(self._url_env_var) if self._url_env_var else None
         return base_url or self.default_base_url
 
-    @property
+    @computed_property
     def provider(self) -> str:
         """Returns the name of the current provider."""
         custom_provider = os.getenv(self._provider_env_var) if self._provider_env_var else None
@@ -167,14 +188,22 @@ class BaseProviderSettings:
 
 @dataclass
 class ModelProviderSettings(BaseProviderSettings):
-    """A model-providers dataclass that defines the model settings associated with a specific provider."""
+    """A model-providers dataclass that defines the model settings associated with a specific provider.
+
+    Attributes:
+        default_model (str): The default LLM for a provider that is selected when initializing with default settings.
+        model_settings (ModelSettings | None): An optional dictionary of settings for the current LLM.
+        timeout (float | None): The timeout in seconds for requests to the current model provider.
+        _model_env_var (str | None): Indicates the name of LLM that should override the provider default model.
+
+    """
 
     default_model: str = field(kw_only=True)
-    model_settings: ModelSettings | None = None
-    timeout: float | None = None
-    _model_env_var: str | None = None
+    model_settings: ModelSettings | None = field(default=None, repr=False)
+    timeout: float | None = field(default=None)
+    _model_env_var: str | None = field(default=None, repr=False)
 
-    @property
+    @computed_property
     def model(self) -> str:
         """Returns the model for the current provider."""
         model: str | None = os.getenv(self._model_env_var) if self._model_env_var else None
@@ -183,13 +212,20 @@ class ModelProviderSettings(BaseProviderSettings):
 
 @dataclass
 class EmbeddingModelProviderSettings(BaseProviderSettings):
-    """A model-providers dataclass that defines the model settings associated with a specific provider."""
+    """A model-providers dataclass that defines the model settings associated with a specific provider.
+
+    Attributes:
+        default_model (str): The default embedder for a provider that is selected when initializing with defaults.
+        model_settings (EmbeddingSettings | None): An optional dictionary of settings for the current embedding model.
+        _embedding_model_env_var (str | None): Indicates the name of embedder that should override the provider default.
+
+    """
 
     default_model: str = field(kw_only=True)
-    model_settings: EmbeddingSettings | None = None
-    _embedding_model_env_var: str | None = None
+    model_settings: EmbeddingSettings | None = field(default=None, repr=False)
+    _embedding_model_env_var: str | None = field(default=None, repr=False)
 
-    @property
+    @computed_property
     def model(self) -> str:
         """Returns the embedding model for the current provider."""
         embedding_model: str | None = (
@@ -771,7 +807,7 @@ class AgentABC(ABC, Generic[AgentDepsType, AgentOutputType]):
 
 
 class EmbedderABC(ABC):
-    """Abstract Embedder base class wrapper that defines the basic methods used to embed records and queries."""
+    """Abstract embedder base class wrapper that defines the basic methods used to embed records and queries."""
 
     def __init__(self, embedder: Embedder | None = None) -> None:
         """Helper for creating a basic PydanticAI Embedder for calculating query/document similarity scores."""
@@ -823,7 +859,7 @@ class EmbedderABC(ABC):
 
     @classmethod
     def get_model_name(cls, embedder: Embedder) -> str:
-        """Helper for extracting the model name of the current LLM."""
+        """Helper for retrieving the name of the model used by the current agent."""
         return getattr(embedder.model, "model_name", str(embedder.model))
 
     @property
@@ -838,7 +874,9 @@ __all__ = [
     "AgentDepsType",
     "AgentOutputType",
     "AgentABC",
+    "EmbedderABC",
+    "EmbeddingModelProviders",
+    "ModelProviders",
     "PydanticAIModelFactory",
     "PydanticAIEmbeddingModelFactory",
-    "EmbedderABC",
 ]

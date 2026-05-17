@@ -59,7 +59,17 @@ T = TypeVar("T", bound=object)
 
 
 class BaseSearchParams(JSONDataModel):
-    """Base search parameters shared by core search input models."""
+    """Base search parameters shared by core search input models.
+
+    Attributes:
+        max_records (int): Maximum records to retrieve per provider.
+        pages (int): Number of result pages to retrieve per provider.
+        page_offset (int): The page number to start the retrieval of `n` pages from.
+        year_from (int | None): Filter records published on or after this year (e.g., 2020).
+        year_to (int | None): Filter records published on or before this year
+        open_access_only: (bool): Only return open access records,
+
+    """
 
     HIDDEN_FIELDS: ClassVar[set[str]] = {"input_hash"}
 
@@ -126,10 +136,11 @@ class BaseSearchParams(JSONDataModel):
         Uses provided queries if available and otherwise derives the field from known ResearchCategory fields.
 
         Args:
-            self: The current model after preliminary field validation
+            categories (Sequence[str | SubjectInfo | ResearchCategory]):
+                Research categories used to infer a list of queries when otherwise not provided.
 
         Returns:
-            An updated model with inferred queries when otherwise missing.
+            list[str]: An updated model with inferred queries when otherwise missing.
 
         """
         # When available, return the `queries` parameter as is.
@@ -149,7 +160,21 @@ class BaseSearchParams(JSONDataModel):
 
 
 class BaseRelevanceSearchParams(BaseSearchParams):
-    """Base relevance search parameters shared by core relevance search input models."""
+    """Base relevance search parameters shared by core relevance search input models.
+
+    Attributes:
+        question (str):
+            Research question, topic, or statement used to rerank records using embeddings. Examples:
+            - Most effective interventions for treating anxiety
+            - Economic outcomes of epidemics and infection rates
+            - ADHD Biomarkers and impact of treatment
+        queries (ResearchQueryList):
+            Search queries to execute against academic databases.
+        similarity_threshold (float | None):
+            Determines the minimum similarity threshold required to keep a record (0 by default). Set this field to
+            `None` to avoid filtering by similarity.
+
+    """
 
     question: str = Field(
         ...,
@@ -191,7 +216,32 @@ class BaseRelevanceSearchParams(BaseSearchParams):
 
 
 class BaseSynthesisParams(BaseRelevanceSearchParams):
-    """Base synthesis parameters shared by core synthesis input models."""
+    """Base synthesis parameters shared by core synthesis input models.
+
+    Attributes:
+        question (str):
+            Research question to synthesize. Be specific and focused. Examples:
+            - What are the most effective interventions for treatment-resistant depression?
+            - How does cognitive behavioral therapy compare to medication for anxiety disorders?
+            - What biomarkers are associated with PTSD treatment response?
+        queries (ResearchQueryList):
+            Search queries to execute against academic databases.
+        similarity_threshold (float | None):
+            Determines the minimum similarity threshold required to keep a record (0.5 by default). Set this field to
+            `None` to avoid filtering by similarity.
+        max_records (int):
+            The maximum number of academic_records to analyze and include within the final research synthesis
+            (5-200 records).
+        pages (int):
+            Number of result pages to retrieve per provider (1-10 pages). With a higher result set, records that are
+            more relevant to the research question and topic are likely to be retrieved.
+        year_from (int | None):
+            Filter records published on or after this year (e.g., 2021). Shows records from the last 5 years by
+            default.
+        year_to (int | None):
+            Filter records published on or before this year.
+
+    """
 
     model_config = ConfigDict(
         str_strip_whitespace=True,

@@ -2,7 +2,7 @@
 
 Quick-reference context for AI coding assistants working on ScholarFlux MCP.
 
-### Last updated 5/14/2026 (**v0.1.0**)
+### Last updated 5/17/2026 (**v0.1.0**)
 
 > For complete, authoritative information, consult:
 > - [README.md](README.md) — overview, features, quickstart, architecture
@@ -38,10 +38,10 @@ poetry run ruff check src tests --fix
 make mcp
 
 # Docker
-cd docker && docker compose up -d                              # Basic (MCP + Redis/MongoDB)
-docker compose --profile with-redis up -d                      # With Redis caching
-docker compose --profile with-ollama up -d                     # With local Ollama
-docker compose --profile with-redis --profile with-ollama up -d  # Full stack
+cd docker && docker compose up -d                                  # Basic (MCP + Redis caching)
+docker compose --profile with-mongodb up -d                        # With MongoDB caching
+docker compose --profile with-ollama up -d                         # With local Ollama
+docker compose --profile with-mongodb --profile with-ollama up -d  # With MongoDB and Ollama
 ```
 
 ## Available MCP Tools
@@ -78,7 +78,7 @@ FastMCP Server (server/main.py)
 ├── create_server()           — Server factory with lifespan management (lazy-loaded)
 ├── app_lifespan()            — Async context manager initializing all services
 ├── _register_tools()         — Registers 9 MCP tools with deferred service access
-└── AppContext                — Dataclass container for lazily initialized services
+└── AppContext                — Dataclass container for lazily initialized services and service-wide health check
      │
      ├── Tool I/O (server/io/)     — Pydantic input validation + markdown/JSON formatting
      │   ├── base.py               — BaseFormatter, BaseToolInput, BaseResearchToolInput (search, relevance search, synthesis)
@@ -166,6 +166,11 @@ SCHOLAR_FLUX_MCP_ENABLE_LOGGING=true                      # set to false to disa
 # Cache backends
 SCHOLAR_FLUX_DEFAULT_SESSION_CACHE_BACKEND=redis      # mongodb, sqlite, redis, memory, etc.
 SCHOLAR_FLUX_DEFAULT_RESPONSE_CACHE_STORAGE=redis      # mongodb, sql/sqlite, redis, duckdb, memory, null
+
+# History Output Persistence
+SCHOLAR_FLUX_MCP_HISTORY_URL=  #  default URL used to connect to a SQLModel-supported DB
+SCHOLAR_FLUX_MCP_PERSIST_HISTORY=true   # persistence in a default dir (e.g., ~/.scholar_flux/package_cache) (true) vs `sqlite:///:memory:` (false)
+SCHOLAR_FLUX_MCP_HISTORY_TTL=86400  # default TTL for cached seconds (Use `none` or `-1` to cache outputs indefinitely)
 
 # Model providers (force specific provider or let cascade auto-detect)
 SCHOLAR_FLUX_MCP_DEFAULT_MODEL_PROVIDER=               # ollama, ollama_cloud, anthropic, google, openai

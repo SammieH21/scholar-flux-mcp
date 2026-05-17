@@ -41,7 +41,16 @@ logger = logging.getLogger(__name__)
 
 
 class SynthesisAgent(AgentABC):
-    """Helper class that encapsulates the logic used to create and interface with LLMs."""
+    """Helper class that encapsulates the logic used to create and interface with LLMs.
+
+    Attributes:
+        agent (Agent[SynthesisContext, SynthesisAgentOutput] | None):
+            PydanticAI Agent used to synthesize academic research into a grounded research summary. When initialized,
+            the synthesis agent uses the `SynthesisContext` dataclass to access contextual information containing
+            synthesis task information and retrieved records. The resulting `SynthesisAgentOutput` model automatically
+            validates data types to ensure that outputs are generated in the correct format.
+
+    """
 
     SYNTHESIS_INSTRUCTIONS: str = format_multiline_string(
         """You are an expert academic research synthesizer specializing in academic literature.
@@ -122,7 +131,7 @@ class SynthesisAgent(AgentABC):
             *kwargs: Additional keyword arguments to pass to `SearchRecordPreprocessingUtils.build_record_context`
 
         Returns:
-            The generated prompt containing the record context required to answer the research question.
+            str: The generated prompt containing the record context required to answer the research question.
 
         """
         try:
@@ -211,7 +220,7 @@ class SynthesisAgent(AgentABC):
             context (SynthesisContext): Synthesis parameters including question, queries, and categories.
 
         Returns:
-            Structured synthesis with evidence and citations.
+            SynthesisAgentOutput: Structured synthesis with evidence and citations.
 
         """
         return await self.synthesize_records(context)

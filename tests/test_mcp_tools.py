@@ -97,6 +97,23 @@ async def test_search_records_tool_with_mock(
 
 
 @pytest.mark.asyncio
+async def test_search_formatter_prepares_record_text_markdown(mock_search_record_list):
+    """Verifies text-record display with `SearchFormatter.format_record()` and `display_full_text=True`."""
+    first_record = mock_search_record_list[0]
+    truncated_record_text = SearchFormatter.format_record(first_record)
+    assert first_record.title in truncated_record_text
+    assert f"DOI: `{first_record.doi}`" in truncated_record_text
+    assert first_record.abstract in truncated_record_text
+    assert all(author[:3] in truncated_record_text for author in first_record.authors)
+
+    assert first_record.full_text not in truncated_record_text
+
+    # First record should have a full text
+    record_text = SearchFormatter.format_record(first_record, display_full_text=True)
+    assert first_record.full_text in record_text
+
+
+@pytest.mark.asyncio
 async def test_search_records_json_output(mock_output_search_service):
     """Test search tool JSON output format."""
     search_input = SearchInput.create(

@@ -93,6 +93,7 @@ def mock_search_record_list() -> list[SearchRecord]:
             doi="10.1000/test.123",
             title="Cognitive Behavioral Therapy for Depression: A Meta-Analysis",
             abstract="This meta-analysis examines the efficacy of CBT...",
+            full_text="This meta-analysis examines the efficacy of CBT across 27 peer reviewed studies...",
             authors=["Smith, J.", "Jones, K."],
             journal="Journal of Clinical Psychology",
             year=2023,

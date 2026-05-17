@@ -3,6 +3,15 @@
 ```json
  {
   "question": "What are the current, most explored concepts in the area of artificial intelligence literacy?",
+  "queries": [
+    "Artificial Intelligence Literacy",
+    "computer science machine learning literacy"
+  ],
+  "categories": [
+    "COMPUTATION",
+    "MATHEMATICS",
+    "QUANTITATIVE"
+  ],
   "max_records": 120,
   "pages": 3,
   "page_offset": 0,
@@ -16,16 +25,7 @@
     "crossref",
     "arxiv"
   ],
-  "categories": [
-    "COMPUTATION",
-    "MATHEMATICS",
-    "QUANTITATIVE"
-  ],
-  "response_format": "markdown",
-  "queries": [
-    "Artificial Intelligence Literacy",
-    "computer science machine learning literacy"
-  ]
+  "response_format": "markdown"
 }
 ```
 

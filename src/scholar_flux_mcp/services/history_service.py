@@ -25,7 +25,11 @@ from scholar_flux_mcp.exceptions.history_exceptions import (
     HistoryCacheRetrievalException,
     HistoryCacheStorageException,
 )
-from scholar_flux_mcp.exceptions.import_exceptions import RapidFuzzImportError, SQLModelImportError
+from scholar_flux_mcp.exceptions.import_exceptions import (
+    RapidFuzzImportError,
+    ScholarFluxImportError,
+    SQLModelImportError,
+)
 from scholar_flux_mcp.models import (
     RelevanceSearchInput,
     RelevanceSearchOutput,
@@ -50,13 +54,14 @@ from scholar_flux_mcp.server.io import (
     SynthesisToolInput,
 )
 from scholar_flux_mcp.utils.fuzzy_text_similarity import PartialRatioSimilarity
-from scholar_flux_mcp.utils.helpers import coerce_bool, coerce_numeric, coerce_str, try_none
+from scholar_flux_mcp.utils.helpers import coerce_bool, coerce_numeric, coerce_str, try_none, with_fallback
 from scholar_flux_mcp.utils.initializer import masker
 
 if TYPE_CHECKING:
     from collections.abc import AsyncIterator, Iterator, Sequence
 
     import sqlmodel  # if history_models is available, so is sqlmodel
+    from scholar_flux.package_metadata import package_directory_settings
 
     # also available if sqlalchemy is available
     from sqlalchemy import Engine, create_engine, exc
@@ -64,6 +69,10 @@ if TYPE_CHECKING:
 
     import scholar_flux_mcp.models.history as history_models
 else:
+    try:
+        from scholar_flux.package_metadata import package_directory_settings
+    except ImportError:
+        package_directory_settings = None
     try:
         import sqlmodel  # if history_models is available, so is sqlmodel
 
@@ -123,6 +132,7 @@ class HistoryService:
     }
     DEFAULT_RAISE_ON_ERROR: bool = True
     STORAGE_TYPE: str = "SQL"
+    DEFAULT_PERSIST_HISTORY: bool = with_fallback(coerce_bool(os.getenv("SCHOLAR_FLUX_MCP_PERSIST_HISTORY")), False)
 
     def __init__(
         self,
@@ -961,13 +971,30 @@ class HistoryService:
             )
 
     @classmethod
-    def create_default_url(cls) -> str:
+    def create_default_url(cls, persist_cache: bool | None = None) -> str:
         """Creates a default URL that persists a SQLite history database within memory."""
+        persist = persist_cache if persist_cache is not None else cls.DEFAULT_PERSIST_HISTORY
+        if persist:
+            try:
+                if package_directory_settings is None:
+                    raise ScholarFluxImportError()
+                # raises a RuntimeError if not available
+                cache_dir = package_directory_settings.get_default_writable_directory("package_cache")
+                return f"sqlite:///{cache_dir / 'mcp_history.db'}"
+            except (RuntimeError, ScholarFluxImportError) as e:
+                logger.warning(
+                    "Failed to persist the HistoryService DB cache. Defaulting to `sqlite:///:memory:` cache due to "
+                    f"the following: {e}"
+                )
         return "sqlite:///:memory:"
 
     @classmethod
-    def get_default_url(cls) -> str:
+    def get_default_url(cls, persist_cache: bool | None = None) -> str:
         """Retrieves the SQLModel URL from the environment configuration, falling back to the default when invalid.
+
+        persist_cache (bool | None):
+            Optionally uses filesystem persistence of cache within the history database when True. Defaults to
+            `sqlite:///:memory` otherwise or if an error occurs during URL selection.
 
         Returns:
             str:
@@ -991,7 +1018,7 @@ class HistoryService:
                     f"Returning the default..."
                 )
 
-        return cls.create_default_url()
+        return cls.create_default_url(persist_cache=persist_cache)
 
     @classmethod
     def get_default_config(cls) -> dict[str, Any]:

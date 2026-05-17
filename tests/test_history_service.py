@@ -13,6 +13,7 @@ from scholar_flux_mcp.models.history import HISTORY_TABLES
 from scholar_flux_mcp.server.io.history import OutputHistoryFormatter
 from scholar_flux_mcp.services import HistoryService
 from scholar_flux_mcp.utils.helpers import os_env_context
+from tests.testing_utilities import raise_error
 
 
 @pytest.fixture
@@ -278,6 +279,42 @@ async def test_history_calculate_fuzzy_similarity(mock_ai_synthesis_output, tmp_
 
     record_topic_similarity = history_service.calculate_fuzzy_topic_similarity(record_two, topic=record.topic)
     assert record_topic_similarity.score < 0.9  # Records would be identified as dupes otherwise
+
+
+async def test_history_url_selection_with_persistence(tmp_path, cleanup, monkeypatch, caplog):
+    """Verifies that DB URL respects the `SCHOLAR_FLUX_MCP_PERSIST_HISTORY."""
+    pytest.importorskip("scholar_flux", reason="The history URL selection need scholar-flux to continue")
+
+    monkeypatch.setattr(HistoryService, "DEFAULT_PERSIST_HISTORY", True)
+
+    # With cache persistence
+    dir_selection = "scholar_flux.package_metadata.directories.PackageDirectorySettings.get_default_writable_directory"
+    monkeypatch.setattr(dir_selection, lambda *args, **kwargs: tmp_path)
+    cache_partial_url = f"sqlite:///{tmp_path}"
+    assert cache_partial_url in HistoryService.get_default_url()
+
+    # Without cache persistence
+    nonpersistence_url = HistoryService.get_default_url(persist_cache=False)
+    assert nonpersistence_url == "sqlite:///:memory:"
+
+    ## Simulating filesystem nonavailability
+    err = "Directly raised exception"
+    monkeypatch.setattr(dir_selection, raise_error(RuntimeError, err))
+    nonpersistence_url_fallback = HistoryService.get_default_url(persist_cache=True)
+
+    assert nonpersistence_url_fallback == "sqlite:///:memory:"
+    assert err in caplog.text
+
+    caplog.clear()
+
+    ## Simulating ScholarFlux not being available
+    monkeypatch.setattr("scholar_flux_mcp.services.history_service.package_directory_settings", None)
+    nonpersistence_url_fallback_two = HistoryService.get_default_url(persist_cache=True)
+
+    assert nonpersistence_url_fallback_two == "sqlite:///:memory:"
+    assert (
+        "The ScholarFlux base package is not installed. Restart the ScholarFluxMCP server after installing"
+    ) in caplog.text
 
 
 async def test_history_output_searches_with_fuzzy_similarity(

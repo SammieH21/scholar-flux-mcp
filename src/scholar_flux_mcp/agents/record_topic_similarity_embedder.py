@@ -50,7 +50,14 @@ search_record_adapter: TypeAdapter[SearchRecordList] = TypeAdapter(SearchRecordL
 
 
 class RecordTopicSimilarityEmbedder(EmbedderABC):
-    """Class responsible for creating and embedding questions and documents via PydanticAI for similarity scoring."""
+    """Class responsible for creating and embedding questions and documents via PydanticAI for similarity scoring.
+
+    Args:
+        embedder (Embedder | None):
+            PydanticAI `Embedder` used to rerank records by similarity to the topic of interest. Note that the embedder is
+            lazily initialized on health checks and when embedding records and topics.
+
+    """
 
     DEFAULT_SEARCH_RECORD_EMBEDDING_FIELDS: list[str] = ["title", "year", "journal", "abstract", "keywords"]
     DEFAULT_SEARCH_RECORD_EMBEDDING_SIMILARITY_THRESHOLD: float = 0.0
@@ -234,8 +241,20 @@ class RecordTopicSimilarityEmbedder(EmbedderABC):
         search_record_embeddings: SearchRecordEmbedding | list[SearchRecordEmbedding],
         research_topic_embedding: TopicEmbedding,
     ) -> list[RecordTopicSimilarity]:
-        """Uses the query and record contents in addition to their embeddings to create a new RecordTopicSimilarity
-        list."""
+        """Calculates the cosine similarity between `SearchRecordEmbedding` instances and a `TopicEmbedding`.
+
+        Args:
+            search_record_embeddings (SearchRecordEmbedding | list[SearchRecordEmbedding]):
+                A `SearchRecordEmbedding` or list of search `SearchRecordEmbedding` instances.
+            research_topic_embedding (TopicEmbedding):
+                The topic embedding calculated by the search query, categories, and question.
+
+        Returns:
+            RecordTopicSimilarity:
+                Pydantic model containing a list of record-topic embedding similarity scores calculated via
+                the cosine similarity between the topic and each record.
+
+        """
         return [
             RecordTopicSimilarity(
                 record_embedding=search_record_embedding,
@@ -253,9 +272,18 @@ class RecordTopicSimilarityEmbedder(EmbedderABC):
         indexed_record_embedding_similarity: tuple[int, RecordTopicSimilarity],
         precision: int | None = None,
     ) -> tuple[float, int]:
-        """Sorting method used to sort record embeddings by similarity.
+        """Sorting method used to sort indexed record embeddings by similarity.
 
-        Preserves original order otherwise.
+        Args:
+            indexed_record_embedding_similarity (tuple[int, RecordTopicSimilarity]):
+                The indexed similarity output retrieved via a record-topic comparison.
+            precision: (int | None):
+                The degree of precision (or decimal significance) to use when sorting the current record. If not
+                provided, the default significance is selected via `cls.TOPIC_SIMILARITY_RANKING_PRECISION`.
+
+        Returns:
+            tuple[float, int]: A tuple defining the numeric sort order. The sort order is defined by similarity score
+            followed by index.
 
         """
         index, record_embedding_similarity = indexed_record_embedding_similarity
@@ -270,7 +298,13 @@ class RecordTopicSimilarityEmbedder(EmbedderABC):
     ) -> float:
         """Sorting method used to sort record embeddings by similarity.
 
-        Preserves original order otherwise.
+        Args:
+            precision: (int | None):
+                The degree of precision (or decimal significance) to use when sorting the current record. If not
+                provided, the default significance is selected via `cls.TOPIC_SIMILARITY_RANKING_PRECISION`.
+
+        Returns:
+            tuple[float, int]: The similarity score between the record and topic.
 
         """
         precision = precision if isinstance(precision, int) else cls.TOPIC_SIMILARITY_RANKING_PRECISION

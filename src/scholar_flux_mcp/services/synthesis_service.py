@@ -63,7 +63,7 @@ class SynthesisService(BaseResearchService):
                 The service used for record retrieval and reranking via the configured embedding model.
             grounding_service (GroundingService): The service used for verifying AI-generated synthesis output.
             synthesis_agent (SynthesisAgent):
-                The `PydanticAI` agent used to generate the research synthesis given the provided input parameters.
+                The agent used to generate the research synthesis given the provided input parameters via `PydanticAI`.
             **kwargs: Additional keyword arguments used to initialize the BaseResearchService.
 
         """

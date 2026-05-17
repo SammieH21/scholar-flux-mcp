@@ -110,15 +110,18 @@ class SearchFormatter(BaseFormatter):
         output: SearchOutput | RelevanceSearchOutput,
         response_format: ResponseFormat | str = ResponseFormat.MARKDOWN,
         *args: Any,
+        max_records: int | None = None,  # markdown only
+        display_full_text: bool = False,  # markdown only
         **kwargs: Any,
     ) -> str:
         """Formats the search results either as a markdown summary or JSON response."""
         format = ResponseFormat(response_format)
-        max_records = kwargs.pop("max_records", None)
         return (
             cls.format_record_search_json(output, *args, **kwargs)  # all records shown automatically
             if format == ResponseFormat.JSON
-            else cls.format_record_search_markdown(output, *args, max_records=max_records, **kwargs)
+            else cls.format_record_search_markdown(
+                output, *args, max_records=max_records, display_full_text=display_full_text, **kwargs
+            )
         )
 
     @classmethod
@@ -128,6 +131,7 @@ class SearchFormatter(BaseFormatter):
         *,
         max_records: int | None = None,
         field_truncation_length: int | None = None,
+        display_full_text: bool = False,
     ) -> str:
         """Formats search results as markdown summary.
 
@@ -162,7 +166,11 @@ class SearchFormatter(BaseFormatter):
 
             for i, record in enumerate(provider_records[:max_records], 1):  # Show first N records
                 formatted_record_string = cls.format_record(
-                    record, i, field_truncation_length=field_truncation_length, indent=indent
+                    record,
+                    i,
+                    field_truncation_length=field_truncation_length,
+                    indent=indent,
+                    display_full_text=display_full_text,
                 )
                 lines.append(formatted_record_string + "\n")
 
@@ -219,6 +227,7 @@ class SearchFormatter(BaseFormatter):
         *,
         display_record_source: bool = False,
         field_truncation_length: int | None = None,
+        display_full_text: bool = False,
         indent: int = 3,
     ) -> str:
         """Formats a record as a human readable string."""
@@ -236,17 +245,25 @@ class SearchFormatter(BaseFormatter):
         open_access = ("Yes" if record.open_access else "No") if record.open_access is not None else "Unknown"
         topic_similarity_score = record.topic_similarity_score if isinstance(record, IndexedSearchRecord) else None
 
-        record_parts.append(f"{i}. **{title}**{year}{record_source_fmt}{doi}{url}")
+        record_string = f"**{title}**{year}{record_source_fmt}{doi}{url}"
+        record_parts.append(f"{i}. {record_string}" if i is not None else record_string)
 
         # Add the authors field if available
         if authors := cls.format_author_list(record):
             record_parts.append(f"{pad}*{authors}*")
 
-        field_truncation_length = field_truncation_length or cls.DISPLAY_FIELD_TRUNCATION_LENGTH
+        field_truncation_length = (
+            (field_truncation_length or None)
+            if display_full_text or field_truncation_length
+            else cls.DISPLAY_FIELD_TRUNCATION_LENGTH
+        )
         # Add truncated abstract
         if record.abstract:
             abstract = truncate(record.abstract, field_truncation_length).removeprefix("\n")
             record_parts.append(f"{pad}> {abstract}")
+
+        if display_full_text and record.full_text:
+            record_parts.append(f"\n{pad}> {record.full_text}")
 
         if display_record_source:
             record_parts.append(f"{pad}Source: {record.display_name}")

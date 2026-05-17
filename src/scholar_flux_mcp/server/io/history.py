@@ -7,6 +7,7 @@ Formats and presents tool output history for browsing recent research operations
 from __future__ import annotations
 
 import json
+from itertools import islice
 from typing import TYPE_CHECKING, Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -27,7 +28,7 @@ from scholar_flux_mcp.server.io.search import SearchFormatter
 from scholar_flux_mcp.utils.helpers import coerce_int, parse_iso_timestamp, truncate
 
 if TYPE_CHECKING:
-    from collections.abc import Sequence
+    from collections.abc import Iterable, Sequence
 
     from scholar_flux_mcp.models.history import (
         RelevanceSearchExecution,
@@ -97,6 +98,10 @@ class RecordHistoryToolInput(BaseToolInput):
             "fuzzy similarity record search uses the title, author, doi, and abstract fields to select and reorder "
             "previously cached records by relevance in descending order."
         ),
+    )
+    display_full_text: bool = Field(
+        default=False,
+        description=("Displays the full abstract and text (if available) for the current article."),
     )
     similarity_threshold: int | float | None = Field(
         default=None,
@@ -387,6 +392,8 @@ class RecordHistoryFormatter(BaseFormatter):
         output: Sequence[SearchRecord | SearchRecordHistory],
         response_format: ResponseFormat | str = ResponseFormat.MARKDOWN,
         *args: Any,
+        max_records: int | None = None,  # markdown only
+        display_full_text: bool = False,  # markdown only
         **kwargs: Any,
     ) -> str:
         """Formats the output history either as a markdown summary or JSON response."""
@@ -394,7 +401,9 @@ class RecordHistoryFormatter(BaseFormatter):
         return (
             cls.format_record_history_json(output, *args, **kwargs)
             if format == ResponseFormat.JSON
-            else cls.format_record_history_markdown(output)
+            else cls.format_record_history_markdown(
+                output, display_full_text=display_full_text, max_records=max_records
+            )
         )
 
     @classmethod
@@ -408,14 +417,25 @@ class RecordHistoryFormatter(BaseFormatter):
         return json.dumps({"record_history": formatted_records}, indent=indent)
 
     @classmethod
-    def format_record_history_markdown(cls, record_history: Sequence[SearchRecord | SearchRecordHistory]) -> str:
+    def format_record_history_markdown(
+        cls,
+        record_history: Sequence[SearchRecord | SearchRecordHistory],
+        max_records: int | None = None,
+        display_full_text: bool = False,
+    ) -> str:
         """Formats the recently recorded tool output history by storage date in descending order."""
         if not record_history:
             return "No history data is available."
 
+        record_iterator: Iterable[tuple[int, SearchRecord | SearchRecordHistory]] = (
+            islice(enumerate(record_history, start=1), max_records)
+            if isinstance(max_records, int)
+            else enumerate(record_history, start=1)
+        )
+
         formatted_records = [
-            SearchFormatter.format_record(cls.convert_record(record), i)
-            for i, record in enumerate(record_history, start=1)
+            SearchFormatter.format_record(cls.convert_record(record), i, display_full_text=display_full_text)
+            for i, record in record_iterator
         ]
 
         return "\n\n---\n\n".join(formatted_records)
@@ -449,6 +469,7 @@ class OutputHistoryFormatter(BaseFormatter):
         output: Sequence[ResearchHistoryOutput],
         response_format: ResponseFormat | str = ResponseFormat.MARKDOWN,
         *args: Any,
+        max_history: int | None = None,
         **kwargs: Any,
     ) -> str:
         """Formats the output history either as a markdown summary or JSON response."""
@@ -456,7 +477,7 @@ class OutputHistoryFormatter(BaseFormatter):
         return (
             cls.format_recent_history_json(output, *args, **kwargs)
             if format == ResponseFormat.JSON
-            else cls.format_recent_history_markdown(output)
+            else cls.format_recent_history_markdown(output, max_history=max_history)
         )
 
     @classmethod
@@ -470,13 +491,21 @@ class OutputHistoryFormatter(BaseFormatter):
         return json.dumps({"recent_history": history_summary}, indent=indent)
 
     @classmethod
-    def format_recent_history_markdown(cls, recent_history: Sequence[ResearchHistoryOutput]) -> str:
+    def format_recent_history_markdown(
+        cls, recent_history: Sequence[ResearchHistoryOutput], max_history: int | None = None
+    ) -> str:
         """Formats the recently recorded tool output history by storage date in descending order."""
         if not recent_history:
             return "No history data is available."
 
+        output_iterator: Iterable[tuple[int, ResearchHistoryOutput]] = (
+            islice(enumerate(recent_history, start=1), max_history)
+            if isinstance(max_history, int)
+            else enumerate(recent_history, start=1)
+        )
+
         formatted_items: list[str] = []
-        for i, history_item in enumerate(recent_history, start=1):
+        for i, history_item in output_iterator:
             history_markdown = cls._format_history_item(history_item, i)
             formatted_items.append(history_markdown)
 

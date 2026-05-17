@@ -31,7 +31,6 @@ else:
         ToolAnnotations = dict
 
 from scholar_flux_mcp.models import (
-    HealthStatus,
     RelevanceSearchOutput,
     SearchOutput,
     SynthesisOutput,
@@ -420,13 +419,18 @@ def _register_tools(server: FastMCP) -> None:
         tool_history_service = lifespan_ctx.history_service
 
         try:
+            # Handles filtering via TTL and max records
             record_history_list = await tool_history_service.retrieve_record_history(
                 ttl=params.ttl,
                 max_history=params.max_records,
                 topic=params.topic,
                 similarity_threshold=params.similarity_threshold,
             )
-            return RecordHistoryFormatter.format(record_history_list, response_format=params.response_format)
+            return RecordHistoryFormatter.format(
+                record_history_list,
+                response_format=params.response_format,
+                display_full_text=params.display_full_text,
+            )
 
         except Exception as e:
             msg = f"The `scholar_flux_list_record_history` tool failed to list the stored record history. {e}"
@@ -589,26 +593,7 @@ def _register_tools(server: FastMCP) -> None:
         """
         try:
             lifespan_ctx = ctx.request_context.lifespan_context
-            cache_service = lifespan_ctx.cache_service
-            history_service = lifespan_ctx.history_service
-
-            relevance_search_service = lifespan_ctx.relevance_search_service
-            record_topic_similarity_embedder = relevance_search_service.record_topic_similarity_embedder
-
-            synthesis_service = lifespan_ctx.synthesis_service
-            synthesis_agent = synthesis_service.synthesis_agent
-
-            # assume healthy until further information otherwise - service running
-            mcp_health_check = HealthStatus(status="healthy")
-            mcp_health_check.update_dependencies()  # update the health status of the package with dependency info
-
-            mcp_health_check.services["cache"] = await cache_service.check_health()
-            mcp_health_check.services["history"] = await history_service.check_health()
-            mcp_health_check.services["agent"] = await synthesis_agent.check_health()
-            mcp_health_check.services["embedder"] = await record_topic_similarity_embedder.check_health()
-
-            if any(service.status == "unhealthy" for service in mcp_health_check.services.values()):
-                mcp_health_check.update_status("unhealthy")
+            mcp_health_check = await lifespan_ctx.check_health()
 
             return HealthCheckFormatter.format(mcp_health_check, response_format=params.response_format)
         except Exception as e:

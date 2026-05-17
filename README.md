@@ -31,6 +31,7 @@ ScholarFlux MCP connects [ScholarFlux](https://github.com/SammieH21/scholar-flux
 - **Multi-provider search**: Query PubMed, PLOS, OpenAlex, Crossref, arXiv, CORE, and Springer Nature concurrently with automatic per-provider rate limiting and shared rate limiter coordination
 - **Schema normalization**: Provider-specific response formats consolidated into a unified record schema
 - **Two-tier caching**: HTTP session cache + processed result cache with pluggable backends (Redis, MongoDB, SQLite, in-memory)
+- **Security-first by design**: Full type safety with input validation (pydantic + mypy strict-mode), automated security auditing (CodeQL), and continuous monitoring with zero known CVEs
 
 ### Added by ScholarFlux MCP
 
@@ -38,14 +39,14 @@ ScholarFlux MCP implements a layered research pipeline on top of ScholarFlux's s
 
 - **Deduplicate → Rank → Filter**: Retrieved records are deduplicated across providers via rapidfuzz fuzzy matching, then scored against your research question using PydanticAI embedding models and filtered by similarity threshold — substantially reducing noise before synthesis
 - **Synthesize → Ground → Report**: PydanticAI agents generate evidence-based research summaries with structured context injection and index-based (`[N]`) citation. The GroundingService then validates every citation against source records — checking both index bounds and referenced text similarity via rapidfuzz — reporting verified and rejected counts. Every synthesis includes confidence scores, grounding statistics, explicit limitations, and suggested follow-up queries
-- **Zero-config model selection**: The model factory cascades through available providers (Ollama local → Ollama Cloud → Anthropic → Google → OpenAI), adapting to your environment with minimal configuration — for both LLM synthesis and embedding-based reranking
+- **Zero-config model selection**: The model factory cascades through available providers (Ollama local → Ollama Cloud → Anthropic → Google → OpenAI), adapting to your environment and available provider dependencies with minimal configuration — for both LLM synthesis and embedding-based reranking
 - **Output history**: SQLModel-based relational storage with TTL support and fuzzy topic search for replaying and retrieving previous searches, relevance rankings, and syntheses without re-executing the pipeline
 - **MCP interface**: 9 tools registered via FastMCP with transport options (stdio, SSE, streamable HTTP)
 
 Supporting infrastructure:
 
-- **Flexible caching**: Inherits ScholarFlux's cache backends; adds MongoDB or in-memory options with optional Redis for sessions
-- **Docker deployment**: Full Docker Compose stack with MongoDB, optional Redis and Ollama, health checks, resource limits, and auto-model-pull on startup
+- **Flexible caching**: Inherits ScholarFlux's cache backends; Redis, MongoDB, SQLite/SQLAlchemy, and in-memory caching for sessions and response cache, while enabling configuration via environment variables
+- **Docker deployment**: Full Docker Compose stack with Redis, optional MongoDB and Ollama, health checks, resource limits, and auto-model-pull on startup
 
 ## Why This Exists
 
@@ -98,7 +99,7 @@ Full output: [`samples/llm_generated_citations_synthesis.md`](samples/llm_genera
 The architecture ensures and validates citation accuracy through the implementation of strict architectural constraints:
 1. **Index Constraint**: LLMs can only cite by record index (0-N). Values outside of this range are flagged as invalid.
 2. **Text Verification**: All cited text must match source records (60%+ fuzzy similarity via `rapidfuzz`)
-3. **Structured Output**: Building off of `PydanticAI`, synthesis outputs are constrained to strict structure and type validation. When the LLM fails to produce the response structure, `PydanticAI` automatically retries the request, relaying the issue to the LLM.
+3. **Structured Output**: Building off of `PydanticAI`, synthesis outputs are constrained to strict structure and type validation. When the LLM fails to produce the response structure expected by the output schema, `PydanticAI` automatically retries the request, relaying the issue to the LLM.
 4. **Confidence Checks**: On every synthesis generation, the `SynthesisAgent` must relay its confidence in the report that it generates, indicating limitations in the produced report or when analyses require more conclusive evidence.
 5. **Post-Generation Checks**: The `GroundingService` validates every index citation and text references to relay when the LLM hallucinates.
 
@@ -114,13 +115,30 @@ The synthesis tool produces structured, citation-grounded academic summaries. He
 **Input:**
 ```json
 {
-  "question": "What are the current, most explored concepts in AI literacy?",
-  "queries": ["Artificial Intelligence Literacy", "machine learning literacy"],
-  "providers": ["plos", "openalex", "crossref", "springernature"],
-  "categories": ["COMPUTATION", "MATHEMATICS"],
+  "question": "What are the current, most explored concepts in the area of artificial intelligence literacy?",
+  "queries": [
+    "Artificial Intelligence Literacy",
+    "computer science machine learning literacy"
+  ],
+  "categories": [
+    "COMPUTATION",
+    "MATHEMATICS",
+    "QUANTITATIVE"
+  ],
+  "providers": [
+    "plos",
+    "openalex",
+    "crossref",
+    "arxiv"
+  ],
   "max_records": 120,
   "pages": 3,
-  "year_from": 2023
+  "page_offset": 0,
+  "year_from": 2023,
+  "year_to": 2100,
+  "open_access_only": false,
+  "similarity_threshold": 0.5,
+  "response_format": "markdown"
 }
 ```
 
@@ -130,62 +148,82 @@ The synthesis tool produces structured, citation-grounded academic summaries. He
 # Research Synthesis
 
 ## Research Question
-> What are the current, most explored concepts in AI literacy?
+> What are the current, most explored concepts in the area of artificial intelligence literacy?
 
-**Categories**: computation, mathematics
+**Categories**: ['Computation', 'Mathematics', 'Quantitative']
+
 **Queries**:
 - Artificial Intelligence Literacy
-- machine learning literacy
+- computer science machine learning literacy
 
-**Records Analyzed**: 54
-**Confidence Score**: 92%
-**Evidence Grounding**: 16 verified records, 0 rejected
+**Records Analyzed**: 65
+
+**Confidence Score**: 85%
+
+**Evidence Grounding**: 8 verified records, 0 rejected
+
+
 
 ---
 
 ## Synthesis
 
-The research on artificial intelligence literacy has rapidly expanded, particularly
-from 2023-2026, with the most explored concepts falling into several interconnected
-areas. First, the development and validation of AI literacy frameworks and assessment
-instruments represents a dominant research theme, with scholars proposing multidimensional
-models encompassing technical competence, ethical reasoning, critical evaluation,
-creative application, and adaptive learning [4]. Multiple validated scales have emerged,
-including the Artificial Intelligence Literacy Scale [5], the Multidimensional AI
-Literacy Competency Scale (MAIL-CS) [17], and the AI Identity Scale [6]...
+The current research landscape on artificial intelligence literacy reveals several most-explored concepts that have emerged as central themes across 65 academic records. Framework development and conceptualization represent the most extensively researched area, with scholars proposing multi-component models that consistently include knowing/comprehending AI, applying/utilizing AI, assessing/evaluating AI, and AI ethics [0]. The integration of computational thinking, data literacy, and algorithm literacy within these frameworks has gained significant traction [0; 1]. Assessment and measurement of AI literacy constitutes another heavily explored domain, with multiple validated scales developed for different populations including university students [6; 10], K-12 learners [4], and Chinese college students [39]. AI literacy in educational contexts—spanning primary education [5; 11; 15], secondary schools [13; 21], higher education [6; 20; 25], and teacher education [9; 16; 18]—represents a dominant research focus. The ethical dimensions of AI literacy consistently appear as a critical component across frameworks [0; 1; 2; 10]. Emerging areas include critical AI literacy for children [19], generative AI literacy [29; 35; 49], and domain-specific AI literacy in healthcare [27; 54; 58] and libraries [36]. Notably, computational thinking has been identified as a significant determinant of AI literacy [23], while the relationship between digital divide and AI literacy has also been explored. Some tensions exist regarding whether AI literacy directly predicts positive outcomes or if mediating factors such as confidence and self-efficacy are necessary [16; 29].
+
 
 ## Key Findings
 
-- AI literacy is consistently conceptualized as a multidimensional construct
-- Framework development and scale validation represent the most mature research area
-- Educational interventions across K-8, primary, secondary, and higher education
-  demonstrate positive learning outcomes
-- A counterintuitive finding shows lower AI literacy correlates with greater AI
-  receptivity due to perceived 'magic' of AI
+- Framework development with multi-component models (knowing AI, applying AI, assessing AI, ethics) is the most established area of AI literacy research, with at least 8 different frameworks proposed across the literature
+- AI literacy assessment and measurement scales have been developed and validated for diverse populations, including the AILS-CCS with four dimensions (Awareness, Usage, Evaluation, Ethics) and the MAIL-CS with four factors
+- Educational contexts (K-12, higher education, teacher education) represent the dominant application domain for AI literacy research, with particular emphasis on integrating AI literacy into existing curricula
+- AI ethics consistently appears as a core component across all major frameworks, addressing responsible AI use, bias, and societal implications
+- Computational thinking has been identified as a significant determinant of AI literacy, facilitating recognition, evaluation, and application of AI technologies
+- Critical AI literacy is an emerging concept focused on enabling children to question, critique, and understand the social, political, and ethical implications of AI
+- Domain-specific AI literacy research has expanded to include healthcare professionals, librarians, and vocational students, revealing generally low to moderate baseline literacy levels across these groups
+
 
 ## Supporting Evidence
 
-1. **Artificial intelligence literacy in design intelligence: A review** (2026)
-   [Link](https://doi.org/10.36922/dp025520053) via crossref
 
-   **Index**: [4]
-   **Relevance Score**: 95%
-   **Summary**: AI literacy is multidimensional, encompassing technical competence,
-   ethical reasoning, critical evaluation, creative application, and adaptive learning
+1. **Towards an Integrated Artificial Intelligence Literacy Framework in Education** (2025) DOI: `10.4018/979-8-3373-2297-1.ch008` [[Link]](https://doi.org/10.4018/979-8-3373-2297-1.ch008)
+
+**Authors**: Elisha Mupaikwa
+
+**Index**: [0]
+
+**Relevance Score**: 95%
+
+**Summary**: Framework development represents the most established research area, with multi-component models including AI knowledge, application, evaluation, and ethics consistently proposed
+
+**Abstract**: A comprehensive framework for artificial intelligence literacy in education is developed in this chapter. A review of 40 journal papers that were retrieved from Google Scholar is presented here. The publication dates of these papers range from 2010 to 2015. The review demonstrates that many scholars have developed several artificial intelligence literacy frameworks, each of which has been tailored to a certain educational level. This chapter's suggested framework includes the four main components of artificial intelligence literacy: knowing and comprehending AI, applying and utilizing AI, assessing and developing AI, and AI ethics. These also include computation thinking, trans-disciplinary knowledge, data literacy, and algorithm literacy.
+
+**Referenced Text**: This chapter's suggested framework includes the four main components of artificial intelligence literacy: knowing and comprehending AI, applying and utilizing AI, assessing and developing AI, and AI ethics.
+
+**Source**: Crossref
 
 ## Limitations
 
-- Most studies are cross-sectional surveys limiting causal inference
-- Many scales are validated in specific cultural contexts limiting generalizability
+- The majority of research originates from specific geographic regions (China, USA, Finland, Germany), potentially limiting generalizability to other contexts
+- Many frameworks are developed for educational settings but may not translate effectively to general population or professional contexts outside education
+- There is inconsistent terminology and definitions across studies, with some conflating AI literacy with digital literacy or computational thinking
+- Most empirical studies rely on self-reported measures rather than objective assessments of AI knowledge and skills
+- Limited longitudinal research exists on the long-term effectiveness of AI literacy interventions
+- Conflicting findings exist regarding the relationship between AI literacy and attitudes toward AI—one study found lower AI literacy predicts greater receptivity due to perceiving AI as magical
+
 
 ## Suggested Follow-up
 
-- What are the most effective pedagogical approaches for teaching AI literacy?
-- How does generative AI specifically change the landscape of AI literacy education?
+- What are the most effective pedagogical strategies for teaching AI literacy across different educational levels?
+- How does AI literacy differ across cultural and socioeconomic contexts?
+- What specific competencies constitute critical AI literacy for the general public versus technical users?
+- How can AI literacy frameworks be adapted for non-formal learning contexts and lifelong learning?
+- What is the long-term impact of AI literacy education on workforce preparedness?
+
+
 
 ---
 *This synthesis was generated using ScholarFlux MCP with PydanticAI.
-LLM: minimax-m2.5:cloud | Embedding Model: embeddinggemma:latest.
+LLM: minimax-m2.5:cloud | Embedding Model: embeddinggemma:latest
 Always verify findings with primary sources.*
 ```
 
@@ -226,7 +264,7 @@ git clone https://github.com/SammieH21/scholar-flux-mcp.git
 cd scholar-flux-mcp
 ```
 
-Afterward, build the docker container:
+Afterward, build the Docker container:
 
 ```bash
 cd docker
@@ -236,25 +274,25 @@ cp .env.example .env
 docker compose up -d
 ```
 
-Once built, you can start a containerized ScholarFlux MCP server directly with docker:
+Once built, you can start a containerized ScholarFlux MCP server directly with Docker:
 
 ```bash
-# Basic (MCP server only)
+# MCP server + Redis
 docker compose up -d
 
-# With Redis caching
-docker compose --profile with-redis up -d
+# With MongoDB caching
+docker compose --profile with-mongodb up -d
 
 # With local Ollama
 docker compose --profile with-ollama up -d
 
-# Full stack
-docker compose --profile with-redis --profile with-ollama up -d
+# With Ollama and MongoDB
+docker compose --profile with-mongodb --profile with-ollama up -d
 ```
 
 ### Option 3: MCP Inspector
 
-MCP Inspector is a quick and easy way to get started with ScholarFlux MCP and test tools directly on live data. To get started, first ensure that you have ScholarFlux MCP server and [`npm`](https://www.npmjs.com/package/marked) installed. Then run the following:
+MCP Inspector is a quick and easy way to get started with ScholarFlux MCP and test tools directly on live data. To get started, first ensure that you have ScholarFlux MCP server and [`npm`](https://www.npmjs.com/) installed. Then run the following:
 
 ```bash
 # Install MCP Inspector
@@ -275,6 +313,7 @@ make mcp
 Add to your MCP configuration file:
 
 **Local installation:**
+
 ```json
 {
   "mcpServers": {
@@ -287,12 +326,15 @@ Add to your MCP configuration file:
 ```
 
 **With Docker:**
+
+(Via streamable HTTP transport and [`docker-compose.yml`](docker/docker-compose.yml))
+
 ```json
 {
   "mcpServers": {
     "scholar_flux": {
-      "command": "docker",
-      "args": ["run", "-i", "--rm", "scholar-flux-mcp"]
+      "url": "http://localhost:8000/mcp",
+      "transport": "streamable-http"
     }
   }
 }
@@ -415,7 +457,6 @@ Retrieve and rank studies via record-topic embedding cosine similarity.
 | `store_history_cache` | bool | true | Store output in history cache |
 | `response_format` | string | "markdown" | "markdown" or "json" |
 | `force_refresh` | bool | false | Enables history cache retrieval for record searches while re-executing the record-topic similarity reranking step |
-```
 
 ### Synthesis Tools
 
@@ -552,6 +593,7 @@ List recently stored academic records across all searches. Retrieves individual 
 | `max_records` | int | null | Max records to return |
 | `response_format` | string | "markdown" | "markdown" or "json" |
 | `topic` | string | null | Filter and sort records by fuzzy text similarity to this topic. Record—topic similarity is calculated based on the title, author, DOI, and abstract. Results ordered by similarity in descending order |
+| `display_full_text` | bool | false | Displays the full abstract and text (if available) for the current article |
 | `similarity_threshold` | float | null | Minimum fuzzy similarity score for inclusion (0.0–1.0) when filtering by topic. At 1.0, filters and sorts via an exact partial string match to the abstract text, author, or DOI. |
 
 #### `scholar_flux_clear_history`
@@ -642,6 +684,7 @@ MultiSearchCoordinator (ScholarFlux)
 ```
 
 **Key design decisions:**
+- **Security-first**: Type-safe architecture with mypy strict-mode, automated CodeQL security scanning, and continuous monitoring for CVEs
 - **Threading over asyncio**: Simpler for users, better for I/O-bound workloads with rate limits
 - **Concurrent execution**: While one provider waits on rate limits, others continue
 - **Shared rate limiters**: Multiple queries to the same provider coordinate through a single limiter
@@ -734,6 +777,7 @@ For details on ScholarFlux's orchestration architecture, see the [ScholarFlux do
 | `SCHOLAR_FLUX_MCP_ENABLE_HISTORY` | Enable history service | `true` |
 | `SCHOLAR_FLUX_MCP_HISTORY_TTL` | Default TTL for cached outputs (seconds) | - |
 | `SCHOLAR_FLUX_MCP_HISTORY_URL` | SQLite/database URL for history storage | - |
+| `SCHOLAR_FLUX_MCP_PERSIST_HISTORY` | Default output history persistence to the filesystem (e.g., `~/.scholar_flux/package_cache/mcp_history.db`) vs in-memory (`sqlite:///:memory:`) | `false` |
 
 ### Model Configuration
 
@@ -844,7 +888,7 @@ ScholarFlux provides reliable multi-provider search with rate limiting, normaliz
 4. **Transparency by default**: Confidence scores, grounding statistics, per-record relevance scores, explicit limitations, and suggested follow-up queries in every synthesis — surfaced directly to the MCP client
 5. **Zero-config model selection**: The model factory cascades through available providers (Ollama local → Ollama Cloud → Anthropic → Google → OpenAI), adapting to your environment for both LLM synthesis and embedding-based reranking
 6. **Output history**: SQLModel-based relational storage lets you replay previous syntheses, relevance searches, and record searches without re-executing the pipeline
-7. **Turnkey Docker deployment**: `docker compose up` gives you the full stack — MCP server, MongoDB caching, optional Redis and Ollama with auto-model-pull — with health checks, resource limits, and non-root security
+7. **Turnkey Docker deployment**: `docker compose --profile with-ollama up` gives you the full stack — MCP server, Redis caching and Ollama for embeddings and synthesis with auto-model-pull, with health checks, resource limits, and non-root security
 8. **MCP-native**: Integrates directly into Claude Desktop, Claude Code, Neovim, or any MCP-compatible client as part of your existing workflow
 
 ### When to Use Each Approach
@@ -931,7 +975,7 @@ Questions or suggestions? Open an issue or email scholar.flux@gmail.com.
 
 ## Project Statistics
 
-- **~20.5k Lines of Code** - ~13.5k LOC source + ~7.0k LOC comprehensive tests
+- **~20.8k Lines of Code** - ~13.7k LOC source + ~7.1k LOC comprehensive tests
 - **93% Test Coverage** - Rigorous testing across core functionality and edge cases
 - **Type-Safe Architecture** - Comprehensive type hints throughout the codebase with mypy strict-mode type checking
 - **Security-Audited** - Automated CVE scanning via CodeQL and Safety CLI, credential masking

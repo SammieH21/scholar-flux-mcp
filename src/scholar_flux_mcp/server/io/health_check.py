@@ -44,16 +44,27 @@ class HealthCheckFormatter(BaseFormatter):
     @classmethod
     def format_health_check_markdown(cls, health_status: HealthStatus) -> str:
         """Formats the health check response as markdown."""
-        service_health_lines = []
         overall_status = health_status.status or "unknown"
-        service_health_lines.append(f"## Health Check Status: {overall_status}")
-        service_health_lines.append("")
+        formatted_time = health_status.timestamp.strftime("%Y-%m-%d at %H:%M:%S")
 
-        for service_health in health_status.services.values():
-            service_health_lines.append(cls.format_service_health_check(service_health))
-            service_health_lines.append("")
+        service_health_summary_list = [
+            cls.format_service_health_check(service_health) for service_health in health_status.services.values()
+        ]
 
-        return "\n".join(service_health_lines)
+        service_health_summaries = "\n\n".join(service_health for service_health in service_health_summary_list)
+
+        health_check_summary = cls.format_multiline_string(
+            f"""## Health Check Status: {overall_status}
+
+            **Version:** {health_status.version}
+
+            - **Timestamp:** {formatted_time}
+
+            {service_health_summaries}
+        """
+        )
+
+        return health_check_summary
 
     @classmethod
     def format_service_health_check(
